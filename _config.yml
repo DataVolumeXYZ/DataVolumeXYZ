@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: ""
-url: "https://datavolume.xyz"
+baseurl: "/DataVolumeXYZ"
+url: "https://datamasteringstudio.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 title: DataVolume.xyz                                    # site's title
