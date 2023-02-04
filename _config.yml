@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: ""
+baseurl: "/"
 url: "https://DataVolume.xyz"
 
 # THEME-SPECIFIC CONFIGURATION
