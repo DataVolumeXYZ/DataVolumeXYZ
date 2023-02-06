@@ -3,7 +3,7 @@ baseurl: ""
 url: "https://DataVolume.xyz"
 
 # THEME-SPECIFIC CONFIGURATION
-title: DataVolume.xyz                                    # site's title
+title: DataVolume.xyz
 description: >- # used by search engines
   Harnessing industry-leading Business Intelligence, Data Analytics, and Automation to help you make better decisions, faster.
 author: James Bartlett                                   # author's name
