@@ -1,6 +1,8 @@
 <footer class="site-footer">
   <p class="text">
-    {{ site.footer_text | default: "" }}</p>
+    {% assign CurrentYear = site.time | date: '%Y' | append: " " %}
+    {% assign SiteName = site.title % | append: " " %}
+    {{ "Copyright © " | append: CurrentYear | apppend: SiteName | append: ". All rights reserved." }}</p>
   <div class="footer-icons">
     <ul>
       <!-- Social icons from Font Awesome, if enabled -->
