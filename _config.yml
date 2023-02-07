@@ -8,7 +8,7 @@ description: >- # used by search engines
   Harnessing industry-leading Business Intelligence, Data Analytics, and Automation to help you make better decisions, faster.
 author: James Bartlett                                   # author's name
 avatar: assets/img/cube.svg                         # Empty for no avatar in navbar
-favicon: assets/cube.ico                             # Icon displayed in the tab
+favicon: assets/favicon.ico                            # Icon displayed in the tab
 
 # Header and footer text
 header_text: Analyzing data in every dimension  # Change Blog header text
