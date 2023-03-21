@@ -5,7 +5,7 @@ title: >
 author: JamesDBartlett3
 date: 2023-03-20 21:00:00 -0500
 feature-img: "assets/img/pexels/soundwaves.jpg"
-thumbnail: "assets/img/pexels/soundwaves.jpg"
+thumbnail: "assets/img/pexels/pbitoolswatchps_externaltoolsribbon.png"
 tags: [Power BI, External Tools, PowerShell]
 excerpt_separator: <!--more-->
 ---
