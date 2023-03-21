@@ -51,15 +51,16 @@ In short, PbiToolsWatchPS will always run pbi-tools in Watch Mode on whatever .p
 
 ## How do I use PbiToolsWatchPS?
 
-1. From the "External Tools" menu in Power BI Desktop, click the button labeled "pbi-tools: Watch"
-2. You should see a Windows PowerShell window open up and start running pbi-tools in Watch Mode. 
+1. Open a .pbix file in Power BI Desktop. 
+2. From the "External Tools" menu in Power BI Desktop, click the button labeled "pbi-tools: Watch"
+3. You should see a Windows PowerShell window open up and start running pbi-tools in Watch Mode. 
   * _Note: **Do not** close the PowerShell window yet._
-1. Make some changes to your .pbix file and save it. In the PowerShell window, you'll see the output from pbi-tools as it extracts the .json files from your .pbix file.
-2. There should now be a new folder in the same folder as your .pbix file, with the same name as your .pbix file, and it should contain the .json files that were extracted from your .pbix file.
-3. Make some more changes to your .pbix file, save it again, and pbi-tools will update the .json files accordingly.
-4. When you're finished working on your .pbix file, make sure to save your changes one last time, wait for pbi-tools to finish extracting the .json files, then close Power BI Desktop and the PowerShell Window. 
-  * _Warning: Always wait for pbi-tools to finish before closing PowerShell or Power BI Desktop, otherwise you may end up with incomplete and/or corrupted .json files._
-1. In your Git repository, stage all of the files you've changed, add a commit message describing the changes you made, then commit and push to your remote/origin repository.
+4. Make some changes to your .pbix file and save it. In the PowerShell window, you'll see the output from pbi-tools as it extracts the .json files from your .pbix file.
+5. There should now be a new folder in the same folder as your .pbix file, with the same name as your .pbix file, and it should contain the .json files that were extracted from your .pbix file.
+6. Make some more changes to your .pbix file, save it again, and pbi-tools will update the .json files accordingly.
+7. When you're finished working on your .pbix file, make sure to save your changes one last time, wait for pbi-tools to finish extracting the .json files, then close Power BI Desktop and the PowerShell Window. 
+  * _Warning: Always wait for pbi-tools to finish extracting and saving your latest changes before closing PowerShell or Power BI Desktop, otherwise you may end up with incomplete and/or corrupted .json files._
+8. In your Git repository, stage all of the files you've changed, add a commit message describing the changes you made, then commit and push to your remote/origin repository.
 
 ## Notes
 
@@ -67,4 +68,4 @@ In short, PbiToolsWatchPS will always run pbi-tools in Watch Mode on whatever .p
 * By default, Windows file paths have a maximum length of 260 characters, so if your .pbix files are saved in a folder with a long path, pbi-tools may start throwing error messages saying that it can't save the .json files it has extracted, because their paths would be too long. If this happens, you can try: 
   * Moving your .pbix files to a folder with a shorter path (relatively simple, but may not solve the problem, or only solve it temporarily)
   * Applying the [LongPathsEnabled](https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd#enable-long-paths-in-windows-10-version-1607-and-later) registry fix on your machine (more complicated, but very likely to solve the problem permanently)
-* The version of PbiToolsWatchPS linked above runs in Windows PowerShell 5.1. If prefer PowerShell Core 7+, you can download and install [046-PbiToolsWatchPS7.pbitool.json](https://raw.githubusercontent.com/JamesDBartlett3/PowerBits/main/ExternalTools/046-PbiToolsWatchPS7.pbitool.json) instead, though that version is not well tested, and may not work properly (or at all).
+* The version of PbiToolsWatchPS linked above runs in Windows PowerShell 5.1. If you prefer PowerShell Core 7+, you can download and install [046-PbiToolsWatchPS7.pbitool.json](https://raw.githubusercontent.com/JamesDBartlett3/PowerBits/main/ExternalTools/046-PbiToolsWatchPS7.pbitool.json) instead, though that version is not well tested, and may not work properly (or at all).
