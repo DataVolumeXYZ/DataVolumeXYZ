@@ -32,7 +32,7 @@ For example, if you have a .pbix file called "MyReport.pbix" inside a folder cal
 ## Why should I use PbiToolsWatchPS to launch pbi-tools instead of just running it from the command line?
 
 * If you're not comfortable with the command line, then PbiToolsWatchPS is a great way to start using pbi-tools without having to learn how to use the command line first.
-* Even if you are already a command line ninja 🐱‍👤 you should _still_ consider using PbiToolsWatchPS because:
+* Even if you are already a command line ninja, you should _still_ consider using PbiToolsWatchPS because:
   * Launching pbi-tools directly from Power BI Desktop with PbiToolsWatchPS is *much* faster than launching it manually from the command line.
   * You won't have to remember the pbi-tools command line syntax, which arguments to use, how to use them, etc.
   * You won't have to worry about accidentally running pbi-tools on the wrong .pbix file.
