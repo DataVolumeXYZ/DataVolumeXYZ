@@ -18,7 +18,7 @@ However, because pbi-tools is a command line application, it must be run from a 
 
 PbiToolsWatchPS is an External Tool for Power BI Desktop which launches a PowerShell window running pbi-tools in Watch Mode on the current file. It essentially tells pbi-tools to start watching the .pbix file you're currently working on, and when pbi-tools detects that you've saved the file, it will extract the "source code" from that file and save it as .json files in an adjacent folder with the same name as the .pbix file. 
 
-For example, if you have a .pbix file called "MyReport.pbix" inside a folder called "C:\MyFolder\\", PbiToolsWatchPS will create a folder called "C:\MyFolder\MyReport\\" and save the .json files there. If you then make some more changes to your report and save it again, PbiToolsWatchPS will update the .json files in the "C:\MyFolder\MyReport\\" folder.
+For example, if you have a .pbix file called "MyReport.pbix" inside a folder called "C:\MyFolder\\", pbi-tools will create a folder called "C:\MyFolder\MyReport\\" and save the .json files there. If you then make some more changes to your report and save it again, pbi-tools will update the .json files in the "C:\MyFolder\MyReport\\" folder.
 
 ## Wait, why should I even use pbi-tools in the first place?
 
@@ -33,7 +33,7 @@ For example, if you have a .pbix file called "MyReport.pbix" inside a folder cal
 
 * If you're not comfortable with the command line, then PbiToolsWatchPS is a great way to start using pbi-tools without having to learn how to use the command line first.
 * Even if you are already a command line ninja, you should _still_ consider using PbiToolsWatchPS because:
-  * Launching pbi-tools directly from Power BI Desktop with PbiToolsWatchPS is *much* faster than launching it manually from the command line.
+  * Launching pbi-tools directly from Power BI Desktop with PbiToolsWatchPS is *much* faster than running it manually from the command line.
   * You won't have to remember the pbi-tools command line syntax, which arguments to use, how to use them, etc.
   * You won't have to worry about accidentally running pbi-tools on the wrong .pbix file.
   * Using PbiToolsWatchPS, you can standardize the way everyone in your team runs pbi-tools, thereby ensuring that everyone's changes to the source code are always saved in the same format and folder structure.
