@@ -67,9 +67,9 @@
       defer
       src="{{ '/assets/js/vendor/mermaid.min.js' | relative_url }}"
       onload="mermaid.initialize({
-                      startOnLoad:true,
-                      theme: '{{ site.mermaid }}',
-                    });"></script>
+                              startOnLoad:true,
+                              theme: '{{ site.mermaid }}',
+                            });"></script>
   {% endif %}
 
   <!-- Simple Jekyll Search 1.10.0 -->
@@ -77,7 +77,7 @@
 
   <!-- Google Analytics / Cookie Consent -->
   <script>
-    const cookieName = 'cookie-notice-dismissed-  {{ site.url }}';
+    const cookieName = 'cookie-notice-dismissed-   {{ site.url }}';
     const isCookieConsent = '{{ site.cookie_consent }}';
     const analyticsName = '{{ site.google_analytics }}';
     const analyticsNameGA4 = '{{ site.google_analytics_ga4 }}';
@@ -122,8 +122,4 @@
   <meta name="twitter:card" content="{% unless page.thumbnail %}summary{% else %}summary_large_image{% endunless %}">
   <meta name="twitter:image" content="{{ '/' | absolute_url }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}{{ page.feature-img | default: site.header_feature_image }}{% endif %}">
   <meta name="twitter:image:alt" content="{{ page.title | default: site.title }}">
-
-  <!-- Mastodon verification linkback -->
-  <a rel="me" href="https://techhub.social/@JamesDBartlett3"></a>
-
 </head>
