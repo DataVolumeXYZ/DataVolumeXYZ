@@ -52,7 +52,7 @@ In short, PbiToolsWatchPS will always run pbi-tools in Watch Mode on whatever .p
 ## How do I use PbiToolsWatchPS?
 
 1. Open a .pbix file in Power BI Desktop. 
-2. From the "External Tools" menu in Power BI Desktop, click the button labeled "pbi-tools: Watch"
+2. From the "External Tools" ribbon tab in Power BI Desktop, click the button labeled "pbi-tools: Watch"
 3. You should see a Windows PowerShell window open up and start running pbi-tools in Watch Mode. 
   * _Note: **Do not** close the PowerShell window yet._
 4. Make some changes to your .pbix file and save it. In the PowerShell window, you'll see the output from pbi-tools as it extracts the .json files from your .pbix file.
