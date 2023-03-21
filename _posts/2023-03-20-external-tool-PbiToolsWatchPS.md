@@ -54,12 +54,12 @@ In short, PbiToolsWatchPS will always run pbi-tools in Watch Mode on whatever .p
 1. Open a .pbix file in Power BI Desktop. 
 2. From the "External Tools" ribbon tab in Power BI Desktop, click the button labeled "pbi-tools: Watch"
 3. You should see a Windows PowerShell window open up and start running pbi-tools in Watch Mode. 
-  * _Note: **Do not** close the PowerShell window yet._
+  * _**Note: You must leave this PowerShell window open for now. You can minimize it if you want, but *DO NOT* close it yet.**_
 4. Make some changes to your .pbix file and save it. In the PowerShell window, you'll see the output from pbi-tools as it extracts the .json files from your .pbix file.
 5. There should now be a new folder in the same folder as your .pbix file, with the same name as your .pbix file, and it should contain the .json files that were extracted from your .pbix file.
 6. Make some more changes to your .pbix file, save it again, and pbi-tools will update the .json files accordingly.
-7. When you're finished working on your .pbix file, make sure to save your changes one last time, wait for pbi-tools to finish extracting the .json files, then close Power BI Desktop and the PowerShell Window. 
-  * _Warning: Always wait for pbi-tools to finish extracting and saving your latest changes before closing PowerShell or Power BI Desktop, otherwise you may end up with incomplete and/or corrupted .json files._
+7. When you're finished working on your .pbix file, make sure to save your changes one last time, wait for pbi-tools to finish extracting the .json files, then close Power BI Desktop and the PowerShell window. 
+  * _**Warning: Always wait for pbi-tools to finish extracting and saving your latest changes before closing PowerShell or Power BI Desktop, otherwise you may end up with incomplete and/or corrupted .json files.**_
 8. In your Git repository, stage all of the files you've changed, add a commit message describing the changes you made, then commit and push to your remote/origin repository.
 
 ## Notes
