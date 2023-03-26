@@ -27,7 +27,7 @@ From the very beginning, I knew that there were varying levels of Power BI exper
 3. Members are encouraged to share their Power BI knowledge and experience with the group, though no one is required to do so.
 4. We facilitate the sharing of Power BI knowledge primarily through two channels:
   * Interactive workshops (either in-person or online via Zoom).
-  * A private Yammer group where members can ask questions, share ideas, and collaborate on projects.
+  * A private [Yammer](https://www.yammer.com) group where members can ask questions, share ideas, and collaborate on projects.
 5. The only "stupid question" in the Data Dojo is the one that goes unasked.
 6. There are no instructors or students in the Data Dojo; We are all here to learn from each other.
 7. Members vote on the topics they'd like to learn about, as well as the dates and times for the workshops where those topics will be covered.
