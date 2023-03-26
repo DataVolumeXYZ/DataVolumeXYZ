@@ -1,7 +1,7 @@
 ---
 layout: post
 title: >
-  The Data Dojo: Establishing a Power BI Community of Practice (Part 1)
+  The Data Dojo: A Power BI Community of Practice (Part 1)
 author: JamesDBartlett3
 # feature-img: "assets/img/pexels/soundwaves.jpg"
 # thumbnail: "assets/img/pexels/___.png"
