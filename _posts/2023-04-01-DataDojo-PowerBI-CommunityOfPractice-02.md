@@ -1,25 +1,32 @@
 ---
 layout: post
-title: >
-  The Data Dojo: A Power BI Community of Practice (Part 2)
+title: |
+  The Data Dojo: Power BI Community of Practice (Part 2)
 author: JamesDBartlett3
-feature-img: "assets/img/data-dojo/matrix_aikido.png"
-thumbnail: "assets/img/data-dojo/web-3706725.jpg"
-tags: [Power BI, Community of Practice, Data Analytics, Data Dojo, Data Literacy, Knowledge Sharing]
+feature-img: assets/img/data-dojo/matrix_aikido.png
+thumbnail: assets/img/data-dojo/people-2569234-cropped.png
+tags:
+  - Power BI
+  - Community of Practice
+  - Data Analytics
+  - Data Dojo
+  - Data Literacy
+  - Knowledge Sharing
 excerpt_separator: <!--more-->
 draft: true
+description: A series about founding and fostering a successful Power BI Community of
+  Practice
 ---
 
 <!-- intro a -->
-<!--more--> 
-{% include aligner.html images="data-dojo/together-2450090-cropped.jpg" column="auto" %}
+<!--more-->
 <!-- intro b -->
 
 <!-- series synopsis & part 1 recap -->
 
 # Our First Workshop
 
-We launched the Data Dojo with our first workshop on July 20th, 2022, and it was a huge success! We had eighteen members in attendance, and we covered the following topics:
+We launched the Data Dojo with our first workshop on July 20th, 2022, and it was a huge success! We had eighteen members in attendance, and we covered the following topics (slide deck [here]()):
 - Introductions around the room
 - What we're doing here, and why it matters
 - The importance of speed and accuracy in data analysis, and what we mean by "speed" and "accuracy"
@@ -32,11 +39,11 @@ We launched the Data Dojo with our first workshop on July 20th, 2022, and it was
 - Testimonials from four Data Dojo members who had already been using Power BI in their day-to-day jobs, experienced first-hand the benefits of data-driven decision making, and successfully collaborated on at least one Power BI project with one or more colleagues from other departments
 - Our next steps
   - Added everyone who attended the workshop to our private Yammer group, and encouraged them to introduce themselves, ask questions, share ideas, and vote on dates and topics for future workshops
-  - Provided a list of Power BI learning resources for those who wanted to dive in right away
+  - Provided [a list of Power BI learning resources]() for those who wanted to dive in right away
 
 # Our Second Workshop
 
-We held our second Data Dojo workshop about a month later, this time with twenty members in attendance! Here's an outline of what we covered:
+We held our second Data Dojo workshop about a month later, this time with twenty members in attendance! Here's an outline of what we covered (slide deck [here]()):
 - **The Five Types of Data Analytics:**
   1. Descriptive — *"What happened, where, and when?"*
   2. Diagnostic — *"Why did it happen?"*
@@ -61,13 +68,5 @@ We held our second Data Dojo workshop about a month later, this time with twenty
   - Examples of some challenges he has encountered working with data, and how he overcame them by utilizing our learning resources and collaborating with other members of the Data Dojo from both his own department and other departments
 
 {% include aligner.html images="data-dojo/fu-3624167-cropped.jpg" column="auto" %}
-
-# Resources
-
-<!-- embed these links where they are referenced above -->
-- [Power BI learning resources for Data Dojo members]()
-- Workshop slide decks:
-  - [first workshop]()
-  - [second workshop]()
 
 <!-- add conclusion and teaser for part 3 -->
