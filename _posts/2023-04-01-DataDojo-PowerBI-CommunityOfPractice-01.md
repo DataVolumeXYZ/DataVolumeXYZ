@@ -5,7 +5,7 @@ title: >
 author: JamesDBartlett3
 feature-img: "assets/img/data-dojo/matrix_aikido.png"
 thumbnail: "assets/img/data-dojo/web-3706725.jpg"
-tags: [Power BI, Community of Practice, Data Dojo, Center of Excellence, Data Literacy, Knowledge Sharing]
+tags: [Power BI, Community of Practice, Data Analytics, Data Dojo, Data Literacy, Knowledge Sharing]
 excerpt_separator: <!--more-->
 draft: true
 ---
