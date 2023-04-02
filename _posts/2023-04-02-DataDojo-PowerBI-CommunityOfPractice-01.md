@@ -26,8 +26,6 @@ The natural solution was to establish an inter-disciplinary Power BI [Community 
 
 This is the first in a series of posts that will document our challenges, progress, setbacks, and victories. In this installment, we'll cover the founding of the Data Dojo, and next time, we'll talk about the first two workshops we held, the topics we covered, some of the difficulties we've encountered since then, and how we plan to move forward from here. I hope you'll join us on this adventure!
 
-<!-- add more details about this series -->
-
 # Founding the Data Dojo
 
 From the very beginning, I knew that there were varying levels of Power BI experience among the faculty and staff at DMU. Some had never even heard of Power BI, while others had already been using it for several years. I also knew that I didn't have the time or energy to teach everyone everything they needed to know about Power BI on an individual basis. Additionally, I knew that I couldn't be the only one teaching if I wanted to have an organization-wide impact. And finally, I knew that a hierarchical structure would only hinder our ability to grow and adapt organically. So, with all of that in mind, I created our Data Dojo with these founding principles:
@@ -49,7 +47,7 @@ From the very beginning, I knew that there were varying levels of Power BI exper
 
 Before we could hold our first workshop, I knew that I'd have to drum up some hype and get people interested in joining the Data Dojo. Of course, the easiest way to kickstart any new marketing effort is to reach out directly to any existing early adopters and ask for their input, so here's how I did that:
 1. I created a [Microsoft Forms](https://forms.office.com) survey to collect some basic information about those who might be interested. 
-2. I used our [PBI Monitor report](https://github.com/RuiRomano/pbimonitor) to identify the people who had used Power BI sometime in the past six months.
+2. I used our [PBI Monitor report](https://github.com/RuiRomano/pbimonitor) to identify the people who had used Power BI sometime in the past six months. *{More on the PBI Monitor report coming in a future post.}*
 3. I sent those people an email with the survey link and an explanation of what I was up to, and asked them to fill it out if they were interested in joining us. 
 
 I was pleasantly surprised by the response. In just a few days, we had over a dozen people sign up to join the Data Dojo, and they had all provided lots of useful information about their existing knowledge, skills, interests and goals, as well as their preferred days and times for future workshops. Shortly thereafter, some of the folks who had signed up asked if they could also invite some of their coworkers to join the Data Dojo, and I was thrilled! My response: "Absolutely! Just forward them the survey link and ask them to fill it out. The more, the merrier!" 
