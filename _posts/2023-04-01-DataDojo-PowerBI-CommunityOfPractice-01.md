@@ -19,7 +19,7 @@ The natural solution was to establish an inter-disciplinary Power BI [Community 
 
 # Founding the Data Dojo
 
-From the very beginning, I knew that there were varying levels of Power BI experience among the faculty and staff at DMU. Some had never even heard of Power BI, while others had already been using it for several years. I also knew that I didn't have the time or energy to teach everyone everything they needed to know about Power BI on an individual basis. Additionally, I knew that I couldn't be the only one teaching if I wanted to have an organization-wide impact. And finally, I knew that a hierarchical structure would only hinder the CoP's ability to grow and adapt organically. So, with all of that in mind, I created our Data Dojo with these founding principles:
+From the very beginning, I knew that there were varying levels of Power BI experience among the faculty and staff at DMU. Some had never even heard of Power BI, while others had already been using it for several years. I also knew that I didn't have the time or energy to teach everyone everything they needed to know about Power BI on an individual basis. Additionally, I knew that I couldn't be the only one teaching if I wanted to have an organization-wide impact. And finally, I knew that a hierarchical structure would only hinder our ability to grow and adapt organically. So, with all of that in mind, I created our Data Dojo with these founding principles:
 
 1. Anyone who is interested in learning how to make better use of their data can become a Data Dojo member.
 2. Members are welcome to attend as many (or as few) of our workshops as they like.
@@ -32,7 +32,7 @@ From the very beginning, I knew that there were varying levels of Power BI exper
 7. Members vote on the topics they'd like to learn about, as well as the dates and times for the workshops where those topics will be covered.
 8. Members are encouraged to network with each other, form their own ad-hoc groups, and collaborate on projects together. This is designed to break down the silos and walls that have hindered the business in the past, and replace them with pipelines and bridges.
 
-{% include aligner.html images="data-dojo/handshake-2009195-small.png" column="auto" %}
+{% include aligner.html images="data-dojo/handshake-2009195-glow-sm.png" column="auto" %}
 
 # Our First Workshop
 
@@ -55,11 +55,11 @@ We launched the Data Dojo with our first workshop on July 20th, 2022, and it was
 
 We held our second Data Dojo workshop about a month later, this time with twenty members in attendance! Here's an outline of what we covered:
 - **The Five Types of Data Analytics:**
-  1. Descriptive — "What happened, where, and when?"
-  2. Diagnostic — "Why did it happen?"
-  3. Predictive — "What will happen in the future?"
-  4. Prescriptive — "What should we do about it?"
-  5. Cognitive — "How can we do it better?"
+  1. Descriptive — *"What happened, where, and when?"*
+  2. Diagnostic — *"Why did it happen?"*
+  3. Predictive — *"What will happen in the future?"*
+  4. Prescriptive — *"What should we do about it?"*
+  5. Cognitive — *"How can we do it better?"*
 - **The Data Analytics Cycle**
   1. Requirements gathering
   2. Data ingestion and processing
