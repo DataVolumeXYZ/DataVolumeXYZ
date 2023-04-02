@@ -5,7 +5,7 @@ title: >
 author: JamesDBartlett3
 feature-img: "assets/img/pexels/soundwaves.jpg"
 thumbnail: "assets/img/pexels/pbitoolswatchps_externaltoolsribbon.png"
-tags: [Power BI, External Tools, PowerShell]
+tags: [Power BI, External Tools, PowerShell, Version Control, Git, pbi-tools]
 excerpt_separator: <!--more-->
 ---
 
