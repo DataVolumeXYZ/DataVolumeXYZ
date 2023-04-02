@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Data Dojo: Power BI Community of Practice (Part 1)"
+title: "The Data Dojo: A Power BI Community of Practice (Part 1)"
 author: JamesDBartlett3
 feature-img: assets/img/data-dojo/matrix_aikido.png
 thumbnail: assets/img/data-dojo/web-3706725-cropped.png
