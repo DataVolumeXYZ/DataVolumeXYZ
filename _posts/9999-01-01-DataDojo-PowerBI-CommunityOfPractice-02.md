@@ -1,7 +1,6 @@
 ---
 layout: post
-title: |
-  The Data Dojo: A Power BI Community of Practice (Part 2)
+title: "The Data Dojo: A Power BI Community of Practice (Part 2)"
 author: JamesDBartlett3
 feature-img: assets/img/data-dojo/matrix_aikido.png
 thumbnail: assets/img/data-dojo/people-2569234-cropped.png
@@ -26,7 +25,7 @@ description: A series about founding and fostering a successful Power BI Communi
 
 # Our First Workshop
 
-We launched the Data Dojo with our first workshop on July 20th, 2022, and it was a huge success! We had eighteen members in attendance, and we covered the following topics (slide deck [here]()):
+We launched the Data Dojo with our first workshop on July 20th, 2022, and it was a huge success! We had eighteen members in attendance, and we covered the following topics<!-- (slide deck [here]())-->:
 - Introductions around the room
 - What we're doing here, and why it matters
 - The importance of speed and accuracy in data analysis, and what we mean by "speed" and "accuracy"
@@ -43,7 +42,7 @@ We launched the Data Dojo with our first workshop on July 20th, 2022, and it was
 
 # Our Second Workshop
 
-We held our second Data Dojo workshop about a month later, this time with twenty members in attendance! Here's an outline of what we covered (slide deck [here]()):
+We held our second Data Dojo workshop about a month later, this time with twenty members in attendance! Here's an outline of what we covered<!-- (slide deck [here]())-->:
 - **The Five Types of Data Analytics:**
   1. Descriptive — *"What happened, where, and when?"*
   2. Diagnostic — *"Why did it happen?"*
@@ -68,5 +67,23 @@ We held our second Data Dojo workshop about a month later, this time with twenty
   - Examples of some challenges he has encountered working with data, and how he overcame them by utilizing our learning resources and collaborating with other members of the Data Dojo from both his own department and other departments
 
 {% include aligner.html images="data-dojo/fu-3624167-cropped.jpg" column="auto" %}
+
+# Our First Major Setback
+
+After such a strong start, it really felt like nothing could stop us, and we were well on our way to achieving our vision of a data-driven DMU. But then, we hit a snag. A big one.
+
+For several years, DMU has been in the process of [building a new campus](https://www.dmu.edu/new-campus/) in West Des Moines, and it's scheduled to open later this year (Fall of 2023). Of course, this is a huge undertaking, and it's been a major focus for the entire university. As you can probably imagine, every department at DMU has been extremely busy with a number of projects related to the new campus, and that has had a significant impact on the amount of time and energy they have been able to devote to the Data Dojo. 
+
+I'd really like to say that the new campus project commitments were the only thing that slowed us down, but that wouldn't be entirely true. I also made a few mistakes along the way, and I'd like to share them with you so that you can avoid making the same mistakes.
+
+## Mistake #1: Failing to Keep a Consistent Schedule
+
+After our second workshop, we had a lot of momentum, and I was eager to keep it going, but I didn't have a clear plan for how to do that. I knew that I wanted to hold a workshop every month or so, but given the frenetic pace of projects at the new campus, it was hard to find dates that worked for most of our members. I really should have just found a date that worked for a dozen or so members, but instead I kept pushing it back indefinitely, hoping that I would eventually find a date that worked for everyone. The worst part of this was that I didn't communicate any of this to our members, so they had no idea what was going on. I'm sure that many of them thought that the Data Dojo had just fizzled out, and that was entirely my fault.
+
+## Mistake #2: Failing to Keep the Conversation Going
+
+My second mistake was not having a strategy for keeping the conversation going between workshops. I had created a private Yammer group for the Data Dojo, and everyone who had attended at least one workshop so far was a member of that group, but my efforts at encouraging members to engage in conversations there achieved only sporadic results at best. There were definitely some great conversations, but mostly between the same few members, and I also didn't do a very good job of seeding the discussion myself with new material. I should have been posting more questions, sharing more ideas, and encouraging more members to do the same. 
+
+## Mistake #3: 
 
 <!-- add conclusion and teaser for part 3 -->
