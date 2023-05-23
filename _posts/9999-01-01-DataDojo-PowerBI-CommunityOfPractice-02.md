@@ -87,3 +87,7 @@ My second mistake was not having a strategy for keeping the conversation going b
 ## Mistake #3: 
 
 <!-- add conclusion and teaser for part 3 -->
+
+# Conclusion
+
+<!-- I think the summary here is that the overall pitfall here is searching for perfection without planning for functionality. You not only wanted a date that worked for every single person but you wanted the "perfect" content (waiting for whatever update to roll out). It's a bit idealistic to assume that tech anything happens on a convenient or timely schedule. Prioritizing conversation, regardless of content and attendence perfection, is clearly an important factor in developing the kind of data driven and data literate culture that DMU or any other organization would benefit from. -->
