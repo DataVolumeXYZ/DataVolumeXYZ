@@ -24,7 +24,7 @@ This is the second in a series of posts documenting the challenges, progress, se
 # Our First Workshop
 
 We launched the Data Dojo with our first workshop on July 20th, 2022, and it was a huge success!  
-We had *eighteen* members in attendance, and we covered the following topics<!-- (slide deck [here]())-->:
+We had *eighteen* members in attendance, and we covered the following topics (slide deck [here](../../../assets/doc/placeholder.pdf)):
 - Introductions around the room
 - What we're doing here, and why it matters
 - The importance of speed and accuracy in data analysis, and what we mean by "speed" and "accuracy"
@@ -37,12 +37,12 @@ We had *eighteen* members in attendance, and we covered the following topics<!--
 - Testimonials from four Data Dojo members who had already been using Power BI in their day-to-day jobs, experienced first-hand the benefits of data-driven decision making, and successfully collaborated on at least one Power BI project with one or more colleagues from other departments
 - Our next steps
   - Added everyone who attended the workshop to our private Yammer group, and encouraged them to introduce themselves, ask questions, share ideas, and vote on dates and topics for future workshops
-  - Provided [a list of Power BI learning resources]() for those who wanted to dive in right away <!-- need to add this document -->
+  - Provided [a list of Power BI learning resources](../../../assets/doc/placeholder.pdf) for those who wanted to dive in right away <!-- need to add this document -->
 
 # Our Second Workshop
 
 We held our second Data Dojo workshop about a month later, this time with *twenty* members in attendance!  
-Here's an outline of what we covered<!-- (slide deck [here]())-->:
+Here's an outline of what we covered (slide deck [here](../../../assets/doc/placeholder.pdf)):
 - [**The Five Types of Data Analytics**](https://www.biconnector.com/blog/5-types-of-data-analytics-explained-with-examples/)
   1. Descriptive — *"What happened, where, and when?"*
   2. Diagnostic — *"Why did it happen?"*
@@ -86,11 +86,11 @@ My second mistake was not having a strategy for keeping the conversation going b
 
 ## Mistake #3: Letting "Perfect" Be the Enemy of "Good"
 
-My third (and biggest) mistake was allowing my daydream of blowing everyone's minds with our next workshop to cloud my judgment and eventuall usurp my usual pragmatic approach to planning events. 
+In the wake of two well-attended workshops and quite a bit of buzz circulating around the organization, I started thinking to myself, "This next workshop will need to be absolutely mind-blowing," and I started daydreaming about how I could make our third Data Dojo workshop the best one yet. My third (and biggest) mistake was allowing those daydreams and high expectations to cloud my judgment, and eventually undermine much of what I had been working so hard to achieve.
 
-At the time, I had been working for several months with the creators of an open-source project called [Power BI Version Control](https://powerbi.tips/2021/02/power-bi-version-control/) (a user-friendly solution based on Power Apps and SharePoint that helps business users keep their .pbix files in a basic version control system). The app's creators and I were getting very close to releasing a highly-anticipated bugfix version, and I really wanted our third Data Dojo workshop to center around deploying the latest version of Power BI Version Control for all Data Dojo members to use with their teams. 
+At the time, I had been collaborating for several months with the creators of an open-source project called [Power BI Version Control](https://powerbi.tips/2021/02/power-bi-version-control/) (a user-friendly solution based on Power Apps and SharePoint that helps business users keep their .pbix files in a basic version control system). The app's creators and I were getting very close to releasing a highly-anticipated bugfix version, and I really wanted our third Data Dojo workshop to center around deploying the latest version of Power BI Version Control for all Data Dojo members to use with their teams.
 
-But, as you've probably guessed by now, the release date for the bugfix version kept getting pushed back, and I kept pushing back the date for our next workshop in turn. I was so focused on getting the timing just right that I didn't even consider the possibility that I could just run the third Data Dojo workshop without even mentioning the Power BI Version Control app, and just wait to blow everyone's minds until the fourth or fifth workshop. I was so focused on achieving a **perfect** workshop that I didn't even consider the possibility of a **good** one. 
+But, as you've probably guessed by now, the release date for the bugfix version kept getting pushed back, and I kept pushing back the date for our next workshop along with it. I was so focused on getting the timing just right that I didn't even consider the possibility that I could just run our third Data Dojo workshop as usual, without even mentioning the Power BI Version Control app, and just wait to blow everyone's minds until the fourth or fifth workshop. I was so focused on achieving a **perfect** workshop that I didn't even consider the possibility of a **good** one. 
 
 ## Summary of Mistakes:
 
