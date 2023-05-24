@@ -24,7 +24,7 @@ This is the second in a series of posts documenting the challenges, progress, se
 # Our First Workshop
 
 We launched the Data Dojo with our first workshop on July 20th, 2022, and it was a huge success!  
-We had *eighteen* members in attendance, and we covered the following topics (slide deck [here](../../../assets/doc/placeholder.pdf)):
+We had *eighteen* members in attendance, and we covered the following topics (slide deck [here](../../../assets/doc/placeholder.pdf)):<!-- need to add this document -->
 - Introductions around the room
 - What we're doing here, and why it matters
 - The importance of speed and accuracy in data analysis, and what we mean by "speed" and "accuracy"
@@ -42,7 +42,7 @@ We had *eighteen* members in attendance, and we covered the following topics (sl
 # Our Second Workshop
 
 We held our second Data Dojo workshop about a month later, this time with *twenty* members in attendance!  
-Here's an outline of what we covered (slide deck [here](../../../assets/doc/placeholder.pdf)):
+Here's an outline of what we covered (slide deck [here](../../../assets/doc/placeholder.pdf)):<!-- need to add this document -->
 - [**The Five Types of Data Analytics**](https://www.biconnector.com/blog/5-types-of-data-analytics-explained-with-examples/)
   1. Descriptive — *"What happened, where, and when?"*
   2. Diagnostic — *"Why did it happen?"*
