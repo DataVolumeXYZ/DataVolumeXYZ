@@ -23,7 +23,8 @@ This is the second in a series of posts documenting the challenges, progress, se
 
 # Our First Workshop
 
-We launched the Data Dojo with our first workshop on July 20th, 2022, and it was a huge success! We had eighteen members in attendance, and we covered the following topics<!-- (slide deck [here]())-->:
+We launched the Data Dojo with our first workshop on July 20th, 2022, and it was a huge success!  
+We had *eighteen* members in attendance, and we covered the following topics<!-- (slide deck [here]())-->:
 - Introductions around the room
 - What we're doing here, and why it matters
 - The importance of speed and accuracy in data analysis, and what we mean by "speed" and "accuracy"
@@ -40,7 +41,8 @@ We launched the Data Dojo with our first workshop on July 20th, 2022, and it was
 
 # Our Second Workshop
 
-We held our second Data Dojo workshop about a month later, this time with twenty members in attendance! Here's an outline of what we covered<!-- (slide deck [here]())-->:
+We held our second Data Dojo workshop about a month later, this time with *twenty* members in attendance!  
+Here's an outline of what we covered<!-- (slide deck [here]())-->:
 - [**The Five Types of Data Analytics**](https://www.biconnector.com/blog/5-types-of-data-analytics-explained-with-examples/)
   1. Descriptive — *"What happened, where, and when?"*
   2. Diagnostic — *"Why did it happen?"*
@@ -88,16 +90,16 @@ My third (and biggest) mistake was allowing my daydream of blowing everyone's mi
 
 At the time, I had been working for several months with the creators of an open-source project called [Power BI Version Control](https://powerbi.tips/2021/02/power-bi-version-control/) (a user-friendly solution based on Power Apps and SharePoint that helps business users keep their .pbix files in a basic version control system). The app's creators and I were getting very close to releasing a highly-anticipated bugfix version, and I really wanted our third Data Dojo workshop to center around deploying the latest version of Power BI Version Control for all Data Dojo members to use with their teams. 
 
-But, as you've probably guessed by now, the release date for the bugfix version kept getting pushed back, and I kept pushing back the date for our next workshop in turn. I was so focused on getting the timing just right that I didn't even consider the possibility that I could just run the third Data Dojo workshop without even mentioning the Power BI Version Control app, and just wait to blow everyone's minds until the *next* workshop. I was so focused on achieving a **perfect** workshop that I didn't even consider the possibility of a **good** one. 
+But, as you've probably guessed by now, the release date for the bugfix version kept getting pushed back, and I kept pushing back the date for our next workshop in turn. I was so focused on getting the timing just right that I didn't even consider the possibility that I could just run the third Data Dojo workshop without even mentioning the Power BI Version Control app, and just wait to blow everyone's minds until the fourth or fifth workshop. I was so focused on achieving a **perfect** workshop that I didn't even consider the possibility of a **good** one. 
 
 ## Summary of Mistakes:
 
-The cumulative result of these indefinite delays and communication failures was that the Data Dojo didn't have a single workshop for nearly three quarters of a year, and almost all of our initial momentum and enthusiasm were lost. I was talking about this situation with my wife the other day, trying to determine exactly where I had gone wrong, and I think she really nailed it with her analysis: 
->"It's a bit idealistic to assume that anything in tech happens on a convenient or timely schedule. Prioritizing conversation, regardless of content and attendence perfection, is clearly an important factor in developing the kind of data-driven and data-literate culture that DMU or any other organization would benefit from."  
+The cumulative result of these indefinite delays and communication failures was that the Data Dojo didn't have a single workshop for nearly three quarters of a year, and most of our initial momentum and enthusiasm were lost. I was talking about this situation with my wife the other day, trying to determine exactly where I had gone wrong, and I think she really nailed it with her analysis: 
+>"It's a bit idealistic to assume that anything in tech happens on a convenient or timely schedule. Prioritizing conversation, regardless of content and attendence perfection, is clearly an important factor in developing the kind of data-driven and data-literate culture that any organization would benefit from."  
 > -- [Erin Howland](https://www.linkedin.com/in/erin-howland-03ab0798/)
 
 # Conclusion
 
-Well, that was a lot of bad news! And while we have reached the conclusion of this artcicle, we have **not** seen the last of the Data Dojo. In the next post, I'll share our comeback story, and how we're working to ensure that the Data Dojo will continue to grow and thrive for years to come. Stay tuned!
+Well, that was a lot of bad news! But don't worry, there's light at the end of this tunnel. While we have reached the conclusion of this article, we have **not** seen the last of the Data Dojo. In the next post, I'll share our comeback story, and how we're working to ensure that the Data Dojo will continue to grow and thrive for years to come. Stay tuned!
 
 {% include aligner.html images="data-dojo/refugees-1020255-cropped.jpg" column="auto" %}
