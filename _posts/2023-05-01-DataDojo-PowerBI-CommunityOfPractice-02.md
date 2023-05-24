@@ -70,7 +70,7 @@ Here's an outline of what we covered (slide deck [here](../../../assets/doc/plac
 
 # Our First Major Setback
 
-After such a strong start, it really felt like nothing could stop us, and we were well on our way to achieving our vision of a data-driven DMU. But then, we hit a snag. A **big** one.
+After such a strong start, it really felt like nothing could stop us, and we were well on our way to achieving our vision of a data-driven DMU. But then, we hit a snag. **A *big* one.**
 
 For several years, DMU has been in the process of [building a new campus](https://www.dmu.edu/new-campus/) in West Des Moines, and it's scheduled to open later this year (Fall of 2023). Of course, this is a huge undertaking, and it's been a major focus for the entire university. As you can probably imagine, every department at DMU has been extremely busy with a number of projects related to the new campus, and that has had a significant impact on the amount of time and energy they have been able to devote to the Data Dojo. 
 
