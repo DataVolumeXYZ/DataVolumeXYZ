@@ -7,7 +7,6 @@ thumbnail: assets/img/data-dojo/web-3706725-cropped.png
 tags:
   - Power BI
   - Community of Practice
-  - Fabric
   - Data Analytics
   - Data Dojo
   - Data Literacy
