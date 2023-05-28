@@ -96,7 +96,7 @@ I was discussing this situation with my wife the other day, trying to determine 
 >"It's a bit idealistic to assume that anything in tech happens on a convenient or timely schedule. Prioritizing conversation, regardless of content and attendence perfection, is clearly an important factor in developing the kind of data-driven and data-literate culture that any organization would benefit from."  
 > -- [Erin Howland](https://www.linkedin.com/in/erin-howland/){:target="_blank"}
 
-# Conclusion
+# Next Time: The Data Dojo Strikes Back!
 
 Well, that sure sounded like a **lot** of bad news! But don't worry; there's light at the end of this tunnel. While we **have** reached the conclusion of this article, we have **not** seen the last of the Data Dojo. 
 
