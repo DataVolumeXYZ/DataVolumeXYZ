@@ -23,12 +23,14 @@ Thank you for joining us on this adventure!
 
 {% include aligner.html images="data-dojo/abac1192-636f-428b-b172-6bdab40f6f9c_cropped.jpg" column="auto" %}
 
-# Our Third Workshop
+# Waking the Sleeping Dragon (Our Third Workshop)
 
-We hosted our third workshop on August 2nd, 2023, and as I mentioned in [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), the stakes were quite high. We had to prove to everyone (ourselves included) that we could:
+We hosted our third workshop on August 2nd, 2023, and as I mentioned in [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), it had been a *very* long time since our last workshop, so the stakes were quite high. We had to prove to everyone (ourselves included) that we could:
 - Rebound quickly from a major setback
 - Resume attracting new members, delivering value to our existing members, and providing a safe and welcoming environment for everyone
 - Recommit ourselves to building a strong community and fostering a culture of knowledge sharing and collaboration within our organization
+
+{% include aligner.html images="data-dojo/sleeping_dragon.jpg" column="auto" %}
 
 Our third workshop was attended by just *twelve* members -- a much lower turnout than either of our previous workshops. I had actually anticipated a significant dip in attendance at our third workshop (as a result of the issues I outlined in the ["Our First Major Setback" section of Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html#Our-First-Major-Setback)), but even though I saw it coming, it still hit me pretty hard and left me feeling more than a little disappointed (mostly in myself). However, this storm cloud had two clearly visible silver linings:
 1. Most of the attrition in attendance consisted of members who participated only minimally during the first two workshops, while nearly all of the members who attended the third workshop were eager participants in the first two workshops, and continued that trend during the third. Obviously, we'll need to figure out how to re-engage our less active members, but we can at least take comfort in the fact that we have a solid core of members whose unwavering enthusiasm will keep us energized and help us navigate even the most turbulent waters.
@@ -39,15 +41,33 @@ For our third workshop, we focused on providing simple definitions, real world e
 
 {% include aligner.html images="data-dojo/3c309192-71d0-47e8-bbed-2b5bcc76f19d_cropped.jpg" column="auto" %}
 
-# The Data Dojo Strikes Back! (Our Comeback Story)
+# The Data Dojo Strikes Back! 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt ultricies, nunc nisl ultricies nunc, sed aliquam
+
+## Wax On, Wax Off: The Importance of Practice
+- Drill the basics
+  - Leadership skills
+  - CoP best practices
+- Master the fundamentals
+  - Event planning
+  - Project management
+- Develop core strength
+  - Skill up at every opportunity
+  - Share knowledge with anyone who expresses interest
 
 {% include aligner.html images="data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg" column="auto" %}
 
-# Our Plans for Keeping the Data Dojo Strong and Healthy
+## The Art of War: Strategy First, Then Tactics
+- Beware of "tunnel vision" masquerading as "laser focus"
+- Zoom out, re-calibrate, and then zoom back in
+- Target attainable goals first, then set stretch goals
+- Don't be afraid to pivot when necessary
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt ultricies, nunc nisl ultricies nunc, sed aliquam
+> "Strategy without tactics is the slowest route to victory.  
+> Tactics without strategy is the noise before defeat."  
+> -- Sun Tzu, "The Art of War"
+
 
 {% include aligner.html images="data-dojo/cde3440a-bbe7-4131-9451-f33b85a99502_cropped.jpg" column="auto" %}
 
