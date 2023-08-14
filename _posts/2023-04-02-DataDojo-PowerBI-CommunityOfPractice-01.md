@@ -56,3 +56,6 @@ I collected survey responses for a few months, wanting to ensure that everyone i
 # Next Time: Our First Two Workshops, and First Major Setback
 
 Thanks for joining us for this first installment in the Data Dojo series! In the next installment, we'll talk about the first two workshops we held, the topics we covered, and a major setback we encountered after our second workshop, which has forced us to reevaluate and reconsider certain aspects of our approach. There are many great lessons to be learned from our experiences, so I hope you'll join us again next time!
+
+## Bonus: Data Dojo featured on Havens Consulting YouTube Channel!
+[![Data Dojo featured on Havens Consulting YouTube Channel!](../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png)](https://www.youtube.com/watch?v=OlvXbg6VjFE&list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&t=326s){:target="_blank"}
