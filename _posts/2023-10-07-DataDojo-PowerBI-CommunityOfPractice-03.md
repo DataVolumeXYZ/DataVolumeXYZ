@@ -56,6 +56,13 @@ I was chatting with my wife the other day about data terminology, and how import
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt ultricies, nunc nisl ultricies nunc, sed aliquam
 
 ## Wax On, Wax Off: The Importance of Practice
+
+One of the most important lessons I've learned from my experiences with the Data Dojo so far is that **practice is absolutely critical**. This is especially true for those of us who are responsible for leading and/or facilitating a Community of Practice, because our actions and decisions will have a direct impact on its success or failure, which in turn will have a direct impact on the success or failure of the organization as a whole. 
+
+{% include aligner.html images="data-dojo/wax_on_wax_off_cropped.jpg" column="auto" %}
+
+Successful Communities of Practice require effective leadership, and in order for us to be effective leaders, we must not only hone our technical skills, but also we must practice the craft of leadership. As leaders and facilitators of our Communities of Practice, we must:
+
 - Drill the basics
   - Leadership skills
   - CoP best practices
