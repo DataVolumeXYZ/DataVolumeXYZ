@@ -36,7 +36,7 @@ We hosted our third workshop on August 2nd, 2023, and as I mentioned in [Part 2]
 - Resume attracting new members, delivering value to our existing members, and providing a safe and welcoming environment for everyone
 - Recommit ourselves to building a strong community and fostering a culture of knowledge sharing and collaboration within our organization
 
-{% include aligner.html images="data-dojo/sleeping_dragon.jpg" column="auto" %}
+{% include aligner.html images="data-dojo/sleeping_dragon_1.jpg" column="auto" %}
 
 Our third workshop was attended by just *twelve* members -- a much lower turnout than either of our previous workshops. I had actually anticipated a significant dip in attendance at our third workshop (as a result of the issues I outlined in the ["Our First Major Setback" section of Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html#Our-First-Major-Setback)), but even though I saw it coming, it still hit me pretty hard and left me feeling more than a little disappointed (mostly in myself). However, this storm cloud had two clearly visible silver linings:
 1. Most of the attrition in attendance consisted of members who participated only minimally during the first two workshops, while nearly all of the members who attended the third workshop were eager participants in the first two workshops, and continued that trend during the third. Obviously, we'll need to figure out how to re-engage our less active members, but we can at least take comfort in the fact that we have a solid core of members whose unwavering enthusiasm will keep us energized and help us navigate even the most turbulent waters.
