@@ -17,7 +17,13 @@ description: A series about founding and fostering a successful Power BI Communi
 ---
 
 <!-- intro -->
-This is the third in a series of posts documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice. In [Part 1 of this series](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at Des Moines University (DMU). In [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), I shared brief summaries of our first two workshops, and a cautionary tale about our first major setback. In this post, I'll share a summary of our third workshop, talk about our comeback story, and outline our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come.
+This is the third in a series of posts documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice.
+In [Part 1](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at [Des Moines University (DMU)](https://dmu.edu). In [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), I talked about our first two workshops, and shared a cautionary tale about our first major setback.
+In this post, I'll tell you all about:
+  - Our third workshop, including a summary of the critical, foundational topic we covered, and why it was so important for us to establish that foundation before moving on to more advanced topics.
+  - How we clawed our way back from the brink of disaster following our setback, and began rebuilding the trust and confidence of our members.
+  - Our plans for ensuring that the Data Dojo will continue to grow and thrive for many years to come.
+
 <!--more-->
 Thank you for joining us on this adventure!
 
