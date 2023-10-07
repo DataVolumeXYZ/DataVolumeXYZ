@@ -51,10 +51,6 @@ I was chatting with my wife the other day about data terminology, and how import
 
 {% include aligner.html images="data-dojo/3c309192-71d0-47e8-bbed-2b5bcc76f19d_cropped.jpg" column="auto" %}
 
-# The Data Dojo Strikes Back! 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis tincidunt ultricies, nunc nisl ultricies nunc, sed aliquam
-
 ## Wax On, Wax Off: The Importance of Practice
 
 One of the most important lessons I've learned from my experiences with the Data Dojo so far is that **practice is absolutely critical**. This is especially true for those of us who are responsible for leading and/or facilitating a Community of Practice, because our actions and decisions will have a direct impact on its success or failure, which in turn will have a direct impact on the success or failure of the organization as a whole. 
@@ -69,11 +65,9 @@ Successful Communities of Practice require effective leadership, and in order fo
 - Master the fundamentals
   - Event planning
   - Project management
-- Develop core strength
+- Develop our core strength
   - Skill up at every opportunity
   - Share knowledge with anyone who expresses interest
-
-{% include aligner.html images="data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg" column="auto" %}
 
 ## The Art of War: Strategy First, Then Tactics
 - Beware of "tunnel vision" masquerading as "laser focus"
@@ -84,7 +78,6 @@ Successful Communities of Practice require effective leadership, and in order fo
 > "Strategy without tactics is the slowest route to victory.  
 > Tactics without strategy is the noise before defeat."  
 > -- Sun Tzu, "The Art of War"
-
 
 {% include aligner.html images="data-dojo/cde3440a-bbe7-4131-9451-f33b85a99502_cropped.jpg" column="auto" %}
 
