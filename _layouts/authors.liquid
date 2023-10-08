@@ -1,0 +1,10 @@
+---
+layout: page
+---
+<ul>
+  {% for author in site.authors %}
+    <li>
+      <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
+    </li>
+  {% endfor %}
+</ul>
