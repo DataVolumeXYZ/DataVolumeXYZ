@@ -20,7 +20,7 @@ description: A series about founding and fostering a successful Power BI Communi
 This is the third in a series of posts documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice.
 In [Part 1](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at [Des Moines University (DMU)](https://dmu.edu). In [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), I talked about our first two workshops, and shared a cautionary tale about our first major setback.
 In this post, I'll tell you all about:
-  - Our third workshop, including a summary of the critical, foundational topic we covered, and why it was so important for us to establish that foundation before moving on to more advanced topics.
+  - Our third workshop, including a summary of the critical, foundational topics we covered, and why it was so important for us to establish that foundation before moving on to more advanced topics.
   - How we clawed our way back from the brink of disaster following our setback, and began rebuilding the trust and confidence of our members.
   - Our plans for ensuring that the Data Dojo will continue to grow and thrive for many years to come.
 
@@ -31,7 +31,7 @@ Thank you for joining us on this adventure!
 
 # Waking the Sleeping Dragon (Our Third Workshop)
 
-We hosted our third workshop on August 2nd, 2023, and as I mentioned in [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), it had been a *very* long time since our last workshop, so the stakes were quite high. We had to prove to everyone (ourselves included) that we could:
+We hosted our third workshop on August 2nd, 2023, and as I mentioned in [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), it had been a *very* long time since our last workshop, so the stakes were quite high. We had to prove to everyone (especially ourselves) that we could:
 - Rebound quickly from a major setback
 - Resume attracting new members, delivering value to our existing members, and providing a safe and welcoming environment for everyone
 - Recommit ourselves to building a strong community and fostering a culture of knowledge sharing and collaboration within our organization
@@ -43,33 +43,33 @@ Our third workshop was attended by just *twelve* members -- a much lower turnout
 2. We also had several new members join us for the first time, and we were thrilled to welcome them to the Data Dojo. We're always excited when new members arrive, but it was especially encouraging to see new members put their faith in us during a time when we were still reeling from a major setback, and the future of the Data Dojo was perhaps uncertain, or even precarious (particularly from their outside perspective).
 The fact that these new members chose to join our ranks _**despite our readily apparent struggles and shortcomings**_ is a testament to the strength and resilience of our community, and the real value that our members provide, both to each other and to the organization at large.
 
-For our third workshop, we focused on providing simple definitions, real world examples, and clear explanations for most of the common technical "jargon" terms that Data Dojo members are likely to encounter while working with data ([slide deck pdf](../../../assets/doc/DMU_Data_Dojo_-_Meeting_003.pdf){:target="_blank"}). Compared to the topics we covered in our previous workshops, this one was probably a little boring. However, it is absolutely critical for everyone working with data in an organization to have a unified vocabulary and a shared understanding of how each term relates to the organization's overall data analytics strategy and specific implementation. This is especially true for a Community of Practice like the Data Dojo, where members are encouraged to share their knowledge and collaborate with each other. If we don't all speak the same language, then we can't communicate effectively with each other, and all of our collaborative and knowledge-sharing efforts will be severely hampered. So, even though this subject may have been a little dry, it was still very important for us to get everyone speaking the same technological dialect, and I'm glad we did it.
+In our third workshop, we focused on providing simple definitions, real world examples, and clear explanations for most of the common technical "jargon" terms that Data Dojo members are likely to encounter while working with data ([slide deck pdf](../../../assets/doc/DMU_Data_Dojo_-_Meeting_003.pdf){:target="_blank"}). Compared with the topics we covered in our previous workshops, this one was probably a little boring. However, it is absolutely critical for everyone working with data in an organization to have a unified vocabulary and a shared understanding of how each term relates to the organization's overall data analytics strategy and specific implementation. This is especially true for a Community of Practice like the Data Dojo, where members are encouraged to share their knowledge and collaborate with each other. If we don't all speak the same language, then we can't communicate effectively with each other, and all of our collaborative and knowledge-sharing efforts will be severely hampered. So, even though this subject may have been a little dry, it was still very important for us to get everyone speaking the same technological dialect, and I'm glad we did it.
 
 I was chatting with my wife the other day about data terminology, and how important it is for everyone in the organization to have a shared understanding of what the various terms mean. She made some excellent points, and I thought I'd share them here:
->It's not uncommon for accounting/finance and IT to have pretty terrible communication with each other, because they're usually speaking two very different languages. Establishing a common language around data in the organization is a great way to not only increase data literacy in the organization at large, but also to start breaking down the language barriers preventing individual business units within the organization from understanding each other and collaborating effectively. Data literacy and a common language around data in the organization enable clearer, more effective communication of business needs and objectives throughout the organization.  
+>It's not uncommon for accounting/finance and IT to have terrible communication with each other, because they're usually speaking two very different languages. Establishing a common language around data in the organization is a great way to not only increase data literacy in the organization at large, but also to start breaking down the language barriers preventing individual business units within the organization from understanding each other and collaborating effectively. Data literacy and a common language around data in the organization enable clearer, more effective communication of needs and objectives throughout the organization.  
 > -- [Erin Howland](https://www.linkedin.com/in/erin-howland/){:target="_blank"}
 
 {% include aligner.html images="data-dojo/3c309192-71d0-47e8-bbed-2b5bcc76f19d_cropped.jpg" column="auto" %}
 
-## Wax On, Wax Off: The Importance of Practice
+# Wax On, Wax Off: The Importance of Practice
 
 One of the most important lessons I've learned from my experiences with the Data Dojo so far is that **practice is absolutely critical**. This is especially true for those of us who are responsible for leading and/or facilitating a Community of Practice, because our actions and decisions will have a direct impact on its success or failure, which in turn will have a direct impact on the success or failure of the organization as a whole. 
 
 {% include aligner.html images="data-dojo/wax_on_wax_off_cropped.jpg" column="auto" %}
 
-Successful Communities of Practice require effective leadership, and in order for us to be effective leaders, we must not only hone our technical skills, but also we must practice the craft of leadership. As leaders and facilitators of our Communities of Practice, we must:
+Successful Communities of Practice require effective leadership, and in order for us to be effective leaders, we must not only hone our technical skills, but also we must practice the craft of leadership itself. Therefore, as leaders and facilitators of our Communities of Practice, we must:
 
-- Drill the basics
-  - Leadership skills
-  - CoP best practices
-- Master the fundamentals
+- "Find a mentor" -- Seek out and learn from those who have already achieved what we aspire to achieve:
   - Event planning
   - Project management
-- Develop our core strength
+- "Drill the basics" -- Research and learn as much as possible about:
+  - Leadership best practices
+  - CoP best practices
+- "Develop core strength" -- 
   - Skill up at every opportunity
   - Share knowledge with anyone who expresses interest
 
-## The Art of War: Strategy First, Then Tactics
+# The Art of War: Strategy First, Then Tactics
 - Beware of "tunnel vision" masquerading as "laser focus"
 - Zoom out, re-calibrate, and then zoom back in
 - Target attainable goals first, then set stretch goals
