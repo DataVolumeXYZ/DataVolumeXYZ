@@ -65,12 +65,15 @@ Here's an outline of what we covered ([slide deck pdf](../../../assets/doc/DMU_D
 {% include aligner.html images="data-dojo/fu-3624167-cropped.jpg" column="auto" %}
 
 # Our First Major Setback
+{: #Our-First-Major-Setback }
 
 After such a strong start, it really felt like nothing could stop us, and we were well on our way to achieving our vision of a data-driven DMU. But then, we hit a snag. **A *big* one.**
 
 For several years, DMU has been in the process of [building a new campus in West Des Moines](https://www.dmu.edu/new-campus/){:target="_blank"}, and it's scheduled to open later this year (Fall of 2023). Of course, this is a huge undertaking, and it's been a major focus for the entire university. As you can probably imagine, every department at DMU has been extremely busy with multiple projects related to the new campus transition, and that has had a significant impact on the amount of time and energy we have been able to devote to the Data Dojo. 
 
 While I'd really like to blame all of those new campus projects and their associated time constraints for slowing us down, that would only be partially true. I also made a few mistakes along the way, and I'd like to share them with you, so that you can avoid making the same mistakes.
+
+{% include aligner.html images="data-dojo/223ef78e-b75f-4a4c-b1fc-165d335a3ca4.jpg" column="auto" %}
 
 ## Mistake #1: Failing to Keep a Consistent Schedule
 
@@ -103,3 +106,6 @@ Well, that sure sounded like a **lot** of bad news! But don't worry; there's lig
 In the next post of this series, I'll share our comeback story, and talk about what we're doing to ensure that the Data Dojo at Des Moines University will continue to grow and thrive for many years to come. Stay tuned!
 
 {% include aligner.html images="data-dojo/data-team-tunnel-light-cropped.jpg" column="auto" %}
+
+## Bonus: Data Dojo featured on Havens Consulting YouTube Channel!
+[![Data Dojo featured on Havens Consulting YouTube Channel!](../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png)](https://www.youtube.com/watch?v=OlvXbg6VjFE&list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&t=326s){:target="_blank"}
