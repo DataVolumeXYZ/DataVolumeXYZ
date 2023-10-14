@@ -34,7 +34,7 @@ We hosted our fourth workshop on _, and it was attended by _ members. This was a
 
 {% include aligner.html images="data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg" column="auto" %}
 
-Our fourth workshop was a very exciting milestone for us because, unlike any of our previous workshops (which mostly consisted of PowerPoint presentations and Q&A sessions), this was an **actual workshop** -- no slide deck, just a live, interactive, hands-on tour of Power BI Desktop!
+Our fourth workshop was a very exciting milestone for us because, unlike any of our previous workshops (which mostly consisted of PowerPoint presentations and Q&A sessions), this was an **actual workshop** -- no slide deck, just a live, interactive, hands-on tour of Power BI Desktop! This was our first true "workshop" in the traditional sense of the word, featuring an interactive walkthrough of installing and using Power BI Desktop, as well as a hands-on introduction to our official Data Dojo report template and some of its handy built-in features.
 
 {% include aligner.html images="data-dojo/powerpoint_vs_livedemo_piechart.jpg" column="auto" %}
 
