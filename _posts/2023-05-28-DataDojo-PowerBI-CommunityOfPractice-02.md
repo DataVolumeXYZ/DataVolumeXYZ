@@ -96,10 +96,10 @@ Sadly, as you've probably guessed by now, the release date for that new bugfix v
 The cumulative result of these indefinite delays and communication failures was that the Data Dojo didn't have a *single* workshop for nearly *three quarters of a year*, and much of our initial momentum and enthusiasm were lost. I felt like I had let everyone down, and I was worried that the Data Dojo might never recover. 
 
 I was discussing this situation with my wife the other day, trying to determine exactly where I had gone wrong, and I think she really nailed it with her analysis: 
->"It's a bit idealistic to assume that anything in tech happens on a convenient or timely schedule. Prioritizing conversation, regardless of content and attendence perfection, is clearly an important factor in developing the kind of data-driven and data-literate culture that any organization would benefit from."  
-> -- [Erin Howland](https://www.linkedin.com/in/erin-howland/){:target="_blank"}
+>It's a bit idealistic to assume that anything in tech happens on a convenient or timely schedule. Prioritizing conversation, regardless of content and attendence perfection, is clearly an important factor in developing the kind of data-driven and data-literate culture that any organization would benefit from.  
+> &ensp;&ensp;&ensp;&ensp;-- [Erin Howland](https://www.linkedin.com/in/erin-howland/){:target="_blank"}
 
-# Next Time: The Data Dojo Strikes Back!
+# Next Time: Waking the Sleeping Dragon
 
 Well, that sure sounded like a **lot** of bad news! But don't worry; there's light at the end of this tunnel. While we **have** reached the conclusion of this article, we have **not** seen the last of the Data Dojo. 
 
