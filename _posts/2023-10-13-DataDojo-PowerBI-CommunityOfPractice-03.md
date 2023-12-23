@@ -11,14 +11,14 @@ tags:
   - Data Dojo
   - Data Literacy
   - Knowledge Sharing
-excerpt_start: <!--excerpt_start-->
+excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 draft: false
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
 
 <!-- intro -->
-<!--excerpt_start-->
+<!--excerpt-->
 This is the third installment in a series documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice. In this post, I'll tell you about our third workshop (including a summary of the foundational topic we covered and why it was so important for us to establish this baseline before moving on to more advanced topics), how we clawed our way back from the brink of disaster following our setback and began rebuilding the trust and confidence of our members, and our plans for ensuring that the Data Dojo will continue to grow and thrive for many years to come.
 <!--more-->
 - In [Part 1](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at [Des Moines University (DMU)](https://dmu.edu). 
