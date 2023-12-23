@@ -18,7 +18,7 @@ footer_text: >-
   
 
 # Blog
-excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+excerpt: custom                                           # Or "truncate" (first 250 characters) or "false" to disable
 post_navigation: true
 color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
 
