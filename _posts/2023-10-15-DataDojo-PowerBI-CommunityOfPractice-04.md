@@ -18,7 +18,7 @@ description: A series about founding and fostering a successful Power BI Communi
 ---
 
 <!-- intro -->
-<!--excerpt_start-->
+<!--excerpt-->
 This is the fourth installment in a series documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice. In this post, I'll tell you about our fourth and fifth workshops (our most important and impactful workshops yet), and I'll explain why I believe that every Power BI Community of Practice should host workshops like these at least once per quarter.
 <!--more-->
 - In [Part 1](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at [Des Moines University (DMU)](https://dmu.edu). 
