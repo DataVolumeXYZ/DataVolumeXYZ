@@ -23,7 +23,7 @@ I joined [Des Moines University](https://dmu.edu) as a Senior Business Intellige
 
 The natural solution was to establish an inter-disciplinary Power BI [Community of Practice (CoP)](https://en.wikipedia.org/wiki/Community_of_practice) at DMU, which is exactly what we are now in the process of doing. We call our CoP the **Data Dojo**, and I'm excited to share our journey with you. 
 
-This is the first in a series of posts that will document our challenges, progress, setbacks, and victories. In this installment, we'll cover the founding of the Data Dojo, and next time, we'll talk about the first two workshops we held, the topics we covered, some of the difficulties we've encountered since then, and how we plan to move forward from here. I hope you'll join us on this adventure!
+This is the first installment in a series that will document our challenges, progress, setbacks, and victories. In this installment, we'll cover the founding of the Data Dojo, and next time, we'll talk about the first two workshops we held, the topics we covered, some of the difficulties we've encountered since then, and how we plan to move forward from here. I hope you'll join us on this adventure!
 <!--more--> 
 
 # Founding the Data Dojo

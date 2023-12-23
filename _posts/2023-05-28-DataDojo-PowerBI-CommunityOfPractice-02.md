@@ -18,10 +18,12 @@ description: A series about founding and fostering a successful Power BI Communi
 ---
 
 <!-- intro -->
-This is the second in a series of posts documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice. In [Part 1 of this series](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at Des Moines University (DMU). 
 <!--excerpt_start-->
-In this post, I'll share brief summaries of our first two workshops, and a cautionary tale about our first major setback. 
-<!--more-->Thank you for joining us on this adventure!
+This is the second installment in a series documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice. In this post, I'll share brief summaries of our first two workshops, and a cautionary tale about our first major setback. 
+<!--more-->
+- In [Part 1 of this series](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at [Des Moines University (DMU)](https://dmu.edu).
+
+Thank you for joining us on this adventure!
 
 {% include aligner.html images="data-dojo/cyberpunk_data_manga_dojo_1_cropped.jpg" column="auto" %}
 
