@@ -6,12 +6,15 @@ author: JamesDBartlett3
 feature-img: "assets/img/pexels/soundwaves.jpg"
 thumbnail: "assets/img/pexels/pbitoolswatchps_externaltoolsribbon.png"
 tags: [Power BI, External Tools, PowerShell, Version Control, Git, pbi-tools]
+excerpt_start: <!--excerpt_start-->
 excerpt_separator: <!--more-->
 ---
 
-Many of you have probably heard of [pbi-tools](https://pbi.tools) (by [Mathias Thierbach](https://github.com/mthierba)). It's a powerful command line application which can extract the source code from a Power BI Desktop (.pbix) file and save it in a folder as .json files. This is great for folks who want to save and track their changes to Power BI reports and datasets in a proper version control system, such as Git. 
+<!--excerpt_start-->
+Many of you have probably heard of [pbi-tools](https://pbi.tools) (by [Mathias Thierbach](https://github.com/mthierba)). It's a powerful command line application which can extract the source code from a Power BI Desktop (.pbix) file and save it in a folder as .json files. This is great for folks who want to save and track their changes to Power BI reports and datasets in a proper version control system, such as Git.
 
-However, because pbi-tools is a command line application, it must be run from a terminal window (like CMD or PowerShell). <!--more--> This is probably not a deterrent for those who are comfortable with the command line, but it can be a bit intimidating for those who are not. So I created a simple External Tool for Power BI Desktop that launches pbi-tools in a new PowerShell window with a single click of a button: **PbiToolsWatchPS**
+However, because pbi-tools is a command line application, it must be run from a terminal window (like CMD or PowerShell).  This is probably not a deterrent for those who are comfortable with the command line, but it can be a bit intimidating for those who are not. So I created a simple External Tool for Power BI Desktop that launches pbi-tools in a new PowerShell window with a single click of a button: **PbiToolsWatchPS**
+<!--more-->
 
 ## What is PbiToolsWatchPS, and how does it work?
 

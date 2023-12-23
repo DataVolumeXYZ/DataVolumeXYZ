@@ -11,13 +11,16 @@ tags:
   - Data Dojo
   - Data Literacy
   - Knowledge Sharing
+excerpt_start: <!--excerpt_start-->
 excerpt_separator: <!--more-->
 draft: false
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
 
 <!-- intro -->
-This is the second in a series of posts documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice. In [Part 1 of this series](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at Des Moines University (DMU), and in this post, I'll share brief summaries of our first two workshops, and a cautionary tale about our first major setback. 
+This is the second in a series of posts documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice. In [Part 1 of this series](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at Des Moines University (DMU). 
+<!--excerpt_start-->
+In this post, I'll share brief summaries of our first two workshops, and a cautionary tale about our first major setback. 
 <!--more-->Thank you for joining us on this adventure!
 
 {% include aligner.html images="data-dojo/cyberpunk_data_manga_dojo_1_cropped.jpg" column="auto" %}
