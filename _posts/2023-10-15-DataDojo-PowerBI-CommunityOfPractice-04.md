@@ -3,7 +3,7 @@ layout: post
 title: "The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)"
 author: JamesDBartlett3
 feature-img: assets/img/data-dojo/matrix_aikido.png
-thumbnail: assets/img/data-dojo/9a4c84f0-74da-475a-bd01-64db7415d8f8_cropped.jpg
+thumbnail: assets/img/data-dojo/masked_cyberpunk_data_manga_dojo_25962e35-2be0-4801-b645-fae50d5411cb_cropped.jpg
 tags:
   - Power BI
   - Community of Practice
@@ -11,32 +11,52 @@ tags:
   - Data Dojo
   - Data Literacy
   - Knowledge Sharing
+excerpt_start: <!--excerpt_start-->
 excerpt_separator: <!--more-->
 draft: true
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
 
 <!-- intro -->
-This is the fourth in a series of posts documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice. 
+<!--excerpt_start-->
+This is the fourth installment in a series documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice. In this post, I'll tell you about our fourth and fifth workshops (our most important and impactful workshops yet), and I'll explain why I believe that every Power BI Community of Practice should host workshops like these at least once per quarter.
+<!--more-->
 - In [Part 1](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at [Des Moines University (DMU)](https://dmu.edu). 
 - In [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), I shared summaries of our first two workshops, and a cautionary tale about our first major setback. 
 - In [Part 3](../../../2023/10/07/DataDojo-PowerBI-CommunityOfPractice-03.html), I shared a summary of our third workshop, talked about our comeback story, and outlined our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come. 
-- In this post, I'll tell you about our fourth workshop, which was our most important and impactful workshop yet, and I'll explain why I believe that every Power BI Community of Practice should host a workshop like this at least once per year.
 
-<!--more-->
 Thank you for joining us on this adventure!
 
-{% include aligner.html images="data-dojo/abac1192-636f-428b-b172-6bdab40f6f9_cropped.jpg" column="auto" %}
+{% include aligner.html images="data-dojo/masked_cyberpunk_data_manga_dojo_25962e35-2be0-4801-b645-fae50d5411cb.jpg" column="auto" %}
 
 # The Data Dojo Strikes Back (Our Fourth Workshop)
 
-We hosted our fourth workshop on _, and it was attended by _ members. This was a significant improvement in turnout over our third workshop, and a very encouraging sign that the Data Dojo is finally back on track, healthy, and growing again. We were thrilled to welcome several new members to the Data Dojo for the first time at this workshop, and we're excited to not only help them discover their own unique paths to data literacy and mastery, but also to learn from them as they bring their own unique knowledge, perspectives, and experiences to the table.
+We hosted our fourth workshop on September 19th, 2023, and it was attended by seventeen members. This was a significant improvement in turnout over our third workshop, and a very encouraging sign that the Data Dojo is finally back on track, healthy, and growing again. We were thrilled to welcome several new members to the Data Dojo for the first time at this workshop, and we're excited to not only help them discover their own unique paths to data literacy and mastery, but also to learn from them as they bring their own unique knowledge, perspectives, and experiences to the table.
 
 {% include aligner.html images="data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg" column="auto" %}
 
-Our fourth workshop was a very exciting milestone for us because, unlike any of our previous workshops (which mostly consisted of PowerPoint presentations and Q&A sessions), this was an **actual workshop** -- no slide deck, just a live, interactive, hands-on tour of Power BI Desktop! This was our first true "workshop" in the traditional sense of the word, featuring an interactive walkthrough of installing and using Power BI Desktop, as well as a hands-on introduction to our official Data Dojo report template and some of its handy built-in features.
+This was a very exciting milestone for us because, unlike any of our previous workshops (which mostly consisted of PowerPoint presentations and Q&A sessions), this was an **actual workshop** -- no slide deck, just a live, interactive, hands-on tour of Power BI Desktop! This was our first true "workshop" in the traditional sense of the word, featuring an interactive walkthrough of installing and using Power BI Desktop, as well as an introduction to our official Data Dojo report template and some of its handy built-in features.
+<!-- add details here -->
 
 {% include aligner.html images="data-dojo/powerpoint_vs_livedemo_piechart.jpg" column="auto" %}
+
+# The Path of Power Query (Our Fifth Workshop)
+
+On December 5th, 2023, we hosted our fifth workshop, which picked up right where we left off with our fourth workshop by diving deep into Power Query. This was our second true "workshop" in the traditional sense of the word, featuring an interactive walkthrough of the Power Query interface in Power BI Desktop, and a live demonstration of how to retrieve, transform, clean, and reshape data. 
+
+At DMU, we are fortunate enough to have a robust and mature on-premises Data Warehouse which contains just about all of the data generated by the business, spanning several different databases and a dozen or so different schemas. In order to make our Data Warehouse data as accessible as possible to report developers throughout the organization, we have created a complete mirror of the Data Warehouse in Power BI using Dataflows, so no one needs to connect to th. Our official Data Dojo report template ships with a custom M function called `fn_GetTableFromDataflow`, which can be invoked to fetch any table from a Dataflow in Power BI:
+
+```fsharp
+// fn_GetTableFromDataflow
+// This function returns a table from a Dataflow in Power BI
+(Workspace as text, Dataflow as text, Table as text, RowLimit as number) as table =>
+  let
+    Source = PowerPlatform.Dataflows(null),
+
+
+```
+
+{% include aligner.html images="data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg" column="auto" %}
 
 # Next Time: ___
 
