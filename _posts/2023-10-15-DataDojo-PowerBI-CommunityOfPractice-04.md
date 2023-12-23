@@ -11,7 +11,7 @@ tags:
   - Data Dojo
   - Data Literacy
   - Knowledge Sharing
-excerpt_start: <!--excerpt_start-->
+excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 draft: true
 description: A series about founding and fostering a successful Power BI Community of Practice
