@@ -45,9 +45,11 @@ In short, PbiToolsWatchPS will always run pbi-tools in Watch Mode on whatever .p
 ## How do I install PbiToolsWatchPS?
 
 1. Download and extract the latest release of [pbi-tools](https://pbi.tools), then [add the location of pbi-tools.exe to your PATH environment variable](https://pbi.tools/tutorials/getting-started-cli.html#4-optionally-add-the-tool-folder-to-your-path-environment-setting).
-2. Download [046-PbiToolsWatchPS5.1.pbitool.json](https://raw.githubusercontent.com/JamesDBartlett3/PowerBits/main/ExternalTools/046-PbiToolsWatchPS5.1.pbitool.json) (from my [PowerBits repo on GitHub](https://github.com/JamesDBartlett3/PowerBits)) and save it in "C:\Program Files (x86)\Common Files\Microsoft Shared\Power BI Desktop\External Tools\\"
-3. If Power BI Desktop is already running, restart it
-4. In Power BI Desktop, open the "External Tools" ribbon tab, and you should see a new button labeled "pbi-tools: Watch"
+2. Download [046-PbiToolsWatchPS5.1.pbitool.json](https://raw.githubusercontent.com/JamesDBartlett3/PowerBits/main/ExternalTools/046-PbiToolsWatchPS5.1.pbitool.json) (from my [PowerBits repo on GitHub](https://github.com/JamesDBartlett3/PowerBits)) and save it in this directory:  
+```C:\Program Files (x86)\Common Files\Microsoft Shared\Power BI Desktop\External Tools\```
+	* _**Note: If this is your first time installing an External Tool for Power BI Desktop, this folder will not yet exist, so you'll need to create it.**_
+1. If Power BI Desktop is already running, restart it
+2. In Power BI Desktop, open the "External Tools" ribbon tab, and you should see a new button labeled "pbi-tools: Watch"
 
 {% include aligner.html images="pexels/pbitoolswatchps_externaltoolsribbon.png" column="auto" %}
 
