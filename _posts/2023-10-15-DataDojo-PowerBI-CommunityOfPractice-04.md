@@ -62,7 +62,7 @@ Our latest official Data Dojo report template now ships with a custom Power Quer
 // remove the limit (by passing -1 as the RowLimit parameter) when 
 // the model is ready for testing.
 
-( 
+(
   Workspace as text,
   Dataflow as text,
   Table as text,

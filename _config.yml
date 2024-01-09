@@ -12,7 +12,7 @@ favicon: assets/favicon.ico                            # Icon displayed in the t
 
 # Header and footer text
 header_text: Mixing and Mastering Data in Every Dimension  # Change Blog header text
-header_feature_image: assets/img/header/synthwave.jpeg
+header_feature_image: assets/img/header/equalizer-skyline.jpeg
 header_feature_image_responsive: true
 footer_text: >-
   
