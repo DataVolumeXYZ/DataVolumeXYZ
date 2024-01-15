@@ -58,9 +58,6 @@ We started by walking the participants through the process of installing Power B
     - Help
     - External Tools
 - Power Query Editor ('Transform Data' Window)
-  - Views
-    - Data Preview
-    - Schema
   - Panes
     - Queries
     - Applied steps
