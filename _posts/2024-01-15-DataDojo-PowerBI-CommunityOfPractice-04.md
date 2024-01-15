@@ -15,7 +15,7 @@ tags:
   - Dataflow
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
-draft: true
+draft: false
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
 
