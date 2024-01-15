@@ -21,13 +21,16 @@
             {% include blog/post_info.liquid author=post.author date=post.date %}
           </header>
           {% if site.excerpt or site.theme_settings.excerpt %}
-              <div class="excerpt">
-                  {% if site.excerpt == "truncate" %}
-                     {{ post.content | strip_html | truncate: '250' | escape }}
-                  {% else %}
-                     {{ post.excerpt | strip_html | escape }}
-                  {% endif %}
-              </div>
+            <div class="excerpt">
+              {% if site.excerpt == "truncate" %}
+                {{ post.content | strip_html | truncate: '250' | escape }}
+              {% elsif site.excerpt == "custom" %}
+                {% assign excerptParts = post.excerpt | split: post.excerpt_start %}
+                {{ excerptParts[1] | strip_html | escape }}
+              {% else %}
+                {{ post.excerpt | strip_html | escape }}
+              {% endif %}
+            </div>
           {% endif %}
       </span>
     </div>

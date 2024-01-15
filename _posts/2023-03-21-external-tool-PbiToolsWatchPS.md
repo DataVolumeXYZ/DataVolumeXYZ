@@ -6,12 +6,15 @@ author: JamesDBartlett3
 feature-img: "assets/img/pexels/soundwaves.jpg"
 thumbnail: "assets/img/pexels/pbitoolswatchps_externaltoolsribbon.png"
 tags: [Power BI, External Tools, PowerShell, Version Control, Git, pbi-tools]
+excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 ---
 
-Many of you have probably heard of [pbi-tools](https://pbi.tools) (by [Mathias Thierbach](https://github.com/mthierba)). It's a powerful command line application which can extract the source code from a Power BI Desktop (.pbix) file and save it in a folder as .json files. This is great for folks who want to save and track their changes to Power BI reports and datasets in a proper version control system, such as Git. 
+<!--excerpt-->
+Many of you have probably heard of [pbi-tools](https://pbi.tools) (by [Mathias Thierbach](https://github.com/mthierba)). It's a powerful command line application which can extract the source code from a Power BI Desktop (.pbix) file and save it in a folder as .json files. This is great for folks who want to save and track their changes to Power BI reports and datasets in a proper version control system, such as Git.
 
-However, because pbi-tools is a command line application, it must be run from a terminal window (like CMD or PowerShell). <!--more--> This is probably not a deterrent for those who are comfortable with the command line, but it can be a bit intimidating for those who are not. So I created a simple External Tool for Power BI Desktop that launches pbi-tools in a new PowerShell window with a single click of a button: **PbiToolsWatchPS**
+However, because pbi-tools is a command line application, it must be run from a terminal window (like CMD or PowerShell).  This is probably not a deterrent for those who are comfortable with the command line, but it can be a bit intimidating for those who are not. So I created a simple External Tool for Power BI Desktop that launches pbi-tools in a new PowerShell window with a single click of a button: **PbiToolsWatchPS**
+<!--more-->
 
 ## What is PbiToolsWatchPS, and how does it work?
 
@@ -42,9 +45,11 @@ In short, PbiToolsWatchPS will always run pbi-tools in Watch Mode on whatever .p
 ## How do I install PbiToolsWatchPS?
 
 1. Download and extract the latest release of [pbi-tools](https://pbi.tools), then [add the location of pbi-tools.exe to your PATH environment variable](https://pbi.tools/tutorials/getting-started-cli.html#4-optionally-add-the-tool-folder-to-your-path-environment-setting).
-2. Download [046-PbiToolsWatchPS5.1.pbitool.json](https://raw.githubusercontent.com/JamesDBartlett3/PowerBits/main/ExternalTools/046-PbiToolsWatchPS5.1.pbitool.json) (from my [PowerBits repo on GitHub](https://github.com/JamesDBartlett3/PowerBits)) and save it in "C:\Program Files (x86)\Common Files\Microsoft Shared\Power BI Desktop\External Tools\\"
-3. If Power BI Desktop is already running, restart it
-4. In Power BI Desktop, open the "External Tools" ribbon tab, and you should see a new button labeled "pbi-tools: Watch"
+2. Download [046-PbiToolsWatchPS5.1.pbitool.json](https://raw.githubusercontent.com/JamesDBartlett3/PowerBits/main/ExternalTools/046-PbiToolsWatchPS5.1.pbitool.json) (from my [PowerBits repo on GitHub](https://github.com/JamesDBartlett3/PowerBits)) and save it in this directory:  
+```C:\Program Files (x86)\Common Files\Microsoft Shared\Power BI Desktop\External Tools\```
+	* _**Note: If this is your first time installing an External Tool for Power BI Desktop, this folder will not yet exist, so you'll need to create it.**_
+1. If Power BI Desktop is already running, restart it
+2. In Power BI Desktop, open the "External Tools" ribbon tab, and you should see a new button labeled "pbi-tools: Watch"
 
 {% include aligner.html images="pexels/pbitoolswatchps_externaltoolsribbon.png" column="auto" %}
 

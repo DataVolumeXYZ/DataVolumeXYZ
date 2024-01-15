@@ -16,9 +16,9 @@ layout: default
   <section class="post-content">
     {% if page.bootstrap %}
       <div class="bootstrap-iso">
-      {% endif %}
-      {{ content }}
-      {% if page.bootstrap %}
+    {% endif %}
+    {{ content }}
+    {% if page.bootstrap %}
       </div>
     {% endif %}
   </section>
@@ -61,40 +61,32 @@ layout: default
 
   {% if page.color %}
     .post-content a {
-      color: {{ page.color }}
-       !important;
+      color: {{ page.color }} !important;
     }
     .share-buttons a {
-      color: {{ page.color }}
-       !important;
+      color: {{ page.color }} !important;
     }
     .tag-list a:not(:hover) {
-      color: {{ page.color }}
-       !important;
+      color: {{ page.color }} !important;
     }
     div#post-nav a {
-      color: {{ page.color }}
-       !important;
+      color: {{ page.color }} !important;
     }
     footer a {
-      color: {{ page.color }}
-       !important;
+      color: {{ page.color }} !important;
     }
     .site-header nav a:hover {
-      color: {{ page.color }}
-       !important;
+      color: {{ page.color }} !important;
     }
     a.button:hover {
-      background: {{ page.color }}
-       !important;
+      background: {{ page.color }} !important;
       border: 1px solid{{ page.color }}!important;
       color: white;
       text-decoration: none;
       filter: none;
     }
     header#main {
-      background-color: {{ page.color }}
-       !important;
+      background-color: {{ page.color }} !important;
       background-image: url('{{ site.color_image | relative_url }}');
     }
   {% endif %}
@@ -105,3 +97,6 @@ layout: default
     }
   {% endif %}
 </style>
+
+<!-- run code in post.js after page has loaded -->
+<script src="/assets/js/post.js"></script>

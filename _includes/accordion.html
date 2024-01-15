@@ -1,0 +1,20 @@
+<details>
+	<summary>
+		{% if include.title_underline %}<u>{% endif %}
+		{% if include.title_bold %}<b>{% endif %}
+		{% if include.title_italic %}<i>{% endif %}
+		{{ include.title_text }}
+		{% if include.title_italic %}</i>{% endif %}
+		{% if include.title_bold %}</b>{% endif %}
+		{% if include.title_underline %}</u>{% endif %}
+	</summary>
+	<p>
+	{% if include.description_underline %}<u>{% endif %}
+	{% if include.description_bold %}<b>{% endif %}
+	{% if include.description_italic %}<i>{% endif %}
+	{{ include.description_text }}
+	{% if include.description_italic %}</i>{% endif %}
+	{% if include.description_bold %}</b>{% endif %}
+	{% if include.description_underline %}</u>{% endif %}
+	</p> 
+</details>
