@@ -120,7 +120,7 @@ in
   FilterLogic
 ```
 
-To import a table from a Dataflow in Power BI, the report author only needs to invoke the `fn_GetTableFromDataflow` function, passing in the name (or GUID) of the Power BI Workspace, the name (or GUID) of the target Dataflow, the name of the table, and the number of rows to retrieve. For example, to import the `FactExamScore` table from the `DataWarehouse` Dataflow in the `DataDojo` Workspace, limiting the results to one million rows for testing purposes, the report author must simply enter the parameter values into the `fn_GetTableFromDataflow` function's inputs and click `Invoke`, and then a new query containing the following M code will be automatically generated:
+To import a table from a Dataflow in Power BI, the report author only needs to invoke the `fn_GetTableFromDataflow` function, passing in the name (or GUID) of the Power BI Workspace, the name (or GUID) of the target Dataflow, the name of the table, and the number of rows to retrieve. For example, to import the `FactExamScore` table from the `DataWarehouse` Dataflow in the `DataDojo` Workspace, limiting the results to one million rows for testing purposes, the report author must simply enter the parameter values into the parameter fields in the `fn_GetTableFromDataflow` function's UI and click `Invoke`, and then a new query containing the following M code will be automatically generated:
 
 ```fsharp
 let
