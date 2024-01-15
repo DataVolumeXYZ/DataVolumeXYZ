@@ -11,6 +11,8 @@ tags:
   - Data Dojo
   - Data Literacy
   - Knowledge Sharing
+  - Power Query
+  - Dataflow
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 draft: true
