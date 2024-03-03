@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.4.4
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=5">
+
+  <!-- Theme Mode-->
+  
+    <script>
+      const isAutoTheme = true;
+      document.documentElement.setAttribute('data-theme', sessionStorage.getItem('theme'))
+    </script>
+  
+
+  <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+  <script defer src="/assets/js/main.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!--Favicon-->
+  <link
+    rel="shortcut icon"
+    href="/assets/favicon.ico"
+    type="image/x-icon">
+
+  
+
+  <!-- KaTeX 0.15.2 -->
+  
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script
+      defer
+      src="/assets/js/vendor/auto-render.min.js"
+      onload="renderMathInElement(document.body);"></script>
+  
+
+  <!-- Mermaid 9.1.1 -->
+  
+    <script
+      defer
+      src="/assets/js/vendor/mermaid.min.js"
+      onload="mermaid.initialize({
+                              startOnLoad:true,
+                              theme: 'default',
+                            });"></script>
+  
+
+  <!-- Simple Jekyll Search 1.10.0 -->
+  <script src="/assets/js/vendor/simple-jekyll-search.min.js" type="text/javascript"></script>
+
+  <!-- Google Analytics / Cookie Consent -->
+  <script>
+    const cookieName = 'cookie-notice-dismissed-   https://DataVolume.xyz';
+    const isCookieConsent = 'false';
+    const analyticsName = '';
+    const analyticsNameGA4 = '';
+  </script>
+
+  
+  
+
+  <!-- seo tags -->
+  <meta property="og:image" content="https://datavolume.xyz/assets/img/data-dojo/web-3706725-cropped.png">
+  
+    <meta property="og:type" content="website" />
+  
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Data Dojo: A Power BI Community of Practice (Part 1) | DataVolume.xyz</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="The Data Dojo: A Power BI Community of Practice (Part 1)" />
+<meta name="author" content="James D. Bartlett III" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A series about founding and fostering a successful Power BI Community of Practice" />
+<meta property="og:description" content="A series about founding and fostering a successful Power BI Community of Practice" />
+<link rel="canonical" href="https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html" />
+<meta property="og:url" content="https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html" />
+<meta property="og:site_name" content="DataVolume.xyz" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Data Dojo: A Power BI Community of Practice (Part 1)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"James D. Bartlett III","url":"https://github.com/JamesDBartlett3"},"dateModified":"2023-04-02T00:00:00+00:00","datePublished":"2023-04-02T00:00:00+00:00","description":"A series about founding and fostering a successful Power BI Community of Practice","headline":"The Data Dojo: A Power BI Community of Practice (Part 1)","mainEntityOfPage":{"@type":"WebPage","@id":"https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html"},"url":"https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- RSS -->
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="DataVolume.xyz"
+    href="https://datavolume.xyz/feed.xml" />
+  <link type="application/atom+xml" rel="alternate" href="https://datavolume.xyz/feed.xml" title="DataVolume.xyz" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:title" content="The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)">
+  <meta name="twitter:description" content="I joined Des Moines University as a Senior Business Intelligence Analyst in December of 2020, and one of the first things I noticed whenever I got to know a ...">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://datavolume.xyz/assets/img/data-dojo/web-3706725-cropped.png">
+  <meta name="twitter:image:alt" content="The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)">
+</head>
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/cube.svg" />
+		</a>
+        
+        <a class="site-title" aria-label="DataVolume.xyz" href="/">
+        DataVolume.xyz
+		</a>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fas fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fas fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fas fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+        
+        
+        <li class="separator"> | </li>
+        <li><a id="theme-toggle" title="The Data Dojo: A Power BI Community of Practice (Part&nbsp;1) " aria-label="The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)" onclick="themeToggle()"></a></li>
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image">
+  <header id="main" style="">
+    <div class="title-padder">
+      
+        <h1 id="The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B1%29" class="title">The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)</h1>
+        
+
+
+<div class="post-info"><a href="https://github.com/JamesDBartlett3" target="_blank" rel="noopener">
+      <img alt="Author's avatar" src="https://avatars.githubusercontent.com/u/37491308?s=460&v=4">
+    
+    <p class="meta">
+      James D. Bartlett III - 
+      
+      April 02, 2023
+    </p></a></div>
+
+      
+    </div>
+  </header>
+
+  <section class="post-content">
+    
+    <!--excerpt-->
+<p>I joined <a href="https://dmu.edu">Des Moines University</a> as a Senior Business Intelligence Analyst in December of 2020, and one of the first things I noticed whenever I got to know a colleague from another department was that many of them were eager to begin analyzing the data generated by their individual business units, but didn’t know where to start. Of course, there are tons of excellent books, videos, blogs, and self-paced e-learning resources about Power BI and data analytics in general, but I’ve found that the best way to <strong>learn</strong> is to <strong>do</strong>, and the best way to <strong>do</strong> is <strong>together</strong>.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/together-2450090-cropped.jpg" alt="together-2450090-cropped.jpg" />
+    </div>
+    
+</div>
+
+<p>The natural solution was to establish an inter-disciplinary Power BI <a href="https://en.wikipedia.org/wiki/Community_of_practice">Community of Practice (CoP)</a> at DMU, which is exactly what we are now in the process of doing. We call our CoP the <strong>Data Dojo</strong>, and I’m excited to share our journey with you.</p>
+
+<!--more-->
+
+<aside class="series-overview">
+  <h4>This post is part of a series called <em>The Data Dojo: A Power BI Community of Practice</em></h4>
+  <ol>
+    
+    
+    <li>
+      
+      <strong>The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)</strong>
+      
+			<ul>
+				<li>
+					<i>The story of how I founded the Data Dojo at Des Moines University (DMU)</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our first two workshops, and a cautionary tale about our first major setback</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)</a>
+      
+			<ul>
+				<li>
+					<i>A summary of our 3rd workshop, our comeback story, and our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our 4th and 5th workshops, and why I believe that every Power BI Community of Practice should host workshops like these as often as possible</i>
+				</li>
+			</ul>
+    </li>
+    
+  </ol>
+  
+</aside>
+
+<h1 id="founding-the-data-dojo">Founding the Data Dojo</h1>
+
+<p>From the very beginning, I knew that there were varying levels of Power BI experience among the faculty and staff at DMU. Some had never even heard of Power BI, while others had already been using it for several years. I also knew that I didn’t have the time or energy to teach everyone everything they needed to know about Power BI on an individual basis. Additionally, I knew that I couldn’t be the only one teaching if I wanted to have an organization-wide impact. And finally, I knew that a hierarchical structure would only hinder our ability to grow and adapt organically. So, with all of that in mind, I created our Data Dojo with these founding principles:</p>
+
+<ol>
+  <li>Anyone who is interested in learning how to make better use of their data can become a Data Dojo member.</li>
+  <li>Members are welcome to attend as many (or as few) of our workshops as they like.</li>
+  <li>Members are encouraged to share their knowledge and experience, though no one is required to do so.</li>
+  <li>We facilitate the sharing of knowledge primarily through two channels:
+    <ul>
+      <li>Interactive workshops (in-person, virtual, or hybrid).</li>
+      <li>A private <a href="https://www.yammer.com">Yammer</a> group where members can ask questions, share ideas, and collaborate on projects.</li>
+    </ul>
+  </li>
+  <li>There are no instructors or students in the Data Dojo; We are all here to learn from each other.</li>
+  <li>The only “stupid question” in the Data Dojo is the one that goes unasked.</li>
+  <li>Members vote on the topics they’d like to learn about, as well as the dates and times for the workshops where those topics will be covered.</li>
+  <li>Members are encouraged to network with each other, form their own ad-hoc groups, and collaborate on projects together. This is designed to break down the silos and walls that have hindered the business in the past, and replace them with pipelines and bridges. <em>{More on this subject coming in a future post.}</em></li>
+</ol>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/handshake-2009195-glow-sm.png" alt="handshake-2009195-glow-sm.png" />
+    </div>
+    
+</div>
+
+<h1 id="calling-all-data-ninjas">Calling All Data Ninjas</h1>
+
+<p>Before we could hold our first workshop, I knew that I’d have to drum up some hype and get people interested in joining the Data Dojo. Of course, the easiest way to kickstart any new marketing effort is to reach out directly to any existing early adopters and ask for their input, so here’s how I did that:</p>
+<ol>
+  <li>I created a <a href="https://forms.office.com">Microsoft Forms</a> survey to collect some basic information about those who might be interested.</li>
+  <li>I used our <a href="https://github.com/RuiRomano/pbimonitor">PBI Monitor report</a> to identify the people who had used Power BI sometime in the past six months. <em>{More on the PBI Monitor report coming in a future post.}</em></li>
+  <li>I sent those people an email with the survey link and an explanation of what I was up to, and asked them to fill it out if they were interested in joining us.</li>
+</ol>
+
+<p>I was pleasantly surprised by the response. In just a few days, we had over a dozen people sign up to join the Data Dojo, and they had all provided lots of useful information about their existing knowledge, skills, interests and goals, as well as their preferred days and times for future workshops. Shortly thereafter, some of the folks who had signed up asked if they could also invite some of their coworkers to join the Data Dojo, and I was thrilled! My response: “Absolutely! Just forward them the survey link and ask them to fill it out. The more, the merrier!”</p>
+
+<p>I collected survey responses for a few months, wanting to ensure that everyone interested in joining the Data Dojo had ample time to sign up. Then, I sent out a follow-up email to those who had, asking them to confirm their interest, to tell me about any questions or concerns they might have, and to provide any suggestions for topics they’d like to see covered in future workshops. I was elated to learn that everyone who had signed up was still interested in joining the Data Dojo, and that they were all eager to attend our first workshop. Using the date and time preferences from the initial survey results, I determined that July 20th, 2022 would be the ideal launch date, so I sent out a calendar invite to everyone who had signed up, and started preparing an agenda for our first workshop.</p>
+
+<h1 id="next-time-our-first-two-workshops-and-first-major-setback">Next Time: Our First Two Workshops, and First Major Setback</h1>
+
+<p>Thanks for joining us for this first installment in the Data Dojo series! In the next installment, we’ll talk about the first two workshops we held, the topics we covered, and a major setback we encountered after our second workshop, which has forced us to reevaluate and reconsider certain aspects of our approach. There are many great lessons to be learned from our experiences, so I hope you’ll join us again next time!</p>
+
+<aside class="series-pager" style="text-align: center">
+<h4><em>The Data Dojo: A Power BI Community of Practice</em> Series</h4>
+
+
+
+<p>Post <strong>1</strong> of <strong>4</strong>
+  </p>
+
+
+  
+  
+
+  
+  
+		&nbsp;&nbsp;<a class="btn" rel="next" href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">Next  ⪢</a>
+  
+
+  
+  
+
+  
+  
+
+</aside>
+
+<h2 id="bonus-data-dojo-featured-on-havens-consulting-youtube-channel">Bonus: Data Dojo featured on Havens Consulting YouTube Channel!</h2>
+<p><a href="https://www.youtube.com/watch?v=OlvXbg6VjFE&amp;list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&amp;t=326s" target="_blank"><img src="../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png" alt="Data Dojo featured on Havens Consulting YouTube Channel!" /></a></p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <li class="meta">Share</li>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html" target="_blank"
+               title=" Facebook">
+                <i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on Facebook</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B1%29%20https%3A%2F%2Fdatavolume.xyz%2F2023%2F04%2F02%2FDataDojo-PowerBI-CommunityOfPractice-01.html"
+               target="_blank" title="">
+                <i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Tweet</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://www.tumblr.com/share?v=3&u=https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html&quote=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B1%29%20%7C%20DataVolume.xyz&s="
+               target="_blank" title=" Tumblr">
+                <i class="fab fa-tumblr-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on Tumblr</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://pinterest.com/pin/create/button/?url=https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html&media=https://datavolume.xyz/assets/img/data-dojo/matrix_aikido.png$description=%0AI+joined+Des+Moines+University+as+a+Senior+Business+Intelligence+Analyst+in+December+of+2020%2C+and+one+of+the+first+things+I+noticed+whenever+I+got+to+know+a+colleague+from+another+department+was+that+many+of+them+were+eager+to+begin+analyzing+the+data+generated+by+their+individual+business+units%2C+but+didn%E2%80%99t+know+where+to+start.+Of+course%2C+there+are+tons+of+excellent+books%2C+videos%2C+blogs%2C+and+self-paced+e-learning+resources+about+Power+BI+and+data+analytics+in+general%2C+but+I%E2%80%99ve+found+that+the+best+way+to+learn+is+to+do%2C+and+the+best+way+to+do+is+together.%0A%0A%0A++++%0A++++%0A++++++++%0A++++%0A++++%0A%0A%0AThe+natural+solution+was+to+establish+an+inter-disciplinary+Power+BI+Community+of+Practice+%28CoP%29+at+DMU%2C+which+is+exactly+what+we+are+now+in+the+process+of+doing.+We+call+our+CoP+the+Data+Dojo%2C+and+I%E2%80%99m+excited+to+share+our+journey+with+you.%0A%0AThis+is+the+first+installment+in+a+series+that+will+document+our+challenges%2C+progress%2C+setbacks%2C+and+victories.+In+this+installment%2C+we%E2%80%99ll+cover+the+founding+of+the+Data+Dojo%2C+and+next+time%2C+we%E2%80%99ll+talk+about+the+first+two+workshops+we+held%2C+the+topics+we+covered%2C+some+of+the+difficulties+we%E2%80%99ve+encountered+since+then%2C+and+how+we+plan+to+move+forward+from+here.+I+hope+you%E2%80%99ll+join+us+on+this+adventure%21%0A%0A"
+               target="_blank" title="">
+                <i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Pin it</span>
+            </a>
+        </li>
+          
+        <li>
+            <a href="https://www.reddit.com/submit?url=https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html&title=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B1%29%20%7C%20DataVolume.xyz"
+               target="_blank" title=" Reddit">
+                <i class="fab fa-reddit-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on Reddit</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html&title=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B1%29%20%7C%20DataVolume.xyz&summary=&source=https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html"
+               target="_blank" title=" LinkedIn">
+                <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on LinkedIn</span>
+            </a>
+        </li>
+          
+        <li>
+            <a href="mailto:?subject=The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)%20%7C%20DataVolume.xyz&body=https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html"
+               target="_blank" title="">
+                <i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Email</span></a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+  <!-- Tag list -->
+  
+  
+
+
+  <div class="tag-list">
+    <ul>
+      
+        <li class="meta">Tags</li>
+      
+
+      
+        <li><a class="button" href="/tags#%0A++++Power+BI">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> 
+    Power BI</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Community+of+Practice">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Community of Practice</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Data+Analytics">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Data Analytics</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Data+Dojo">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Data Dojo</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Data+Literacy">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Data Literacy</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Knowledge+Sharing">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Knowledge Sharing</p>
+        </a></li>
+      
+    </ul>
+  </div>
+
+
+
+</article>
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+  
+    <div id="next-post">
+      <a alt="The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)" href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">
+        <p>Next Post ⪢</p>
+        The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)
+      </a>
+    </div>
+  
+
+  
+    <div id="previous-post">
+      <a alt="PbiToolsWatchPS: Extract and save your Power BI Desktop source code with a single click!
+" href="/2023/03/21/external-tool-PbiToolsWatchPS.html">
+        <p>⪡ Previous Post</p>
+        PbiToolsWatchPS: Extract and save your Power BI Desktop source code with a single click!
+
+      </a>
+    </div>
+  
+</div>
+
+
+<!--Utterances-->
+
+
+<!-- Cusdis -->
+
+
+<!-- Disqus -->
+
+
+<!-- To change color of links in the page -->
+<style>
+  header#main {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  
+
+  
+    header#main {
+      background-image: url('/assets/img/data-dojo/matrix_aikido.png');
+    }
+  
+</style>
+
+<!-- run code in post.js after page has loaded -->
+<script src="/assets/js/post.js"></script>
+    </div>
+    <footer class="site-footer">
+  <p class="text">
+    
+    Copyright © 2024 — DataVolume.xyz — All rights reserved.</p>
+  <div class="footer-icons">
+    <ul>
+      <!-- Social icons from Font Awesome, if enabled -->
+      
+  <li>
+    <a
+      feed.xml
+      href="/feed.xml"
+      title="Follow RSS feed"
+      target="_blank">
+      <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+    
+    <li>
+      <a href="https://github.com/JamesDBartlett3"title="Follow on Github"target="_blank"rel="me noopener">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+    
+    <li>
+      <a href="https://www.linkedin.com/in/jamesdbartlett3"title="Follow on Linkedin"target="_blank"rel="me noopener">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  
+
+  
+
+  
+
+  
+    
+    
+    
+    
+    <li>
+      <a href="https://techhub.social/@JamesDBartlett3"title="Follow on Mastodon"target="_blank"rel="me noopener">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+    </ul>
+  </div>
+  <div class="views" style="padding-top:15px">
+    <span class="views">
+      <img src=https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://datavolume.xyz/2023/04/02/datadojo-powerbi-communityofpractice-01.html&count_bg=%233a7bcf&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false" alt="Views" />
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

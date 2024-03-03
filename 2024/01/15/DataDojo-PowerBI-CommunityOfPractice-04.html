@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.4.4
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=5">
+
+  <!-- Theme Mode-->
+  
+    <script>
+      const isAutoTheme = true;
+      document.documentElement.setAttribute('data-theme', sessionStorage.getItem('theme'))
+    </script>
+  
+
+  <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+  <script defer src="/assets/js/main.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!--Favicon-->
+  <link
+    rel="shortcut icon"
+    href="/assets/favicon.ico"
+    type="image/x-icon">
+
+  
+
+  <!-- KaTeX 0.15.2 -->
+  
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script
+      defer
+      src="/assets/js/vendor/auto-render.min.js"
+      onload="renderMathInElement(document.body);"></script>
+  
+
+  <!-- Mermaid 9.1.1 -->
+  
+    <script
+      defer
+      src="/assets/js/vendor/mermaid.min.js"
+      onload="mermaid.initialize({
+                              startOnLoad:true,
+                              theme: 'default',
+                            });"></script>
+  
+
+  <!-- Simple Jekyll Search 1.10.0 -->
+  <script src="/assets/js/vendor/simple-jekyll-search.min.js" type="text/javascript"></script>
+
+  <!-- Google Analytics / Cookie Consent -->
+  <script>
+    const cookieName = 'cookie-notice-dismissed-   https://DataVolume.xyz';
+    const isCookieConsent = 'false';
+    const analyticsName = '';
+    const analyticsNameGA4 = '';
+  </script>
+
+  
+  
+
+  <!-- seo tags -->
+  <meta property="og:image" content="https://datavolume.xyz/assets/img/data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg">
+  
+    <meta property="og:type" content="website" />
+  
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Data Dojo: A Power BI Community of Practice (Part 4) | DataVolume.xyz</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="The Data Dojo: A Power BI Community of Practice (Part 4)" />
+<meta name="author" content="James D. Bartlett III" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A series about founding and fostering a successful Power BI Community of Practice" />
+<meta property="og:description" content="A series about founding and fostering a successful Power BI Community of Practice" />
+<link rel="canonical" href="https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html" />
+<meta property="og:url" content="https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html" />
+<meta property="og:site_name" content="DataVolume.xyz" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Data Dojo: A Power BI Community of Practice (Part 4)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"James D. Bartlett III","url":"https://github.com/JamesDBartlett3"},"dateModified":"2024-01-15T00:00:00+00:00","datePublished":"2024-01-15T00:00:00+00:00","description":"A series about founding and fostering a successful Power BI Community of Practice","headline":"The Data Dojo: A Power BI Community of Practice (Part 4)","mainEntityOfPage":{"@type":"WebPage","@id":"https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html"},"url":"https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- RSS -->
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="DataVolume.xyz"
+    href="https://datavolume.xyz/feed.xml" />
+  <link type="application/atom+xml" rel="alternate" href="https://datavolume.xyz/feed.xml" title="DataVolume.xyz" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:title" content="The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)">
+  <meta name="twitter:description" content="  This post is part of a series called The Data Dojo: A Power BI Community of Practice                          The Data Dojo: A Power BI Community of Practi...">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://datavolume.xyz/assets/img/data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg">
+  <meta name="twitter:image:alt" content="The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)">
+</head>
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/cube.svg" />
+		</a>
+        
+        <a class="site-title" aria-label="DataVolume.xyz" href="/">
+        DataVolume.xyz
+		</a>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fas fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fas fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fas fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+        
+        
+        <li class="separator"> | </li>
+        <li><a id="theme-toggle" title="The Data Dojo: A Power BI Community of Practice (Part&nbsp;4) " aria-label="The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)" onclick="themeToggle()"></a></li>
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image">
+  <header id="main" style="">
+    <div class="title-padder">
+      
+        <h1 id="The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B4%29" class="title">The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)</h1>
+        
+
+
+<div class="post-info"><a href="https://github.com/JamesDBartlett3" target="_blank" rel="noopener">
+      <img alt="Author's avatar" src="https://avatars.githubusercontent.com/u/37491308?s=460&v=4">
+    
+    <p class="meta">
+      James D. Bartlett III - 
+      
+      January 15, 2024
+    </p></a></div>
+
+      
+    </div>
+  </header>
+
+  <section class="post-content">
+    
+    <!-- intro -->
+<!--excerpt-->
+
+<!--more-->
+
+<aside class="series-overview">
+  <h4>This post is part of a series called <em>The Data Dojo: A Power BI Community of Practice</em></h4>
+  <ol>
+    
+    
+    <li>
+      
+      <a href="/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)</a>
+      
+			<ul>
+				<li>
+					<i>The story of how I founded the Data Dojo at Des Moines University (DMU)</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our first two workshops, and a cautionary tale about our first major setback</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)</a>
+      
+			<ul>
+				<li>
+					<i>A summary of our 3rd workshop, our comeback story, and our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <strong>The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)</strong>
+      
+			<ul>
+				<li>
+					<i>Summaries of our 4th and 5th workshops, and why I believe that every Power BI Community of Practice should host workshops like these as often as possible</i>
+				</li>
+			</ul>
+    </li>
+    
+  </ol>
+  
+</aside>
+
+<p>Thank you for joining us on this adventure!</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg" alt="73b72522-d039-4f78-89b6-68738189a233_cropped.jpg" />
+    </div>
+    
+</div>
+
+<h1 id="workshop4-the-data-dojo-strikes-back-our-1st-handson-workshop">Workshop #4: The Data Dojo Strikes Back (Our 1st Hands‑On Workshop)</h1>
+
+<p>We hosted our 4th workshop on September 19th, 2023, and it was attended by seventeen members. This was a significant improvement in turnout over our previous workshop, and an encouraging sign that the Data Dojo is finally back on track, healthy, and growing again. We were thrilled to welcome several new members to the Data Dojo for the first time at this workshop, and we’re excited to not only help them discover their own unique paths to data literacy and mastery, but also to learn from them as they bring their own unique knowledge, perspectives, and experiences to the table.</p>
+
+<p>This was also an exciting new milestone for us because, unlike any of our previous workshops (which mostly consisted of PowerPoint presentations and Q&amp;A sessions), this was an <strong>actual workshop</strong> – no slide deck, just a live, interactive tour of Power BI Desktop! Thus, it was our first true “workshop” in the traditional sense of the word.</p>
+
+<p>We started by walking our participants through the process of installing Power BI Desktop from the Microsoft Store and downloading our official Data Dojo report template from our SharePoint site. Then, we opened Power BI Desktop and took a tour of the template, pointing out some of its most useful features and explaining how they work. We also talked about the importance of using a standardized report template, and how it can help us to work together more effectively, by ensuring that all of our reports are consistent, accessible, professional, and easy to use. Next, we pointed out the main UI components of Power BI Desktop (see expandable section below), and briefly explained what each one is used for.</p>
+
+<details>
+	<summary>
+		
+		<b>
+		
+		A quick tour of the main UI components of Power BI Desktop...
+		
+		</b>
+		
+	</summary>
+	<p>
+	
+	
+	
+	
+	<div style="margin-left:1.5em; margin-bottom:2em;">
+		<ul>
+			<li>Report &amp; Model Editor (Main Window)
+				<ul>
+					<li>Views
+						<ul>
+							<li>Report View</li>
+							<li>Table View</li>
+							<li>Model View</li>
+						</ul>
+					</li>
+					<li>Panes
+						<ul>
+							<li>Data</li>
+							<li>Filter</li>
+							<li>Visualization</li>
+							<li>Selection</li>
+						</ul>
+					</li>
+					<li>Ribbons
+						<ul>
+							<li>Home</li>
+							<li>Insert</li>
+							<li>Modeling</li>
+							<li>View</li>
+							<li>Optimize</li>
+							<li>Help</li>
+							<li>External Tools</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Power Query Editor ("Transform Data" Window)
+				<ul>
+					<li>Panes
+						<ul>
+							<li>Queries</li>
+							<li>Applied steps</li>
+						</ul>
+					</li>
+					<li>Ribbons
+						<ul>
+							<li>Home</li>
+							<li>Transform</li>
+							<li>Add Column</li>
+							<li>View</li>
+							<li>Tools</li>
+							<li>Help</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	<hr style="width:80%;text-align:center;" />
+	</div>
+	
+	
+	
+	
+	</p> 
+</details>
+
+<p>Finally, we wrapped up our 4th workshop by thanking our participants and encouraging them to:</p>
+<ul>
+  <li>Continue exploring and experimenting with Power BI Desktop and the official Data Dojo report template.</li>
+  <li>Ask questions, share their experiences and discoveries, and contribute to the ongoing conversation in our Viva Engage group.</li>
+  <li>Prepare for the next workshop by writing down ideas for reports they’d like to start building, as well as any data sources they’ll need in order to build those reports.</li>
+</ul>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/masked_cyberpunk_data_manga_dojo_25962e35-2be0-4801-b645-fae50d5411cb.jpg" alt="masked_cyberpunk_data_manga_dojo_25962e35-2be0-4801-b645-fae50d5411cb.jpg" />
+    </div>
+    
+</div>
+
+<h1 id="workshop5-the-dao-of-the-dataflow-our-2nd-handson-workshop">Workshop #5: The Dao of the Dataflow (Our 2nd Hands‑On Workshop)</h1>
+
+<p>On December 5th, 2023, we hosted our 5th workshop, picking up right where we left off last time, and diving deep into Power Query. This was our 2nd hands-on workshop, featuring an interactive walkthrough of the Power Query interface in Power BI Desktop, and a live demonstration of how to retrieve, transform, clean, and model data. We also introduced a new-and-improved version of our official Data Dojo report template, and showcased its built-in shortcuts for importing Data Warehouse tables from our centrally-managed Dataflows in Power BI.</p>
+
+<details>
+	<summary>
+		
+		<b>
+		
+		A little backstory about these Dataflows...
+		
+		</b>
+		
+	</summary>
+	<p>
+	
+	
+	<i>
+	At DMU, we are fortunate enough to have a robust and mature on-premises Data Warehouse which contains just about all of the data generated by the business, spanning several different databases and a dozen or so different schemas.<br />In order to make the data in our Data Warehouse as accessible and simple to use as possible for report developers throughout the organization, I "mirrored" our Data Warehouse into a set of Power BI Dataflows (organized by database and schema), and granted our Data Dojo members read-only access to them.
+	</i>
+	
+	
+	</p> 
+</details>
+
+<p>Our latest official Data Dojo report template now ships with a custom Power Query function called <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code>, which can be invoked to fetch any table from any Dataflow in Power BI. Here’s the code:</p>
+
+<div class="language-fsharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// fn_GetTableFromDataflow</span>
+<span class="c1">// This function returns a table from a Dataflow in Power BI</span>
+
+<span class="c1">// -- RowLimit Parameter Notes --</span>
+<span class="c1">// During the development stages of any new Power BI report/model, </span>
+<span class="c1">// Power BI Desktop automatically refreshes all modified queries every </span>
+<span class="c1">// time the report author applies their changes in Power Query. </span>
+<span class="c1">// This interrupts the report author's workflow and hampers progress, </span>
+<span class="c1">// especially when the refresh takes a long time.</span>
+<span class="c1">// To avoid this problem, the report author should use the RowLimit </span>
+<span class="c1">// parameter to temporarily limit the number of rows returned by this </span>
+<span class="c1">// function during the data modeling stage of development, and then </span>
+<span class="c1">// remove the limit (by passing -1 as the RowLimit parameter) when </span>
+<span class="c1">// the model is ready for testing.</span>
+
+<span class="p">(</span>
+  <span class="nc">Workspace</span> <span class="k">as</span> <span class="n">text</span><span class="p">,</span>
+  <span class="nc">Dataflow</span> <span class="k">as</span> <span class="n">text</span><span class="p">,</span>
+  <span class="nc">Table</span> <span class="k">as</span> <span class="n">text</span><span class="p">,</span>
+  <span class="nc">RowLimit</span> <span class="k">as</span> <span class="n">number</span>
+<span class="p">)</span> <span class="k">as</span> <span class="n">table</span> <span class="o">=&gt;</span>
+<span class="k">let</span>
+  <span class="nc">Source</span> <span class="p">=</span> <span class="nn">PowerPlatform</span><span class="p">.</span><span class="nc">Dataflows</span><span class="p">(</span><span class="k">null</span><span class="o">),</span>
+  <span class="nc">WorkspaceList</span> <span class="p">=</span> <span class="nc">Source</span><span class="o">{[</span><span class="nc">Id</span><span class="p">=</span><span class="s2">"Workspaces"</span><span class="o">]}[</span><span class="nc">Data</span><span class="o">],</span>
+  <span class="nc">SelectedWorkspace</span> <span class="p">=</span> 
+    <span class="k">try</span> <span class="nc">WorkspaceList</span><span class="o">{[</span><span class="n">workspaceName</span><span class="p">=</span><span class="nc">Workspace</span><span class="o">]}[</span><span class="nc">Data</span><span class="p">]</span>
+    <span class="n">otherwise</span> <span class="nc">WorkspaceList</span><span class="o">{[</span><span class="n">workspaceId</span><span class="p">=</span><span class="nc">Workspace</span><span class="o">]}[</span><span class="nc">Data</span><span class="o">],</span>
+  <span class="nc">SelectedDataflow</span> <span class="p">=</span> 
+    <span class="k">try</span> <span class="nc">SelectedWorkspace</span><span class="o">{[</span><span class="n">dataflowName</span><span class="p">=</span><span class="nc">Dataflow</span><span class="o">]}[</span><span class="nc">Data</span><span class="p">]</span>
+    <span class="n">otherwise</span> <span class="nc">SelectedWorkspace</span><span class="o">{[</span><span class="n">dataflowId</span><span class="p">=</span><span class="nc">Dataflow</span><span class="o">]}[</span><span class="nc">Data</span><span class="o">],</span>
+  <span class="nc">SelectedTable</span> <span class="p">=</span> <span class="nc">SelectedDataflow</span><span class="o">{[</span><span class="n">entity</span><span class="p">=</span><span class="nc">Table</span><span class="p">,</span><span class="n">version</span><span class="p">=</span><span class="s2">""</span><span class="o">]}[</span><span class="nc">Data</span><span class="o">],</span>
+  <span class="nc">FilterLogic</span> <span class="p">=</span> <span class="k">if</span> <span class="nc">RowLimit</span> <span class="p">&lt;</span> <span class="mi">0</span>
+    <span class="k">then</span> <span class="nc">SelectedTable</span>
+    <span class="k">else</span> <span class="nn">Table</span><span class="p">.</span><span class="nc">FirstN</span><span class="p">(</span><span class="nc">SelectedTable</span><span class="p">,</span> <span class="nc">RowLimit</span><span class="p">)</span>
+<span class="k">in</span>
+  <span class="nc">FilterLogic</span>
+</code></pre></div></div>
+
+<p>To import a table from a Dataflow in Power BI, the report author only needs to invoke the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function, passing in the name (or ID) of the Power BI Workspace, the name (or ID) of the target Dataflow, the name of the table, and the number of rows to retrieve. For example, to import the <code class="language-plaintext highlighter-rouge">FactExamScore</code> table from the <code class="language-plaintext highlighter-rouge">DataWarehouse</code> Dataflow in the <code class="language-plaintext highlighter-rouge">DataDojo</code> Workspace, limiting the results to one million rows for testing purposes, the report author must simply enter those values into the parameter fields in the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function’s UI and click <code class="language-plaintext highlighter-rouge">Invoke</code>, and then a new query containing the following M code will be automatically generated:</p>
+
+<div class="language-fsharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span>
+  <span class="nc">Source</span> <span class="p">=</span> <span class="n">fn_GetTableFromDataflow</span><span class="p">(</span>
+    <span class="s2">"DataDojo"</span><span class="p">,</span> <span class="s2">"DataWarehouse"</span><span class="p">,</span> <span class="s2">"FactExamScore"</span><span class="p">,</span> <span class="mi">1000000</span>
+  <span class="p">)</span>
+<span class="k">in</span>
+  <span class="nc">Source</span>
+</code></pre></div></div>
+
+<p>Armed with the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function and our centrally-managed Dataflows, Data Dojo members can easily import any table from our Data Warehouse into their Power BI report/model, without having to learn how to write SQL or M queries, and without having to worry about future changes to the server name, database name, etc. This is a huge time-saver, significantly lowering the barrier to entry for new report authors, and helping to ensure that everyone is using the same, standardized, approved version of each table.</p>
+
+<p>We concluded our 5th workshop by encouraging our participants to:</p>
+<ul>
+  <li>Continue exploring and experimenting with the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function in Power Query.</li>
+  <li>Keep writing down ideas for their first report.</li>
+  <li>Start researching which Data Warehouse tables they’ll need to pull into their model in order to build that report.</li>
+</ul>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/6d05725e-071a-407c-a834-63096ca57e57_cropped.jpg" alt="6d05725e-071a-407c-a834-63096ca57e57_cropped.jpg" />
+    </div>
+    
+</div>
+
+<!-- add image of data ninjas with code -->
+
+<h1 id="the-importance-of-hands-on-workshops">The Importance of Hands-On Workshops</h1>
+
+<p>I firmly believe that every Power BI Community of Practice should host interactive, hands-on workshops whenever possible, and here are three solid reasons why:</p>
+<ol>
+  <li><strong>Slideshows are boring. They’re boring to make, and they’re often just as boring to watch.</strong> And to make matters worse, slideshows are not even very effective at conveying the complex technical concepts of data analytics, nor the tools and techniques we use to implement them. If we’re only hosting lectures, and not giving our members a chance to get their hands dirty, then we’re not helping them learn, grow, and develop their skills, and that means we’re also not helping our organizations achieve their strategic goals and objectives with regards to data.</li>
+  <li><strong>Technical concepts and skills are best learned via live, interactive, hands-on demonstration</strong> – where every participant can follow along, ask questions, and experience firsthand the thrill of discovery and the rush of wielding a powerful tool for the first time. This is especially true for data analytics, which is simultaneously a highly visual discipline, <strong><em>and</em></strong> requires the ability to think in <strong><em>n</em>-dimensional space</strong> (a concept which defies all attempts at visualization, making it nearly impossible to learn by merely watching).</li>
+  <li><strong>Following along with a live demonstration is not just more effective as a learning aid than watching a slideshow – it’s also more fun!</strong> And when people are having fun, they’re more likely to ask questions, remain engaged during the workshop, retain more of what they learn, tell their coworkers about their experiences, and most importantly, keep coming back for more. By hosting hands-on workshops on a regular basis, we can help our members learn more, learn faster, and have more fun doing it. And that’s a win-win-win for everyone involved.</li>
+</ol>
+
+<h1 id="next-time-designing-a-versatile-user-friendly-power-bi-report-template">Next Time: Designing a Versatile, User-Friendly Power BI Report Template</h1>
+<p>You’ve now had a peek under the hood of our official Data Dojo report template, and seen one of its most powerful features (the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function). In the next installment of this series, we’ll take a closer look at the latest Data Dojo template, tinker with more of its capabilities, and talk about how to strike the right balance when designing a Power BI template that’s both simple enough for a beginner <strong>and</strong> versatile enough for a seasoned pro. Stay tuned!</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/data-team-tunnel-matrix-cropped.png" alt="data-team-tunnel-matrix-cropped.png" />
+    </div>
+    
+</div>
+
+<aside class="series-pager" style="text-align: center">
+<h4><em>The Data Dojo: A Power BI Community of Practice</em> Series</h4>
+
+
+
+<p>Post <strong>4</strong> of <strong>4</strong>
+  </p>
+
+
+  
+  
+
+  
+  
+
+  
+    <a class="btn" rel="prev" href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">⪡ Previous </a>
+  
+  
+
+  
+  
+
+</aside>
+
+<h2 id="bonus-data-dojo-featured-on-havens-consulting-youtube-channel">Bonus: Data Dojo featured on Havens Consulting YouTube Channel!</h2>
+<p><a href="https://www.youtube.com/watch?v=OlvXbg6VjFE&amp;list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&amp;t=326s" target="_blank"><img src="../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png" alt="Data Dojo featured on Havens Consulting YouTube Channel!" /></a></p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <li class="meta">Share</li>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html" target="_blank"
+               title=" Facebook">
+                <i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on Facebook</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B4%29%20https%3A%2F%2Fdatavolume.xyz%2F2024%2F01%2F15%2FDataDojo-PowerBI-CommunityOfPractice-04.html"
+               target="_blank" title="">
+                <i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Tweet</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://www.tumblr.com/share?v=3&u=https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html&quote=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B4%29%20%7C%20DataVolume.xyz&s="
+               target="_blank" title=" Tumblr">
+                <i class="fab fa-tumblr-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on Tumblr</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://pinterest.com/pin/create/button/?url=https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html&media=https://datavolume.xyz/assets/img/data-dojo/matrix_aikido.png$description=%0A%0A%0AThis+is+the+fourth+installment+in+a+series+documenting+the+challenges%2C+progress%2C+setbacks%2C+and+victories+of+The+Data+Dojo%3A+A+Power+BI+Community+of+Practice.%0A%0AIn+this+post%2C+I%E2%80%99ll+tell+you+about+our+4th+and+5th+workshops+%28our+most+important+and+impactful+workshops+yet%29%2C+and+I%E2%80%99ll+explain+why+I+believe+that+every+Power+BI+Community+of+Practice+should+host+workshops+like+these+as+often+as+possible.%0A%0A"
+               target="_blank" title="">
+                <i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Pin it</span>
+            </a>
+        </li>
+          
+        <li>
+            <a href="https://www.reddit.com/submit?url=https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html&title=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B4%29%20%7C%20DataVolume.xyz"
+               target="_blank" title=" Reddit">
+                <i class="fab fa-reddit-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on Reddit</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html&title=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B4%29%20%7C%20DataVolume.xyz&summary=&source=https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html"
+               target="_blank" title=" LinkedIn">
+                <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on LinkedIn</span>
+            </a>
+        </li>
+          
+        <li>
+            <a href="mailto:?subject=The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)%20%7C%20DataVolume.xyz&body=https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html"
+               target="_blank" title="">
+                <i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Email</span></a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+  <!-- Tag list -->
+  
+  
+
+
+  <div class="tag-list">
+    <ul>
+      
+        <li class="meta">Tags</li>
+      
+
+      
+        <li><a class="button" href="/tags#%0A++++Power+BI">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> 
+    Power BI</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Community+of+Practice">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Community of Practice</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Data+Analytics">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Data Analytics</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Data+Dojo">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Data Dojo</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Data+Literacy">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Data Literacy</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Dataflow">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Dataflow</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Knowledge+Sharing">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Knowledge Sharing</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Power+Query+%28M%29">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Power Query (M)</p>
+        </a></li>
+      
+    </ul>
+  </div>
+
+
+
+</article>
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+  
+
+  
+    <div id="previous-post">
+      <a alt="The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)" href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">
+        <p>⪡ Previous Post</p>
+        The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)
+      </a>
+    </div>
+  
+</div>
+
+
+<!--Utterances-->
+
+
+<!-- Cusdis -->
+
+
+<!-- Disqus -->
+
+
+<!-- To change color of links in the page -->
+<style>
+  header#main {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  
+
+  
+    header#main {
+      background-image: url('/assets/img/data-dojo/matrix_aikido.png');
+    }
+  
+</style>
+
+<!-- run code in post.js after page has loaded -->
+<script src="/assets/js/post.js"></script>
+    </div>
+    <footer class="site-footer">
+  <p class="text">
+    
+    Copyright © 2024 — DataVolume.xyz — All rights reserved.</p>
+  <div class="footer-icons">
+    <ul>
+      <!-- Social icons from Font Awesome, if enabled -->
+      
+  <li>
+    <a
+      feed.xml
+      href="/feed.xml"
+      title="Follow RSS feed"
+      target="_blank">
+      <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+    
+    <li>
+      <a href="https://github.com/JamesDBartlett3"title="Follow on Github"target="_blank"rel="me noopener">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+    
+    <li>
+      <a href="https://www.linkedin.com/in/jamesdbartlett3"title="Follow on Linkedin"target="_blank"rel="me noopener">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  
+
+  
+
+  
+
+  
+    
+    
+    
+    
+    <li>
+      <a href="https://techhub.social/@JamesDBartlett3"title="Follow on Mastodon"target="_blank"rel="me noopener">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+    </ul>
+  </div>
+  <div class="views" style="padding-top:15px">
+    <span class="views">
+      <img src=https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://datavolume.xyz/2024/01/15/datadojo-powerbi-communityofpractice-04.html&count_bg=%233a7bcf&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false" alt="Views" />
+    </span>
+  </div>
+</footer>
+  </body>
+</html>
