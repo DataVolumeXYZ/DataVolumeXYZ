@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)"
+summary: The story of how I founded the Data Dojo at Des Moines University (DMU)
 author: JamesDBartlett3
 feature-img: assets/img/data-dojo/matrix_aikido.png
 thumbnail: assets/img/data-dojo/web-3706725-cropped.png
@@ -14,6 +15,7 @@ tags:
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 draft: false
+series: data-dojo
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
 <!--excerpt-->
@@ -22,9 +24,11 @@ I joined [Des Moines University](https://dmu.edu) as a Senior Business Intellige
 {% include aligner.html images="data-dojo/together-2450090-cropped.jpg" column="auto" %}
 
 The natural solution was to establish an inter-disciplinary Power BI [Community of Practice (CoP)](https://en.wikipedia.org/wiki/Community_of_practice) at DMU, which is exactly what we are now in the process of doing. We call our CoP the **Data Dojo**, and I'm excited to share our journey with you. 
-
+{% if layout == default %}
 This is the first installment in a series that will document our challenges, progress, setbacks, and victories. In this installment, we'll cover the founding of the Data Dojo, and next time, we'll talk about the first two workshops we held, the topics we covered, some of the difficulties we've encountered since then, and how we plan to move forward from here. I hope you'll join us on this adventure!
+{% endif %}
 <!--more--> 
+{% include blog/blog_series_overview.liquid series=page.series %}
 
 # Founding the Data Dojo
 
@@ -57,6 +61,8 @@ I collected survey responses for a few months, wanting to ensure that everyone i
 # Next Time: Our First Two Workshops, and First Major Setback
 
 Thanks for joining us for this first installment in the Data Dojo series! In the next installment, we'll talk about the first two workshops we held, the topics we covered, and a major setback we encountered after our second workshop, which has forced us to reevaluate and reconsider certain aspects of our approach. There are many great lessons to be learned from our experiences, so I hope you'll join us again next time!
+
+{% include blog/blog_series_pager.liquid series=page.series %}
 
 ## Bonus: Data Dojo featured on Havens Consulting YouTube Channel!
 [![Data Dojo featured on Havens Consulting YouTube Channel!](../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png)](https://www.youtube.com/watch?v=OlvXbg6VjFE&list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&t=326s){:target="_blank"}

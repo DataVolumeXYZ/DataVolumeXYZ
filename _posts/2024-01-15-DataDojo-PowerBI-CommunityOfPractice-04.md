@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)"
+summary: Summaries of our 4th and 5th workshops, and why I believe that every Power BI Community of Practice should host workshops like these as often as possible
 author: JamesDBartlett3
 feature-img: assets/img/data-dojo/matrix_aikido.png
 thumbnail: assets/img/data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg
@@ -16,19 +17,20 @@ tags:
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 draft: false
+series: data-dojo
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
 
 <!-- intro -->
 <!--excerpt-->
+{% if layout == default %}
 This is the fourth installment in a series documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice.  
 
 In this post, I'll tell you about our 4th and 5th workshops (our most important and impactful workshops yet), and I'll explain why I believe that every Power BI Community of Practice should host workshops like these as often as possible.
+{% endif %}
 <!--more-->
 
-- In [Part 1](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at [Des Moines University (DMU)](https://dmu.edu). 
-- In [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), I shared summaries of our 1st and 2nd workshops, and a cautionary tale about our first major setback. 
-- In [Part 3](../../../2023/10/07/DataDojo-PowerBI-CommunityOfPractice-03.html), I shared a summary of our 3rd workshop, talked about our comeback story, and outlined our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come. 
+{% include blog/blog_series_overview.liquid series=page.series %}
 
 Thank you for joining us on this adventure!
 
@@ -195,6 +197,8 @@ I firmly believe that every Power BI Community of Practice should host interacti
 You've now had a peek under the hood of our official Data Dojo report template, and seen one of its most powerful features (the `fn_GetTableFromDataflow` function). In the next installment of this series, we'll take a closer look at the latest Data Dojo template, tinker with more of its capabilities, and talk about how to strike the right balance when designing a Power BI template that's both simple enough for a beginner **and** versatile enough for a seasoned pro. Stay tuned!
 
 {% include aligner.html images="data-dojo/data-team-tunnel-matrix-cropped.png" column="auto" %}
+
+{% include blog/blog_series_pager.liquid series=page.series %}
 
 ## Bonus: Data Dojo featured on Havens Consulting YouTube Channel!
 [![Data Dojo featured on Havens Consulting YouTube Channel!](../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png)](https://www.youtube.com/watch?v=OlvXbg6VjFE&list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&t=326s){:target="_blank"}

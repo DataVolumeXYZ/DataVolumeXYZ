@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)"
+summary: A summary of our 3rd workshop, our comeback story, and our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come
 author: JamesDBartlett3
 feature-img: assets/img/data-dojo/matrix_aikido.png
 thumbnail: assets/img/data-dojo/9a4c84f0-74da-475a-bd01-64db7415d8f8_cropped.jpg
@@ -14,17 +15,20 @@ tags:
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 draft: false
+series: data-dojo
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
 
 <!-- intro -->
 <!--excerpt-->
+{% if layout == default %}
 This is the third installment in a series documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice.  
 
 In this post, I'll tell you about our third workshop (including a summary of the foundational topic we covered and why it was so important for us to establish this baseline before moving on to more advanced topics), how we clawed our way back from the brink of disaster following our setback and began rebuilding the trust and confidence of our members, and our plans for ensuring that the Data Dojo will continue to grow and thrive for many years to come.
+{% endif %}
 <!--more-->
-- In [Part 1](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at [Des Moines University (DMU)](https://dmu.edu). 
-- In [Part 2](../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html), I talked about our first two workshops, and shared a cautionary tale about our first major setback.
+
+{% include blog/blog_series_overview.liquid series=page.series %}
 
 Thank you for joining us on this adventure!
 
@@ -96,6 +100,8 @@ Speaking of averting disaster by thinking ahead, here are some pointers to help 
 In Part 4 of this series, I'll tell you all about our fourth workshop, which featured an interactive walkthrough of Power BI Desktop, and generated more buzz, enthusiasm, and positive feedback from our members than all previous workshops combined -- a huge success for the Data Dojo, and a clear indication that we're finally back on the right track and making forward progress. I'll also share some of my key takeaways from the organizer/facilitator perspective, like how we can leverage the power of kinesthetic learning to help our members engage directly with the subject matter, acquire and retain new knowledge and skills, and become better data analysts and data-driven decision makers in the process. Stay tuned!
 
 {% include aligner.html images="data-dojo/data-team-tunnel-matrix-cropped.png" column="auto" %}
+
+{% include blog/blog_series_pager.liquid series=page.series %}
 
 ## Bonus: Data Dojo featured on Havens Consulting YouTube Channel!
 [![Data Dojo featured on Havens Consulting YouTube Channel!](../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png)](https://www.youtube.com/watch?v=OlvXbg6VjFE&list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&t=326s){:target="_blank"}
