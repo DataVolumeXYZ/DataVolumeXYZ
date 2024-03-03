@@ -196,9 +196,9 @@ I firmly believe that every Power BI Community of Practice should host interacti
 # Next Time: Designing a Versatile, User-Friendly Power BI Report Template
 You've now had a peek under the hood of our official Data Dojo report template, and seen one of its most powerful features (the `fn_GetTableFromDataflow` function). In the next installment of this series, we'll take a closer look at the latest Data Dojo template, tinker with more of its capabilities, and talk about how to strike the right balance when designing a Power BI template that's both simple enough for a beginner **and** versatile enough for a seasoned pro. Stay tuned!
 
-{% include aligner.html images="data-dojo/data-team-tunnel-matrix-cropped.png" column="auto" %}
-
 {% include blog/blog_series_pager.liquid series=page.series %}
+
+{% include aligner.html images="data-dojo/data-team-tunnel-matrix-cropped.png" column="auto" %}
 
 ## Bonus: Data Dojo featured on Havens Consulting YouTube Channel!
 [![Data Dojo featured on Havens Consulting YouTube Channel!](../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png)](https://www.youtube.com/watch?v=OlvXbg6VjFE&list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&t=326s){:target="_blank"}
