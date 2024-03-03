@@ -1,0 +1,25 @@
+{% comment %} Credit: https://engineering.chrobinson.com/how-to/linking-a-series-of-jekyll-posts/ {% endcomment %}
+
+<aside class="series-overview">
+  <h4>This post is part of a series called <em>{{ site.data.series | where: 'id', page.series | map: 'title' }}</em></h4>
+  <ol>
+    {% assign series-posts = site.posts | reverse | where: 'series', page.series %}
+    {% for post in series-posts %}
+    <li>
+      {% if post.url == page.url %}
+      <strong>{{ post.title }}</strong>
+      {% else %}
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      {% endif %}
+			<ul>
+				<li>
+					<i>{{ post.summary }}</i>
+				</li>
+			</ul>
+    </li>
+    {% endfor %}
+  </ol>
+  {% if series-posts.size == 1 %}
+  <p>More posts coming soon!</p>
+  {% endif %}
+</aside>

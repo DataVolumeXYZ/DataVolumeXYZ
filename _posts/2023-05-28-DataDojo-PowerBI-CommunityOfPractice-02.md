@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)"
+summary: Summaries of our first two workshops, and a cautionary tale about our first major setback
 author: JamesDBartlett3
 feature-img: assets/img/data-dojo/matrix_aikido.png
 thumbnail: assets/img/data-dojo/fu-3624167-cropped2.jpg
@@ -14,16 +15,20 @@ tags:
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 draft: false
+series: data-dojo
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
 
 <!-- intro -->
 <!--excerpt-->
+{% if layout == default %}
 This is the second installment in a series documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice.  
 
-In this post, I'll share brief summaries of our first two workshops, and a cautionary tale about our first major setback. 
+In this post, I'll share brief summaries of our first two workshops, and a cautionary tale about our first major setback.
+{% endif %}
 <!--more-->
-- In [Part 1 of this series](../../../2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html), I shared the story of how I founded the Data Dojo at [Des Moines University (DMU)](https://dmu.edu).
+
+{% include blog/blog_series_overview.liquid series=page.series %}
 
 Thank you for joining us on this adventure!
 
@@ -113,6 +118,8 @@ Well, that sure sounded like a **lot** of bad news! But don't worry; there's lig
 In the next post of this series, I'll share our comeback story, and talk about what we're doing to ensure that the Data Dojo at Des Moines University will continue to grow and thrive for many years to come. Stay tuned!
 
 {% include aligner.html images="data-dojo/data-team-tunnel-light-cropped.jpg" column="auto" %}
+
+{% include blog/blog_series_pager.liquid series=page.series %}
 
 ## Bonus: Data Dojo featured on Havens Consulting YouTube Channel!
 [![Data Dojo featured on Havens Consulting YouTube Channel!](../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png)](https://www.youtube.com/watch?v=OlvXbg6VjFE&list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&t=326s){:target="_blank"}
