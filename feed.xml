@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://datavolume.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://datavolume.xyz/" rel="alternate" type="text/html" /><updated>2024-05-28T04:56:36+00:00</updated><id>https://datavolume.xyz/feed.xml</id><title type="html">DataVolume.xyz</title><subtitle>Harnessing industry-leading Business Intelligence, Data Analytics, and Automation to help you make better decisions, faster.</subtitle><author><name>James Bartlett</name></author><entry><title type="html">The Data Dojo: A Power BI Community of Practice (Part 4)</title><link href="https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html" rel="alternate" type="text/html" title="The Data Dojo: A Power BI Community of Practice (Part 4)" /><published>2024-01-15T00:00:00+00:00</published><updated>2024-01-15T00:00:00+00:00</updated><id>https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04</id><content type="html" xml:base="https://datavolume.xyz/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html"><![CDATA[<!-- intro -->
+<!--excerpt-->
+
+<!--more-->
+
+<aside class="series-overview">
+  <h4>This post is part of a series called <em>The Data Dojo: A Power BI Community of Practice</em></h4>
+  <ol>
+    
+    
+    <li>
+      
+      <a href="/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)</a>
+      
+			<ul>
+				<li>
+					<i>The story of how I founded the Data Dojo at Des Moines University (DMU)</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our first two workshops, and a cautionary tale about our first major setback</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)</a>
+      
+			<ul>
+				<li>
+					<i>A summary of our 3rd workshop, our comeback story, and our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <strong>The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)</strong>
+      
+			<ul>
+				<li>
+					<i>Summaries of our 4th and 5th workshops, and why I believe that every Power BI Community of Practice should host workshops like these as often as possible</i>
+				</li>
+			</ul>
+    </li>
+    
+  </ol>
+  
+</aside>
+
+<p>Thank you for joining us on this adventure!</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg" alt="73b72522-d039-4f78-89b6-68738189a233_cropped.jpg" />
+    </div>
+    
+</div>
+
+<h1 id="workshop4-the-data-dojo-strikes-back-our-1st-handson-workshop">Workshop #4: The Data Dojo Strikes Back (Our 1st Hands‑On Workshop)</h1>
+
+<p>We hosted our 4th workshop on September 19th, 2023, and it was attended by seventeen members. This was a significant improvement in turnout over our previous workshop, and an encouraging sign that the Data Dojo is finally back on track, healthy, and growing again. We were thrilled to welcome several new members to the Data Dojo for the first time at this workshop, and we’re excited to not only help them discover their own unique paths to data literacy and mastery, but also to learn from them as they bring their own unique knowledge, perspectives, and experiences to the table.</p>
+
+<p>This was also an exciting new milestone for us because, unlike any of our previous workshops (which mostly consisted of PowerPoint presentations and Q&amp;A sessions), this was an <strong>actual workshop</strong> – no slide deck, just a live, interactive tour of Power BI Desktop! Thus, it was our first true “workshop” in the traditional sense of the word.</p>
+
+<p>We started by walking our participants through the process of installing Power BI Desktop from the Microsoft Store and downloading our official Data Dojo report template from our SharePoint site. Then, we opened Power BI Desktop and took a tour of the template, pointing out some of its most useful features and explaining how they work. We also talked about the importance of using a standardized report template, and how it can help us to work together more effectively, by ensuring that all of our reports are consistent, accessible, professional, and easy to use. Next, we pointed out the main UI components of Power BI Desktop (see expandable section below), and briefly explained what each one is used for.</p>
+
+<details>
+	<summary>
+		
+		<b>
+		
+		A quick tour of the main UI components of Power BI Desktop...
+		
+		</b>
+		
+	</summary>
+	<p>
+	
+	
+	
+	
+	<div style="margin-left:1.5em; margin-bottom:2em;">
+		<ul>
+			<li>Report &amp; Model Editor (Main Window)
+				<ul>
+					<li>Views
+						<ul>
+							<li>Report View</li>
+							<li>Table View</li>
+							<li>Model View</li>
+						</ul>
+					</li>
+					<li>Panes
+						<ul>
+							<li>Data</li>
+							<li>Filter</li>
+							<li>Visualization</li>
+							<li>Selection</li>
+						</ul>
+					</li>
+					<li>Ribbons
+						<ul>
+							<li>Home</li>
+							<li>Insert</li>
+							<li>Modeling</li>
+							<li>View</li>
+							<li>Optimize</li>
+							<li>Help</li>
+							<li>External Tools</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Power Query Editor ("Transform Data" Window)
+				<ul>
+					<li>Panes
+						<ul>
+							<li>Queries</li>
+							<li>Applied steps</li>
+						</ul>
+					</li>
+					<li>Ribbons
+						<ul>
+							<li>Home</li>
+							<li>Transform</li>
+							<li>Add Column</li>
+							<li>View</li>
+							<li>Tools</li>
+							<li>Help</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	<hr style="width:80%;text-align:center;" />
+	</div>
+	
+	
+	
+	
+	</p> 
+</details>
+
+<p>Finally, we wrapped up our 4th workshop by thanking our participants and encouraging them to:</p>
+<ul>
+  <li>Continue exploring and experimenting with Power BI Desktop and the official Data Dojo report template.</li>
+  <li>Ask questions, share their experiences and discoveries, and contribute to the ongoing conversation in our Viva Engage group.</li>
+  <li>Prepare for the next workshop by writing down ideas for reports they’d like to start building, as well as any data sources they’ll need in order to build those reports.</li>
+</ul>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/masked_cyberpunk_data_manga_dojo_25962e35-2be0-4801-b645-fae50d5411cb.jpg" alt="masked_cyberpunk_data_manga_dojo_25962e35-2be0-4801-b645-fae50d5411cb.jpg" />
+    </div>
+    
+</div>
+
+<h1 id="workshop5-the-dao-of-the-dataflow-our-2nd-handson-workshop">Workshop #5: The Dao of the Dataflow (Our 2nd Hands‑On Workshop)</h1>
+
+<p>On December 5th, 2023, we hosted our 5th workshop, picking up right where we left off last time, and diving deep into Power Query. This was our 2nd hands-on workshop, featuring an interactive walkthrough of the Power Query interface in Power BI Desktop, and a live demonstration of how to retrieve, transform, clean, and model data. We also introduced a new-and-improved version of our official Data Dojo report template, and showcased its built-in shortcuts for importing Data Warehouse tables from our centrally-managed Dataflows in Power BI.</p>
+
+<details>
+	<summary>
+		
+		<b>
+		
+		A little backstory about these Dataflows...
+		
+		</b>
+		
+	</summary>
+	<p>
+	
+	
+	<i>
+	At DMU, we are fortunate enough to have a robust and mature on-premises Data Warehouse which contains just about all of the data generated by the business, spanning several different databases and a dozen or so different schemas.<br />In order to make the data in our Data Warehouse as accessible and simple to use as possible for report developers throughout the organization, I "mirrored" our Data Warehouse into a set of Power BI Dataflows (organized by database and schema), and granted our Data Dojo members read-only access to them.
+	</i>
+	
+	
+	</p> 
+</details>
+
+<p>Our latest official Data Dojo report template now ships with a custom Power Query function called <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code>, which can be invoked to fetch any table from any Dataflow in Power BI. Here’s the code:</p>
+
+<div class="language-fsharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// fn_GetTableFromDataflow</span>
+<span class="c1">// This function returns a table from a Dataflow in Power BI</span>
+
+<span class="c1">// -- RowLimit Parameter Notes --</span>
+<span class="c1">// During the development stages of any new Power BI report/model, </span>
+<span class="c1">// Power BI Desktop automatically refreshes all modified queries every </span>
+<span class="c1">// time the report author applies their changes in Power Query. </span>
+<span class="c1">// This interrupts the report author's workflow and hampers progress, </span>
+<span class="c1">// especially when the refresh takes a long time.</span>
+<span class="c1">// To avoid this problem, the report author should use the RowLimit </span>
+<span class="c1">// parameter to temporarily limit the number of rows returned by this </span>
+<span class="c1">// function during the data modeling stage of development, and then </span>
+<span class="c1">// remove the limit (by passing -1 as the RowLimit parameter) when </span>
+<span class="c1">// the model is ready for testing.</span>
+
+<span class="p">(</span>
+  <span class="nc">Workspace</span> <span class="k">as</span> <span class="n">text</span><span class="p">,</span>
+  <span class="nc">Dataflow</span> <span class="k">as</span> <span class="n">text</span><span class="p">,</span>
+  <span class="nc">Table</span> <span class="k">as</span> <span class="n">text</span><span class="p">,</span>
+  <span class="nc">RowLimit</span> <span class="k">as</span> <span class="n">number</span>
+<span class="p">)</span> <span class="k">as</span> <span class="n">table</span> <span class="o">=&gt;</span>
+<span class="k">let</span>
+  <span class="nc">Source</span> <span class="p">=</span> <span class="nn">PowerPlatform</span><span class="p">.</span><span class="nc">Dataflows</span><span class="p">(</span><span class="k">null</span><span class="o">),</span>
+  <span class="nc">WorkspaceList</span> <span class="p">=</span> <span class="nc">Source</span><span class="o">{[</span><span class="nc">Id</span><span class="p">=</span><span class="s2">"Workspaces"</span><span class="o">]}[</span><span class="nc">Data</span><span class="o">],</span>
+  <span class="nc">SelectedWorkspace</span> <span class="p">=</span> 
+    <span class="k">try</span> <span class="nc">WorkspaceList</span><span class="o">{[</span><span class="n">workspaceName</span><span class="p">=</span><span class="nc">Workspace</span><span class="o">]}[</span><span class="nc">Data</span><span class="p">]</span>
+    <span class="n">otherwise</span> <span class="nc">WorkspaceList</span><span class="o">{[</span><span class="n">workspaceId</span><span class="p">=</span><span class="nc">Workspace</span><span class="o">]}[</span><span class="nc">Data</span><span class="o">],</span>
+  <span class="nc">SelectedDataflow</span> <span class="p">=</span> 
+    <span class="k">try</span> <span class="nc">SelectedWorkspace</span><span class="o">{[</span><span class="n">dataflowName</span><span class="p">=</span><span class="nc">Dataflow</span><span class="o">]}[</span><span class="nc">Data</span><span class="p">]</span>
+    <span class="n">otherwise</span> <span class="nc">SelectedWorkspace</span><span class="o">{[</span><span class="n">dataflowId</span><span class="p">=</span><span class="nc">Dataflow</span><span class="o">]}[</span><span class="nc">Data</span><span class="o">],</span>
+  <span class="nc">SelectedTable</span> <span class="p">=</span> <span class="nc">SelectedDataflow</span><span class="o">{[</span><span class="n">entity</span><span class="p">=</span><span class="nc">Table</span><span class="p">,</span><span class="n">version</span><span class="p">=</span><span class="s2">""</span><span class="o">]}[</span><span class="nc">Data</span><span class="o">],</span>
+  <span class="nc">FilterLogic</span> <span class="p">=</span> <span class="k">if</span> <span class="nc">RowLimit</span> <span class="p">&lt;</span> <span class="mi">0</span>
+    <span class="k">then</span> <span class="nc">SelectedTable</span>
+    <span class="k">else</span> <span class="nn">Table</span><span class="p">.</span><span class="nc">FirstN</span><span class="p">(</span><span class="nc">SelectedTable</span><span class="p">,</span> <span class="nc">RowLimit</span><span class="p">)</span>
+<span class="k">in</span>
+  <span class="nc">FilterLogic</span>
+</code></pre></div></div>
+
+<p>To import a table from a Dataflow in Power BI, the report author only needs to invoke the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function, passing in the name (or ID) of the Power BI Workspace, the name (or ID) of the target Dataflow, the name of the table, and the number of rows to retrieve. For example, to import the <code class="language-plaintext highlighter-rouge">FactExamScore</code> table from the <code class="language-plaintext highlighter-rouge">DataWarehouse</code> Dataflow in the <code class="language-plaintext highlighter-rouge">DataDojo</code> Workspace, limiting the results to one million rows for testing purposes, the report author must simply enter those values into the parameter fields in the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function’s UI and click <code class="language-plaintext highlighter-rouge">Invoke</code>, and then a new query containing the following M code will be automatically generated:</p>
+
+<div class="language-fsharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span>
+  <span class="nc">Source</span> <span class="p">=</span> <span class="n">fn_GetTableFromDataflow</span><span class="p">(</span>
+    <span class="s2">"DataDojo"</span><span class="p">,</span> <span class="s2">"DataWarehouse"</span><span class="p">,</span> <span class="s2">"FactExamScore"</span><span class="p">,</span> <span class="mi">1000000</span>
+  <span class="p">)</span>
+<span class="k">in</span>
+  <span class="nc">Source</span>
+</code></pre></div></div>
+
+<p>Armed with the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function and our centrally-managed Dataflows, Data Dojo members can easily import any table from our Data Warehouse into their Power BI report/model, without having to learn how to write SQL or M queries, and without having to worry about future changes to the server name, database name, etc. This is a huge time-saver, significantly lowering the barrier to entry for new report authors, and helping to ensure that everyone is using the same, standardized, approved version of each table.</p>
+
+<p>We concluded our 5th workshop by encouraging our participants to:</p>
+<ul>
+  <li>Continue exploring and experimenting with the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function in Power Query.</li>
+  <li>Keep writing down ideas for their first report.</li>
+  <li>Start researching which Data Warehouse tables they’ll need to pull into their model in order to build that report.</li>
+</ul>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/6d05725e-071a-407c-a834-63096ca57e57_cropped.jpg" alt="6d05725e-071a-407c-a834-63096ca57e57_cropped.jpg" />
+    </div>
+    
+</div>
+
+<!-- add image of data ninjas with code -->
+
+<h1 id="the-importance-of-hands-on-workshops">The Importance of Hands-On Workshops</h1>
+
+<p>I firmly believe that every Power BI Community of Practice should host interactive, hands-on workshops whenever possible, and here are three solid reasons why:</p>
+<ol>
+  <li><strong>Slideshows are boring. They’re boring to make, and they’re often just as boring to watch.</strong> And to make matters worse, slideshows are not even very effective at conveying the complex technical concepts of data analytics, nor the tools and techniques we use to implement them. If we’re only hosting lectures, and not giving our members a chance to get their hands dirty, then we’re not helping them learn, grow, and develop their skills, and that means we’re also not helping our organizations achieve their strategic goals and objectives with regards to data.</li>
+  <li><strong>Technical concepts and skills are best learned via live, interactive, hands-on demonstration</strong> – where every participant can follow along, ask questions, and experience firsthand the thrill of discovery and the rush of wielding a powerful tool for the first time. This is especially true for data analytics, which is simultaneously a highly visual discipline, <strong><em>and</em></strong> requires the ability to think in <strong><em>n</em>-dimensional space</strong> (a concept which defies all attempts at visualization, making it nearly impossible to learn by merely watching).</li>
+  <li><strong>Following along with a live demonstration is not just more effective as a learning aid than watching a slideshow – it’s also more fun!</strong> And when people are having fun, they’re more likely to ask questions, remain engaged during the workshop, retain more of what they learn, tell their coworkers about their experiences, and most importantly, keep coming back for more. By hosting hands-on workshops on a regular basis, we can help our members learn more, learn faster, and have more fun doing it. And that’s a win-win-win for everyone involved.</li>
+</ol>
+
+<h1 id="next-time-designing-a-versatile-user-friendly-power-bi-report-template">Next Time: Designing a Versatile, User-Friendly Power BI Report Template</h1>
+<p>You’ve now had a peek under the hood of our official Data Dojo report template, and seen one of its most powerful features (the <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code> function). In the next installment of this series, we’ll take a closer look at the latest Data Dojo template, tinker with more of its capabilities, and talk about how to strike the right balance when designing a Power BI template that’s both simple enough for a beginner <strong>and</strong> versatile enough for a seasoned pro. Stay tuned!</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/data-team-tunnel-matrix-cropped.png" alt="data-team-tunnel-matrix-cropped.png" />
+    </div>
+    
+</div>
+
+<aside class="series-pager" style="text-align: center">
+<h4><em>The Data Dojo: A Power BI Community of Practice</em> Series</h4>
+
+
+
+<p>Post <strong>4</strong> of <strong>4</strong>
+  </p>
+
+
+  
+  
+
+  
+  
+
+  
+    <a class="btn" rel="prev" href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">⪡ Previous </a>
+  
+  
+
+  
+  
+
+</aside>
+
+<h2 id="bonus-data-dojo-featured-on-havens-consulting-youtube-channel">Bonus: Data Dojo featured on Havens Consulting YouTube Channel!</h2>
+<p><a href="https://www.youtube.com/watch?v=OlvXbg6VjFE&amp;list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&amp;t=326s" target="_blank"><img src="../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png" alt="Data Dojo featured on Havens Consulting YouTube Channel!" /></a></p>]]></content><author><name>James D. Bartlett III</name></author><category term="Power BI" /><category term="Community of Practice" /><category term="Data Analytics" /><category term="Data Dojo" /><category term="Data Literacy" /><category term="Knowledge Sharing" /><category term="Power Query (M)" /><category term="Dataflow" /><summary type="html"><![CDATA[A series about founding and fostering a successful Power BI Community of Practice]]></summary></entry><entry><title type="html">The Data Dojo: A Power BI Community of Practice (Part 3)</title><link href="https://datavolume.xyz/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html" rel="alternate" type="text/html" title="The Data Dojo: A Power BI Community of Practice (Part 3)" /><published>2023-10-13T00:00:00+00:00</published><updated>2023-10-13T00:00:00+00:00</updated><id>https://datavolume.xyz/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03</id><content type="html" xml:base="https://datavolume.xyz/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html"><![CDATA[<!-- intro -->
+<!--excerpt-->
+
+<!--more-->
+
+<aside class="series-overview">
+  <h4>This post is part of a series called <em>The Data Dojo: A Power BI Community of Practice</em></h4>
+  <ol>
+    
+    
+    <li>
+      
+      <a href="/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)</a>
+      
+			<ul>
+				<li>
+					<i>The story of how I founded the Data Dojo at Des Moines University (DMU)</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our first two workshops, and a cautionary tale about our first major setback</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <strong>The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)</strong>
+      
+			<ul>
+				<li>
+					<i>A summary of our 3rd workshop, our comeback story, and our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our 4th and 5th workshops, and why I believe that every Power BI Community of Practice should host workshops like these as often as possible</i>
+				</li>
+			</ul>
+    </li>
+    
+  </ol>
+  
+</aside>
+
+<p>Thank you for joining us on this adventure!</p>
+
+<h1 id="waking-the-sleeping-dragon-our-third-workshop">Waking the Sleeping Dragon (Our Third Workshop)</h1>
+
+<p>We hosted our third workshop on August 2nd, 2023, and as I mentioned in <a href="../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">Part 2</a>, it had been a <em>very</em> long time since our last workshop, so the stakes were quite high. We had to prove to everyone (especially ourselves) that we could:</p>
+<ul>
+  <li>Rebound quickly from a major setback</li>
+  <li>Resume attracting new members, delivering value to our existing members, and providing a safe and welcoming environment for everyone</li>
+  <li>Recommit ourselves to building a strong community and fostering a culture of knowledge sharing and collaboration within our organization</li>
+</ul>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/sleeping_dragon_1.jpg" alt="sleeping_dragon_1.jpg" />
+    </div>
+    
+</div>
+
+<p>Our third workshop was attended by just <em>twelve</em> members – a much lower turnout than either of our previous workshops. I had actually anticipated a significant dip in attendance at our third workshop (as a result of the issues I outlined in the <a href="../../../2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html#Our-First-Major-Setback">“Our First Major Setback” section of Part 2</a>), but even though I saw it coming, it still hit me pretty hard and left me feeling more than a little disappointed (mostly in myself). However, this storm cloud had two clearly visible silver linings:</p>
+<ol>
+  <li>Most of the attrition consisted of members who had participated only minimally (if at all) during the first two workshops, while nearly all of the members in attendance had been eager participants in the first two workshops, and continued that trend during the third. Obviously, we’ll need to figure out how to re-engage our less active members, but we can at least take comfort in the fact that we have a solid core of members whose unwavering enthusiasm will keep us energized and help us navigate even the most turbulent waters.</li>
+  <li>We also had several new members join us for the first time, and we were thrilled to welcome them to the Data Dojo. We’re always excited when new members arrive, but it was especially encouraging to see new members put their faith in us during a time when we were still reeling from a major setback, and the future of the Data Dojo was perhaps uncertain, or even precarious (particularly from their outside perspective).
+The fact that these new members chose to join our ranks <em><strong>despite our readily apparent struggles and shortcomings</strong></em> is a testament to the strength and resilience of our community, and the real value that our members provide, both to each other and to the organization at large.</li>
+</ol>
+
+<p>In this workshop, we focused on providing simple definitions, real world examples, and clear explanations for most of the common technical “jargon” terms that Data Dojo members are likely to encounter while working with data (<a href="../../../assets/doc/DMU_Data_Dojo_-_Meeting_003.pdf" target="_blank">slide deck pdf</a>). Compared with the topics we covered in our previous workshops, this one was probably a little boring. However, it is absolutely critical for everyone working with data in an organization to have a unified vocabulary and a shared understanding of how each term relates to the organization’s overall data analytics strategy and specific implementation. This is especially true for a Community of Practice like the Data Dojo, where members are encouraged to share their knowledge and collaborate with each other. If we don’t all speak the same language, then we can’t communicate effectively with each other, and all of our collaborative and knowledge-sharing efforts will be severely hampered. So, even though this subject may have been a little dry, it was still very important for us to get everyone speaking the same technological dialect, and I’m glad we did it.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/3c309192-71d0-47e8-bbed-2b5bcc76f19d_cropped.jpg" alt="3c309192-71d0-47e8-bbed-2b5bcc76f19d_cropped.jpg" />
+    </div>
+    
+</div>
+
+<p>I was chatting with my wife the other day about data terminology, and how important it is for everyone in the organization to have a shared understanding of what the various terms mean. She made some excellent points, and I thought I’d share them here:</p>
+<blockquote>
+  <p>It’s not uncommon for accounting/finance and IT to have terrible communication with each other, because they’re usually speaking two very different languages. Establishing a common language around data in the organization is a great way to not only increase data literacy in the organization at large, but also to start breaking down the language barriers preventing individual business units within the organization from understanding each other and collaborating effectively. Data literacy and a common language around data in the organization enable clearer, more effective communication of needs and objectives throughout the organization.<br />
+    – <a href="https://www.linkedin.com/in/erin-howland/" target="_blank">Erin Howland</a></p>
+</blockquote>
+
+<h1 id="wax-on-wax-off-the-importance-of-practice">Wax On, Wax Off: The Importance of Practice</h1>
+
+<p>One of the most important lessons I’ve learned from my experiences with the Data Dojo so far is that <strong>practice is absolutely critical</strong>. This is especially true for those of us who are responsible for leading and/or facilitating a Community of Practice, because our actions and decisions will have a direct impact on the success or failure of both our Community of Practice and the organization as a whole.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/wax_on_wax_off_cropped.jpg" alt="wax_on_wax_off_cropped.jpg" />
+    </div>
+    
+</div>
+
+<p>Successful Communities of Practice require effective leadership, and in order for us to be effective leaders, we must not only hone our technical skills, but also we must practice the craft of leadership itself. Therefore, as leaders and facilitators of our Communities of Practice, we must:</p>
+
+<ul>
+  <li>Find one or more mentors with expertise in:
+    <ul>
+      <li>Event planning</li>
+      <li>Project management</li>
+      <li>Collaborative leadership</li>
+    </ul>
+  </li>
+  <li>Learn and drill the basics
+    <ul>
+      <li>Learn as much as possible from our mentors</li>
+      <li>Practice what we’ve learned</li>
+      <li>Seek feedback from mentors, peers, and members of our Communities of Practice</li>
+    </ul>
+  </li>
+  <li>Develop core strength
+    <ul>
+      <li>Pick one new skill to learn, and one existing skill which needs improvement</li>
+      <li>Focus on those two skills, and look for opportunities to practice them whenever possible</li>
+      <li>After gaining sufficient strength in those two skills, repeat the process with two more</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="the-art-of-war-strategy-first-then-tactics">The Art of War: Strategy First, Then Tactics</h1>
+
+<p>As we’ve seen, successful Community of Practice leaders and facilitators must be effective tacticians, but that’s only half of the equation. In order to be truly effective, we must also be strategic thinkers. We must be able to:</p>
+<ul>
+  <li>Look at the big picture and understand how our Communities of Practice fit into the larger organizational landscape</li>
+  <li>Identify and prioritize the most important goals and objectives for our Communities of Practice, and then develop and execute a plan to achieve them</li>
+  <li>Adapt our plans as necessary in response to changes in the organization’s needs, as well as the needs of our members</li>
+  <li>Communicate our plans with our members, so that they can understand and support our vision, and help us achieve our goals</li>
+  <li>Seize the initiative and take advantage of opportunities as they arise, while also being mindful of the potential risks and pitfalls involved, and taking proper precautions to avoid or mitigate them</li>
+</ul>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/data_samurai_generals_strategy_session.jpg" alt="data_samurai_generals_strategy_session.jpg" />
+    </div>
+    
+</div>
+
+<p>Speaking of averting disaster by thinking ahead, here are some pointers to help you avoid making the same strategic mistakes that I’ve made:</p>
+<ul>
+  <li>Beware of “tunnel vision” masquerading as “laser focus” (I’ve fallen into this particular trap so many times, I’ve lost count)</li>
+  <li>Remember to zoom out from time to time, assess the situation, re-calibrate as necessary, and then zoom back in</li>
+  <li>Target attainable goals first, then set stretch goals once you’ve achieved the attainable ones</li>
+  <li>Don’t be afraid to pivot when necessary – an acceptable solution today is better than a perfect solution next year</li>
+  <li>Know your limits, don’t overcommit yourself, and don’t hesitate to ask for help when you need it</li>
+</ul>
+
+<blockquote>
+  <p>Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.<br />
+    – <a href="https://en.wikipedia.org/wiki/Sun_Tzu" target="_blank">Sun Tzu</a>, <a href="https://en.wikipedia.org/wiki/The_Art_of_War" target="_blank">“The Art of War”</a></p>
+</blockquote>
+
+<h1 id="next-time-the-data-dojo-strikes-back">Next Time: The Data Dojo Strikes Back!</h1>
+<p>In Part 4 of this series, I’ll tell you all about our fourth workshop, which featured an interactive walkthrough of Power BI Desktop, and generated more buzz, enthusiasm, and positive feedback from our members than all previous workshops combined – a huge success for the Data Dojo, and a clear indication that we’re finally back on the right track and making forward progress. I’ll also share some of my key takeaways from the organizer/facilitator perspective, like how we can leverage the power of kinesthetic learning to help our members engage directly with the subject matter, acquire and retain new knowledge and skills, and become better data analysts and data-driven decision makers in the process. Stay tuned!</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/data-team-tunnel-matrix-cropped.png" alt="data-team-tunnel-matrix-cropped.png" />
+    </div>
+    
+</div>
+
+<aside class="series-pager" style="text-align: center">
+<h4><em>The Data Dojo: A Power BI Community of Practice</em> Series</h4>
+
+
+
+<p>Post <strong>3</strong> of <strong>4</strong>
+  </p>
+
+
+  
+  
+
+  
+    <a class="btn" rel="prev" href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">⪡ Previous </a>
+  
+  
+
+  
+  
+
+  
+  
+		&nbsp;&nbsp;<a class="btn" rel="next" href="/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html">Next  ⪢</a>
+  
+
+</aside>
+
+<h2 id="bonus-data-dojo-featured-on-havens-consulting-youtube-channel">Bonus: Data Dojo featured on Havens Consulting YouTube Channel!</h2>
+<p><a href="https://www.youtube.com/watch?v=OlvXbg6VjFE&amp;list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&amp;t=326s" target="_blank"><img src="../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png" alt="Data Dojo featured on Havens Consulting YouTube Channel!" /></a></p>]]></content><author><name>James D. Bartlett III</name></author><category term="Power BI" /><category term="Community of Practice" /><category term="Data Analytics" /><category term="Data Dojo" /><category term="Data Literacy" /><category term="Knowledge Sharing" /><summary type="html"><![CDATA[A series about founding and fostering a successful Power BI Community of Practice]]></summary></entry><entry><title type="html">The Data Dojo: A Power BI Community of Practice (Part 2)</title><link href="https://datavolume.xyz/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html" rel="alternate" type="text/html" title="The Data Dojo: A Power BI Community of Practice (Part 2)" /><published>2023-05-28T00:00:00+00:00</published><updated>2023-05-28T00:00:00+00:00</updated><id>https://datavolume.xyz/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02</id><content type="html" xml:base="https://datavolume.xyz/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html"><![CDATA[<!-- intro -->
+<!--excerpt-->
+
+<!--more-->
+
+<aside class="series-overview">
+  <h4>This post is part of a series called <em>The Data Dojo: A Power BI Community of Practice</em></h4>
+  <ol>
+    
+    
+    <li>
+      
+      <a href="/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)</a>
+      
+			<ul>
+				<li>
+					<i>The story of how I founded the Data Dojo at Des Moines University (DMU)</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <strong>The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)</strong>
+      
+			<ul>
+				<li>
+					<i>Summaries of our first two workshops, and a cautionary tale about our first major setback</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)</a>
+      
+			<ul>
+				<li>
+					<i>A summary of our 3rd workshop, our comeback story, and our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our 4th and 5th workshops, and why I believe that every Power BI Community of Practice should host workshops like these as often as possible</i>
+				</li>
+			</ul>
+    </li>
+    
+  </ol>
+  
+</aside>
+
+<p>Thank you for joining us on this adventure!</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/cyberpunk_data_manga_dojo_1_cropped.jpg" alt="cyberpunk_data_manga_dojo_1_cropped.jpg" />
+    </div>
+    
+</div>
+
+<h1 id="our-first-workshop">Our First Workshop</h1>
+
+<p>We launched the Data Dojo with our first workshop on July 20th, 2022, and it was a huge success!<br />
+We had <em>eighteen</em> members in attendance, and we covered the following topics (<a href="../../../assets/doc/DMU_Data_Dojo_-_Meeting_001.pdf" target="_blank">slide deck pdf</a>):</p>
+<ul>
+  <li>Introductions around the room</li>
+  <li>What we’re doing here, and why it matters</li>
+  <li>The importance of speed and accuracy in data analysis, and what we mean by “speed” and “accuracy”</li>
+  <li>Data driven decision makers: what they <strong>do know</strong>, and what they often <strong>don’t know</strong></li>
+  <li>The current paradigm and state of data analysis at DMU</li>
+  <li>The new paradigm: our vision for the future, and plans for turning that vision into a reality</li>
+  <li>Testimonials from four Data Dojo members who had already been using Power BI in their day-to-day jobs, experienced first-hand the benefits of data-driven decision making, and successfully collaborated on at least one Power BI project with one or more colleagues from other departments</li>
+  <li>Our next steps
+    <ul>
+      <li>Added everyone who attended the workshop to our private Yammer group, and encouraged them to introduce themselves, ask questions, share ideas, and vote on dates and topics for future workshops</li>
+      <li>Provided a list of Power BI learning resources (<a href="../../../assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.pdf">pdf</a>/<a href="../../../assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.xlsx">xlsx</a>) for those who wanted to dive in right away</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="our-second-workshop">Our Second Workshop</h1>
+
+<p>We held our second Data Dojo workshop about a month later, this time with <em>twenty</em> members in attendance!<br />
+Here’s an outline of what we covered (<a href="../../../assets/doc/DMU_Data_Dojo_-_Meeting_002.pdf" target="_blank">slide deck pdf</a>):</p>
+<ul>
+  <li><a href="https://www.biconnector.com/blog/5-types-of-data-analytics-explained-with-examples/" target="_blank"><strong>The Five Types of Data Analytics</strong></a>
+    <ol>
+      <li>Descriptive — <em>“What happened, where, and when?”</em></li>
+      <li>Diagnostic — <em>“Why did it happen?”</em></li>
+      <li>Predictive — <em>“What will happen in the future?”</em></li>
+      <li>Prescriptive — <em>“What should we do about it?”</em></li>
+      <li>Cognitive — <em>“How can we do it better?”</em></li>
+    </ol>
+  </li>
+  <li><strong>The Data Analytics Cycle</strong> <!-- Need to find the original source for this -->
+    <ol>
+      <li>Requirements gathering</li>
+      <li>Data ingestion and processing</li>
+      <li>Data exploration</li>
+      <li>Data analysis</li>
+      <li>Deploy analytics solution</li>
+      <li>Request and process feedback</li>
+      <li>Optimize solution</li>
+      <li>Repeat</li>
+    </ol>
+  </li>
+  <li><a href="https://www.datamation.com/big-data/structured-vs-unstructured-data/" target="_blank"><strong>Structured vs. Unstructured Data</strong></a></li>
+  <li><strong>Better Instruction Through Data</strong> — A presentation by one of our members from outside the IT department, which included:
+    <ul>
+      <li>A live demo of some of the reports he had made using curated datasets provided by the IT department</li>
+      <li>Stories of how several of his reports had already made a significant impact on the way his department operates on a day-to-day basis</li>
+      <li>Examples of some challenges he has encountered working with data, and how he overcame them by utilizing our learning resources and collaborating with other members of the Data Dojo from both his own department and other departments</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/fu-3624167-cropped.jpg" alt="fu-3624167-cropped.jpg" />
+    </div>
+    
+</div>
+
+<h1 id="Our-First-Major-Setback">Our First Major Setback</h1>
+
+<p>After such a strong start, it really felt like nothing could stop us, and we were well on our way to achieving our vision of a data-driven DMU. But then, we hit a snag. <strong>A <em>big</em> one.</strong></p>
+
+<p>For several years, DMU has been in the process of <a href="https://www.dmu.edu/new-campus/" target="_blank">building a new campus in West Des Moines</a>, and it’s scheduled to open later this year (Fall of 2023). Of course, this is a huge undertaking, and it’s been a major focus for the entire university. As you can probably imagine, every department at DMU has been extremely busy with multiple projects related to the new campus transition, and that has had a significant impact on the amount of time and energy we have been able to devote to the Data Dojo.</p>
+
+<p>While I’d really like to blame all of those new campus projects and their associated time constraints for slowing us down, that would only be partially true. I also made a few mistakes along the way, and I’d like to share them with you, so that you can avoid making the same mistakes.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/223ef78e-b75f-4a4c-b1fc-165d335a3ca4.jpg" alt="223ef78e-b75f-4a4c-b1fc-165d335a3ca4.jpg" />
+    </div>
+    
+</div>
+
+<h2 id="mistake-1-failing-to-keep-a-consistent-schedule">Mistake #1: Failing to Keep a Consistent Schedule</h2>
+
+<p>After our second workshop, we had a lot of momentum, and I was eager to keep it going, but I didn’t have a clear plan for how to do that. I knew that I wanted to hold a workshop every month or so, but given the frenetic pace of projects at the new campus, it was hard to find dates that worked for most of our members. I really should have just found a date that worked for at least half of our members, but instead I kept pushing it back indefinitely, hoping that I would eventually find a date that worked for everyone. The worst part of this was that I didn’t communicate any of this to our members, so they had no idea what was going on. I’m sure that many of them thought the Data Dojo had just fizzled out, and that was entirely my fault.</p>
+
+<h2 id="mistake-2-failing-to-keep-the-conversation-going">Mistake #2: Failing to Keep the Conversation Going</h2>
+
+<p>My second mistake was not having a strategy for keeping the conversation going between workshops. I had created a private Yammer group for the Data Dojo, and everyone who had attended at least one workshop so far was a member of that group, but my efforts at encouraging members to engage with each other only achieved sporadic results. There were definitely some great conversations, but mostly between the same handful of members, and I also didn’t do a very good job of seeding the discussion myself with new material. I should have been posting more questions, sharing more ideas and links, and encouraging more members to do the same.</p>
+
+<h2 id="mistake-3-letting-perfect-be-the-enemy-of-good">Mistake #3: Letting Perfect be the Enemy of Good</h2>
+
+<p>In the wake of two well-attended workshops, and with quite a bit of buzz about the Data Dojo circulating around the organization, I started thinking to myself, <em>“This next workshop will need to be absolutely mind-blowing,”</em> and I started daydreaming about how I could make our third workshop the best one yet. My third (and biggest) mistake was allowing those daydreams and high expectations to cloud my judgment, and eventually undermine much of what I had been working so hard to achieve.</p>
+
+<p>At the time, I had been collaborating for several months with <a href="https://www.linkedin.com/in/escobedoanthony" target="_blank">Anthony Escobedo</a> and <a href="https://www.linkedin.com/in/powerbisteve/" target="_blank">Steve Campbell</a>, the creators of an open-source project called <a href="https://powerbi.tips/2021/02/power-bi-version-control/" target="_blank">Power BI Version Control</a> (a user-friendly app that helps business users maintain their Power BI files in a basic version control system). Anthony, Steve, and I were getting very close to releasing a highly-anticipated bugfix version of Power BI Version Control, and I really wanted the third Data Dojo workshop to center around deploying this new release for all Data Dojo members to use with their respective teams and business units.</p>
+
+<p>Sadly, as you’ve probably guessed by now, the release date for that new bugfix version kept getting pushed back, and I kept pushing back the date for our next Data Dojo workshop along with it. I was so focused on getting the timing just right that I didn’t even consider the possibility that I could run our third Data Dojo workshop based on some other core topic, and just wait to blow everyone’s minds with the Power BI Version Control deployment until the fourth or fifth workshop. I was so focused on achieving a <strong>perfect</strong> workshop that I didn’t even consider the possibility of a <strong>good</strong> one.</p>
+
+<h2 id="summary-of-mistakes">Summary of Mistakes:</h2>
+
+<p>The cumulative result of these indefinite delays and communication failures was that the Data Dojo didn’t have a <em>single</em> workshop for nearly <em>three quarters of a year</em>, and much of our initial momentum and enthusiasm were lost. I felt like I had let everyone down, and I was worried that the Data Dojo might never recover.</p>
+
+<p>I was discussing this situation with my wife the other day, trying to determine exactly where I had gone wrong, and I think she really nailed it with her analysis:</p>
+<blockquote>
+  <p>It’s a bit idealistic to assume that anything in tech happens on a convenient or timely schedule. Prioritizing conversation, regardless of content and attendence perfection, is clearly an important factor in developing the kind of data-driven and data-literate culture that any organization would benefit from.<br />
+    – <a href="https://www.linkedin.com/in/erin-howland/" target="_blank">Erin Howland</a></p>
+</blockquote>
+
+<h1 id="next-time-waking-the-sleeping-dragon">Next Time: Waking the Sleeping Dragon</h1>
+
+<p>Well, that sure sounded like a <strong>lot</strong> of bad news! But don’t worry; there’s light at the end of this tunnel. While we <strong>have</strong> reached the conclusion of this article, we have <strong>not</strong> seen the last of the Data Dojo.</p>
+
+<p>In the next post of this series, I’ll share our comeback story, and talk about what we’re doing to ensure that the Data Dojo at Des Moines University will continue to grow and thrive for many years to come. Stay tuned!</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/data-team-tunnel-light-cropped.jpg" alt="data-team-tunnel-light-cropped.jpg" />
+    </div>
+    
+</div>
+
+<aside class="series-pager" style="text-align: center">
+<h4><em>The Data Dojo: A Power BI Community of Practice</em> Series</h4>
+
+
+
+<p>Post <strong>2</strong> of <strong>4</strong>
+  </p>
+
+
+  
+    <a class="btn" rel="prev" href="/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html">⪡ Previous </a>
+  
+  
+
+  
+  
+
+  
+  
+		&nbsp;&nbsp;<a class="btn" rel="next" href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">Next  ⪢</a>
+  
+
+  
+  
+
+</aside>
+
+<h2 id="bonus-data-dojo-featured-on-havens-consulting-youtube-channel">Bonus: Data Dojo featured on Havens Consulting YouTube Channel!</h2>
+<p><a href="https://www.youtube.com/watch?v=OlvXbg6VjFE&amp;list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&amp;t=326s" target="_blank"><img src="../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png" alt="Data Dojo featured on Havens Consulting YouTube Channel!" /></a></p>]]></content><author><name>James D. Bartlett III</name></author><category term="Power BI" /><category term="Community of Practice" /><category term="Data Analytics" /><category term="Data Dojo" /><category term="Data Literacy" /><category term="Knowledge Sharing" /><summary type="html"><![CDATA[A series about founding and fostering a successful Power BI Community of Practice]]></summary></entry><entry><title type="html">The Data Dojo: A Power BI Community of Practice (Part 1)</title><link href="https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html" rel="alternate" type="text/html" title="The Data Dojo: A Power BI Community of Practice (Part 1)" /><published>2023-04-02T00:00:00+00:00</published><updated>2023-04-02T00:00:00+00:00</updated><id>https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01</id><content type="html" xml:base="https://datavolume.xyz/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html"><![CDATA[<!--excerpt-->
+<p>I joined <a href="https://dmu.edu">Des Moines University</a> as a Senior Business Intelligence Analyst in December of 2020, and one of the first things I noticed whenever I got to know a colleague from another department was that many of them were eager to begin analyzing the data generated by their individual business units, but didn’t know where to start. Of course, there are tons of excellent books, videos, blogs, and self-paced e-learning resources about Power BI and data analytics in general, but I’ve found that the best way to <strong>learn</strong> is to <strong>do</strong>, and the best way to <strong>do</strong> is <strong>together</strong>.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/together-2450090-cropped.jpg" alt="together-2450090-cropped.jpg" />
+    </div>
+    
+</div>
+
+<p>The natural solution was to establish an inter-disciplinary Power BI <a href="https://en.wikipedia.org/wiki/Community_of_practice">Community of Practice (CoP)</a> at DMU, which is exactly what we are now in the process of doing. We call our CoP the <strong>Data Dojo</strong>, and I’m excited to share our journey with you.</p>
+
+<!--more-->
+
+<aside class="series-overview">
+  <h4>This post is part of a series called <em>The Data Dojo: A Power BI Community of Practice</em></h4>
+  <ol>
+    
+    
+    <li>
+      
+      <strong>The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)</strong>
+      
+			<ul>
+				<li>
+					<i>The story of how I founded the Data Dojo at Des Moines University (DMU)</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our first two workshops, and a cautionary tale about our first major setback</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)</a>
+      
+			<ul>
+				<li>
+					<i>A summary of our 3rd workshop, our comeback story, and our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our 4th and 5th workshops, and why I believe that every Power BI Community of Practice should host workshops like these as often as possible</i>
+				</li>
+			</ul>
+    </li>
+    
+  </ol>
+  
+</aside>
+
+<h1 id="founding-the-data-dojo">Founding the Data Dojo</h1>
+
+<p>From the very beginning, I knew that there were varying levels of Power BI experience among the faculty and staff at DMU. Some had never even heard of Power BI, while others had already been using it for several years. I also knew that I didn’t have the time or energy to teach everyone everything they needed to know about Power BI on an individual basis. Additionally, I knew that I couldn’t be the only one teaching if I wanted to have an organization-wide impact. And finally, I knew that a hierarchical structure would only hinder our ability to grow and adapt organically. So, with all of that in mind, I created our Data Dojo with these founding principles:</p>
+
+<ol>
+  <li>Anyone who is interested in learning how to make better use of their data can become a Data Dojo member.</li>
+  <li>Members are welcome to attend as many (or as few) of our workshops as they like.</li>
+  <li>Members are encouraged to share their knowledge and experience, though no one is required to do so.</li>
+  <li>We facilitate the sharing of knowledge primarily through two channels:
+    <ul>
+      <li>Interactive workshops (in-person, virtual, or hybrid).</li>
+      <li>A private <a href="https://www.yammer.com">Yammer</a> group where members can ask questions, share ideas, and collaborate on projects.</li>
+    </ul>
+  </li>
+  <li>There are no instructors or students in the Data Dojo; We are all here to learn from each other.</li>
+  <li>The only “stupid question” in the Data Dojo is the one that goes unasked.</li>
+  <li>Members vote on the topics they’d like to learn about, as well as the dates and times for the workshops where those topics will be covered.</li>
+  <li>Members are encouraged to network with each other, form their own ad-hoc groups, and collaborate on projects together. This is designed to break down the silos and walls that have hindered the business in the past, and replace them with pipelines and bridges. <em>{More on this subject coming in a future post.}</em></li>
+</ol>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/data-dojo/handshake-2009195-glow-sm.png" alt="handshake-2009195-glow-sm.png" />
+    </div>
+    
+</div>
+
+<h1 id="calling-all-data-ninjas">Calling All Data Ninjas</h1>
+
+<p>Before we could hold our first workshop, I knew that I’d have to drum up some hype and get people interested in joining the Data Dojo. Of course, the easiest way to kickstart any new marketing effort is to reach out directly to any existing early adopters and ask for their input, so here’s how I did that:</p>
+<ol>
+  <li>I created a <a href="https://forms.office.com">Microsoft Forms</a> survey to collect some basic information about those who might be interested.</li>
+  <li>I used our <a href="https://github.com/RuiRomano/pbimonitor">PBI Monitor report</a> to identify the people who had used Power BI sometime in the past six months. <em>{More on the PBI Monitor report coming in a future post.}</em></li>
+  <li>I sent those people an email with the survey link and an explanation of what I was up to, and asked them to fill it out if they were interested in joining us.</li>
+</ol>
+
+<p>I was pleasantly surprised by the response. In just a few days, we had over a dozen people sign up to join the Data Dojo, and they had all provided lots of useful information about their existing knowledge, skills, interests and goals, as well as their preferred days and times for future workshops. Shortly thereafter, some of the folks who had signed up asked if they could also invite some of their coworkers to join the Data Dojo, and I was thrilled! My response: “Absolutely! Just forward them the survey link and ask them to fill it out. The more, the merrier!”</p>
+
+<p>I collected survey responses for a few months, wanting to ensure that everyone interested in joining the Data Dojo had ample time to sign up. Then, I sent out a follow-up email to those who had, asking them to confirm their interest, to tell me about any questions or concerns they might have, and to provide any suggestions for topics they’d like to see covered in future workshops. I was elated to learn that everyone who had signed up was still interested in joining the Data Dojo, and that they were all eager to attend our first workshop. Using the date and time preferences from the initial survey results, I determined that July 20th, 2022 would be the ideal launch date, so I sent out a calendar invite to everyone who had signed up, and started preparing an agenda for our first workshop.</p>
+
+<h1 id="next-time-our-first-two-workshops-and-first-major-setback">Next Time: Our First Two Workshops, and First Major Setback</h1>
+
+<p>Thanks for joining us for this first installment in the Data Dojo series! In the next installment, we’ll talk about the first two workshops we held, the topics we covered, and a major setback we encountered after our second workshop, which has forced us to reevaluate and reconsider certain aspects of our approach. There are many great lessons to be learned from our experiences, so I hope you’ll join us again next time!</p>
+
+<aside class="series-pager" style="text-align: center">
+<h4><em>The Data Dojo: A Power BI Community of Practice</em> Series</h4>
+
+
+
+<p>Post <strong>1</strong> of <strong>4</strong>
+  </p>
+
+
+  
+  
+
+  
+  
+		&nbsp;&nbsp;<a class="btn" rel="next" href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">Next  ⪢</a>
+  
+
+  
+  
+
+  
+  
+
+</aside>
+
+<h2 id="bonus-data-dojo-featured-on-havens-consulting-youtube-channel">Bonus: Data Dojo featured on Havens Consulting YouTube Channel!</h2>
+<p><a href="https://www.youtube.com/watch?v=OlvXbg6VjFE&amp;list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&amp;t=326s" target="_blank"><img src="../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png" alt="Data Dojo featured on Havens Consulting YouTube Channel!" /></a></p>]]></content><author><name>James D. Bartlett III</name></author><category term="Power BI" /><category term="Community of Practice" /><category term="Data Analytics" /><category term="Data Dojo" /><category term="Data Literacy" /><category term="Knowledge Sharing" /><summary type="html"><![CDATA[A series about founding and fostering a successful Power BI Community of Practice]]></summary></entry><entry><title type="html">PbiToolsWatchPS: Extract and save your Power BI Desktop source code with a single click!</title><link href="https://datavolume.xyz/2023/03/21/external-tool-PbiToolsWatchPS.html" rel="alternate" type="text/html" title="PbiToolsWatchPS: Extract and save your Power BI Desktop source code with a single click!" /><published>2023-03-21T00:00:00+00:00</published><updated>2023-03-21T00:00:00+00:00</updated><id>https://datavolume.xyz/2023/03/21/external-tool-PbiToolsWatchPS</id><content type="html" xml:base="https://datavolume.xyz/2023/03/21/external-tool-PbiToolsWatchPS.html"><![CDATA[<!--excerpt-->
+<p>Many of you have probably heard of <a href="https://pbi.tools">pbi-tools</a> (by <a href="https://github.com/mthierba">Mathias Thierbach</a>). It’s a powerful command line application which can extract the source code from a Power BI Desktop (.pbix) file and save it in a folder as .json files. This is great for folks who want to save and track their changes to Power BI reports and datasets in a proper version control system, such as Git.</p>
+
+<p>However, because pbi-tools is a command line application, it must be run from a terminal window (like CMD or PowerShell).  This is probably not a deterrent for those who are comfortable with the command line, but it can be a bit intimidating for those who are not. So I created a simple External Tool for Power BI Desktop that launches pbi-tools in a new PowerShell window with a single click of a button: <strong>PbiToolsWatchPS</strong>
+<!--more--></p>
+
+<h2 id="what-is-pbitoolswatchps-and-how-does-it-work">What is PbiToolsWatchPS, and how does it work?</h2>
+
+<p>PbiToolsWatchPS is an External Tool for Power BI Desktop which launches a PowerShell window running pbi-tools in Watch Mode on the current file. It essentially tells pbi-tools to start watching the .pbix file you’re currently working on, and when pbi-tools detects that you’ve saved the file, it will extract the “source code” from that file and save it as .json files in an adjacent folder with the same name as the .pbix file.</p>
+
+<p>For example, if you have a .pbix file called “MyReport.pbix” inside a folder called “C:\MyFolder\”, pbi-tools will create a folder called “C:\MyFolder\MyReport\” and save the .json files there. If you then make some more changes to your report and save it again, pbi-tools will update the .json files in the “C:\MyFolder\MyReport\” folder.</p>
+
+<h2 id="wait-why-should-i-even-use-pbi-tools-in-the-first-place">Wait, why should I even use pbi-tools in the first place?</h2>
+
+<h4 id="if-you-use-pbi-tools-to-extract-and-save-your-power-bi-desktop-source-code-in-version-control-youll-be-able-to">If you use pbi-tools to extract and save your Power BI Desktop source code in version control, you’ll be able to:</h4>
+<ol>
+  <li>Inspect all of the changes made to your Power BI reports and datasets over time (who changed what, where, when, and why)</li>
+  <li>Merge changes from two or more developers working on the same file</li>
+  <li>Make changes directly in the .json source code and use pbi-tools to recompile the source code into a new Power BI Desktop file</li>
+  <li>Automate the process of testing your reports and datasets in a CI/CD pipeline</li>
+  <li>And so much more — the possibilities are nearly limitless!</li>
+</ol>
+
+<h2 id="why-should-i-use-pbitoolswatchps-to-launch-pbi-tools-instead-of-just-running-it-from-the-command-line">Why should I use PbiToolsWatchPS to launch pbi-tools instead of just running it from the command line?</h2>
+
+<ul>
+  <li>If you’re not comfortable with the command line, then PbiToolsWatchPS is a great way to start using pbi-tools without having to learn how to use the command line first.</li>
+  <li>Even if you are already a command line ninja, you should <em>still</em> consider using PbiToolsWatchPS because:
+    <ul>
+      <li>Launching pbi-tools directly from Power BI Desktop with PbiToolsWatchPS is <em>much</em> faster than running it manually from the command line.</li>
+      <li>You won’t have to remember the pbi-tools command line syntax, which arguments to use, how to use them, etc.</li>
+      <li>You won’t have to worry about accidentally running pbi-tools on the wrong .pbix file.</li>
+      <li>Using PbiToolsWatchPS, you can standardize the way everyone in your team runs pbi-tools, thereby ensuring that everyone’s changes to the source code are always saved in the same format and folder structure.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>In short, PbiToolsWatchPS will always run pbi-tools in Watch Mode on whatever .pbix file you’re currently working on, it will always save the .json files in exactly the same format and location, and it will do so more quickly and reliably than running it manually from the command line. What’s not to like? 😎</p>
+
+<h2 id="how-do-i-install-pbitoolswatchps">How do I install PbiToolsWatchPS?</h2>
+
+<ol>
+  <li>Download and extract the latest release of <a href="https://pbi.tools">pbi-tools</a>, then <a href="https://pbi.tools/tutorials/getting-started-cli.html#4-optionally-add-the-tool-folder-to-your-path-environment-setting">add the location of pbi-tools.exe to your PATH environment variable</a>.</li>
+  <li>Download <a href="https://raw.githubusercontent.com/JamesDBartlett3/PowerBits/main/ExternalTools/046-PbiToolsWatchPS5.1.pbitool.json">046-PbiToolsWatchPS5.1.pbitool.json</a> (from my <a href="https://github.com/JamesDBartlett3/PowerBits">PowerBits repo on GitHub</a>) and save it in this directory:<br />
+<code class="language-plaintext highlighter-rouge">C:\Program Files (x86)\Common Files\Microsoft Shared\Power BI Desktop\External Tools\</code>
+    <ul>
+      <li><em><strong>Note: If this is your first time installing an External Tool for Power BI Desktop, this folder will not yet exist, so you’ll need to create it.</strong></em></li>
+    </ul>
+  </li>
+  <li>If Power BI Desktop is already running, restart it</li>
+  <li>In Power BI Desktop, open the “External Tools” ribbon tab, and you should see a new button labeled “pbi-tools: Watch”</li>
+</ol>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/pexels/pbitoolswatchps_externaltoolsribbon.png" alt="pbitoolswatchps_externaltoolsribbon.png" />
+    </div>
+    
+</div>
+
+<h2 id="how-do-i-use-pbitoolswatchps">How do I use PbiToolsWatchPS?</h2>
+
+<ol>
+  <li>Open a .pbix file in Power BI Desktop.</li>
+  <li>From the “External Tools” ribbon tab in Power BI Desktop, click the button labeled “pbi-tools: Watch”</li>
+  <li>You should see a Windows PowerShell window open up and start running pbi-tools in Watch Mode.
+    <ul>
+      <li><em><strong>Note: You must leave this PowerShell window open for now. You can minimize it if you want, but *DO NOT* close it yet.</strong></em></li>
+    </ul>
+  </li>
+  <li>Make some changes to your .pbix file and save it. In the PowerShell window, you’ll see the output from pbi-tools as it extracts the .json files from your .pbix file.</li>
+  <li>There should now be a new folder in the same folder as your .pbix file, with the same name as your .pbix file, and it should contain the .json files that were extracted from your .pbix file.</li>
+  <li>Make some more changes to your .pbix file, save it again, and pbi-tools will update the .json files accordingly.</li>
+  <li>When you’re finished working on your .pbix file, make sure to save your changes one last time, wait for pbi-tools to finish extracting the .json files, then close Power BI Desktop and the PowerShell window.
+    <ul>
+      <li><em><strong>Warning: Always wait for pbi-tools to finish extracting and saving your latest changes before closing PowerShell or Power BI Desktop, otherwise you may end up with incomplete and/or corrupted .json files.</strong></em></li>
+    </ul>
+  </li>
+  <li>In your Git repository, stage all of the files you’ve changed, add a commit message describing the changes you made, then commit and push to your remote/origin repository.</li>
+</ol>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>Extracting the contents of Power BI Desktop files is <strong>strictly NOT supported by Microsoft</strong>. If you use PbiToolsWatchPS, pbi-tools, or any other tools that modify the contents of your Power BI Desktop files, and something goes sideways, <strong>Microsoft will NOT help you</strong>, so make sure to keep plenty of backups!</li>
+  <li>By default, Windows file paths have a maximum length of 260 characters, so if your .pbix files are saved in a folder with a long path, pbi-tools may start throwing error messages saying that it can’t save the .json files it has extracted, because their paths would be too long. If this happens, you can try:
+    <ul>
+      <li>Moving your .pbix files to a folder with a shorter path (relatively simple, but may not solve the problem, or only solve it temporarily)</li>
+      <li>Applying the <a href="https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd#enable-long-paths-in-windows-10-version-1607-and-later">LongPathsEnabled</a> registry fix on your machine (more complicated, but very likely to solve the problem permanently)</li>
+    </ul>
+  </li>
+  <li>The version of PbiToolsWatchPS linked above runs in Windows PowerShell 5.1. If you prefer PowerShell Core 7+, you can download and install <a href="https://raw.githubusercontent.com/JamesDBartlett3/PowerBits/main/ExternalTools/046-PbiToolsWatchPS7.pbitool.json">046-PbiToolsWatchPS7.pbitool.json</a> instead, though that version is not well tested, and may not work properly (or at all).</li>
+</ul>]]></content><author><name>James D. Bartlett III</name></author><category term="Power BI" /><category term="External Tools" /><category term="PowerShell" /><category term="Version Control" /><category term="Git" /><category term="pbi-tools" /><summary type="html"><![CDATA[Many of you have probably heard of pbi-tools (by Mathias Thierbach). It’s a powerful command line application which can extract the source code from a Power BI Desktop (.pbix) file and save it in a folder as .json files. This is great for folks who want to save and track their changes to Power BI reports and datasets in a proper version control system, such as Git. However, because pbi-tools is a command line application, it must be run from a terminal window (like CMD or PowerShell). This is probably not a deterrent for those who are comfortable with the command line, but it can be a bit intimidating for those who are not. So I created a simple External Tool for Power BI Desktop that launches pbi-tools in a new PowerShell window with a single click of a button: PbiToolsWatchPS]]></summary></entry></feed>
