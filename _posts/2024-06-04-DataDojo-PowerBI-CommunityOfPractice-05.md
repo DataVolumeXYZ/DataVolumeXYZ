@@ -4,7 +4,7 @@ title: "The Data Dojo: A Power BI Community of Practice (Part&nbsp;5)"
 summary: A tour-de-force of the Data Dojo Report Template, which we provide to our members to give them a sturdy foundation upon which to develop reports of their own. 
 author: JamesDBartlett3
 feature-img: assets/img/data-dojo/matrix_aikido.png
-thumbnail: assets/img/data-dojo/73b72522-d039-4f78-89b6-68738189a233_cropped.jpg
+thumbnail: assets/img/data-dojo/masked_cyberpunk_data_manga_dojo_c83fd4e5-c643-4ef8-96d6-b3e8469a77c2.jpg
 tags:
   - Power BI
   - Community of Practice
