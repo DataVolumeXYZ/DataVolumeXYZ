@@ -117,9 +117,9 @@ Well, that sure sounded like a **lot** of bad news! But don't worry; there's lig
 
 In the next post of this series, I'll share our comeback story, and talk about what we're doing to ensure that the Data Dojo at Des Moines University will continue to grow and thrive for many years to come. Stay tuned!
 
-{% include aligner.html images="data-dojo/data-team-tunnel-light-cropped.jpg" column="auto" %}
-
 {% include blog/blog_series_pager.liquid series=page.series %}
+
+{% include aligner.html images="data-dojo/data-team-tunnel-light-cropped.jpg" column="auto" %}
 
 ## Bonus: Data Dojo featured on Havens Consulting YouTube Channel!
 [![Data Dojo featured on Havens Consulting YouTube Channel!](../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png)](https://www.youtube.com/watch?v=OlvXbg6VjFE&list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&t=326s){:target="_blank"}

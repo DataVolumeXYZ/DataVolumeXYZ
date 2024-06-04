@@ -99,9 +99,9 @@ Speaking of averting disaster by thinking ahead, here are some pointers to help 
 # Next Time: The Data Dojo Strikes Back!
 In Part 4 of this series, I'll tell you all about our fourth workshop, which featured an interactive walkthrough of Power BI Desktop, and generated more buzz, enthusiasm, and positive feedback from our members than all previous workshops combined -- a huge success for the Data Dojo, and a clear indication that we're finally back on the right track and making forward progress. I'll also share some of my key takeaways from the organizer/facilitator perspective, like how we can leverage the power of kinesthetic learning to help our members engage directly with the subject matter, acquire and retain new knowledge and skills, and become better data analysts and data-driven decision makers in the process. Stay tuned!
 
-{% include aligner.html images="data-dojo/data-team-tunnel-matrix-cropped.png" column="auto" %}
-
 {% include blog/blog_series_pager.liquid series=page.series %}
+
+{% include aligner.html images="data-dojo/data-team-tunnel-matrix-cropped.png" column="auto" %}
 
 ## Bonus: Data Dojo featured on Havens Consulting YouTube Channel!
 [![Data Dojo featured on Havens Consulting YouTube Channel!](../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png)](https://www.youtube.com/watch?v=OlvXbg6VjFE&list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&t=326s){:target="_blank"}
