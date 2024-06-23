@@ -35,20 +35,37 @@ In this post, we'll take a closer look at the latest Data Dojo template, tinker 
 
 Thank you for joining us on this adventure!
 
-<!-- TODO: Add image of data ninjas looking at a report template -->
-{% include aligner.html images="" column="auto" %}
 
 # The Data Dojo Report Template
 
+<!-- TODO: Add section summary -->
+
+<!-- TODO: Add image of data ninjas looking at a report template -->
+{% include aligner.html images="../../../assets/img/data-dojo/report-template-72060c18-e82b-447e-87d5-06721145b18c_cropped.jpg" column="auto" %}
+
 ## Report Pages
+
+<!-- TODO: Add list of demo report pages, descriptions, and screenshots -->
 
 ## Notes Page
 
+<!-- TODO: Add notes page description and screenshot -->
+
 ## Slicers & Filters
+
+<!-- TODO: Add slicers and filters descriptions and screenshots -->
 
 ## Star Schema
 
+<!-- TODO: Add star schema description, screenshot, and M code -->
+
+## Date Dimension
+
+<!-- TODO: Add date dimension description, screenshot, and M code -->
+
 ## Explicit Measures
+
+<!-- TODO: Add explicit measures description, screenshot, and DAX code -->
 
 # Advanced Features
 
@@ -62,13 +79,19 @@ Thank you for joining us on this adventure!
 If you've been following this blog series, you'll recall from the previous post that our latest official Data Dojo report template includes a custom Power Query function called `fn_GetTableFromDataflow`, which can be invoked to fetch any table from any Dataflow in Power BI. In case you missed it, or you need a refresher, click here for a recap:  
 [The Dao of the Dataflow](../../../2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html#The-Dao-of-the-Dataflow){:target="_blank"}
 
-## Field Parameters
+## Report & Model Settings
 
-## Calculation Groups
+- Hide visual headers
+- Discourage implicit measures
+- TODO: add more
 
 ## Integrated VertiPaq Analyzer
 
+<!-- TODO: Add VertiPaq Analyzer description, screenshots, DAX code, and credit link to Hariharan's blog (https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/) and GitHub repo (https://github.com/rhariharaneee/Power-BI) -->
+
 # Striking the Perfect Balance
+
+<!-- TODO: Explain the importance of striking the right balance between simplicity and versatility when designing a Power BI template. -->
 
 <!-- TODO: add image of data ninjas practicing crane stance -->
 {% include aligner.html images="" column="auto" %}
