@@ -13,7 +13,10 @@ tags:
   - Data Literacy
   - Knowledge Sharing
   - Power Query (M)
+  - Star Schema
   - Dataflow
+  - Date Dimension
+  - VertiPaq Analyzer
   - Template
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
@@ -87,7 +90,7 @@ If you've been following this blog series, you'll recall from the previous post 
 
 ## Integrated VertiPaq Analyzer
 
-<!-- TODO: Add VertiPaq Analyzer description, screenshots, DAX code, and credit link to Hariharan's blog (https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/) and GitHub repo (https://github.com/rhariharaneee/Power-BI) -->
+<!-- TODO: Add VertiPaq Analyzer description, screenshots, DAX code, and credit link to Hariharan Rajendran's blog (https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/) and GitHub repo (https://github.com/rhariharaneee/Power-BI) -->
 
 # Striking the Perfect Balance
 
