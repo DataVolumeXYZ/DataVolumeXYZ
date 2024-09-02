@@ -43,7 +43,6 @@ Thank you for joining us on this adventure!
 
 <!-- TODO: Add section summary -->
 
-<!-- TODO: Add image of data ninjas looking at a report template -->
 {% include aligner.html images="../../../assets/img/data-dojo/report-template-72060c18-e82b-447e-87d5-06721145b18c_cropped.jpg" column="auto" %}
 
 ## Report Pages
@@ -69,6 +68,14 @@ Thank you for joining us on this adventure!
 ## Explicit Measures
 
 <!-- TODO: Add explicit measures description, screenshot, and DAX code -->
+
+## Conditional Formatting
+
+<!-- TODO: Add standard conditional formatting in visuals, color-changing slicers, etc. -->
+
+## Scrims & Overlays
+
+<!-- TODO: Add scrim and overlay descriptions and screenshots -->
 
 # Advanced Features
 
