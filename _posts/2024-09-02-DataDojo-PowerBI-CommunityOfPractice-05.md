@@ -90,21 +90,24 @@ The Data Dojo Power BI Report Template is intended to be a starting point for re
 <!-- TODO: Add section summary -->
 
 
-#### Dataflow Magic
+### Dataflow Magic
 
 If you've been following this blog series, you'll recall from the previous post that our latest official Data Dojo report template includes a custom Power Query function called `fn_GetTableFromDataflow`, which can be invoked to fetch any table from any Dataflow in Power BI. In case you missed it, or you need a refresher, click here for a recap:  
 [The Dao of the Dataflow](../../../2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html#The-Dao-of-the-Dataflow){:target="_blank"}
 
-#### Report & Model Settings
+### Report & Model Settings
 
 - Hide visual headers
 - Discourage implicit measures
 - `_Measures` table with `Formatting` and `Calculation` folders
 - TODO: add more
 
-#### Integrated VertiPaq Analyzer
+### Integrated "VertiPaq Analyzer Lite"
 
 <!-- TODO: Add VertiPaq Analyzer description, screenshots, DAX code, and credit link to Hariharan Rajendran's blog (https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/) and GitHub repo (https://github.com/rhariharaneee/Power-BI) -->
+If you're not already familiar with the [VertiPaq Analyzer](https://www.sqlbi.com/tools/vertipaq-analyzer/), it's a fantastic tool for analyzing the performance of a Power BI semantic model, but until just a few months ago, it required the use of external tools like Microsoft Excel, [DAX Studio](https://www.sqlbi.com/tv/introducing-vertipaq-analyzer-in-dax-studio/), or [Tabular Editor 3](https://data-goblins.com/power-bi/analyze-power-bi-dataset), so it wasn't very practical for business users and self-service data analysts. 
+
+However, thanks to [Hariharan Rajendran's brilliant work](https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/), we now have a way to access the VertiPaq Analyzer data directly within Power BI Desktop via the DAX Query View, so now the Data Dojo report template has a "VertiPaq Analyzer Lite" built right in. This provides our Data Ninjas with a great way to identify and address performance issues in their Power BI semantic models, and thereby improve the overall performance of their reports, all without ever having to install or learn to use any external tools.
 
 # Balance: Simplicity & Versatility
 
