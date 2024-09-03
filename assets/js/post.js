@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	var siteHeaderHeight = document.querySelector(".site-header").scrollHeight
 	var seriesOverviewHeight = document.querySelector(".series-overview").scrollHeight + 0
 	var topOffset = seriesOverviewHeight + siteHeaderHeight + bannerHeight
-	var bottomOffset = documentHeight - postContentHeight + topOffset - seriesOverviewHeight
+	var bottomOffset = documentHeight - postContentHeight - seriesOverviewHeight - siteHeaderHeight - bannerHeight
 
 	function progressShow() {
 		if (window.scrollY < topOffset) {
@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function progressbarScroll() {
 		var detailsExpandersCount = detailsExpanders.length
-		var totalDetailsExpanderHeight = 0
+		var detailsExpanderHeight = 0
 		for (var i = 0; i < detailsExpandersCount; i++) {
-			totalDetailsExpanderHeight += detailsExpanders[i].scrollHeight
+			detailsExpanderHeight += detailsExpanders[i].scrollHeight
 		}
-		var totalScroll = ((window.scrollY - topOffset) / (postContentHeight - topOffset - bottomOffset + totalDetailsExpanderHeight)) * 100;
+		var totalScroll = ((window.scrollY - topOffset) / (postContentHeight - bottomOffset - window.innerHeight - topOffset + detailsExpanderHeight)) * 100;
 		document.querySelector(".progress__bar").style.width = totalScroll + "%";
 	}
 
