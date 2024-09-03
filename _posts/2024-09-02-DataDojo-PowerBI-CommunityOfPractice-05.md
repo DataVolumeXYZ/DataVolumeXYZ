@@ -93,15 +93,22 @@ If you've been following this blog series, you'll recall from the previous post 
 
 - Hide visual headers
 - Discourage implicit measures
+- `_Measures` table with `Formatting` and `Calculation` folders
 - TODO: add more
 
 ## Integrated VertiPaq Analyzer
 
 <!-- TODO: Add VertiPaq Analyzer description, screenshots, DAX code, and credit link to Hariharan Rajendran's blog (https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/) and GitHub repo (https://github.com/rhariharaneee/Power-BI) -->
 
-# Striking the Perfect Balance
+# Balance: Simplicity vs. Versatility
 
-<!-- TODO: Explain the importance of striking the right balance between simplicity and versatility when designing a Power BI template. -->
+It's important to strike the right balance between simplicity and versatility while designing a Power BI report template, and here are several reasons why:
+
+1. **User-Friendliness**: A simple design makes it easier for users to understand, navigate, and use the report effectively without feeling overwhelmed by too many features or complex visuals. It helps in reducing cognitive load which encourages faster adoption and familiarity with the report by its stakeholders.
+2. **Scalability & Adaptability**: While simplicity is key, versatility ensures that your report template can cater to a variety of data scenarios and business needs without requiring significant rework or customization each time it's used. This flexibility will save a great deal of time and resources in the long run.
+3. **Consistency**: A well-designed Power BI report template, if adopted throughout the organization, will lead to consistency in visual representation of data across the organization's Power BI reports. This uniformity helps users to interpret the data quickly as they become familiar with the layout and style of reporting.
+4. **Customization & Personalization**: Versatility also enables customization according to individual user needs or departmental requirements, without compromising on the overall structure and integrity of the report template. This adds value by giving report authors and users a deeper sense of involvement in the data analysis process, which can lead to higher engagement levels.
+5. **Speed & Efficiency**: A simple yet versatile Power BI template helps save time, as it reduces the need for extensive training or repeated queries. Users can quickly understand and apply the insights they gain from reading the report without spending excessive amounts of time on comprehension or seeking assistance, resulting in improved efficiency within their roles.
 
 <!-- TODO: add image of data ninjas practicing crane stance -->
 {% include aligner.html images="" column="auto" %}
