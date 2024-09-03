@@ -22,6 +22,7 @@ codeBlocks.forEach(function (codeBlock) {
 document.addEventListener("DOMContentLoaded", function () {
 	var progressBar = document.querySelector(".progress")
 	var postContent = document.querySelector(".post-content")
+	var detailsExpanders = document.querySelectorAll("details.expander")
 	var documentHeight = Math.max(
 		document.documentElement.clientHeight,
 		document.documentElement.scrollHeight,
@@ -47,7 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	function progressbarScroll() {
-		var totalScroll = ((window.scrollY - topOffset) / (postContentHeight - topOffset - bottomOffset)) * 100;
+		var detailsExpandersCount = detailsExpanders.length
+		var totalDetailsExpanderHeight = 0
+		for (var i = 0; i < detailsExpandersCount; i++) {
+			totalDetailsExpanderHeight += detailsExpanders[i].scrollHeight
+		}
+		var totalScroll = ((window.scrollY - topOffset) / (postContentHeight - topOffset - bottomOffset + totalDetailsExpanderHeight)) * 100;
 		document.querySelector(".progress__bar").style.width = totalScroll + "%";
 	}
 
