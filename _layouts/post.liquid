@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <article {% if page.feature-img or page.color %}class="feature-image"{% endif %}>
   <header id="main" style="">
     <div class="title-padder">
@@ -12,7 +13,9 @@ layout: default
       {% endif %}
     </div>
   </header>
-
+  <div class="progress" style="top: 0px;">
+    <div class="progress__bar"></div>
+  </div>
   <section class="post-content">
     {% if page.bootstrap %}
       <div class="bootstrap-iso">
