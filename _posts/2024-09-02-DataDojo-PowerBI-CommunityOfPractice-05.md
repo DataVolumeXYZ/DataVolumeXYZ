@@ -45,6 +45,14 @@ Thank you for joining us on this adventure!
 
 {% include aligner.html images="../../../assets/img/data-dojo/report-template-72060c18-e82b-447e-87d5-06721145b18c_cropped.jpg" column="auto" %}
 
+## Overview
+
+The Data Dojo Report Template is a comprehensive Power BI report template that we provide to the Data Dojo members to give them a sturdy foundation upon which to develop reports of their own. It's designed to be simple, versatile, and user-friendly, with a focus on best practices in data visualization, data modeling, and report design. 
+
+The template includes a variety of features, like a handful of example report pages, a hidden Notes page, sample data imported from a flat file and modeled in a proper star schema, a designated date dimension for proper Time Intelligence calculations, explicit DAX measures, conditional formatting, slicers in various configurations, scrims, overlays, and more. It also incorporates several more advanced features, like a custom Power Query function for importing tables from Power Platform Dataflows, and an integrated VertiPaq Analyzer for model performance tuning. 
+
+The Data Dojo Power BI Report Template is intended to be a starting point for report development, and users are encouraged to customize it to suit their specific needs and preferences. It is also constantly under development, with new features and improvements being added regularly based on feedback from the Data Dojo members and the Power BI community at large.
+
 ## Report Pages
 
 <!-- TODO: Add list of demo report pages, descriptions, and screenshots -->
@@ -77,30 +85,28 @@ Thank you for joining us on this adventure!
 
 <!-- TODO: Add scrim and overlay descriptions and screenshots -->
 
-# Advanced Features
+## Advanced Features
 
 <!-- TODO: Add section summary -->
 
-<!-- TODO: add image of data ninjas with code -->
-{% include aligner.html images="" column="auto" %}
 
-## Dataflow Magic
+#### Dataflow Magic
 
 If you've been following this blog series, you'll recall from the previous post that our latest official Data Dojo report template includes a custom Power Query function called `fn_GetTableFromDataflow`, which can be invoked to fetch any table from any Dataflow in Power BI. In case you missed it, or you need a refresher, click here for a recap:  
 [The Dao of the Dataflow](../../../2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html#The-Dao-of-the-Dataflow){:target="_blank"}
 
-## Report & Model Settings
+#### Report & Model Settings
 
 - Hide visual headers
 - Discourage implicit measures
 - `_Measures` table with `Formatting` and `Calculation` folders
 - TODO: add more
 
-## Integrated VertiPaq Analyzer
+#### Integrated VertiPaq Analyzer
 
 <!-- TODO: Add VertiPaq Analyzer description, screenshots, DAX code, and credit link to Hariharan Rajendran's blog (https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/) and GitHub repo (https://github.com/rhariharaneee/Power-BI) -->
 
-# Balance: Simplicity vs. Versatility
+# Balance: Simplicity & Versatility
 
 It's important to strike the right balance between simplicity and versatility while designing a Power BI report template, and here are several reasons why:
 
