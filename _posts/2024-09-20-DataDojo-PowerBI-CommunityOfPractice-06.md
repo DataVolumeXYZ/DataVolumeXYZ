@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Data Dojo: A Power BI Community of Practice (Part&nbsp;6)"
-summary: Office Hours & Coffee Lounge - A new workshop format for the Data Dojo, why we decided to add it, and how it's been going so far.
+summary: A new workshop format for the Data Dojo called "Office Hours & Coffee Lounge," why we decided to add it, and how it's been going so far.
 author: JamesDBartlett3
 feature-img: assets/img/data-dojo/matrix_aikido.png
 thumbnail: assets/img/data-dojo/ae896172-0bd7-4d20-ba30-e8a6d0574b04_cropped.jpg
@@ -38,23 +38,19 @@ Thank you for joining us on this adventure!
 
 {% include aligner.html images="../../../assets/img/data-dojo/_____.jpg" column="auto" %}
 
-# The Data Dojo: Office Hours & Coffee Lounge
+# Introduction
 
 <!-- TODO: Add overview -->
 
-# What is this "Office Hours & Coffee Lounge" Thing?
-
-<!-- TODO: Add description -->
-
-# Why Did We Decide to Add a New Workshop Format?
+# Why Add A New Workshop Format?
 
 <!-- TODO: Add rationale -->
 
-# OK... But Does It Actually Work?
+# OK, But Does It Actually Work?
 
 <!-- TODO: Add results -->
 
-# What About the Existing Workshop Formats?
+# What About The Existing Formats?
 
 <!-- TODO: Add explanation -->
 
@@ -73,7 +69,9 @@ Thank you for joining us on this adventure!
 
 # Next Time: The Data Dojo Goes Global!
 
-As I'm sure many of you already know, I've been speaking about the Data Dojo at various conferences, user groups, and livestreams around the world for couple years now. In my conversations with some of the folks I've met at these events, I've learned that many of them are interested in founding similar Power BI Communities of Practice within their own organizations all over the world. So, in the next installment of this series, I'll be sharing some of the insights I've gained from these conversations, and I'll be talking about how we're planning to help other organizations establish their own Data Dojos, and our vision for a global network of Power BI Communities of Practice. This process is still in its very early stages, so I don't know exactly what it's going to look like yet, or how long it will be before I have more to share, but I'm thrilled to be embarking on this new quest in the Data Dojo saga, and I can't wait to see where it takes us.
+As I'm sure many of you already know, I've been speaking about the Data Dojo at various conferences, user groups, and livestreams for a couple of years now. In my conversations with some of the folks I've met at these events, I've learned that many of them are interested in founding similar Power BI Communities of Practice within their own organizations all over the world.
+
+So, in the next installment of this series, I'll be sharing some of the insights I've gained from these conversations, and I'll be talking about how we're planning to help other organizations establish their own Data Dojos, and our vision for a global network of Power BI Communities of Practice. This process is still in its very early stages, so I don't know exactly what it's going to look like yet, or how long it will be before I have more to share, but I'm thrilled to be embarking on this new quest in the Data Dojo saga, and I can't wait to see where it takes us.
 
 If you are interested in founding a Power BI Community of Practice within your organization, or if you're just curious to learn more about what we're doing with the Data Dojo, I'd love to hear from you! Please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/jamesdbartlett3/){:target="_blank"}, [Bluesky](https://bsky.app/profile/jamesdbartlett3.bsky.social){:target="_blank"}, or [Mastodon](https://techhub.social/@JamesDBartlett3){:target="_blank"}, or leave a comment below. 
 
