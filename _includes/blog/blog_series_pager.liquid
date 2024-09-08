@@ -3,6 +3,8 @@
 <aside class="series-pager" style="text-align: center">
 <h4><em>{{ site.data.series | where: 'id', page.series | map: 'title' }}</em> Series</h4>
 {% assign series-posts = site.posts | reverse | where: 'series', page.series %}
+{% assign series-pager-message = site.data.series | where: 'id', page.series | map: 'pager_message' %}
+
 {% for post in series-posts %}
   {% if post.url == page.url %}
     {% assign prev_post_index = forloop.index | minus: 1 %}
@@ -12,7 +14,8 @@
 {% endfor %}
 
 <p>Post <strong>{{ curr_post_index }}</strong> of <strong>{{ series-posts.size }}</strong>
-  {% if series-posts.size == 1 %}More posts coming soon!{% endif %}</p>
+	{{ series-pager-message }}
+</p>
 
 {% for post in series-posts %}
   {% if prev_post_index == forloop.index %}
