@@ -13,16 +13,19 @@
   {% endif %}
 {% endfor %}
 
-<p>Post <strong>{{ curr_post_index }}</strong> of <strong>{{ series-posts.size }}</strong>
-	{{ series-pager-message }}
+<p>
 </p>
 
 {% for post in series-posts %}
   {% if prev_post_index == forloop.index %}
-    <a class="btn" rel="prev" href="{{ site.baseurl }}{{ post.url }}">{{ site.data.language.str_previous_post | remove: 'Post'  }}</a>
+    <a class="btn" rel="prev" href="{{ site.baseurl }}{{ post.url }}">{{ site.data.language.str_previous_post | remove: ' Post' }}</a>
   {% endif %}
+	{% if curr_post_index == forloop.index %}
+		&nbsp;&nbsp;&nbsp;Post <strong>{{ curr_post_index }}</strong> of <strong>{{ series-posts.size }}</strong>
+		&nbsp;{{ series-pager-message }}
+	{% endif %}
   {% if next_post_index == forloop.index %}
-		&nbsp;&nbsp;<a class="btn" rel="next" href="{{ site.baseurl }}{{ post.url }}">{{ site.data.language.str_next_post | remove: 'Post' }}</a>
+		&nbsp;&nbsp;&nbsp;<a class="btn" rel="next" href="{{ site.baseurl }}{{ post.url }}">{{ site.data.language.str_next_post | remove: 'Post' }}</a>
   {% endif %}
 {% endfor %}
 </aside>
