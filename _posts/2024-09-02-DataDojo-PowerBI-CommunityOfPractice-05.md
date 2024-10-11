@@ -39,7 +39,7 @@ In this post, we'll take a closer look at the latest Data Dojo template, tinker 
 Thank you for joining us on this adventure!
 
 
-# The Data Dojo Report Template
+# The Data Dojo Power BI Report Template
 
 <!-- TODO: Add section summary -->
 
@@ -47,17 +47,31 @@ Thank you for joining us on this adventure!
 
 ## Overview
 
-The Data Dojo Report Template is a comprehensive Power BI report template that we provide to the Data Dojo members to give them a sturdy foundation upon which to develop reports of their own. It's designed to be simple, versatile, and user-friendly, with a focus on best practices in data visualization, data modeling, and report design.
+The Data Dojo Power BI Report Template is a comprehensive Power BI report template that we provide to the Data Dojo members to give them a sturdy foundation upon which to develop reports of their own. It's designed to be simple, versatile, and user-friendly, with a focus on best practices in data visualization, data modeling, and report design.
 
 The template includes a variety of features, like a handful of example report pages, a hidden Notes page, sample data imported from a flat file and modeled in a proper star schema, a designated date dimension for proper Time Intelligence calculations, explicit DAX measures, conditional formatting, slicers in various configurations, scrims, overlays, and more. It also incorporates several more advanced features, like a custom Power Query function for importing tables from Power Platform Dataflows, and an integrated VertiPaq Analyzer for model performance tuning.
 
 The Data Dojo Power BI Report Template is intended to be a starting point for report development, and users are encouraged to customize it to suit their specific needs and preferences. It is also constantly under development, with new features and improvements being added regularly based on feedback from the Data Dojo members and the Power BI community at large.
 
-## Report Pages
+<!-- TODO: Accordion collapse everything H2 and below -->
+
+## Pages
 
 <!-- TODO: Add list of demo report pages, descriptions, and screenshots -->
 
-## Notes Page
+### Template Instructions
+
+### KPIs Page
+
+### Static Slicers Page
+
+### Show/Hide Slicers Page
+
+### Drillthrough Page (Hidden)
+
+### Tooltip Page (Hidden)
+
+### Developer Notes Page (Hidden)
 
 <!-- TODO: Add notes page description and screenshot -->
 
