@@ -53,29 +53,27 @@ The template includes a variety of features, like a handful of example report pa
 
 The Data Dojo Power BI Report Template is intended to be a starting point for report development, and users are encouraged to customize it to suit their specific needs and preferences. It is also constantly under development, with new features and improvements being added regularly based on feedback from the Data Dojo members and ideas from the Power BI community.
 
-*Note: Currently, the Data Dojo Power BI Report Template is only available to Data Dojo members (it contains a fair amount of organization-specific information, branding, and other features, so it is not suitable for public distribution in its current state). However, we're working on a generic version that we plan to release to the public in the near future, and I will add a download link to this post when it's ready, so stay tuned!*
-
 <!-- TODO: Accordion collapse everything H2 and below -->
 
 ## Pages
 
 <!-- TODO: Add list of demo report pages, descriptions, and screenshots -->
 
-### Template Instructions
+### Instructions Page
 
-### KPIs Page
+### Horizontal Slicers Page
 
-### Static Slicers Page
+### Vertical Slicers Page
 
 ### Show/Hide Slicers Page
 
-### Drillthrough Page (Hidden)
+<!-- ### Drillthrough Page (Hidden) -->
 
 ### Tooltip Page (Hidden)
 
-### Developer Notes Page (Hidden)
+### Infotip Page (Hidden)
 
-<!-- TODO: Add notes page description and screenshot -->
+<!-- ### Developer Notes Page (Hidden) -->
 
 ## Slicers & Filters
 
@@ -121,7 +119,7 @@ If you've been following this blog series, you'll recall from the previous post 
 
 ### Integrated "VertiPaq Analyzer Lite"
 
-<!-- TODO: Add VertiPaq Analyzer description, screenshots, and DAX code-->
+<!-- TODO: Add VertiPaq Analyzer screenshot -->
 
 If you're not already familiar with the [VertiPaq Analyzer](https://www.sqlbi.com/tools/vertipaq-analyzer/), it's a fantastic tool for analyzing the performance of a Power BI semantic model, but until just a few months ago, it required the use of external tools like Microsoft Excel, [DAX Studio](https://www.sqlbi.com/tv/introducing-vertipaq-analyzer-in-dax-studio/), or [Tabular Editor 3](https://data-goblins.com/power-bi/analyze-power-bi-dataset), so it wasn't very practical for business users and self-service data analysts.
 
@@ -139,6 +137,13 @@ It's important to strike the right balance between simplicity and versatility wh
 
 <!-- TODO: add image of data ninjas practicing crane stance -->
 {% include aligner.html images="" column="auto" %}
+
+# Conclusion
+
+<!-- TODO: Add conclusion -->
+
+# Resources
+<!-- TODO: Add download links -->
 
 # Next Time: The Data Dojo - Office Hours & Coffee Lounge
 In the next installment of this series, we'll talk about a brand new format for the Data Dojo, which we call "Office Hours & Coffee Lounge," why we decided to add this new format to our repertoire, and how it's been going so far. Stay tuned!
