@@ -7,7 +7,7 @@
     {% for post in series-posts %}
     <li>
       {% if post.url == page.url %}
-      <strong>{{ post.title }}</strong>
+      <strong>{{ post.title }} &nbsp;&nbsp;⟪<u>YOU ARE HERE</u>⟫</strong>
       {% else %}
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       {% endif %}

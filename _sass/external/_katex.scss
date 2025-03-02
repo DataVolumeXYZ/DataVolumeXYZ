@@ -207,7 +207,9 @@ $katex-font-path: "../../assets/fonts/katex" !default;
 }
 
 .katex * {
-  -ms-high-contrast-adjust: none !important;
+	// Removed to comply with deprecation of -ms-high-contrast-adjust
+	// https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/
+  // -ms-high-contrast-adjust: none !important;
   border-color: currentColor;
 }
 
