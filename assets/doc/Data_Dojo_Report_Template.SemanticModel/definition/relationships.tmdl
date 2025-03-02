@@ -1,0 +1,20 @@
+relationship a293d5c5-5093-4690-835f-a34664ab5ac8
+	fromColumn: FactSales.CountryKey
+	toColumn: DimCountry.CountryKey
+
+relationship bdcf8149-9f82-41f0-8afa-635325957e1c
+	fromColumn: FactSales.DiscountBandKey
+	toColumn: DimDiscountBand.DiscountBandKey
+
+relationship ab5cb3bf-d9de-4c46-860e-69a54ce3f2a4
+	fromColumn: FactSales.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship 7dec1cb7-dce7-4a01-8456-47510ee9f027
+	fromColumn: FactSales.SegmentKey
+	toColumn: DimSegment.SegmentKey
+
+relationship 621f96d5-cce7-2155-bc1d-33863d14ab8d
+	fromColumn: FactSales.DateKey
+	toColumn: DimDate.DateKey
+
