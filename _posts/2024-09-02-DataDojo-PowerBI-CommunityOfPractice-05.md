@@ -55,7 +55,7 @@ The Data Dojo Power BI Report Template is intended to be a starting point for re
 
 <!-- TODO: Accordion collapse everything H2 and below -->
 
-## Pages
+## Report Pages
 
 <!-- TODO: Add list of demo report pages, descriptions, and screenshots -->
 
@@ -65,7 +65,7 @@ The Data Dojo Power BI Report Template is intended to be a starting point for re
 
 ### Vertical Slicers Page
 
-### Show/Hide Slicers Page
+### Slicer Panel Page
 
 <!-- ### Drillthrough Page (Hidden) -->
 
