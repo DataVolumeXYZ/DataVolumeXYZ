@@ -73,7 +73,7 @@ The Data Dojo Power BI Report Template is intended to be a starting point for re
 
 ### Infotip Page (Hidden)
 
-<!-- ### Developer Notes Page (Hidden) -->
+### Developer Notes Page (Hidden)
 
 ## Slicers & Filters
 
