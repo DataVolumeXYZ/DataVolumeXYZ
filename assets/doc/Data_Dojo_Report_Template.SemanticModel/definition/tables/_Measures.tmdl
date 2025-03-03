@@ -11,7 +11,7 @@ table _Measures
 			    )
 			RETURN
 			    Result
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 8d7888b9-a357-4d2b-a3f8-aa682b18e6c8
 
 		changedProperty = IsHidden
@@ -26,14 +26,14 @@ table _Measures
 			    )
 			RETURN
 			    Result
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 9a3ecc75-6541-4e2e-ad20-5b1e14ca0fb5
 
 		changedProperty = IsHidden
 
 	/// Unicode character for the ⓘ hover target in the table visual on the Horizontal Slicers page
 	measure 'Symbol - Info' = UNICHAR(128712)
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 280b7ee0-7b31-4a6a-96f8-fbff1b85e232
 
 		changedProperty = IsHidden
@@ -56,21 +56,21 @@ table _Measures
 			    )
 			RETURN
 			    Result
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 200cf50d-982d-446a-a322-45762e499788
 
 		changedProperty = IsHidden
 
 	/// Background color code for slicers that have no values selected
 	measure 'Slicer Background Color - Unfiltered' = "#9b77a9ff"
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 9c9634d3-1112-4ef9-81c3-683ad27f2abb
 
 		changedProperty = IsHidden
 
 	/// Background color code for slicers which have at least one value selected
 	measure 'Slicer Background Color - Filtered' = "#f08d8eff"
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 1b360a42-5dde-4a3a-aab4-0ddd02819b5b
 
 		changedProperty = IsHidden
@@ -93,14 +93,14 @@ table _Measures
 			    )
 			RETURN
 			    Result
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 9a5ec041-0ab6-43a8-8be2-80e6210d0d8c
 
 		changedProperty = IsHidden
 
 	/// Unicode character for the eraser symbol on the Clear Slicers buttons in the report
 	measure 'Symbol - Eraser' = UNICHAR(129529)
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: e1d702f0-b93c-4b41-8a77-7740b1ab8904
 
 		changedProperty = IsHidden
@@ -114,14 +114,14 @@ table _Measures
 			    [Slicer Background Color - Filtered],
 			    [Slicer Background Color - Unfiltered]
 			)
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 98ebfbf6-0862-43b4-aeae-c79f1bf33bdf
 
 		changedProperty = IsHidden
 
 	/// Average of the Sales column in the FactSales table
 	measure 'Average Sale Price' = AVERAGEX(FactSales, FactSales[Sales])
-		displayFolder: _Calculation
+		displayFolder: Calculation
 		lineageTag: 8050f1af-2468-40dd-9738-8e54020f7747
 
 		changedProperty = IsHidden
@@ -130,7 +130,7 @@ table _Measures
 
 	/// Sum of the COGS column in the FactSales table
 	measure 'Total COGS' = SUMX(FactSales, FactSales[COGS])
-		displayFolder: _Calculation
+		displayFolder: Calculation
 		lineageTag: fcbbc003-ea67-4f4f-a211-cea0961eb652
 
 		changedProperty = IsHidden
@@ -139,7 +139,7 @@ table _Measures
 
 	/// Sum of the Discounts column in the FactSales table
 	measure 'Total Discounts' = SUMX(FactSales, FactSales[Discounts])
-		displayFolder: _Calculation
+		displayFolder: Calculation
 		lineageTag: 890642d1-9588-4934-b998-fd96c30f5c83
 
 		changedProperty = IsHidden
@@ -148,7 +148,7 @@ table _Measures
 
 	/// Sum of the Gross Sales column in the FactSales  table
 	measure 'Total Gross Sales' = SUMX(FactSales, FactSales[Gross Sales])
-		displayFolder: _Calculation
+		displayFolder: Calculation
 		lineageTag: 78f1ca93-3bf1-4d33-a683-69abfb43ed68
 
 		changedProperty = IsHidden
@@ -157,7 +157,7 @@ table _Measures
 
 	/// Sum of the Manufacturing Price column in the FactSales table
 	measure 'Total Manufacturing Price' = SUMX(FactSales, FactSales[Manufacturing Price])
-		displayFolder: _Calculation
+		displayFolder: Calculation
 		lineageTag: 477aef62-d74d-4a1a-ae30-327aab77d668
 
 		changedProperty = IsHidden
@@ -167,14 +167,14 @@ table _Measures
 	/// Sum of the Profit column in the FactSales table
 	measure 'Total Profit' = SUMX(FactSales, FactSales[Profit])
 		formatString: #,0.00
-		displayFolder: _Calculation
+		displayFolder: Calculation
 		lineageTag: 495c8df4-5aee-4ed4-af21-ca47bee9e0e0
 
 		changedProperty = IsHidden
 
 	/// Sum of the Sale Price column in the FactSales table
 	measure 'Total Sale Price' = SUMX(FactSales, FactSales[Sale Price])
-		displayFolder: _Calculation
+		displayFolder: Calculation
 		lineageTag: b4ab0acc-d488-4f3a-b304-a3952345a7ff
 
 		changedProperty = IsHidden
@@ -183,7 +183,7 @@ table _Measures
 
 	/// Sum of the Sales column in the FactSales table
 	measure 'Total Sales' = SUMX(FactSales, FactSales[Sales])
-		displayFolder: _Calculation
+		displayFolder: Calculation
 		lineageTag: 2c6c60bd-e3fa-46b8-bfd2-f0f0b9b9e845
 
 		changedProperty = IsHidden
@@ -192,7 +192,7 @@ table _Measures
 
 	/// Sum of the Units Sold column in the FactSales table
 	measure 'Total Units Sold' = SUMX(FactSales, FactSales[Units Sold])
-		displayFolder: _Calculation
+		displayFolder: Calculation
 		lineageTag: 9ed80218-35c8-4e39-9047-9bc69e3f1fe7
 
 		changedProperty = IsHidden
@@ -214,7 +214,7 @@ table _Measures
 			    </head>
 			    <body></body>
 			</html>"
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 6954ca83-a438-4feb-9dbd-025da22b9838
 		dataCategory: Uncategorized
 
@@ -222,7 +222,7 @@ table _Measures
 
 	/// Title of the current page in the report
 	measure 'Page Title' = MAX(ReportPages[PageName])
-		displayFolder: _Formatting
+		displayFolder: Formatting
 		lineageTag: 06a8ac48-b36b-402c-b062-3ec487a355b3
 
 		changedProperty = IsHidden
