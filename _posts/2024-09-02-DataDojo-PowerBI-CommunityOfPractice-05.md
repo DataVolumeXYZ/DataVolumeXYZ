@@ -57,23 +57,36 @@ The Data Dojo Power BI Report Template is intended to be a starting point for re
 
 ## Report Pages
 
-<!-- TODO: Add list of demo report pages, descriptions, and screenshots -->
+<!-- TODO: Add descriptions, and screenshots -->
 
-### Instructions Page
+### Instructions
+This page displays a tabbed interface with six sections:
+1. **Intro**: Welcome message and overview of the report template.
+2. **Demo Pages**: Description of each of the example report pages.
+3. **DAX**: Brief introduction to the DAX language, the `_Measures` table, and the `DAX Query View` feature.
+4. **Power Query / M**: Brief introduction to the Power Query language and data transformation.
+5. **Data Modeling**: Overview of Model View, Star Schema, Relationships, Cardinality, and Cross-Filter Direction.
+6. **Help & Resources**: Links to additional resources for learning Power BI, including LinkedIn Learning courses, Learning Paths on Microsoft Learn, free "Dashboard in a Day" webinars, etc.
 
-### Horizontal Slicers Page
+### Horizontal Slicers
+This page features slicers in the horizontal layout with "chiclet style" buttons. It also features a table visual with conditional formatting of the row color, a tooltip with conditional formatting that appears when hovering over a row, and a special "Infotip" icon that reveals a special message when hovered over.
 
-### Vertical Slicers Page
+### Vertical Slicers
+This page has slicers in the vertical layout, with checklist and radio button styles.
 
-### Slicer Panel Page
+### Slicer Panel
+This page showcases a slicer panel which can be expanded and collapsed to save space on the report canvas.
 
-<!-- ### Drillthrough Page (Hidden) -->
+<!-- ### Drillthrough (Hidden) -->
 
-### Tooltip Page (Hidden)
+### Tooltip (Hidden)
+This is a special type of page that is hidden when the report is published, but is used to create a tooltip to display when hovering over specific parts of visuals in other pages. It contains a [(new) Card visual](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card) with 8 different measures, and conditional formatting on both the card background and the text color on one of the measures. The tooltip is then linked to the visual on another page using the "Tooltip" field in the visual's formatting pane.
 
-### Infotip Page (Hidden)
+### Infotip (Hidden)
+This is another special type of page that is hidden when the report is published, but is used to create an "Infotip" that appears when hovering over a special icon in the table visual on the "Horizontal Slicers" page. The Infotip contains a message that explains how to interpret the conditional formatting on the rows in the table.
 
-### Developer Notes Page (Hidden)
+### Developer Notes (Hidden)
+This page contains a text box for the report developer to keep their notes, including information on the data model, DAX measures, and other technical details about the report. When the report is published, this page is hidden from view, but it can be accessed by the report developer when they are making changes to the report in Power BI Desktop.
 
 ## Slicers & Filters
 
