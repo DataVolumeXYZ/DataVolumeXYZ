@@ -69,48 +69,69 @@ This page displays a tabbed interface with six sections:
 6. **Help & Resources**: Links to additional resources for learning Power BI, including LinkedIn Learning courses, Learning Paths on Microsoft Learn, free "Dashboard in a Day" webinars, etc.
 
 ### Horizontal Slicers
-This page features slicers in the horizontal layout with "chiclet style" buttons. It also features a table visual with conditional formatting of the row color, a tooltip with conditional formatting that appears when hovering over a row, and a special "Infotip" icon that reveals a special message when hovered over.
+This page features slicers in the horizontal orientation with rounded rectangle (a.k.a. "chiclet") buttons. It also features a table visual with conditional formatting on fill color, a tooltip with conditional formatting that appears when hovering over a row, and a special "Infotip" icon on the table visual that reveals helpful information about the conditional formatting when hovered over.
 
 ### Vertical Slicers
-This page has slicers in the vertical layout, with checklist and radio button styles.
+This page has slicers in the vertical orientation, with both multi-select (a.k.a. "checklist") and single-select (a.k.a. "radio button") styles. It also has a [Line and Clustered Column Chart](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-combo-chart?tabs=powerbi-desktop) visual with a date hierarchy on the X-axis to demonstrate the various [Drill Modes](https://learn.microsoft.com/en-us/power-bi/consumer/end-user-drill).
 
 ### Slicer Panel
-This page showcases a slicer panel which can be expanded and collapsed to save space on the report canvas.
+This page showcases a slicer panel which can be expanded and collapsed to save space on the report canvas. This technique is achieved using a combination of bookmarks, buttons, and object visibility settings in the Selection Pane, and it can be a great way to give users a broad selection of slicers for filtering the data in the report without cluttering the report canvas. However, the slicer panel technique also requires a fair amount more work to create and maintain than standard slicers, so it should be used judiciously, and only when necessary to meet specific user requirements.
 
 <!-- ### Drillthrough (Hidden) -->
 
 ### Tooltip (Hidden)
-This is a special type of page that is hidden when the report is published, but is used to create a tooltip to display when hovering over specific parts of visuals in other pages. It contains a [(new) Card visual](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card) with 8 different measures, and conditional formatting on both the card background and the text color on one of the measures. The tooltip is then linked to the visual on another page using the "Tooltip" field in the visual's formatting pane.
+This is a special type of page that is hidden when the report is published, and is used to create a tooltip that displays when hovering over specific parts of visuals in other pages. It contains a [(new) Card visual](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card) with 8 different measures, and conditional formatting on both the background color behind the cards and the text color inside one of the cards. This tooltip displays when the user hovers over any row in the table visual on the "Horizontal Slicers" page, and the conditional formatting of the background and text colors is based on the positive or negative value of the "Total Profit" measure, which is displayed in the tooltip, but not in the table visual itself.
 
 ### Infotip (Hidden)
-This is another special type of page that is hidden when the report is published, but is used to create an "Infotip" that appears when hovering over a special icon in the table visual on the "Horizontal Slicers" page. The Infotip contains a message that explains how to interpret the conditional formatting on the rows in the table.
+This is another special type of page that is hidden when the report is published, and is used to create an "Infotip" that appears when hovering over a specific object in the report. In this case, it will appear when the user hovers over a special "Info" icon in the upper-right corner of the table visual on the "Horizontal Slicers" page, and it will display a message that explains the meaning of the conditional formatting in the visual to which it is attached.
 
 ### Developer Notes (Hidden)
-This page contains a text box for the report developer to keep their notes, including information on the data model, DAX measures, and other technical details about the report. When the report is published, this page is hidden from view, but it can be accessed by the report developer when they are making changes to the report in Power BI Desktop.
+This page contains a text box for the report developer to write and keep their notes, including information on the data model, DAX measures, and other technical details about the report. When the report is published, this page is hidden from view, but it can be accessed by the report developer when they open the report in Power BI Desktop.
 
 ## Slicers & Filters
 
-<!-- TODO: Add slicers and filters descriptions and screenshots -->
+Power BI has a feature called the Filter Pane which can be used to filter the data at the report, page, or individual visual level, which makes it an incredibly flexible and powerful tool in the right hands. However, that same flexibility and power can make the Filter Pane confusing and overwhelming for report users, and to make matters worse, the Filter Pane can also be difficult for the report developer to style and format to match the rest of the report's design. Slicers, on the other hand, are much easier to style and format, and they are also more intuitive for users to interact with. 
+
+Thus, the Filter Pane in the Data Dojo Report Template is hidden from report users by default, and only visible to the report developer when editing the report. This is a deliberate design choice, intended to simplify the report developer's work and reduce the cognitive load on the report's users, resulting in a better overall experience for everyone, and more active engagement with the report. That being said, there are other schools of thought on this subject, and the battle of Slicers vs. Filter Pane has been raging for almost as long as Power BI has been around, so you should consider the pros and cons of these different approaches, and choose whichever works best for your specific report and its intended audience.
 
 ## Star Schema
 
-<!-- TODO: Add star schema description, screenshot, and M code -->
+<!-- TODO: Add screenshot -->
+One of the core tenets of good data modeling in Power BI is the use of a Star Schema, which is a simple and intuitive way to organize the data tables in a hub-and-spoke configuration, with a central Fact table surrounded by Dimension tables. The Fact table contains the numerical data to be aggregated and analyzed, like sales amounts, quantities, or counts, while the Dimension tables contain the descriptive attributes that will be used to filter, group, or slice-and-dice through the data, like dates, products, customers, etc. This configuration is called a "Star Schema" because when drawn on paper, it looks like a star, with the Fact table in the center and the Dimension tables radiating out from it, like the points of a star.
+
+The Star Schema structure is easy to understand and work with, and it's also the most efficient for querying and aggregating data in DAX, which makes it the ideal structure for Power BI semantic models. The Data Dojo report template includes a sample Star Schema with a Fact table called `FactSales` and several Dimension tables, including `DimProduct`, `DimCustomer`, `DimDate`, `DimCountry`, etc., each of which is connected to the `FactSales` table by a "one-to-many" relationship. This Star Schema is designed to be a starting point that report developers can use as a guide when building their own semantic models.
 
 ## Date Dimension
 
-<!-- TODO: Add date dimension description, screenshot, and M code -->
+<!-- TODO: Add screenshot -->
+The Date Dimension in a Power BI semantic model is a special type of Dimension table that contains a continuous sequence of dates, usually one row per day, along with a variety of attributes that describe each date, like the day of the week, the month, the quarter, the year, etc. The Date Dimension is a critical component of any Power BI semantic model, because it enables Time Intelligence calculations, like year-over-year comparisons, month-to-date totals, rolling averages, etc., which are essential for many types of business analysis.
+
+The Data Dojo report template includes a sample Date Dimension table called `DimDate`, which contains a continuous sequence of 456 days, with the most recent date dynamically set to the day before the most recent refresh, along with a variety of attributes that describe each date, like the year, month number, month name, day of the week, etc. Thus, `DimDate` is designed to simulate a typical Date Dimension that report developers might find in a real-world Data Warehouse, which usually contain data up to the previous day, and are updated nightly with new data. `DimDate` is also tagged as a "Date Table" in Power BI, which tells Power BI to treat it as a special type of table that can be used for Time Intelligence calculations like those mentioned above.
 
 ## Explicit Measures
 
-<!-- TODO: Add explicit measures description, screenshot, and DAX code -->
+<!-- TODO: Add screenshot and examples of DAX measures -->
+Explicit Measures are DAX formulas that are created by the report developer to perform specific calculations on the data in the semantic model, like sums, averages, counts, etc. These measures are called "explicit" because they are explicitly defined by the report developer, rather than being automatically generated by Power BI, which are called "implicit" measures. Explicit Measures are preferred over Implicit Measures because they are more flexible and powerful, and they can be customized to suit the specific needs of the report, whereas Implicit Measures are limited in their functionality and can be difficult to work with in certain scenarios. 
+
+The Data Dojo report template includes a variety of Explicit Measures, and they are all stored in the `_Measures` table, which is organized into two folders, `Formatting` and `Calculation`. These folders are used to group the measures by their function or purpose -- `Formatting` for measures that control the appearance of objects on the report canvas, like colors, fonts, etc., and `Calculation` for measures that perform calculations on the data, like sums, averages, etc. The Explicit Measures in the Data Dojo report template are intended to demonstrate best practices in DAX formula writing, like proper formatting, comments, consistent naming conventions, etc., and to serve as a model for report developers to follow when creating their own measures.
 
 ## Conditional Formatting
 
-<!-- TODO: Add standard conditional formatting in visuals, color-changing slicers, etc. -->
+<!-- TODO: Add screenshots -->
+Several visuals in the Data Dojo Report Template have conditional formatting applied to them, which changes the appearance of the visual based on the data being displayed in it. For example, the table visual on the "Horizontal Slicers" page has conditional formatting on the fill color of the cells, which changes the color of the cells in the row based on the value in the "Segment" column and the "Total Sales" measure, both of which are displayed in the table. Conditional formatting like this can make it easier for the report user to notice patterns and trends in the data, and to quickly identify outliers or anomalies. That same table visual also features a tooltip with its own conditional formatting, which appears when the user hovers over a row, and displays additional information about the data in that row, like the "Total Profit" measure, which is not displayed in the table itself.
+
+The slicers in the Data Dojo Report Template also have a special conditional formatting feature that's worth mentioning: When the user selects one or more values in a slicer on a report page, that slicer's background color will change, as will the color of the "Clear Slicers" button on that page. Report users often forget that they have applied a filter to the data in the report, and this can lead to confusion, frustration, and even a bad business decision based on faulty interpretation of the data. To help prevent situations like that from occurring, this feature gives report users a clear visual reminder that the data they are seeing is not the full dataset, but rather a subset of the data based on the slicer selections they have made. This can help to reduce the likelihood of errors and misunderstandings, and to improve the overall quality of the data analysis process.
 
 ## Scrims & Overlays
 
-<!-- TODO: Add scrim and overlay descriptions and screenshots -->
+<!-- TODO: Add screenshots -->
+Scrims and Overlays are design techniques that can be used to enhance the visual appearance and usability of a Power BI report, and to make it more engaging and informative for the user. 
+
+A scrim is a semi-transparent layer that is placed over a visual or group of visuals to draw attention to a specific part of the report, like a title, a key metric, or a call-to-action. A scrim can be used to make the text on the report more readable, to create a visual hierarchy on the report canvas, or to add a layer of interactivity to the report. Alternatively, scrims can be used to mask or obscure parts of the report that are not relevant to the user at that moment, or to create a sense of depth or dimensionality in the report design. 
+
+An overlay is a report design technique that is used to display additional information or controls on top of a visual or group of visuals, like a tooltip, a slicer panel, or a navigation menu. Overlays can be used to provide context or explanation for the data being displayed, to give the user more control over the data analysis process, or to add interactivity to the report. 
+
+The Data Dojo Report Template features several examples of scrims and overlays, including two overlays on the "Horizontal Slicers" page in the form of a Tooltip and an Infotip, and a combination of scrims and overlays on the "Slicer Panel" page which are used to create an expandable and collapsible slicer panel with a "frosted glass" effect that partially obscures the report page when the panel is expanded. 
 
 ## Advanced Features
 
@@ -132,11 +153,11 @@ If you've been following this blog series, you'll recall from the previous post 
 
 ### Integrated "VertiPaq Analyzer Lite"
 
-<!-- TODO: Add VertiPaq Analyzer screenshot -->
+<!-- TODO: Add screenshot -->
 
 If you're not already familiar with the [VertiPaq Analyzer](https://www.sqlbi.com/tools/vertipaq-analyzer/), it's a fantastic tool for analyzing the performance of a Power BI semantic model, but until just a few months ago, it required the use of external tools like Microsoft Excel, [DAX Studio](https://www.sqlbi.com/tv/introducing-vertipaq-analyzer-in-dax-studio/), or [Tabular Editor 3](https://data-goblins.com/power-bi/analyze-power-bi-dataset), so it wasn't very practical for business users and self-service data analysts.
 
-However, thanks to [Hariharan Rajendran](https://in.linkedin.com/in/imhariharanr)'s [brilliant](https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/) [work](https://github.com/rhariharaneee/Power-BI), we now have a way to access the VertiPaq Analyzer data directly within Power BI Desktop via the DAX Query View, so now the Data Dojo report template has a "VertiPaq Analyzer Lite" built right in. This provides our Data Ninjas with a great way to identify and address performance issues in their Power BI semantic models, and thereby improve the overall performance of their reports, all without ever having to install or learn to use any external tools.
+However, thanks to [Hariharan Rajendran](https://in.linkedin.com/in/imhariharanr)'s [brilliant](https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/) [work](https://github.com/rhariharaneee/Power-BI), we now have a way to access the VertiPaq Analyzer data directly within Power BI Desktop via the DAX Query View, so now the Data Dojo report template has a "VertiPaq Analyzer Lite" built right in. This provides report developers with a great way to identify and address performance issues in their Power BI semantic models, and thereby improve the overall performance of their reports, all without ever having to install or learn to use any external tools.
 
 # Balance: Simplicity & Versatility
 
