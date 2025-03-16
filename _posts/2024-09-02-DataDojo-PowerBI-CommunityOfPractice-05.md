@@ -41,17 +41,13 @@ Thank you for joining us on this adventure!
 
 # The Data Dojo Power BI Report Template
 
-<!-- TODO: Add section summary -->
+The Data Dojo Power BI Report Template is a starter file that we provide to the Data Dojo members to give them a sturdy foundation upon which to develop reports of their own. It's designed to be simple, versatile, and user-friendly, with a focus on best practices in data visualization, data modeling, and report design. It is intended to be a starting point for report development, and users are encouraged to customize it to suit their specific needs and preferences. It is also constantly under development, with new features and improvements being added regularly based on feedback from the Data Dojo members and ideas from the Power BI community.
 
-{% include aligner.html images="../../../assets/img/data-dojo/report-template-72060c18-e82b-447e-87d5-06721145b18c_cropped.jpg" column="auto" %}
+{% include aligner.html images="data-dojo/report-template-72060c18-e82b-447e-87d5-06721145b18c_cropped.jpg" column="auto" %}
 
 ## Overview
 
-The Data Dojo Power BI Report Template is a comprehensive Power BI report template that we provide to the Data Dojo members to give them a sturdy foundation upon which to develop reports of their own. It's designed to be simple, versatile, and user-friendly, with a focus on best practices in data visualization, data modeling, and report design.
-
-The template includes a variety of features, like a handful of example report pages, a hidden Notes page, sample data imported from a flat file and modeled in a proper Star Schema, a designated Date Dimension for proper Time Intelligence calculations, explicit DAX measures, conditional formatting, slicers in various configurations, scrims, overlays, and more. It also incorporates several advanced features, like a custom Power Query function for importing tables from Power Platform Dataflows, and an integrated VertiPaq Analyzer in DAX Query View for model performance tuning.
-
-The Data Dojo Power BI Report Template is intended to be a starting point for report development, and users are encouraged to customize it to suit their specific needs and preferences. It is also constantly under development, with new features and improvements being added regularly based on feedback from the Data Dojo members and ideas from the Power BI community.
+The Data Dojo Power BI Report Template includes a variety of helpful features, like an Instructions page, three example report pages, a Developer Notes page, sample data imported from a flat file and modeled in a proper Star Schema, a designated Date Dimension for Time Intelligence calculations, explicit DAX measures, conditional formatting, slicers in various configurations, scrims, overlays, and more. It also incorporates several advanced features, such as a collection of custom Power Query functions for importing and transforming data, and an integrated VertiPaq Analyzer in DAX Query View for model performance tuning.
 
 <!-- TODO: Accordion collapse everything H2 and below -->
 
@@ -68,25 +64,65 @@ This page displays a tabbed interface with six sections:
 5. **Data Modeling**: Overview of Model View, Star Schema, Relationships, Cardinality, and Cross-Filter Direction.
 6. **Help & Resources**: Links to additional resources for learning Power BI, including LinkedIn Learning courses, Learning Paths on Microsoft Learn, free "Dashboard in a Day" webinars, etc.
 
+{% include aligner.html images="data-dojo/report-template/instructions-intro.jpg" column="auto" alt="Instructions page of the Data Dojo Power BI Report Template showing a tabbed interface with sections for Intro, Demo Pages, DAX, Power Query / M, Data Modeling, and Help & Resources" description="The Instructions page, featuring a tabbed interface for easy navigation" %}
+
 ### Horizontal Slicers
 This page features slicers in the horizontal orientation with rounded rectangle (a.k.a. "chiclet") buttons. It also features a table visual with conditional formatting on fill color, a tooltip with conditional formatting that appears when hovering over a row, and a special "Infotip" icon on the table visual that reveals helpful information about the conditional formatting when hovered over.
+
+{% include aligner.html images="data-dojo/report-template/horizontal-slicers.jpg" column="auto" alt="Horizontal Slicers page of the Data Dojo Power BI Report Template showing horizontal slicers with rounded rectangle buttons, a table visual with conditional formatting, and an Infotip icon" description="The Horizontal Slicers page, featuring a table visual <br/>with conditional formatting and an Infotip icon" %}
 
 ### Vertical Slicers
 This page has slicers in the vertical orientation, with both multi-select (a.k.a. "checklist") and single-select (a.k.a. "radio button") styles. It also has a [Line and Clustered Column Chart](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-combo-chart?tabs=powerbi-desktop) visual with a date hierarchy on the X-axis to demonstrate the various [Drill Modes](https://learn.microsoft.com/en-us/power-bi/consumer/end-user-drill).
 
+{% include aligner.html images="data-dojo/report-template/vertical-slicers.jpg" column="auto" alt="Vertical Slicers page of the Data Dojo Power BI Report Template showing vertical slicers with multi-select and single-select styles, and a Line and Clustered Column Chart visual with a date hierarchy on the X-axis" description="The Vertical Slicers page, featuring slicers with multi-select and single-select styles, <br/>and a Line and Clustered Column Chart visual with a date hierarchy on the X-axis" %}
+
 ### Slicer Panel
 This page showcases a slicer panel which can be expanded and collapsed to save space on the report canvas. This technique is achieved using a combination of bookmarks, buttons, and object visibility settings in the Selection Pane, and it can be a great way to give users a broad selection of slicers for filtering the data in the report without cluttering the report canvas. However, the slicer panel technique also requires a fair amount more work to create and maintain than standard slicers, so it should be used judiciously, and only when necessary to meet specific user requirements.
+<table>
+	<tr>
+		<td>
+			{% include aligner.html images="data-dojo/report-template/slicer-panel-hidden.jpg" column="auto" alt="Slicer Panel page of the Data Dojo Power BI Report Template showing a hidden slicer panel with a button to expand it" description="The Slicer Panel page with hidden slicer panel and 'Show Slicers' button" %}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			{% include aligner.html images="data-dojo/report-template/slicer-panel-visible.jpg" column="auto" alt="Slicer Panel page of the Data Dojo Power BI Report Template showing an expanded slicer panel with multiple slicers visible" description="The Slicer Panel page with visible slicer panel and 'Hide Slicers' button" %}
+		</td>
+	</tr>
+</table>
 
 <!-- ### Drillthrough (Hidden) -->
 
 ### Tooltip (Hidden)
 This is a special type of page that is hidden when the report is published, and is used to create a tooltip that displays when hovering over specific parts of visuals in other pages. It contains a [(new) Card visual](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card) with 8 different measures, and conditional formatting on both the background color behind the cards and the text color inside one of the cards. This tooltip displays when the user hovers over any row in the table visual on the "Horizontal Slicers" page, and the conditional formatting of the background and text colors is based on the positive or negative value of the "Total Profit" measure, which is displayed in the tooltip, but not in the table visual itself.
+<table>
+	<tr>
+		<td style="width:28%; text-align:right;">
+			When <b>Total Profit</b> <br/>value is <span style='color:green;'><b>positive</b></span>
+		</td>
+		<td>
+			{% include aligner.html images="data-dojo/report-template/tooltip-positive-profit.jpg" column="auto" alt="Tooltip page of the Data Dojo Power BI Report Template showing a (new) Card visual with positive Total Profit value" description="✅ No action required;<br/>Do not activate conditional formatting" %}
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align:right;">
+			When <b>Total Profit</b> <br/>value is <span style='color:red;'><b>negative</b></span>
+		</td>
+		<td>
+			{% include aligner.html images="data-dojo/report-template/tooltip-negative-profit.jpg" column="auto" alt="Tooltip page of the Data Dojo Power BI Report Template showing a (new) Card visual with negative Total Profit value and conditional formatting turning both the background color and text color red, to draw the user's attention" description="⚠️ Action required!<br/>Activate conditional formatting to draw user's attention" %}
+		</td>
+	</tr>
+</table>
 
 ### Infotip (Hidden)
-This is another special type of page that is hidden when the report is published, and is used to create an "Infotip" that appears when hovering over a specific object in the report. In this case, it will appear when the user hovers over a special "Info" icon in the upper-right corner of the table visual on the "Horizontal Slicers" page, and it will display a message that explains the meaning of the conditional formatting in the visual to which it is attached.
+This is another special type of page that is hidden when the report is published, and is used to display an "Infotip" when hovering over a specific object in the report. In this case, it will appear when the user hovers over a special "Info" icon in the upper-right corner of the table visual on the "Horizontal Slicers" page, and it will display a message that explains the meaning of the conditional formatting in the visual to which it is attached.
+
+{% include aligner.html images="data-dojo/report-template/infotip.jpg" column="auto" alt="Infotip page of the Data Dojo Power BI Report Template showing a message explaining the meaning of the conditional formatting in the table visual to which it is attached" description="'Infotip' on a table visual with a message explaining <br/>its conditional formatting and Tooltip features" %}
 
 ### Developer Notes (Hidden)
 This page contains a text box for the report developer to write and keep their notes, including information on the data model, DAX measures, and other technical details about the report. When the report is published, this page is hidden from view, but it can be accessed by the report developer when they open the report in Power BI Desktop.
+
+{% include aligner.html images="data-dojo/report-template/developer-notes.jpg" column="auto" alt="Developer Notes page of the Data Dojo Power BI Report Template showing a text box for the report developer to write and keep their notes" description="Developer Notes page with a text box for writing and keeping notes" %}
 
 ## Slicers & Filters
 
@@ -94,19 +130,24 @@ Power BI has a feature called the Filter Pane which can be used to filter the da
 
 Thus, the Filter Pane in the Data Dojo Report Template is hidden from report users by default, and only visible to the report developer when editing the report. This is a deliberate design choice, intended to simplify the report developer's work and reduce the cognitive load on the report's users, resulting in a better overall experience for everyone, and more active engagement with the report. That being said, there are other schools of thought on this subject, and the battle of Slicers vs. Filter Pane has been raging for almost as long as Power BI has been around, so you should consider the pros and cons of these different approaches, and choose whichever works best for your specific report and its intended audience.
 
+<!-- TODO: Add Filter Pane vs. Slicers illustration -->
+
 ## Star Schema
 
 <!-- TODO: Add screenshot -->
 One of the core tenets of good data modeling in Power BI is the use of a Star Schema, which is a simple and intuitive way to organize the data tables in a hub-and-spoke configuration, with a central Fact table surrounded by Dimension tables. The Fact table contains the numerical data to be aggregated and analyzed, like sales amounts, quantities, or counts, while the Dimension tables contain the descriptive attributes that will be used to filter, group, or slice-and-dice through the data, like dates, products, customers, etc. This configuration is called a "Star Schema" because when drawn on paper, it looks like a star, with the Fact table in the center and the Dimension tables radiating out from it, like the points of a star.
 
-The Star Schema structure is easy to understand and work with, and it's also the most efficient for querying and aggregating data in DAX, which makes it the ideal structure for Power BI semantic models. The Data Dojo report template includes a sample Star Schema with a Fact table called `FactSales` and several Dimension tables, including `DimProduct`, `DimCustomer`, `DimDate`, `DimCountry`, etc., each of which is connected to the `FactSales` table by a "one-to-many" relationship. This Star Schema is designed to be a starting point that report developers can use as a guide when building their own semantic models.
+The Star Schema structure is easy to understand and work with, and it's also the most efficient for querying and aggregating data in DAX, which makes it the ideal structure for Power BI semantic models. The Data Dojo report template includes a sample Star Schema with a Fact table called `FactSales` and several Dimension tables, including `DimProduct`, `DimDate`, `DimCountry`, etc., each of which is connected to the `FactSales` table by a "one-to-many" relationship. This Star Schema is designed to be a starting point that report developers can use as a guide when building their own semantic models.
+
+{% include aligner.html images="data-dojo/report-template/star-schema.jpg" column="auto" alt="A basic Star Schema of the sample data in the Data Dojo Power BI Report Template, featuring a central Fact table (FactSales) surrounded by several Dimension tables (DimProduct, DimSegment, DimDiscountBand, DimDate, DimCountry), and a dedicated Measures table (_Measures) off to the side" description="A basic Star Schema in the Model View, featuring a dedicated Measures table<br/>and a central Fact table surrounded by its Dimension tables" %}
 
 ## Date Dimension
 
-<!-- TODO: Add screenshot -->
 The Date Dimension in a Power BI semantic model is a special type of Dimension table that contains a continuous sequence of dates, usually one row per day, along with a variety of attributes that describe each date, like the day of the week, the month, the quarter, the year, etc. The Date Dimension is a critical component of any Power BI semantic model, because it enables Time Intelligence calculations, like year-over-year comparisons, month-to-date totals, rolling averages, etc., which are essential for many types of business analysis.
 
 The Data Dojo report template includes a sample Date Dimension table called `DimDate`, which contains a continuous sequence of 456 days, with the most recent date dynamically set to the day before the most recent refresh, along with a variety of attributes that describe each date, like the year, month number, month name, day of the week, etc. Thus, `DimDate` is designed to simulate a typical Date Dimension that report developers might find in a real-world Data Warehouse, which usually contain data up to the previous day, and are updated nightly with new data. `DimDate` is also tagged as a "Date Table" in Power BI, which tells Power BI to treat it as a special type of table that can be used for Time Intelligence calculations like those mentioned above.
+
+{% include aligner.html images="data-dojo/report-template/dimdate.jpg" column="auto" alt="A sample Date Dimension table (DimDate) in the Data Dojo Power BI Report Template, showing a continuous sequence of dates with various attributes like year, month number, month name, day of the week, etc." description="A sample Date Dimension table (DimDate) in the Power Query Editor, <br/>showing a continuous sequence of dates and various attributes" %}
 
 ## Explicit Measures
 

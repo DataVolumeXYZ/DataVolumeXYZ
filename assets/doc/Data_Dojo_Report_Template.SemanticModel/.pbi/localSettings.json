@@ -1,10 +1,5 @@
 {
   "version": "1.1",
   "userConsent": {},
-  "remoteArtifacts": [
-    {
-      "datasetId": "357c857c-45ea-4c4a-9411-e54d5cc8b022"
-    }
-  ],
-  "securityBindingsSignature": "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl/a6GAsnlkW7B0Xz3zLrgwAAAAACAAAAAAAQZgAAAAEAACAAAACcOKAclM0SweJtaPmhpaJMlGdWoKV1timGfsSo/LNC4gAAAAAOgAAAAAIAACAAAABL3FmwaybIEWx+RIFPt3pW8//kg8olRZIcDCCFsCBaCVAAAADZ1y0fivbABpdlqzloE07lSV/wc+8mQp9IAfL9NtHcvpAvIiQ3vfyku8naQGO6KwJsSanUiaDL+W8teWuEbWy6OEzi2z0BsZMzXl8kUDuYfUAAAADfkVUlYk7GAXJbuG8QAXlKeIKFsopFPp5vz2VmEiWD4sQAHQr7tH3LlTNBETXRXe5CLOKw4rlG0YMaCbrtyvvF"
+  "securityBindingsSignature": "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAl/a6GAsnlkW7B0Xz3zLrgwAAAAACAAAAAAAQZgAAAAEAACAAAADqtq96dkirCeZAsspgbWZWnBraM7uzIcmo2YNepysssgAAAAAOgAAAAAIAACAAAACTLjTsTeAUDQSMFv7RH7HSHhdaQ8rRJnmgf7irVySvl1AAAAAbuk/imoRvZVp7MX+cPYQf1m9m3H0mWoUj0ymfoNAO0r8Ecbn+dAGMy4746+kCQCGXPxQTHogbDtfkO6iWkX2QQ26HaA+uX+RBTK5OrjnIOkAAAABwMg3MrET1VfubrWltO86Wn5CXq6hplKXHMPFaKVBxsE7WdFgSwvRxm3ibeFeG3wOH/Wbr1nzpFoxmDdddsa+D"
 }

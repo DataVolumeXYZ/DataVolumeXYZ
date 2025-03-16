@@ -47,19 +47,28 @@
       "config": "{\"visibility\":1}",
       "displayName": "Developer Notes",
       "displayOption": 1,
-      "filters": "[]",
+      "filters": "[{\"name\":\"abb29f1f4a6d48710737\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ReportPages\"}},\"Property\":\"PageNumber\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"ReportPages\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"PageNumber\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'7'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"isHiddenInViewMode\":true,\"isLockedInViewMode\":true}]",
       "height": 720.00,
       "name": "5c1e5389869c722fc691",
       "ordinal": 6,
       "visualContainers": [
         {
-          "config": "{\"name\":\"54d74f81803f83b61a38\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.372384937238495,\"y\":70.96234309623432,\"z\":0,\"width\":1263.26359832636,\"height\":640,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Developer Notes:\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"textDecoration\":\"underline\"}}]},{\"textRuns\":[{\"value\":\"Use this page to write notes to yourself (or others who may need to maintain/modify this report in the future).\",\"textStyle\":{\"fontSize\":\"14pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Because this page is marked as hidden, it will not be visible to users of the report when it is published.\",\"textStyle\":{\"fontSize\":\"14pt\"}}],\"listType\":\"bullet\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"60D\"}}}}}]}}}",
+          "config": "{\"name\":\"54d74f81803f83b61a38\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":61.58995815899582,\"z\":0,\"width\":1280,\"height\":658.744769874477,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Developer Notes:\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"textDecoration\":\"underline\"}}]},{\"textRuns\":[{\"value\":\"Use this page to write notes to yourself (or others who may need to maintain/modify this report in the future).\",\"textStyle\":{\"fontSize\":\"14pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Because this page is marked as hidden, it will not be visible to users of the report when it is published.\",\"textStyle\":{\"fontSize\":\"14pt\"}}],\"listType\":\"bullet\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"60D\"}}}}}],\"padding\":[{\"properties\":{\"top\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"left\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 640.00,
-          "width": 1263.26,
-          "x": 9.37,
-          "y": 70.96,
+          "height": 658.74,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 61.59,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9f8cc557a7ed03ac60b6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":6.6945606694560675,\"z\":1000,\"width\":368.2008368200837,\"height\":50.20920502092051,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'blank'\"}}}},\"selector\":{\"id\":\"default\"}}],\"text\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"text\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_Measures\"}},\"Property\":\"Page Title\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}},\"topMargin\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"bottomMargin\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'top'\"}}}},\"selector\":{\"id\":\"default\"}}],\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'parallelogram'\"}}},\"trapezoidSlant\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"hexagonSlant\":{\"expr\":{\"Literal\":{\"Value\":\"31L\"}}}},\"selector\":{\"id\":\"default\"}}],\"fill\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#77FFFF'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"40D\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'btn_PageTitle'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 50.21,
+          "width": 368.20,
+          "x": 16.00,
+          "y": 6.69,
+          "z": 1000.00
         }
       ],
       "width": 1280.00
