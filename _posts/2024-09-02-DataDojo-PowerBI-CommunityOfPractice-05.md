@@ -216,7 +216,9 @@ It's important to strike the right balance between simplicity and versatility wh
 In conclusion, the Data Dojo Power BI Report Template is a powerful and flexible tool that can help report developers create high-quality reports quickly and easily. It incorporates best practices in data modeling, DAX formula writing, and report design, while also providing a variety of advanced features that can enhance the functionality and usability of the report. By striking the right balance between simplicity and versatility, the Data Dojo Report Template is designed to be user-friendly for beginners while also being powerful enough for seasoned pros. We encourage all Data Dojo members to explore the features of the Data Dojo Report Template, and to use it as a starting point for their own reports. We also welcome feedback and suggestions for improvements, as we are constantly looking for ways to enhance the template and make it even more useful for our members.
 
 # Resources
-<!-- TODO: Add download links -->
+- [Data Dojo Power BI Report Template](../../../assets/doc/Data_Dojo_Report_Template.pbit)
+- [Recommended Power BI Learning Resources (Excel)](../../../assets/doc/Data_Dojo_-_Power_BI_Learning_Resources.xlsx)
+- [Recommended Power BI Learning Resources (PDF)](../../../assets/doc/Data_Dojo_-_Power_BI_Learning_Resources.pdf)
 
 # Next Time: The Data Dojo - Office Hours & Coffee Lounge
 In the next installment of this series, we'll talk about a brand new format for the Data Dojo, which we call "Office Hours & Coffee Lounge," why we decided to add this new format to our repertoire, and how it's been going so far. Stay tuned!
