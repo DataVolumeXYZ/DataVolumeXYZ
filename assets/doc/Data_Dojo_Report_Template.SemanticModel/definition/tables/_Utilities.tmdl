@@ -1,0 +1,31 @@
+table _Utilities
+	isHidden
+	lineageTag: 750e23d7-b415-41b0-9ef5-c8acb8767dfd
+
+	measure UserPrincipalName = USERPRINCIPALNAME()
+		isHidden
+		lineageTag: 89f56428-f962-42c1-929e-9c54b230c855
+
+		changedProperty = IsHidden
+
+	measure UserName = USERNAME()
+		isHidden
+		lineageTag: ec3f4dfe-9545-42cc-b179-0c33b0820c14
+
+		changedProperty = IsHidden
+
+	partition _Utilities = m
+		mode: import
+		queryGroup: Ultilities
+		source =
+				let
+				    Source = _Measures
+				in
+				    Source
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

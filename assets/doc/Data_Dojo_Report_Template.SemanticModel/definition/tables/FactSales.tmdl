@@ -1,0 +1,184 @@
+table FactSales
+	lineageTag: 55131885-fce1-4c12-8530-317be14de938
+
+	column 'Units Sold'
+		dataType: double
+		lineageTag: 0f0e11c7-bc00-4833-9184-e4f6cdb84f8f
+		summarizeBy: none
+		sourceColumn: Units Sold
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Manufacturing Price'
+		dataType: double
+		lineageTag: 0e08775f-0f38-48a6-9346-b480e4af731f
+		summarizeBy: none
+		sourceColumn: Manufacturing Price
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sale Price'
+		dataType: double
+		lineageTag: cfbd26aa-f1a6-4073-a00e-d0f9c8dd501d
+		summarizeBy: none
+		sourceColumn: Sale Price
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Gross Sales'
+		dataType: double
+		lineageTag: 141affa2-fbfa-466d-b27d-2ad0801a4cf0
+		summarizeBy: none
+		sourceColumn: Gross Sales
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Discounts
+		dataType: double
+		lineageTag: 35dcf4dd-8eda-4bc3-b008-6f21ebe84717
+		summarizeBy: none
+		sourceColumn: Discounts
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sales
+		dataType: double
+		lineageTag: b8c57880-3fcf-46ed-b2b3-650be6de65f0
+		summarizeBy: none
+		sourceColumn: Sales
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Cost of Goods Sold
+	column COGS
+		dataType: double
+		lineageTag: b63bae76-bba6-4d4e-8a73-aef023aeeb21
+		summarizeBy: none
+		sourceColumn: COGS
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Profit
+		dataType: double
+		lineageTag: 7024ec1e-704d-4ea9-b0a6-1e7c35b8cfb5
+		summarizeBy: none
+		sourceColumn: Profit
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Foreign key to the DimSegment table
+	column SegmentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c39c404d-a0fa-4199-b1cf-5d0322ec7f60
+		summarizeBy: none
+		sourceColumn: SegmentKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Foreign key to the DimCountry table
+	column CountryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d649c531-b1a7-460d-bef4-f5d611bbf829
+		summarizeBy: none
+		sourceColumn: CountryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Foreign key to the DimProduct table
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 93960a21-e9de-41f5-bd14-bca06cf8229e
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Foreign key to the DimDiscountBand table
+	column DiscountBandKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d1bdbb2a-83f8-4da7-9e29-ad14d437f3a9
+		summarizeBy: none
+		sourceColumn: DiscountBandKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Foreign key to the DimDate table
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c2ca5c6f-8d05-4f73-afbb-8bcc8f46e5b9
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactSales = m
+		mode: import
+		queryGroup: 'Sample Tables'
+		source =
+				let
+				    Source = _Source,
+				    #"Left Join Dim Segment" = Table.NestedJoin(Source, {"Segment"}, DimSegment, {"Segment"}, "Dim Segment", JoinKind.LeftOuter),
+				    #"Expand Dim Segement" = Table.ExpandTableColumn(#"Left Join Dim Segment", "Dim Segment", {"SegmentKey"}, {"SegmentKey"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Expand Dim Segement","United States of America","USA",Replacer.ReplaceText,{"Country"}),
+				    #"Left Join Dim Country" = Table.NestedJoin(#"Replaced Value", {"Country"}, DimCountry, {"Country"}, "Dim Country", JoinKind.LeftOuter),
+				    #"Expand Dim Country" = Table.ExpandTableColumn(#"Left Join Dim Country", "Dim Country", {"CountryKey"}, {"CountryKey"}),
+				    #"Left Join Dim Product" = Table.NestedJoin(#"Expand Dim Country", {"Product"}, DimProduct, {"Product"}, "Dim Product", JoinKind.LeftOuter),
+				    #"Expand Dim Product" = Table.ExpandTableColumn(#"Left Join Dim Product", "Dim Product", {"ProductKey"}, {"ProductKey"}),
+				    #"Left Join Discount Band" = Table.NestedJoin(#"Expand Dim Product", {"Discount Band"}, DimDiscountBand, {"Discount Band"}, "Dim Discount Band", JoinKind.LeftOuter),
+				    #"Expand Dim Discount Band" = Table.ExpandTableColumn(#"Left Join Discount Band", "Dim Discount Band", {"DiscountBandKey"}, {"DiscountBandKey"}),
+				    #"Added DateKey" = Table.AddColumn(#"Expand Dim Discount Band", "DateKey", each Int64.From(Date.ToText( [Date], [ Format = "yyyyMMdd" ] )), Int64.Type ),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Added DateKey",{"Units Sold", "Manufacturing Price", "Sale Price", "Gross Sales", "Discounts", "Sales", "COGS", "Profit", "SegmentKey", "CountryKey", "ProductKey", "DiscountBandKey", "DateKey"})
+				in
+				    #"Removed Other Columns"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

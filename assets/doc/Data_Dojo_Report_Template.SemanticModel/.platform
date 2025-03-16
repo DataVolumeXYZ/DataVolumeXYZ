@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Data_Dojo_Report_Template"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "69cd88b6-bb28-4af1-a0ba-034f0852dd65"
+  }
+}

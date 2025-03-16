@@ -1,0 +1,52 @@
+table _Info_SemanticModel
+	isHidden
+	lineageTag: 959b0eb6-cc0d-406d-9bf5-6ab5f9c3ceb9
+
+	/// The last time the semantic model was refreshed
+	column LatestRefreshDateTime
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: f9b5ac07-e8ac-4b00-8126-c32852c6dacb
+		summarizeBy: none
+		sourceColumn: LatestRefreshDateTime
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// The time of day before which this semantic model should have completed its daily refresh
+	column 'Refresh Deadline'
+		dataType: dateTime
+		isHidden
+		formatString: Long Time
+		lineageTag: 6a246cc5-a0b5-4298-a415-d1b4aed88da1
+		summarizeBy: none
+		sourceColumn: Refresh Deadline
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	partition _Info_SemanticModel = m
+		mode: import
+		queryGroup: Ultilities
+		source =
+				let
+				    // See the comments in fn_GetLocalTime to understand how to adjust the date and time to your locality
+				    Source = DateTimeZone.RemoveZone(fn_GetLocalDateTime(3, 2, 11, 1, -5, -6)),
+				    #"Converted to Table" = #table(1, {{Source}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Converted to Table",{{"Column1", type datetime}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "LatestRefreshDateTime"}}),
+				    #"Added Refresh Deadline" = Table.AddColumn(#"Renamed Columns", "Refresh Deadline", each Refresh_Deadline, type time)
+				in
+				    #"Added Refresh Deadline"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,25 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "1.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dimstudent.lastname": {
+			      "Binding": {
+			        "ConceptualEntity": "DimStudent",
+			        "ConceptualProperty": "LastName"
+			      },
+			      "State": "Generated"
+			    },
+			    "dimstudent.firstname": {
+			      "Binding": {
+			        "ConceptualEntity": "DimStudent",
+			        "ConceptualProperty": "FirstName"
+			      },
+			      "State": "Generated"
+			    }
+			  }
+			}
+		contentType: json
+

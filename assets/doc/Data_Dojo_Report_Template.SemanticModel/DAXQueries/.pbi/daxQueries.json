@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "tabOrder": [
+    "[VertiPaq] Tables",
+    "[VertiPaq] Columns",
+    "[VertiPaq] Relationships",
+    "[VertiPaq] Partitions",
+    "[VertiPaq] Summary",
+    "[Info.View] Tables",
+    "[Info.View] Columns",
+    "[Info.View] Relationships",
+    "[Info.View] Measures"
+  ],
+  "defaultTab": "[VertiPaq] Tables"
+}
