@@ -30,7 +30,7 @@ description: A series about founding and fostering a successful Power BI Communi
 {% if layout == default %}
 This is the fifth installment in a series documenting the challenges, progress, setbacks, and victories of The Data Dojo: A Power BI Community of Practice.
 
-In this post, we'll take a closer look at the latest Data Dojo template, tinker with more of its capabilities, and talk about how to strike the right balance when designing a Power BI template that's both simple enough for a beginner **and** versatile enough for a seasoned pro.
+In this post, we'll take a closer look at the latest Data Dojo template, tinker with some of its capabilities, and talk about how to strike the right balance when designing a Power BI template that's both simple enough for a beginner **and** versatile enough for a seasoned pro.
 {% endif %}
 <!--more-->
 
