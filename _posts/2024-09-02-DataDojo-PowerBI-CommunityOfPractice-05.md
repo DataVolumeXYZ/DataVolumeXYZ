@@ -47,13 +47,11 @@ The Data Dojo Power BI Report Template is a starter file that we provide to the 
 
 ## Overview
 
-The Data Dojo Power BI Report Template includes a variety of helpful features, like an Instructions page, three example report pages, a Developer Notes page, sample data imported from a flat file and modeled in a proper Star Schema, a designated Date Dimension for Time Intelligence calculations, explicit DAX measures, conditional formatting, slicers in various configurations, scrims, overlays, and more. It also incorporates several advanced features, such as a collection of custom Power Query functions for importing and transforming data, and an integrated VertiPaq Analyzer in DAX Query View for model performance tuning.
-
-<!-- TODO: Accordion collapse everything H2 and below -->
+The Data Dojo Power BI Report Template includes a variety of helpful features, like an Instructions page, three example report pages, a Developer Notes page, sample data imported from a flat file and modeled in a proper Star Schema, a designated Date Dimension for Time Intelligence calculations, Explicit Measures, conditional formatting, slicers in various configurations, scrims, overlays, and more. It also incorporates several advanced features, such as a collection of custom Power Query functions for importing and transforming data, and an integrated VertiPaq Analyzer in DAX Query View for model performance tuning.
 
 ## Report Pages
 
-<!-- TODO: Add descriptions, and screenshots -->
+The Data Dojo Power BI Report Template includes the following report pages, each of which demonstrates a different aspect of Power BI report design and functionality:
 
 ### Instructions
 This page displays a tabbed interface with six sections:
@@ -97,7 +95,7 @@ This page showcases a slicer panel which can be expanded and collapsed to save s
 This is a special type of page that is hidden when the report is published, and is used to create a tooltip that displays when hovering over specific parts of visuals in other pages. It contains a [(new) Card visual](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card) with 8 different measures, and conditional formatting on both the background color behind the cards and the text color inside one of the cards. This tooltip displays when the user hovers over any row in the table visual on the "Horizontal Slicers" page, and the conditional formatting of the background and text colors is based on the positive or negative value of the "Total Profit" measure, which is displayed in the tooltip, but not in the table visual itself.
 <table>
 	<tr>
-		<td style="width:28%; text-align:right;">
+		<td style="width:28%; text-align:center;">
 			When <b>Total Profit</b> <br/>value is <span style='color:green;'><b>positive</b></span>
 		</td>
 		<td>
@@ -105,7 +103,7 @@ This is a special type of page that is hidden when the report is published, and 
 		</td>
 	</tr>
 	<tr>
-		<td style="text-align:right;">
+		<td style="text-align:center;">
 			When <b>Total Profit</b> <br/>value is <span style='color:red;'><b>negative</b></span>
 		</td>
 		<td>
@@ -130,12 +128,11 @@ Power BI has a feature called the Filter Pane which can be used to filter the da
 
 Thus, the Filter Pane in the Data Dojo Report Template is hidden from report users by default, and only visible to the report developer when editing the report. This is a deliberate design choice, intended to simplify the report developer's work and reduce the cognitive load on the report's users, resulting in a better overall experience for everyone, and more active engagement with the report. That being said, there are other schools of thought on this subject, and the battle of Slicers vs. Filter Pane has been raging for almost as long as Power BI has been around, so you should consider the pros and cons of these different approaches, and choose whichever works best for your specific report and its intended audience.
 
-<!-- TODO: Add Filter Pane vs. Slicers illustration -->
+{% include aligner.html images="data-dojo/report-template/power_bi_slicer_filter_pane_sparring.png" column="auto" alt="Illustration of Power BI Slicer and Filter Pane sparring in a martial arts dojo" %}
 
 ## Star Schema
 
-<!-- TODO: Add screenshot -->
-One of the core tenets of good data modeling in Power BI is the use of a Star Schema, which is a simple and intuitive way to organize the data tables in a hub-and-spoke configuration, with a central Fact table surrounded by Dimension tables. The Fact table contains the numerical data to be aggregated and analyzed, like sales amounts, quantities, or counts, while the Dimension tables contain the descriptive attributes that will be used to filter, group, or slice-and-dice through the data, like dates, products, customers, etc. This configuration is called a "Star Schema" because when drawn on paper, it looks like a star, with the Fact table in the center and the Dimension tables radiating out from it, like the points of a star.
+One of the core tenets of good data modeling in Power BI is the use of a Star Schema, which is a simple and intuitive way to organize the data tables in a hub-and-spoke configuration, with a central Fact table surrounded by Dimension tables. The Fact table contains the numerical data to be aggregated and analyzed, like sales amounts, quantities, and counts, while the Dimension tables contain the descriptive attributes that will be used to filter, group, or slice-and-dice through the data, like dates, products, customers, etc. This configuration is called a "Star Schema" because when drawn on paper, it looks like a star, with the Fact table in the center and the Dimension tables radiating out from it, like the points of a star.
 
 The Star Schema structure is easy to understand and work with, and it's also the most efficient for querying and aggregating data in DAX, which makes it the ideal structure for Power BI semantic models. The Data Dojo report template includes a sample Star Schema with a Fact table called `FactSales` and several Dimension tables, including `DimProduct`, `DimDate`, `DimCountry`, etc., each of which is connected to the `FactSales` table by a "one-to-many" relationship. This Star Schema is designed to be a starting point that report developers can use as a guide when building their own semantic models.
 
@@ -151,21 +148,24 @@ The Data Dojo report template includes a sample Date Dimension table called `Dim
 
 ## Explicit Measures
 
-<!-- TODO: Add screenshot and examples of DAX measures -->
 Explicit Measures are DAX formulas that are created by the report developer to perform specific calculations on the data in the semantic model, like sums, averages, counts, etc. These measures are called "explicit" because they are explicitly defined by the report developer, rather than being automatically generated by Power BI, which are called "implicit" measures. Explicit Measures are preferred over Implicit Measures because they are more flexible and powerful, and they can be customized to suit the specific needs of the report, whereas Implicit Measures are limited in their functionality and can be difficult to work with in certain scenarios. 
 
-The Data Dojo report template includes a variety of Explicit Measures, and they are all stored in the `_Measures` table, which is organized into two folders, `Formatting` and `Calculation`. These folders are used to group the measures by their function or purpose -- `Formatting` for measures that control the appearance of objects on the report canvas, like colors, fonts, etc., and `Calculation` for measures that perform calculations on the data, like sums, averages, etc. The Explicit Measures in the Data Dojo report template are intended to demonstrate best practices in DAX formula writing, like proper formatting, comments, consistent naming conventions, etc., and to serve as a model for report developers to follow when creating their own measures.
+The Data Dojo report template includes a variety of Explicit Measures, and they are all stored in the `_Measures` table, which is organized into two folders, `Formatting` and `Calculation`. These folders are used to group the measures by their function or purpose -- `Formatting` for measures that control the appearance of objects on the report canvas, like colors, fonts, etc., and `Calculation` for measures that perform calculations on the data, like sums, averages, etc. The Explicit Measures in the Data Dojo report template are intended to demonstrate best practices in DAX formula writing, like proper formatting, consistent naming conventions, etc., and to serve as a model for report developers to follow when creating their own measures.
+
+{% include aligner.html images="data-dojo/report-template/measures.jpg" column="auto" alt="A dedicated Measures table (_Measures) in the Data Dojo Power BI Report Template, showing two folders (Calculation and Formatting) with various Explicit Measures for performing calculations on the data and controlling the appearance of objects on the report canvas" description="A dedicated Measures table (_Measures) with two folders (Calculation and Formatting) containing various Explicit Measures, alongside an example of a measure which changes a slicer's background color to visually indicate when it is active" %}
 
 ## Conditional Formatting
 
-<!-- TODO: Add screenshots -->
 Several visuals in the Data Dojo Report Template have conditional formatting applied to them, which changes the appearance of the visual based on the data being displayed in it. For example, the table visual on the "Horizontal Slicers" page has conditional formatting on the fill color of the cells, which changes the color of the cells in the row based on the value in the "Segment" column and the "Total Sales" measure, both of which are displayed in the table. Conditional formatting like this can make it easier for the report user to notice patterns and trends in the data, and to quickly identify outliers or anomalies. That same table visual also features a tooltip with its own conditional formatting, which appears when the user hovers over a row, and displays additional information about the data in that row, like the "Total Profit" measure, which is not displayed in the table itself.
 
-The slicers in the Data Dojo Report Template also have a special conditional formatting feature that's worth mentioning: When the user selects one or more values in a slicer on a report page, that slicer's background color will change, as will the color of the "Clear Slicers" button on that page. Report users often forget that they have applied a filter to the data in the report, and this can lead to confusion, frustration, and even a bad business decision based on faulty interpretation of the data. To help prevent situations like that from occurring, this feature gives report users a clear visual reminder that the data they are seeing is not the full dataset, but rather a subset of the data based on the slicer selections they have made. This can help to reduce the likelihood of errors and misunderstandings, and to improve the overall quality of the data analysis process.
+{% include aligner.html images="data-dojo/report-template/conditional-formatting.jpg" column="auto" alt="A table visual with conditional formatting on the fill color of the cells, based on the value of a DAX Measure" description="A table visual with conditional formatting on the fill color of the cells,<br/>based on the value of a DAX Measure" %}
+
+The slicers in the Data Dojo Report Template also have a special conditional formatting feature that's worth mentioning: When the user selects one or more values in a slicer on a report page, that slicer's background color will change, as will the color of the "Clear Slicers" button on that page. Report users often forget that they have applied a filter to the data in the report, and this can lead to confusion, frustration, and even a bad business decision based on faulty interpretation of the data. To help prevent situations like that from occurring, this feature gives report users a clear visual reminder that the data they are seeing is not the full dataset, but rather a subset of the data based on the slicer selections they have made. This can help reduce the likelihood of errors and misunderstandings, and improve the overall quality of the data analysis process.
+
+{% include aligner.html images="data-dojo/report-template/dynamic-slicer-color.jpg" column="auto" alt="A screenshot of slicers with conditional formatting applied to their background color, which changes when the user selects one or more values in the slicer" description="A screenshot of slicers with conditional formatting applied to their background color,<br/>which changes when the user selects one or more values in the slicer" %}
 
 ## Scrims & Overlays
 
-<!-- TODO: Add screenshots -->
 Scrims and Overlays are design techniques that can be used to enhance the visual appearance and usability of a Power BI report, and to make it more engaging and informative for the user. 
 
 A scrim is a semi-transparent layer that is placed over a visual or group of visuals to draw attention to a specific part of the report, like a title, a key metric, or a call-to-action. A scrim can be used to make the text on the report more readable, to create a visual hierarchy on the report canvas, or to add a layer of interactivity to the report. Alternatively, scrims can be used to mask or obscure parts of the report that are not relevant to the user at that moment, or to create a sense of depth or dimensionality in the report design. 
@@ -174,10 +174,11 @@ An overlay is a report design technique that is used to display additional infor
 
 The Data Dojo Report Template features several examples of scrims and overlays, including two overlays on the "Horizontal Slicers" page in the form of a Tooltip and an Infotip, and a combination of scrims and overlays on the "Slicer Panel" page which are used to create an expandable and collapsible slicer panel with a "frosted glass" effect that partially obscures the report page when the panel is expanded. 
 
+{% include aligner.html images="data-dojo/report-template/glassmorphism.jpg" column="auto" alt="A combination of scrims and overlays on the Slicer Panel page of the Data Dojo Power BI Report Template, showing an expandable and collapsible slicer panel with a 'frosted glass' effect that partially obscures the report page when the panel is expanded" description="A combination of scrims and overlays on the Slicer Panel page, <br/>showing an expandable and collapsible slicer panel with a 'frosted glass' effect" %}
+
 ## Advanced Features
 
-<!-- TODO: Add section summary -->
-
+The Data Dojo Report Template includes several advanced features that are designed to enhance the functionality and usability of the report, and to make it easier for report developers to create and maintain their reports. These features include:
 
 ### Dataflow Magic
 
@@ -189,16 +190,14 @@ If you've been following this blog series, you'll recall from the previous post 
 - Hide visual headers
 - Discourage implicit measures
 - Disable auto-date/time intelligence
-- `_Measures` table with `Formatting` and `Calculation` folders
-- TODO: add more
 
 ### Integrated "VertiPaq Analyzer Lite"
-
-<!-- TODO: Add screenshot -->
 
 If you're not already familiar with the [VertiPaq Analyzer](https://www.sqlbi.com/tools/vertipaq-analyzer/), it's a fantastic tool for analyzing the performance of a Power BI semantic model, but until just a few months ago, it required the use of external tools like Microsoft Excel, [DAX Studio](https://www.sqlbi.com/tv/introducing-vertipaq-analyzer-in-dax-studio/), or [Tabular Editor 3](https://data-goblins.com/power-bi/analyze-power-bi-dataset), so it wasn't very practical for business users and self-service data analysts.
 
 However, thanks to [Hariharan Rajendran](https://in.linkedin.com/in/imhariharanr)'s [brilliant](https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/) [work](https://github.com/rhariharaneee/Power-BI), we now have a way to access the VertiPaq Analyzer data directly within Power BI Desktop via the DAX Query View, so now the Data Dojo report template has a "VertiPaq Analyzer Lite" built right in. This provides report developers with a great way to identify and address performance issues in their Power BI semantic models, and thereby improve the overall performance of their reports, all without ever having to install or learn to use any external tools.
+
+{% include aligner.html images="data-dojo/report-template/vertipaq-analyzer-lite.jpg" column="auto" alt="A screenshot of 'VertiPaq Analyzer Lite' in the Data Dojo Power BI Report Template, showing DAX Query View with performance metrics for the Power BI semantic model" description="A screenshot of 'VertiPaq Analyzer Lite' in DAX Query View, <br/>showing performance metrics for the Power BI semantic model" %}
 
 # Balance: Simplicity & Versatility
 
@@ -210,12 +209,11 @@ It's important to strike the right balance between simplicity and versatility wh
 4. **Customization & Personalization**: Versatility also enables customization according to individual user needs or departmental requirements, without compromising on the overall structure and integrity of the report template. This adds value by giving report authors and users a deeper sense of involvement in the data analysis process, which can lead to higher engagement levels.
 5. **Speed & Efficiency**: A simple yet versatile Power BI template helps save time, as it reduces the need for extensive training or repeated queries. Users can quickly understand and apply the insights they gain from reading the report without spending excessive amounts of time on comprehension or seeking assistance, resulting in improved efficiency within their roles.
 
-<!-- TODO: add image of data ninjas practicing crane stance -->
-{% include aligner.html images="" column="auto" %}
+{% include aligner.html images="data-dojo/report-template/data_ninjas_balance_1.png" column="auto" alt="A team of Data Ninjas practicing balance moves with their laptops"%}
 
 # Conclusion
 
-<!-- TODO: Add conclusion -->
+In conclusion, the Data Dojo Power BI Report Template is a powerful and flexible tool that can help report developers create high-quality reports quickly and easily. It incorporates best practices in data modeling, DAX formula writing, and report design, while also providing a variety of advanced features that can enhance the functionality and usability of the report. By striking the right balance between simplicity and versatility, the Data Dojo Report Template is designed to be user-friendly for beginners while also being powerful enough for seasoned pros. We encourage all Data Dojo members to explore the features of the Data Dojo Report Template, and to use it as a starting point for their own reports. We also welcome feedback and suggestions for improvements, as we are constantly looking for ways to enhance the template and make it even more useful for our members.
 
 # Resources
 <!-- TODO: Add download links -->

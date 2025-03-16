@@ -2,15 +2,19 @@ table _Measures
 	lineageTag: 360dd824-1ecd-4173-a25d-9c3c654c2eba
 
 	/// Conditional formatting to highlight rows where the SegmentKey column in the DimSegment table is either 0 or 2
-	measure 'Row Highlight Column' =
+	measure 'Row Highlight Column' = ```
+			
 			
 			VAR Result =
 			    SWITCH (
 			        TRUE (),
-			        MAX ( DimSegment[SegmentKey] ) IN {1, 3}, "#C4A8D1"
+			        MAX ( DimSegment[SegmentKey] ) IN {1, 3},
+			        "#C4A8D1"
 			    )
 			RETURN
-			    Result
+			    Result 
+			
+			```
 		displayFolder: Formatting
 		lineageTag: 8d7888b9-a357-4d2b-a3f8-aa682b18e6c8
 
@@ -39,23 +43,25 @@ table _Measures
 		changedProperty = IsHidden
 
 	/// Dynamic background color for the Country slicer
-	measure 'Slicer Background - Country' =
+	measure 'Slicer Background - Country' = ```
 			
-			VAR AcademicProgram_NonFilteredList =
+			VAR NonFilteredList =
 			    CALCULATE (
 			        DISTINCTCOUNT ( DimCountry[Country] ),
 			        ALLNOBLANKROW ( DimCountry[Country] )
 			    )
-			VAR AcademicProgram_FilteredList =
+			VAR FilteredList =
 			    DISTINCTCOUNT ( DimCountry[Country] )
 			VAR Result =
 			    IF (
-			        AcademicProgram_FilteredList < AcademicProgram_NonFilteredList,
+			        FilteredList < NonFilteredList,
 			        [Slicer Background Color - Filtered],
 			        [Slicer Background Color - Unfiltered]
 			    )
 			RETURN
 			    Result
+			
+			```
 		displayFolder: Formatting
 		lineageTag: 200cf50d-982d-446a-a322-45762e499788
 
@@ -78,16 +84,16 @@ table _Measures
 	/// Dynamic background color for the Year slicer
 	measure 'Slicer Background - Year' =
 			
-			VAR AcademicProgram_NonFilteredList =
+			VAR NonFilteredList =
 			    CALCULATE (
 			        DISTINCTCOUNT ( 'DimDate'[Year] ),
 			        ALLNOBLANKROW ( 'DimDate'[Year] )
 			    )
-			VAR AcademicProgram_FilteredList =
+			VAR FilteredList =
 			    DISTINCTCOUNT ( 'DimDate'[Year] )
 			VAR Result =
 			    IF (
-			        AcademicProgram_FilteredList < AcademicProgram_NonFilteredList,
+			        FilteredList < NonFilteredList,
 			        [Slicer Background Color - Filtered],
 			        [Slicer Background Color - Unfiltered]
 			    )

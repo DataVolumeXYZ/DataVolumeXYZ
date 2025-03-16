@@ -140,21 +140,36 @@ createOrReplace
 				queryGroup: 'Sample Tables'
 				source =
 						let
+						    // Extract the Date column from the _Source table
 						    Source = _Source[Date],
+						    // Convert the list of dates to a table
 						    #"Converted to Table1" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+						    // Change the type of the column to Int64
 						    #"Changed Type1" = Table.TransformColumnTypes(#"Converted to Table1",{{"Column1", Int64.Type}}),
+						    // Extract the list of dates from the table
 						    DateList = #"Changed Type1"[Column1],
+						    // Create a list of dates from the minimum to the maximum date
 						    Date = {List.Min(DateList)..List.Max(DateList)},
+						    // Convert the list of dates to a table
 						    #"Converted to Table" = Table.FromList(Date, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+						    // Change the type of the column to date
 						    #"Changed Type" = Table.TransformColumnTypes(#"Converted to Table",{{"Column1", type date}}),
+						    // Rename the column to "Date"
 						    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "Date"}}),
+						    // Add a column for the year extracted from the Date column
 						    #"Inserted Year" = Table.AddColumn(#"Renamed Columns", "Year", each Date.Year([Date]), Int64.Type),
+						    // Add a column for the month number extracted from the Date column
 						    #"Inserted Month" = Table.AddColumn(#"Inserted Year", "Month Number", each Date.Month([Date]), Int64.Type),
+						    // Add a column for the month name extracted from the Date column
 						    #"Inserted Month Name" = Table.AddColumn(#"Inserted Month", "Month Name", each Date.MonthName([Date]), type text),
+						    // Add a column for the day of the week extracted from the Date column
 						    #"Inserted Day of Week" = Table.AddColumn(#"Inserted Month Name", "Day of Week", each Date.DayOfWeek([Date]), Int64.Type),
+						    // Add a column for the day name extracted from the Date column
 						    #"Inserted Day Name" = Table.AddColumn(#"Inserted Day of Week", "Day Name", each Date.DayOfWeekName([Date]), type text),
+						    // Add a column for the date key in the format yyyyMMdd
 						    #"Inserted DateKey" = Table.AddColumn(#"Inserted Day Name", "DateKey", each Int64.From(Date.ToText( [Date], [ Format = "yyyyMMdd" ] )), Int64.Type )
 						in
+						    // Return the final table with the DateKey column
 						    #"Inserted DateKey"
 
 			changedProperty = IsHidden
@@ -560,15 +575,19 @@ createOrReplace
 			lineageTag: 360dd824-1ecd-4173-a25d-9c3c654c2eba
 
 			/// Conditional formatting to highlight rows where the SegmentKey column in the DimSegment table is either 0 or 2
-			measure 'Row Highlight Column' =
+			measure 'Row Highlight Column' = ```
+					
 					
 					VAR Result =
 					    SWITCH (
 					        TRUE (),
-					        MAX ( DimSegment[SegmentKey] ) IN {1, 3}, "#C4A8D1"
+					        MAX ( DimSegment[SegmentKey] ) IN {1, 3},
+					        "#C4A8D1"
 					    )
 					RETURN
-					    Result
+					    Result 
+					
+					```
 				displayFolder: Formatting
 				lineageTag: 8d7888b9-a357-4d2b-a3f8-aa682b18e6c8
 
@@ -597,23 +616,25 @@ createOrReplace
 				changedProperty = IsHidden
 
 			/// Dynamic background color for the Country slicer
-			measure 'Slicer Background - Country' =
+			measure 'Slicer Background - Country' = ```
 					
-					VAR AcademicProgram_NonFilteredList =
+					VAR NonFilteredList =
 					    CALCULATE (
 					        DISTINCTCOUNT ( DimCountry[Country] ),
 					        ALLNOBLANKROW ( DimCountry[Country] )
 					    )
-					VAR AcademicProgram_FilteredList =
+					VAR FilteredList =
 					    DISTINCTCOUNT ( DimCountry[Country] )
 					VAR Result =
 					    IF (
-					        AcademicProgram_FilteredList < AcademicProgram_NonFilteredList,
+					        FilteredList < NonFilteredList,
 					        [Slicer Background Color - Filtered],
 					        [Slicer Background Color - Unfiltered]
 					    )
 					RETURN
 					    Result
+					
+					```
 				displayFolder: Formatting
 				lineageTag: 200cf50d-982d-446a-a322-45762e499788
 
@@ -636,16 +657,16 @@ createOrReplace
 			/// Dynamic background color for the Year slicer
 			measure 'Slicer Background - Year' =
 					
-					VAR AcademicProgram_NonFilteredList =
+					VAR NonFilteredList =
 					    CALCULATE (
 					        DISTINCTCOUNT ( 'DimDate'[Year] ),
 					        ALLNOBLANKROW ( 'DimDate'[Year] )
 					    )
-					VAR AcademicProgram_FilteredList =
+					VAR FilteredList =
 					    DISTINCTCOUNT ( 'DimDate'[Year] )
 					VAR Result =
 					    IF (
-					        AcademicProgram_FilteredList < AcademicProgram_NonFilteredList,
+					        FilteredList < NonFilteredList,
 					        [Slicer Background Color - Filtered],
 					        [Slicer Background Color - Unfiltered]
 					    )
@@ -833,7 +854,7 @@ createOrReplace
 				mode: import
 				source =
 						let
-						    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8swrLikqTS7JzM8rVtJRMlSK1YlW8sgvyqzKzytJzFEIzslMTi0CSRmBpcJSi0oyk1EkjMESEL5CQGJeag5Q0EQpNhYA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [PageName = _t, PageNumber = _t])
+						    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8swrLikqTS7JzM8rVtJRMlSK1YlW8sgvyqzKzytJzFEIzslMTi0CSRmBpcJSi0oyk1EkjMESEL5CQGJeag5Q0AQsGJKfn1OSWQDkm4L5nnlp+RC+GZjvklqWmpNfANTnl1+SCjLMXCk2FgA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [PageName = _t, PageNumber = _t])
 						in
 						    Source
 
@@ -984,7 +1005,27 @@ createOrReplace
 
 		cultureInfo en-US
 
-			linguisticMetadata = {"Version":"1.0.0","Language":"en-US","Entities":{"dimstudent.lastname":{"Binding":{"ConceptualEntity":"DimStudent","ConceptualProperty":"LastName"},"State":"Generated"},"dimstudent.firstname":{"Binding":{"ConceptualEntity":"DimStudent","ConceptualProperty":"FirstName"},"State":"Generated"}}}
+			linguisticMetadata =
+					{
+					  "Version": "1.0.0",
+					  "Language": "en-US",
+					  "Entities": {
+					    "dimstudent.lastname": {
+					      "Binding": {
+					        "ConceptualEntity": "DimStudent",
+					        "ConceptualProperty": "LastName"
+					      },
+					      "State": "Generated"
+					    },
+					    "dimstudent.firstname": {
+					      "Binding": {
+					        "ConceptualEntity": "DimStudent",
+					        "ConceptualProperty": "FirstName"
+					      },
+					      "State": "Generated"
+					    }
+					  }
+					}
 				contentType: json
 
 		expression _Source = ```

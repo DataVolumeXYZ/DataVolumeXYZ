@@ -86,21 +86,36 @@ table DimDate
 		queryGroup: 'Sample Tables'
 		source =
 				let
+				    // Extract the Date column from the _Source table
 				    Source = _Source[Date],
+				    // Convert the list of dates to a table
 				    #"Converted to Table1" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    // Change the type of the column to Int64
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Converted to Table1",{{"Column1", Int64.Type}}),
+				    // Extract the list of dates from the table
 				    DateList = #"Changed Type1"[Column1],
+				    // Create a list of dates from the minimum to the maximum date
 				    Date = {List.Min(DateList)..List.Max(DateList)},
+				    // Convert the list of dates to a table
 				    #"Converted to Table" = Table.FromList(Date, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    // Change the type of the column to date
 				    #"Changed Type" = Table.TransformColumnTypes(#"Converted to Table",{{"Column1", type date}}),
+				    // Rename the column to "Date"
 				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "Date"}}),
+				    // Add a column for the year extracted from the Date column
 				    #"Inserted Year" = Table.AddColumn(#"Renamed Columns", "Year", each Date.Year([Date]), Int64.Type),
+				    // Add a column for the month number extracted from the Date column
 				    #"Inserted Month" = Table.AddColumn(#"Inserted Year", "Month Number", each Date.Month([Date]), Int64.Type),
+				    // Add a column for the month name extracted from the Date column
 				    #"Inserted Month Name" = Table.AddColumn(#"Inserted Month", "Month Name", each Date.MonthName([Date]), type text),
+				    // Add a column for the day of the week extracted from the Date column
 				    #"Inserted Day of Week" = Table.AddColumn(#"Inserted Month Name", "Day of Week", each Date.DayOfWeek([Date]), Int64.Type),
+				    // Add a column for the day name extracted from the Date column
 				    #"Inserted Day Name" = Table.AddColumn(#"Inserted Day of Week", "Day Name", each Date.DayOfWeekName([Date]), type text),
+				    // Add a column for the date key in the format yyyyMMdd
 				    #"Inserted DateKey" = Table.AddColumn(#"Inserted Day Name", "DateKey", each Int64.From(Date.ToText( [Date], [ Format = "yyyyMMdd" ] )), Int64.Type )
 				in
+				    // Return the final table with the DateKey column
 				    #"Inserted DateKey"
 
 	changedProperty = IsHidden
