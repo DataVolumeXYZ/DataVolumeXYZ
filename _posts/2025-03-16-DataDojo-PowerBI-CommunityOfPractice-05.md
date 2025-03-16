@@ -20,7 +20,7 @@ tags:
   - Template
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
-draft: true
+draft: false
 series: data-dojo
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
@@ -172,7 +172,7 @@ A scrim is a semi-transparent layer that is placed over a visual or group of vis
 
 An overlay is a report design technique that is used to display additional information or controls on top of a visual or group of visuals, like a tooltip, a slicer panel, or a navigation menu. Overlays can be used to provide context or explanation for the data being displayed, to give the user more control over the data analysis process, or to add interactivity to the report. 
 
-The Data Dojo Report Template features several examples of scrims and overlays, including two overlays on the "Horizontal Slicers" page in the form of a Tooltip and an Infotip, and a combination of scrims and overlays on the "Slicer Panel" page which are used to create an expandable and collapsible slicer panel with a "frosted glass" effect that partially obscures the report page when the panel is expanded. 
+The Data Dojo Report Template features several examples of scrims and overlays, including two overlays on the "Horizontal Slicers" page in the form of a Tooltip and an Infotip, and a combination of scrims and overlays on the "Slicer Panel" page which are used to create an expandable and collapsible slicer panel with a "frosted glass" effect which partially obscures the report page when the panel is expanded (credit for this technique goes to Oscar Martínez Valero -- [Blog](https://www.bibb.pro/post/modern-design-business-intelligence-glassmorphism-power-bi)/[LinkedIn](https://www.linkedin.com/in/oscarmartinezv/)/[GitHub](https://github.com/OscarValerock)). 
 
 {% include aligner.html images="data-dojo/report-template/glassmorphism.jpg" column="auto" alt="A combination of scrims and overlays on the Slicer Panel page of the Data Dojo Power BI Report Template, showing an expandable and collapsible slicer panel with a 'frosted glass' effect that partially obscures the report page when the panel is expanded" description="A combination of scrims and overlays on the Slicer Panel page, <br/>showing an expandable and collapsible slicer panel with a 'frosted glass' effect" %}
 
