@@ -9,9 +9,12 @@
 <div class="row">
     {% for image in images %}
     <div {% if column %} style="flex: {{ column }}%" {% else %} class="column" {% endif %}  >
-        <img {% if images.size == 1 %}class="single"{% endif %}
+			<figure class="image">
+        <img {% if images.size == 1 %} class="single" {% endif %}
             src="{{ image | prepend: 'assets/img/' | relative_url }}"
-            alt="{{ image | prepend: '/' | split: '/' | last }}">
+            alt="{{ image | prepend: '/' | split: '/' | last }}"/>
+					<figcaption style="text-align: center;"><em>{{ include.description }}</em></figcaption>
+			</figure>
     </div>
     {% endfor %}
 </div>
