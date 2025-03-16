@@ -245,7 +245,7 @@ expression fn_Coalesce =
 	annotation PBI_ResultType = Function
 
 /// Path to 'Learning_Resources.xlsx' on the web
-expression LearningResources_URL = "https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.xlsx" meta [IsParameterQuery=true, List={"https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.xlsx"}, DefaultValue="https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.xlsx", Type="Text", IsParameterQueryRequired=true]
+expression LearningResources_URL = "https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/Data_Dojo_-_Power_BI_Learning_Resources.xlsx" meta [IsParameterQuery=true, List={"https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.xlsx"}, DefaultValue="https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.xlsx", Type="Text", IsParameterQueryRequired=true]
 	lineageTag: 99ae3065-18e8-4fcd-8caa-7ff21682b373
 	queryGroup: Parameters
 
