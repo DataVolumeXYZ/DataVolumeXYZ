@@ -36,15 +36,15 @@ In this post, we'll talk about a brand new style of Data Dojo workshop, which we
 
 Thank you for joining us on this adventure!
 
-{% include aligner.html images="../../../assets/img/data-dojo/_____.jpg" column="auto" %}
+<!-- {% include aligner.html images="../../../assets/img/data-dojo/_____.jpg" column="auto" %} -->
 
 # Introduction
 
-After nearly two and a half years of running the Data Dojo, we've learned a lot about what works and what doesn't when it comes to fostering a successful Power BI Community of Practice. One of the most important lessons we've learned is that it's essential to keep things fresh and exciting for our members. That's why we're always looking for new ways to engage our community and provide them with valuable learning experiences. Those of you who've been keeping up with this series will know that we've experimented with a variety of workshop formats, from traditional presentations and demos to hands-on labs and interactive discussions. In this post, I'll tell you about a brand new style of Data Dojo workshop which we call "Office Hours & Coffee Lounge," why we decided to add this new format to our repertoire, and how it's been going so far.
+After two and a half years running the Data Dojo, we've learned a lot about what works and what doesn't when it comes to fostering a successful Power BI Community of Practice. One of the most important lessons we've learned is that it's essential to keep things fresh and exciting for our members. That's why we're always looking for new ways to engage our community and provide them with valuable learning experiences. Those of you who've been keeping up with this series will know that we've experimented with a variety of workshop formats, from traditional presentations and demos to hands-on labs and interactive discussions. In this post, I'll tell you about a brand new style of Data Dojo workshop which we call "Office Hours & Coffee Lounge," why we decided to add this new format to our repertoire, and how it's been going so far.
 
 # What Is "Office Hours & Coffee Lounge"?
 
-"Office Hours & Coffee Lounge" is a new workshop format that we recently introduced to the Data Dojo in response to feedback from our members. The idea behind this format is to create a relaxed and informal space where members can drop in, ask questions, share ideas, and connect with other members of the community. The format is inspired by the concept of "office hours" in academia, where professors make themselves available to students outside of class to answer questions and provide guidance. We decided to combine this concept with the idea of a "coffee lounge;" a casual meeting place where people can gather to socialize and relax. The result is a workshop format that is designed to be low-pressure, interactive, and community-driven.
+"Office Hours & Coffee Lounge" is a new workshop format that we recently introduced to the Data Dojo in response to feedback from our members. The idea behind this format is to create a relaxed and informal space where members can drop in, ask questions, share ideas, and connect with other members of the community. The format is inspired by the concept of "office hours" in academia, where instructors make themselves available to students outside of class to answer questions and provide guidance. We decided to combine this concept with the idea of a "coffee lounge;" a casual meeting place where people can gather to socialize and relax. The result is a workshop format that is designed to be low-pressure, interactive, and community-driven.
 
 Just like our other workshop formats, "Office Hours & Coffee Lounge" workshops are open to all members of the Data Dojo, regardless of their level of experience with Power BI, but unlike our other workshops, they are not structured around a specific topic or agenda. Instead, the focus is on creating an open and welcoming space where members can come together to learn from each other, share their knowledge, and build relationships with their peers. As such, when we schedule an "Office Hours & Coffee Lounge" workshop, we don't prepare any presentation or demo materials in advance. Instead, we simply invite our members to join us for an informal chat, and we let the conversation flow naturally from the participants' questions, comments, and ideas.
 
@@ -76,16 +76,16 @@ The existing workshop formats that we've been using in the Data Dojo, such as pr
 <!-- TODO: Add key takeaways -->
 
 <!-- TODO: add image of data ninjas in a coffee shop -->
-{% include aligner.html images="../../../assets/img/data-dojo/_____.jpg" column="auto" %}
+<!-- {% include aligner.html images="../../../assets/img/data-dojo/_____.jpg" column="auto" %} -->
 
 
 # Next Time: The Data Dojo Goes Global!
 
-As I'm sure many of you already know, I've been speaking about the Data Dojo at various conferences, user groups, and livestreams for a couple years now. In my conversations with some of the folks I've met through these events, I've learned that many of them are interested in founding similar Power BI Communities of Practice within their own organizations all over the world.
+As I'm sure many of you already know, I've been speaking about the Data Dojo at various conferences, user groups, and livestreams for a couple of years now. In my conversations with some of the folks I've met through these events, I've learned that many of them are interested in founding similar Power BI Communities of Practice within their own organizations all over the world.
 
 So, in the next installment of this series, I'll share some of the insights I've gained from those conversations, and I'll talk about our plans to help other organizations establish their own Data Dojos, and our vision for a global network of Power BI Communities of Practice. This process is still in its very early stages, so I don't know exactly what it's going to look like yet, or when I will have more information to share with you, but I'm thrilled to be embarking on this new quest in the Data Dojo saga, and I can't wait to see where it takes us.
 
-If you are interested in founding a Power BI Community of Practice within your organization, or if you're just curious to learn more about what we're doing with the Data Dojo, I'd love to hear from you! Please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/jamesdbartlett3/){:target="_blank"}, [Bluesky](https://bsky.app/profile/jamesdbartlett3.bsky.social){:target="_blank"}, or [Mastodon](https://techhub.social/@JamesDBartlett3){:target="_blank"}, or leave a comment below.
+If you are interested in founding a Power BI Community of Practice within your organization, or if you're just curious to learn more about what we're doing with the Data Dojo, I'd love to hear from you! Please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/jamesdbartlett3){:target="_blank"}, [Bluesky](https://jamesdbartlett3.bsky.social){:target="_blank"}, or [Mastodon](https://techhub.social/@JamesDBartlett3){:target="_blank"}, or leave a comment below.
 
 {% include blog/blog_series_pager.liquid series=page.series %}
 
