@@ -8,6 +8,7 @@ thumbnail: "assets/img/pexels/pbitoolswatchps_externaltoolsribbon.png"
 tags: [Power BI, External Tools, PowerShell, Version Control, Git, pbi-tools]
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
+published: true
 ---
 
 <!--excerpt-->

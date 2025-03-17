@@ -20,7 +20,7 @@ tags:
   - Template
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
-draft: false
+published: true
 series: data-dojo
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
