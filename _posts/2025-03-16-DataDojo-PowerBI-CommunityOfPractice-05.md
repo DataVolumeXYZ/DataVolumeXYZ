@@ -16,8 +16,12 @@ tags:
   - Star Schema
   - Dataflow
   - Date Dimension
+  - DAX Query View
   - VertiPaq Analyzer
+  - Conditional Formatting
+  - Slicer Panel
   - Template
+  - Learning Resources
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 published: true

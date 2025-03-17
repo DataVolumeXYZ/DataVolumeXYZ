@@ -15,7 +15,7 @@ tags:
   - Office Hours
   - Coffee Lounge
   - Workshop Format
-
+  - Unstructured
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
 published: false
