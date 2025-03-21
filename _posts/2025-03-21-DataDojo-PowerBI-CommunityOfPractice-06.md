@@ -68,10 +68,6 @@ OK, so the members like this new format, but how is it for us organizers? We've 
 
 The other workshop formats we've been using—presentations, hands-on labs, and interactive discussions—remain important, and we'll keep offering them. Each format has its own strengths and helps us build our Power BI community in different ways. That said, we believe in mixing things up and offering different learning experiences that work for different people. This new format is just one way we're doing that, and while we'll keep trying new approaches, we aim to balance structure with flexibility.
 
-# Testimonials
-
-<!-- TODO: Add testimonials -->
-
 # Key Takeaways
 
 ## What the Office Hours & Coffee Lounge IS:
