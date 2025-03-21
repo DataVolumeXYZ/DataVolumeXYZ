@@ -18,7 +18,7 @@ tags:
   - Unstructured
 excerpt_start: <!--excerpt-->
 excerpt_separator: <!--more-->
-published: false
+published: true
 series: data-dojo
 description: A series about founding and fostering a successful Power BI Community of Practice
 ---
