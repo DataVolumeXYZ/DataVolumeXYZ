@@ -62,7 +62,7 @@ Finally, we wanted to experiment with a new format that would allow us to be mor
 
 When we first introduced this workshop style, we weren't sure how it would be received, but we were pleasantly surprised by the positive responses from those who attended. Many told us they appreciated connecting with other members in a more relaxed setting, and found the format to be a refreshing change from our more structured workshops. Some even mentioned they felt more comfortable asking questions and sharing ideas in this format than in our other workshops, which was exactly what we'd hoped to hear. From what we've seen so far, this approach seems to work quite well for our members.
 
-OK, so the members like this new format, but how is it for us organizers? We've found that these sessions are actually easier to run than our other workshop formats since we don't need to prepare materials in advance. This means we can focus more on engaging with our members instead of planning presentations. The casual format also gives us better insights into what participants want from the Data Dojo, which helps us improve all our workshops.
+OK, so the members like this new format, but how is it for us organizers? We've found that these sessions are actually easier to run than our other workshop formats since we don't need to prepare materials in advance. This means we can focus more on engaging with our members instead of planning presentations. The casual format also gives us better insights into what participants want from the Data Dojo, which helps us improve all of our workshops.
 
 # What About The Existing Formats?
 
@@ -86,14 +86,13 @@ The other workshop formats we've been using—presentations, hands-on labs, and 
 
 {% include aligner.html images="data-dojo/coffee_b92b8a0a-0ab7-43be-9ba0-3f6e89847f98.jpg" column="auto" %}
 
-
 # Next Time: The Data Dojo Goes Global!
 
 As I'm sure many of you already know, I've been speaking about the Data Dojo at various conferences, user groups, and livestreams for a couple of years now. In my conversations with some of the folks I've met through these events, I've learned that many of them are interested in founding similar Power BI Communities of Practice within their own organizations all over the world.
 
 So, in the next installment of this series, I'll share some of the insights I've gained from those conversations, and I'll talk about our plans to help other organizations establish their own Data Dojos, and our vision for a global network of Power BI Communities of Practice. This process is still in its very early stages, so I don't know exactly what it's going to look like yet, or when I will have more information to share with you, but I'm thrilled to be embarking on this new quest in the Data Dojo saga, and I can't wait to see where it takes us.
 
-If you are interested in founding a Power BI Community of Practice within your organization, or if you're just curious to learn more about what we're doing with the Data Dojo, I'd love to hear from you! Please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/jamesdbartlett3){:target="_blank"}, [Bluesky](https://jamesdbartlett3.bsky.social){:target="_blank"}, or [Mastodon](https://techhub.social/@JamesDBartlett3){:target="_blank"}, or leave a comment below.
+If you are interested in founding a Power BI Community of Practice within your organization, or if you're just curious to learn more about what we're doing with the Data Dojo, I'd love to hear from you! Please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/jamesdbartlett3){:target="_blank"}, [Bluesky](https://jamesdbartlett3.bsky.social){:target="_blank"}, or [Mastodon](https://techhub.social/@JamesDBartlett3){:target="_blank"}.
 
 {% include blog/blog_series_pager.liquid series=page.series %}
 
