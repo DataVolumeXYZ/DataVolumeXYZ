@@ -2,13 +2,15 @@
 Param (
   [bool]$LiveReload = $true,
   [switch]$Incremental,
-  [switch]$Init
+  [switch]$Init,
+  [switch]$Published
 )
 
 [string]$LiveReloadArg = $LiveReload ? " --livereload" : ""
 [string]$IncrementalArg = !!$Incremental ? " --incremental" : ""
 [string]$InitArg = !!$Init ? "bundle exec " : ""
-[string]$commandString = $InitArg + "jekyll serve" ` + $LiveReloadArg + $IncrementalArg
+[string]$PublishedArg = !!$Published ? "" : " --unpublished"
+[string]$commandString = $InitArg + "jekyll serve" + $LiveReloadArg + $IncrementalArg + $PublishedArg
 
 # Print command string
 Write-Output "Running command: ""$commandString"""
