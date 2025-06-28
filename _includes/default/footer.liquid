@@ -10,7 +10,9 @@
   </div>
   <div class="views" style="padding-top:15px">
     <span class="views">
-      <img src=https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{site.url | downcase}}{{page.url | downcase}}&count_bg=%233a7bcf&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false" alt="Views" />
+			{% assign page_path = page.url | downcase %}
+			{% if page_path == "/" %}{% assign page_path = "/index.html" %}{% endif %}
+			<img src='https://hits.sh/{{ site.url | downcase | replace: "https://", "" | replace: "http://", "" }}{{ page_path }}.svg?label=views&extraCount=1062&color=417eb3' alt="Views" />
     </span>
   </div>
 </footer>
