@@ -21,7 +21,7 @@ published: true
 ---
 
 <!--excerpt-->
-If you've spent any significant amount of time working with AI coding agents, you've probably noticed a frustrating pattern: they forget *everything* between sessions. You teach them your preferences, explain your project's architecture, walk them through your coding conventions, and then the next day... it's like talking to a stranger all over again. Most AI tools attempt to solve this problem with markdown-based memory files, and while that approach works well enough for simple use cases, it breaks down quickly as your needs grow more complex. So I've been building something I think is fundamentally better: [**Axons for Agents**](https://github.com/JamesDBartlett3/Axons_4_Agents){:target="_blank"} — a graph-based memory system that models the way human brains actually store and retrieve information, complete with brain-like plasticity, memory compartmentalization, and an MCP server that lets AI assistants use it as a native tool.
+If you've spent any significant amount of time working with AI coding agents, you've probably noticed a frustrating pattern: they forget *everything* between sessions. You teach them your preferences, explain your project's architecture, walk them through your coding conventions, and then the next day... it's like talking to a stranger all over again. Most AI tools attempt to solve this problem with markdown-based memory files, and while that approach works well enough for simple use cases, it breaks down quickly as your needs grow more complex. So I've been building something I think is fundamentally better. It's called [**Axons for Agents**](https://github.com/JamesDBartlett3/Axons_4_Agents){:target="_blank"} — a graph-based memory system that models the way human brains actually store and retrieve information, complete with brain-like plasticity, memory compartmentalization, and an MCP server that lets AI assistants use it as a native tool.
 <!--more-->
 
 > **⚠️ Disclaimer:** Axons for Agents is a brand-new, experimental project in active early-stage development. It is provided **as-is**, strictly for **testing and experimentation purposes only**. It is **not** production-ready, and should **not** be relied upon for any critical, commercial, or sensitive workloads. The APIs, schema, and data formats are subject to breaking changes without notice. The author makes no warranties, express or implied, regarding the software's fitness for any particular purpose, and assumes no liability for any damages, data loss, or other issues arising from its use. **Use at your own risk.**
@@ -236,7 +236,7 @@ One of the things I'm most excited about is the MCP server, which is now impleme
 
 This means you can say things like "remember that I prefer tabs over spaces" or "what do you know about the authentication system?" and your AI assistant will interact with the memory graph behind the scenes — storing memories, querying related information, managing compartments, and running plasticity operations, all through natural conversation.
 
-The MCP server is built with [FastMCP](https://gofastmcp.com/){:target="_blank"} and exposes tools in five categories:
+The MCP server is built with [FastMCP](https://gofastmcp.com/){:target="_blank"} and exposes tools in four categories:
 
 1. **Memory Tools**: `store_memory`, `recall_memory`, `search_memories`, `get_related`
 2. **Association Tools**: `create_concept`, `create_keyword`, `create_topic`, `create_entity`, `link_concept`, and query methods for each
