@@ -26,21 +26,36 @@ published: true
 
 <!--excerpt-->
 
-If you've spent any significant amount of time working with AI agents, you've probably run into a frustrating limitation: they can remember individual facts between sessions, but they have no understanding of how those facts relate to each other. It's a lot like Leonard Shelby in _Memento_, who literally _marks down_ his memories on paper, polaroid photos, and tattoos. He can read any individual memory and know what it says, but he can't piece together how they all connect. That's basically what your AI agent is doing with its markdown memory files: storing a flat collection of facts with no relational structure between them. It works for simple use cases, but it falls apart once your project's knowledge starts looking more like a web than a list. So, I've been building something I think is fundamentally better. I call it [**Axons for Agents**](https://github.com/JamesDBartlett3/Axons_4_Agents){:target="\_blank"}: a graph-based memory system modeled after how human brains actually store and retrieve information, with brain-like plasticity, memory compartmentalization, and an MCP server that lets AI agents use it as a native tool.
+If you've spent any significant amount of time working with AI agents, you've probably run into a frustrating limitation: they can remember individual facts between sessions, but they have no understanding of how those facts relate to each other. It's a lot like Leonard Shelby in _Memento_, who literally _marks down_ his memories on paper, polaroid photos, and tattoos. He can read any individual memory and know what it says, but he can't piece together how they all connect.
+
+![Leonard Shelby from Memento](/assets/img/animated/memento-quotes-14-1025334382.gif) That's basically what your AI agent is doing with its markdown memory files: storing a flat collection of facts with no relational structure between them. It works for simple use cases, but it falls apart once your project's knowledge starts looking more like a web than a list. So, I've been building something I think is fundamentally better. I call it [**Axons for Agents**](https://github.com/JamesDBartlett3/Axons_4_Agents){:target="\_blank"}: a graph-based memory system modeled after how human brains actually store and retrieve information, with brain-like plasticity, memory compartmentalization, and an MCP server that lets AI agents use it as a native tool.
 
 <!--more-->
 
 > **⚠️ Disclaimer:** Axons for Agents is a brand-new, experimental project in active early-stage development. It is provided **as-is**, strictly for **testing and experimentation purposes only**. It is **not** production-ready, and should **not** be relied upon for any critical, commercial, or sensitive workloads. The APIs, schema, and data formats are subject to breaking changes without notice. The author makes no warranties, express or implied, regarding the software's fitness for any particular purpose, and assumes no liability for any damages, data loss, or other issues arising from its use. **Use at your own risk.**
 
+# Table of Contents
+
+<!-- prettier-ignore-start -->
+
+- TOC
+{:toc}
+<!-- prettier-ignore-end -->
+
 # Why I Started This Project
 
 The **Axons for Agents** idea came from a very specific frustration. I'd been using AI agents extensively in my day-to-day work and hobbies, and I kept running into the same wall over and over: **context rot**. Not the kind where the AI forgets everything (markdown memory files handle basic recall well enough), but the kind where the AI can recite your project's facts back to you individually without understanding how any of them fit together. The relationships between decisions, constraints, trade-offs, and lessons learned were getting lost, and those relationships were often more valuable than the facts themselves.
+
+![Memento](/assets/img/animated/memento-gifs-8-484607361.gif)
 
 To stretch the _Memento_ analogy a bit further: imagine your AI agent has been working with you for several months on a complex project. Over that time, you've made dozens of architectural decisions, each one informed by specific constraints, trade-offs, and lessons learned. You've established standards and conventions, discovered edge cases, and built up a rich web of interconnected knowledge. Your AI's markdown memory file is like Leonard's collection of annotated polaroids. Each one captures a single fact with a handwritten note, and he can pick up any photo and read it. But he can't trace how one photo connects to another. He can't follow the thread from "this project's data model" to "general dimensional modeling best practices" to "our decision to use a star schema" to "the trade-off between query performance and storage efficiency." And just like Leonard's tattoos, those memory entries are static. There's no mechanism for them to change, strengthen, weaken, or be removed based on whether they're still relevant. Every fact is treated equally, regardless of where it came from, how recently it was added, what other facts it's connected to, how often it's been useful, etc.
 
 If you've seen the film, then you know why this is so disorienting. The entire movie is structured in reverse, so the audience experiences Leonard's confusion firsthand. Each individual scene makes perfect sense on its own, but the connections between scenes are stripped away. You have all the pieces of the puzzle, but no picture on the box. That's what flat-file memory feels like from the AI's perspective: a pile of correct facts with no structure linking them together.
 
-After numerous attempts to address this issue with various workarounds, I had a bit of a "light bulb" moment: **Humans are innately adept at forming and navigating complex networks of connections between abstract concepts. What if an AI agent's memory system could be structured more like a human brain?**
+After numerous attempts to address this issue with various workarounds, I had a bit of a "light bulb" moment.
+![Light bulb moment](/assets/img/animated/light-bulb-gru-1927168673.gif)
+
+**Humans are innately adept at forming and navigating complex networks of connections between abstract concepts. What if an AI agent's memory system could be structured more like a human brain?**
 
 # How the Human Brain Stores Memories
 
