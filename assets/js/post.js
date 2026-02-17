@@ -20,48 +20,61 @@ codeBlocks.forEach(function (codeBlock) {
 
 // Progress bar
 document.addEventListener("DOMContentLoaded", function () {
-	var progressBar = document.querySelector(".progress")
-	var postContent = document.querySelector(".post-content")
-	var detailsExpanders = document.querySelectorAll("details.expander")
-	var documentHeight = Math.max(
-		document.documentElement.clientHeight,
-		document.documentElement.scrollHeight,
-		document.documentElement.offsetHeight,
-		document.body.scrollHeight,
-		document.body.offsetHeight
-	)
-	var postContentHeight = postContent.scrollHeight
-	var bannerHeight = document.querySelector("#main").scrollHeight
-	var siteHeaderHeight = document.querySelector(".site-header").scrollHeight
-	var seriesOverviewHeight = document.querySelector(".series-overview").scrollHeight + 0
-	var topOffset = seriesOverviewHeight + siteHeaderHeight + bannerHeight
-	var bottomOffset = documentHeight - postContentHeight - seriesOverviewHeight - siteHeaderHeight - bannerHeight
+  var progressBar = document.querySelector(".progress")
+  var postContent = document.querySelector(".post-content")
+  var detailsExpanders = document.querySelectorAll("details.expander")
+  var documentHeight = Math.max(
+    document.documentElement.clientHeight,
+    document.documentElement.scrollHeight,
+    document.documentElement.offsetHeight,
+    document.body.scrollHeight,
+    document.body.offsetHeight,
+  )
+  var postContentHeight = postContent.scrollHeight
+  var bannerHeight = document.querySelector("#main").scrollHeight
+  var siteHeaderHeight = document.querySelector(".site-header").scrollHeight
+  var seriesOverview = document.querySelector(".series-overview")
+  var seriesOverviewHeight = seriesOverview ? seriesOverview.scrollHeight : 0
+  var topOffset = seriesOverviewHeight + siteHeaderHeight + bannerHeight
+  var bottomOffset =
+    documentHeight -
+    postContentHeight -
+    seriesOverviewHeight -
+    siteHeaderHeight -
+    bannerHeight
 
-	function progressShow() {
-		if (window.scrollY < topOffset) {
+  function progressShow() {
+    if (window.scrollY < topOffset) {
 			progressBar.classList.remove("progress--visible");
 			progressBar.classList.add("progress--hidden");
-		} else {
+    } else {
 			progressBar.classList.remove("progress--hidden");
 			progressBar.classList.add("progress--visible");
-		}
-	}
+    }
+  }
 
-	function progressbarScroll() {
-		var detailsExpandersCount = detailsExpanders.length
-		var detailsExpanderHeight = 0
-		for (var i = 0; i < detailsExpandersCount; i++) {
-			detailsExpanderHeight += detailsExpanders[i].scrollHeight
-		}
-		var totalScroll = ((window.scrollY - topOffset) / (postContentHeight - bottomOffset - window.innerHeight - topOffset + detailsExpanderHeight)) * 100;
+  function progressbarScroll() {
+    var detailsExpandersCount = detailsExpanders.length
+    var detailsExpanderHeight = 0
+    for (var i = 0; i < detailsExpandersCount; i++) {
+      detailsExpanderHeight += detailsExpanders[i].scrollHeight
+    }
+    var totalScroll =
+      ((window.scrollY - topOffset) /
+        (postContentHeight -
+          bottomOffset -
+          window.innerHeight -
+          topOffset +
+          detailsExpanderHeight)) *
+      100;
 		document.querySelector(".progress__bar").style.width = totalScroll + "%";
-	}
+  }
 
-	progressShow();
-	progressbarScroll();
+  progressShow();
+  progressbarScroll();
 
-	window.addEventListener("scroll", function () {
-		progressShow();
-		progressbarScroll();
-	});
+  window.addEventListener("scroll", function () {
+    progressShow();
+    progressbarScroll();
+  });
 });
