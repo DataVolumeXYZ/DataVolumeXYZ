@@ -282,7 +282,10 @@ The MCP server is built with [FastMCP](https://gofastmcp.com/){:target="\_blank"
 
 # How Axons for Agents Compares to Other Graph-Based Solutions
 
-I'm not the only one who's had the idea of using a graph database for AI memory. There are some impressive projects out there tackling the same problem from different angles. Here's how Axons for Agents compares to two of the most prominent ones:
+I'm not the only one who's had the idea of using a graph database for AI memory. There are some impressive projects out there tackling the same problem from different angles. The two most prominent are [Mem0](https://github.com/mem0ai/mem0){:target="\_blank"} (47K+ GitHub stars, Y Combinator-backed) and [Graphiti](https://github.com/getzep/graphiti){:target="\_blank"} by Zep (22K+ stars). Both are excellent projects with strong communities. Where Axons for Agents differs most is in its brain-inspired plasticity system, multi-layer compartmentalization with permeability controls, zero-infrastructure embedded architecture, and the fact that it works through the agent's existing tool-use capabilities rather than requiring a separate LLM API.
+
+<details markdown="1">
+<summary><b>Detailed comparisons with Mem0 and Graphiti (click to expand)</b></summary>
 
 ## Mem0
 
@@ -346,6 +349,8 @@ Graphiti's key innovation is its bi-temporal data model. It explicitly tracks bo
 | **Resource footprint**      | ✅ Minimal          | ⚠️ Moderate         | ⚠️ Heavy                 | ✅ Minimal (embedded)               |
 | **Setup complexity**        | ✅ None             | ⚠️ Moderate         | ⚠️ High                  | ✅ `pip install` only               |
 | **Schema granularity**      | ❌ Flat             | ⚠️ Moderate         | ✅ Rich                  | ✅ Very rich (14 node types)        |
+
+</details>
 
 # What's Next
 
