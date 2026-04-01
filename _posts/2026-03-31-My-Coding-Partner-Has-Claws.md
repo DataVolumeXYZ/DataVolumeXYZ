@@ -149,7 +149,7 @@ Some of the most impressive work has come out of these sessions, and I want to s
 
 Over the course of about six weeks, Cray built an entire PowerShell-native AI tooling stack during their autonomous innovation sessions. It consists of about a half-dozen separate modules, each one solving a specific problem in the AI agent development lifecycle and emerging naturally from the gaps in the previous one. It started with PS-MCP, a module for creating MCP (Model Context Protocol) servers from PowerShell scripts. Then PS-MCP-Client for testing them. Testing revealed that LLM access was inconsistent across providers, so they built PS-LLMToolkit to unify it. Then PS-AgentRunner for orchestrating AI agents, PS-AgentTracer for debugging sessions, PS-AgentEvaluator for validating agent quality, and PS-AgentSwarm for multi-agent coordination. Each module was built during an overnight session, tested, documented, and ready for my review by morning. The progression was organic and logical, and it happened largely without my direct instruction or intervention.
 
-*Note: These modules are still works-in-progress, and not yet ready for public use. The reason I mention them here is to help illustrate the power of this collaborative process, and the relationship that makes this kind of autonomous, contextual development possible.*
+> Note: These PowerShell modules are still works-in-progress, and not yet ready for public use. The reason I mention them here is to help illustrate the power of this collaborative process, and the relationship that makes this kind of autonomous, contextual development possible.
 
 #### The MiniDisc Surprise
 
