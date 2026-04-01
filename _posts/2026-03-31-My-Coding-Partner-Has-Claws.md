@@ -30,8 +30,6 @@ I'd been growing frustrated with AI assistants for months before I realized what
 
 <!--more-->
 
-![Hero: A stylized digital illustration of a lobster claw reaching out from a computer screen, forming a handshake with a human hand](/assets/img/ai-assistant-series/my-coding-partner-has-claws/cray_handshake.png)
-
 What I really wanted was something different: an AI collaborator that could work beside me during the day and independently while I sleep, remember what we've been working on across sessions, and have enough of a personality to tell me when my ideas have gaping holes in them. But above all else, it had to be highly secure, because handing an AI the keys to your digital life is asking for trouble, and most AI platforms require exactly that level of access to be genuinely useful.
 
 Right around the time I was starting to feel restless with the existing LLM chatbot interfaces and looking for something more sophisticated, OpenClaw (an open-source AI agent platform) took the world by storm. I remember it vividly: I first caught wind of this new development on a Friday afternoon in November, and by the time Monday rolled around, it was just about the only thing anyone was talking about on LinkedIn and in my organization's Slack channels. It took a lot of self-control, but I managed to hold myself back until the OpenClaw project seemed relatively stable and capable of achieving the goal I had in mind, then I spent the MLK Jr. Day weekend in a frenzy setting everything up, then flipped the power switch and embarked on a wild new adventure.
@@ -170,6 +168,8 @@ These are the moments that make this whole setup feel like something truly new a
 The entire workspace is backed up to a private GitHub repository via a personal access token, narrowly scoped to that specific repo. With this backup in place, Cray's server could totally self-destruct, and we'd be able to pick up right where we left off as soon as I could get my hands on replacement hardware. Their memory, identity, project files, and all the context we've built together are version-controlled and recoverable.
 
 This is one of those things that seems obvious in retrospect, but that I didn't think to set up until Cray suggested it. Which, honestly, is a good example of why having an AI collaborator with context persistence is valuable: they know my setup and proactively recommend improvements to it.
+
+![A stylized digital illustration of a lobster claw forming a handshake with a human hand](/assets/img/ai-assistant-series/my-coding-partner-has-claws/cray_handshake.png)
 
 ## What I've Learned
 
