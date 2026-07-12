@@ -3,6 +3,8 @@ layout: post
 title: "An Open Letter to the OMB: Do Not Let This Be Our Lysenko Moment"
 summary: "The OMB's proposed rule would put political appointees in charge of federal science funding. History tells us exactly how that ends."
 author: JamesDBartlett3
+feature-img: "assets/img/feature-img/lysenko1_cropped.png"
+thumbnail: "assets/img/feature-img/lysenko2_transparent.png"
 tags:
   - Science
   - Policy
@@ -37,7 +39,7 @@ Lysenko was, by any honest accounting, a charlatan. He had the equivalent of a m
 
 Joseph Stalin did not have time to wait. The Soviet Union was in the grip of famine; millions had already died of starvation, and some even resorted to cannibalism. Stalin needed a miracle, and Lysenko was offering one, so Stalin put Lysenko in charge of a prestigious genetics institute and gave him the authority to impose his scientifically unsound farming practices on collective farms across the Soviet Union.
 
-To call the results catastrophic would be an understatement nearly as large as the Soviet Union itself. Soaking seeds in freezing water hampered germination, crop yields collapsed, and people starved and died by the millions. Meanwhile, legitimate genetics was branded a "whore of capitalism," and geneticists were forced to publicly renounce Mendelian genetics or lose their positions. Thousands were dismissed, jailed, sent to the gulags, or even executed, and the message was clear: toe the party line or be destroyed.
+To call the results catastrophic would be an understatement nearly as large as the Soviet Union itself. Soaking seeds in freezing water hampered germination, crop yields collapsed, and people starved and died by the millions. Meanwhile, legitimate genetics was branded a "reactionary bourgeois enterprise" and a "whore of capitalism," and geneticists were forced to publicly renounce Mendelian genetics or lose their positions. Thousands were dismissed, jailed, sent to the gulags, or even executed, and the message was clear: toe the party line or be destroyed.
 
 Tragically, the damage done by Lysenkoism was not limited to agriculture. The Soviet Union sat on the sidelines while the rest of the world discovered the structure of DNA and launched the field of molecular biology. Soviet genetics did not recover until after the collapse of the Soviet Union in the late 1980s and early 1990s. More than half a century of progress was lost because a politician decided that he knew better than the scientists.
 
