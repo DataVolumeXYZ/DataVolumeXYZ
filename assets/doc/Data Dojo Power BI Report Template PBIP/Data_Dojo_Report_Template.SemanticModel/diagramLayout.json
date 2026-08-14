@@ -1,0 +1,255 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1316.5506805264508,
+            "y": 219.30032699136171
+          },
+          "nodeIndex": "_Utilities",
+          "nodeLineageTag": "750e23d7-b415-41b0-9ef5-c8acb8767dfd",
+          "size": {
+            "height": 72,
+            "width": 236.85222543535451
+          },
+          "zIndex": 3,
+          "expandedHeight": 156.96557804748136
+        },
+        {
+          "location": {
+            "x": 1002.8664554962445,
+            "y": 2.8522254353545122
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "360dd824-1ecd-4173-a25d-9c3c654c2eba",
+          "size": {
+            "height": 596.00384422136312,
+            "width": 262.52225435354478
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1316.7714606849388,
+            "y": 303.44097733431909
+          },
+          "nodeIndex": "_Info_SemanticModel",
+          "nodeLineageTag": "959b0eb6-cc0d-406d-9bf5-6ab5f9c3ceb9",
+          "size": {
+            "height": 72,
+            "width": 237.09277938434388
+          },
+          "zIndex": 5,
+          "expandedHeight": 145
+        },
+        {
+          "location": {
+            "x": 1317.401142584845,
+            "y": 388.81780348283593
+          },
+          "nodeIndex": "ReportPages",
+          "nodeLineageTag": "bd0082f8-8e43-44fd-bdb3-f5d59dd24e42",
+          "size": {
+            "height": 72,
+            "width": 236.5
+          },
+          "zIndex": 6,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 388.56880680994334,
+            "y": 0
+          },
+          "nodeIndex": "FactSales",
+          "nodeLineageTag": "55131885-fce1-4c12-8530-317be14de938",
+          "size": {
+            "height": 598.66666666666674,
+            "width": 265.37447978889929
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 703.20489041224016,
+            "y": 455.24701000407214
+          },
+          "nodeIndex": "DimCountry",
+          "nodeLineageTag": "59aaa13e-08a0-4c1e-bfa5-8565ca546537",
+          "size": {
+            "height": 145,
+            "width": 262.52225435354489
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 722.6687873339597,
+            "y": 4.0405061967961444
+          },
+          "nodeIndex": "DimDate",
+          "nodeLineageTag": "1266a7a3-473e-4d74-967f-f6af86b266e6",
+          "size": {
+            "height": 256.40890174141782,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 0.83333333333334281,
+            "y": 453.58784151813131
+          },
+          "nodeIndex": "DimDiscountBand",
+          "nodeLineageTag": "1e3d4106-1420-4e28-aa1b-f84d7ec0f17b",
+          "size": {
+            "height": 145,
+            "width": 309.58397403689384
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 233.61407305639744
+          },
+          "nodeIndex": "DimProduct",
+          "nodeLineageTag": "c51ebd56-3e35-439f-a060-d7c79be336ac",
+          "size": {
+            "height": 145,
+            "width": 269.652817941931
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 1.4261127176772277
+          },
+          "nodeIndex": "DimSegment",
+          "size": {
+            "height": 145,
+            "width": 273.93115609496277
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1316.7524863317194,
+            "y": 134
+          },
+          "nodeIndex": "LearningResources",
+          "nodeLineageTag": "5499e594-6603-49e5-a122-5b88ebd76647",
+          "size": {
+            "height": 72,
+            "width": 236.2594460510104
+          },
+          "zIndex": 8,
+          "expandedHeight": 314.53946532980422
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 339.33333206176758,
+            "y": 0
+          },
+          "nodeIndex": "FactSales",
+          "size": {
+            "height": 420,
+            "width": 290
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 294
+          },
+          "nodeIndex": "DimCountry",
+          "size": {
+            "height": 145,
+            "width": 263
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "DimDate",
+          "size": {
+            "height": 258,
+            "width": 240
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 704.33333206176758,
+            "y": 0
+          },
+          "nodeIndex": "DimDiscountBand",
+          "size": {
+            "height": 145,
+            "width": 312
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 748.33333206176758,
+            "y": 340
+          },
+          "nodeIndex": "DimProduct",
+          "size": {
+            "height": 145,
+            "width": 266
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 737.33333206176758,
+            "y": 170
+          },
+          "nodeIndex": "DimSegment",
+          "size": {
+            "height": 145,
+            "width": 277
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Star Schema",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": true,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

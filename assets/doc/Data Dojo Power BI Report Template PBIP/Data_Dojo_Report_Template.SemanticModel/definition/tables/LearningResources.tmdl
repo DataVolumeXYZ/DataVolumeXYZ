@@ -1,0 +1,119 @@
+table LearningResources
+	isHidden
+	lineageTag: 5499e594-6603-49e5-a122-5b88ebd76647
+
+	measure Link = MIN(LearningResources[URL])
+		isHidden
+		lineageTag: 18a4ce3e-8621-46d7-bc38-bb9e5113cfee
+
+		changedProperty = IsHidden
+
+	column Name
+		dataType: string
+		isHidden
+		lineageTag: 3d4ba81a-7ed7-449e-a257-516c17f6cad9
+		summarizeBy: none
+		sourceColumn: Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL
+		dataType: string
+		isHidden
+		lineageTag: 71191217-ece7-4bc5-8c92-aad5be2442bc
+		summarizeBy: none
+		sourceColumn: URL
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommended Order'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8d888ca9-a327-4083-b85f-db208c9a804e
+		summarizeBy: none
+		sourceColumn: Recommended Order
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Source
+		dataType: string
+		isHidden
+		lineageTag: 85561133-c0eb-4d5c-9aa0-ecd2d37c313f
+		summarizeBy: none
+		sourceColumn: Source
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Primary Content Type'
+		dataType: string
+		isHidden
+		lineageTag: 6ddf5c21-705d-445c-8740-ee66679d3771
+		summarizeBy: none
+		sourceColumn: Primary Content Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Secondary Content Type'
+		dataType: string
+		isHidden
+		lineageTag: ffc76b0d-6312-4541-a1b0-66d3c3b6849a
+		summarizeBy: none
+		sourceColumn: Secondary Content Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Learning Level'
+		dataType: string
+		isHidden
+		lineageTag: 08334f8d-e025-4077-ace2-0ed71a7ad96c
+		summarizeBy: none
+		sourceColumn: Learning Level
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time Commitment (Hours)'
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: 0128bc10-c6e9-49b9-8273-dbadd0e9653a
+		summarizeBy: none
+		sourceColumn: Time Commitment (Hours)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	partition LearningResources = m
+		mode: import
+		source =
+				let
+				    // Connect to Power BI Learning Resources spreadsheet in GitHub
+				    Source = Excel.Workbook(Web.Contents(LearningResources_URL), null, true),
+				    // Select the "Power_BI_Learning_Resources_Table" table from the spreadsheet
+				    Power_BI_Learning_Resources_Table = Source{[Item="Power_BI_Learning_Resources",Kind="Table"]}[Data],
+				    // Set the correct data types for the columns in the table
+				    #"Changed Type" = Table.TransformColumnTypes(Power_BI_Learning_Resources_Table,{{"Name", type text}, {"URL", type text}, {"Recommended Order", Int64.Type}, {"Source", type text}, {"Primary Content Type", type text}, {"Secondary Content Type", type text}, {"Learning Level", type text}, {"Time Commitment (Hours)", type number}})
+				in
+				    #"Changed Type"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

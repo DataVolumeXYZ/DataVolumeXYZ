@@ -1,0 +1,40 @@
+table ReportPages
+	isHidden
+	lineageTag: bd0082f8-8e43-44fd-bdb3-f5d59dd24e42
+
+	column PageName
+		dataType: string
+		isHidden
+		lineageTag: 9c4d4d2c-8fc8-4057-8ec8-8e241e62a5d7
+		summarizeBy: none
+		sourceColumn: PageName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PageNumber
+		dataType: string
+		isHidden
+		lineageTag: 2e4a4994-716b-4460-9fc3-c2a1d4c48322
+		summarizeBy: none
+		sourceColumn: PageNumber
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ReportPages = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8swrLikqTS7JzM8rVtJRMlSK1YlW8sgvyqzKzytJzFEIzslMTi0CSRmBpcJSi0oyk1EkjMESEL5CQGJeag5Q0AQsGJKfn1OSWQDkm4L5nnlp+RC+GZjvklqWmpNfANTnl1+SCjLMXCk2FgA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [PageName = _t, PageNumber = _t])
+				in
+				    Source
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

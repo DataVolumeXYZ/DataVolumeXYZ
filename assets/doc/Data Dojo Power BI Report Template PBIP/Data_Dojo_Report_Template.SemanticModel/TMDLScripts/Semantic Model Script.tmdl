@@ -1,0 +1,1320 @@
+createOrReplace
+
+	model Model
+		culture: en-US
+		defaultPowerBIDataSourceVersion: powerBI_V3
+		discourageImplicitMeasures
+		sourceQueryCulture: en-US
+		dataAccessOptions
+			legacyRedirects
+			returnErrorValuesAsNull
+
+		table DimCountry
+			lineageTag: 59aaa13e-08a0-4c1e-bfa5-8565ca546537
+
+			column Country
+				dataType: string
+				lineageTag: 2cecb2c0-1cf8-4899-8917-76e308869ce7
+				summarizeBy: none
+				sourceColumn: Country
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column CountryKey
+				dataType: int64
+				formatString: 0
+				lineageTag: 4f26ef67-18b1-4ff2-856c-eafc64003f98
+				summarizeBy: none
+				sourceColumn: CountryKey
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			partition DimCountry = m
+				mode: import
+				queryGroup: 'Sample Tables'
+				source =
+						let
+						    Source = _Source,
+						    #"Removed Other Columns" = Table.SelectColumns(Source,{"Country"}),
+						    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+						    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "CountryKey", 1, 1, Int64.Type),
+						    #"Replaced Value" = Table.ReplaceValue(#"Added Index","United States of America","USA",Replacer.ReplaceText,{"Country"})
+						in
+						    #"Replaced Value"
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table DimDate
+			lineageTag: 1266a7a3-473e-4d74-967f-f6af86b266e6
+			dataCategory: Time
+
+			column Date
+				dataType: dateTime
+				isKey
+				formatString: Long Date
+				lineageTag: dc04e504-908f-4f4f-83df-14f17949f587
+				summarizeBy: none
+				sourceColumn: Date
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+				annotation UnderlyingDateTimeDataType = Date
+
+			column Year
+				dataType: int64
+				formatString: 0
+				lineageTag: df55a7c1-f389-4a08-bda9-094b47ba83a5
+				summarizeBy: none
+				sourceColumn: Year
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Month Number'
+				dataType: int64
+				formatString: 0
+				lineageTag: 4dea3b44-3e5c-41b5-8d86-9fab0479e537
+				summarizeBy: none
+				sourceColumn: Month Number
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Month Name'
+				dataType: string
+				lineageTag: 989df02d-ac28-4bda-a8a0-1661b9b22b13
+				summarizeBy: none
+				sourceColumn: Month Name
+				sortByColumn: 'Month Number'
+
+				changedProperty = IsHidden
+
+				changedProperty = SortByColumn
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Day of Week'
+				dataType: int64
+				formatString: 0
+				lineageTag: 59412fee-c68d-4782-8c44-8fef9413c06d
+				summarizeBy: none
+				sourceColumn: Day of Week
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Day Name'
+				dataType: string
+				lineageTag: aaeaf8d9-93a9-4ff4-ba31-50243ccf216d
+				summarizeBy: none
+				sourceColumn: Day Name
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column DateKey
+				dataType: int64
+				formatString: 0
+				lineageTag: 15997bed-02ca-442d-8994-96948730e84e
+				summarizeBy: none
+				sourceColumn: DateKey
+
+				annotation SummarizationSetBy = Automatic
+
+			partition DimDate = m
+				mode: import
+				queryGroup: 'Sample Tables'
+				source =
+						let
+						    // Extract the Date column from the _Source table
+						    Source = _Source[Date],
+						    // Convert the list of dates to a table
+						    #"Converted to Table1" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+						    // Change the type of the column to Int64
+						    #"Changed Type1" = Table.TransformColumnTypes(#"Converted to Table1",{{"Column1", Int64.Type}}),
+						    // Extract the list of dates from the table
+						    DateList = #"Changed Type1"[Column1],
+						    // Create a list of dates from the minimum to the maximum date
+						    Date = {List.Min(DateList)..List.Max(DateList)},
+						    // Convert the list of dates to a table
+						    #"Converted to Table" = Table.FromList(Date, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+						    // Change the type of the column to date
+						    #"Changed Type" = Table.TransformColumnTypes(#"Converted to Table",{{"Column1", type date}}),
+						    // Rename the column to "Date"
+						    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "Date"}}),
+						    // Add a column for the year extracted from the Date column
+						    #"Inserted Year" = Table.AddColumn(#"Renamed Columns", "Year", each Date.Year([Date]), Int64.Type),
+						    // Add a column for the month number extracted from the Date column
+						    #"Inserted Month" = Table.AddColumn(#"Inserted Year", "Month Number", each Date.Month([Date]), Int64.Type),
+						    // Add a column for the month name extracted from the Date column
+						    #"Inserted Month Name" = Table.AddColumn(#"Inserted Month", "Month Name", each Date.MonthName([Date]), type text),
+						    // Add a column for the day of the week extracted from the Date column
+						    #"Inserted Day of Week" = Table.AddColumn(#"Inserted Month Name", "Day of Week", each Date.DayOfWeek([Date]), Int64.Type),
+						    // Add a column for the day name extracted from the Date column
+						    #"Inserted Day Name" = Table.AddColumn(#"Inserted Day of Week", "Day Name", each Date.DayOfWeekName([Date]), type text),
+						    // Add a column for the date key in the format yyyyMMdd
+						    #"Inserted DateKey" = Table.AddColumn(#"Inserted Day Name", "DateKey", each Int64.From(Date.ToText( [Date], [ Format = "yyyyMMdd" ] )), Int64.Type )
+						in
+						    // Return the final table with the DateKey column
+						    #"Inserted DateKey"
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table DimDiscountBand
+			lineageTag: 1e3d4106-1420-4e28-aa1b-f84d7ec0f17b
+
+			column 'Discount Band'
+				dataType: string
+				lineageTag: 964b5970-37ec-47b1-ba0c-6aae5eb3c5c8
+				summarizeBy: none
+				sourceColumn: Discount Band
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column DiscountBandKey
+				dataType: int64
+				formatString: 0
+				lineageTag: f086f4b4-8b53-4f39-adf2-abf06bd0dc63
+				summarizeBy: none
+				sourceColumn: DiscountBandKey
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			partition DimDiscountBand = m
+				mode: import
+				queryGroup: 'Sample Tables'
+				source =
+						let
+						    Source = _Source,
+						    #"Removed Other Columns" = Table.SelectColumns(Source,{"Discount Band"}),
+						    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+						    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "DiscountBandKey", 1, 1, Int64.Type)
+						in
+						    #"Added Index"
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table DimProduct
+			lineageTag: c51ebd56-3e35-439f-a060-d7c79be336ac
+
+			column Product
+				dataType: string
+				lineageTag: 8b7f06de-9408-438f-b9a5-85a3be83e44e
+				summarizeBy: none
+				sourceColumn: Product
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column ProductKey
+				dataType: int64
+				formatString: 0
+				lineageTag: bb5a2070-77c7-413f-be2f-1c5b7c010d67
+				summarizeBy: none
+				sourceColumn: ProductKey
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			partition DimProduct = m
+				mode: import
+				queryGroup: 'Sample Tables'
+				source =
+						let
+						    Source = _Source,
+						    #"Removed Other Columns" = Table.SelectColumns(Source,{"Product"}),
+						    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+						    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "ProductKey", 1, 1, Int64.Type)
+						in
+						    #"Added Index"
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table DimSegment
+			lineageTag: f8bda616-d87c-4bb6-94d4-ea8f3ece4e68
+
+			column Segment
+				dataType: string
+				lineageTag: e02c3a83-7de1-4b0b-a0e5-8ef95b367592
+				summarizeBy: none
+				sourceColumn: Segment
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column SegmentKey
+				dataType: int64
+				formatString: 0
+				lineageTag: 20181870-114d-49c5-8f6e-85c37ee08e20
+				summarizeBy: none
+				sourceColumn: SegmentKey
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			partition DimSegment = m
+				mode: import
+				queryGroup: 'Sample Tables'
+				source =
+						let
+						    Source = _Source,
+						    #"Removed Other Columns" = Table.SelectColumns(Source,{"Segment"}),
+						    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+						    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "SegmentKey", 1, 1, Int64.Type)
+						in
+						    #"Added Index"
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table FactSales
+			lineageTag: 55131885-fce1-4c12-8530-317be14de938
+
+			column 'Units Sold'
+				dataType: double
+				lineageTag: 0f0e11c7-bc00-4833-9184-e4f6cdb84f8f
+				summarizeBy: none
+				sourceColumn: Units Sold
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			column 'Manufacturing Price'
+				dataType: double
+				lineageTag: 0e08775f-0f38-48a6-9346-b480e4af731f
+				summarizeBy: none
+				sourceColumn: Manufacturing Price
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			column 'Sale Price'
+				dataType: double
+				lineageTag: cfbd26aa-f1a6-4073-a00e-d0f9c8dd501d
+				summarizeBy: none
+				sourceColumn: Sale Price
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			column 'Gross Sales'
+				dataType: double
+				lineageTag: 141affa2-fbfa-466d-b27d-2ad0801a4cf0
+				summarizeBy: none
+				sourceColumn: Gross Sales
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			column Discounts
+				dataType: double
+				lineageTag: 35dcf4dd-8eda-4bc3-b008-6f21ebe84717
+				summarizeBy: none
+				sourceColumn: Discounts
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			column Sales
+				dataType: double
+				lineageTag: b8c57880-3fcf-46ed-b2b3-650be6de65f0
+				summarizeBy: none
+				sourceColumn: Sales
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// Cost of Goods Sold
+			column COGS
+				dataType: double
+				lineageTag: b63bae76-bba6-4d4e-8a73-aef023aeeb21
+				summarizeBy: none
+				sourceColumn: COGS
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			column Profit
+				dataType: double
+				lineageTag: 7024ec1e-704d-4ea9-b0a6-1e7c35b8cfb5
+				summarizeBy: none
+				sourceColumn: Profit
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// Foreign key to the DimSegment table
+			column SegmentKey
+				dataType: int64
+				formatString: 0
+				lineageTag: c39c404d-a0fa-4199-b1cf-5d0322ec7f60
+				summarizeBy: none
+				sourceColumn: SegmentKey
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			/// Foreign key to the DimCountry table
+			column CountryKey
+				dataType: int64
+				formatString: 0
+				lineageTag: d649c531-b1a7-460d-bef4-f5d611bbf829
+				summarizeBy: none
+				sourceColumn: CountryKey
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			/// Foreign key to the DimProduct table
+			column ProductKey
+				dataType: int64
+				formatString: 0
+				lineageTag: 93960a21-e9de-41f5-bd14-bca06cf8229e
+				summarizeBy: none
+				sourceColumn: ProductKey
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			/// Foreign key to the DimDiscountBand table
+			column DiscountBandKey
+				dataType: int64
+				formatString: 0
+				lineageTag: d1bdbb2a-83f8-4da7-9e29-ad14d437f3a9
+				summarizeBy: none
+				sourceColumn: DiscountBandKey
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			/// Foreign key to the DimDate table
+			column DateKey
+				dataType: int64
+				formatString: 0
+				lineageTag: c2ca5c6f-8d05-4f73-afbb-8bcc8f46e5b9
+				summarizeBy: none
+				sourceColumn: DateKey
+
+				annotation SummarizationSetBy = Automatic
+
+			partition FactSales = m
+				mode: import
+				queryGroup: 'Sample Tables'
+				source =
+						let
+						    Source = _Source,
+						    #"Left Join Dim Segment" = Table.NestedJoin(Source, {"Segment"}, DimSegment, {"Segment"}, "Dim Segment", JoinKind.LeftOuter),
+						    #"Expand Dim Segement" = Table.ExpandTableColumn(#"Left Join Dim Segment", "Dim Segment", {"SegmentKey"}, {"SegmentKey"}),
+						    #"Replaced Value" = Table.ReplaceValue(#"Expand Dim Segement","United States of America","USA",Replacer.ReplaceText,{"Country"}),
+						    #"Left Join Dim Country" = Table.NestedJoin(#"Replaced Value", {"Country"}, DimCountry, {"Country"}, "Dim Country", JoinKind.LeftOuter),
+						    #"Expand Dim Country" = Table.ExpandTableColumn(#"Left Join Dim Country", "Dim Country", {"CountryKey"}, {"CountryKey"}),
+						    #"Left Join Dim Product" = Table.NestedJoin(#"Expand Dim Country", {"Product"}, DimProduct, {"Product"}, "Dim Product", JoinKind.LeftOuter),
+						    #"Expand Dim Product" = Table.ExpandTableColumn(#"Left Join Dim Product", "Dim Product", {"ProductKey"}, {"ProductKey"}),
+						    #"Left Join Discount Band" = Table.NestedJoin(#"Expand Dim Product", {"Discount Band"}, DimDiscountBand, {"Discount Band"}, "Dim Discount Band", JoinKind.LeftOuter),
+						    #"Expand Dim Discount Band" = Table.ExpandTableColumn(#"Left Join Discount Band", "Dim Discount Band", {"DiscountBandKey"}, {"DiscountBandKey"}),
+						    #"Added DateKey" = Table.AddColumn(#"Expand Dim Discount Band", "DateKey", each Int64.From(Date.ToText( [Date], [ Format = "yyyyMMdd" ] )), Int64.Type ),
+						    #"Removed Other Columns" = Table.SelectColumns(#"Added DateKey",{"Units Sold", "Manufacturing Price", "Sale Price", "Gross Sales", "Discounts", "Sales", "COGS", "Profit", "SegmentKey", "CountryKey", "ProductKey", "DiscountBandKey", "DateKey"})
+						in
+						    #"Removed Other Columns"
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table _Utilities
+			isHidden
+			lineageTag: 750e23d7-b415-41b0-9ef5-c8acb8767dfd
+
+			measure UserPrincipalName = USERPRINCIPALNAME()
+				isHidden
+				lineageTag: 89f56428-f962-42c1-929e-9c54b230c855
+
+				changedProperty = IsHidden
+
+			measure UserName = USERNAME()
+				isHidden
+				lineageTag: ec3f4dfe-9545-42cc-b179-0c33b0820c14
+
+				changedProperty = IsHidden
+
+			partition _Utilities = m
+				mode: import
+				queryGroup: Ultilities
+				source =
+						let
+						    Source = _Measures
+						in
+						    Source
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table _Info_SemanticModel
+			isHidden
+			lineageTag: 959b0eb6-cc0d-406d-9bf5-6ab5f9c3ceb9
+
+			/// The last time the semantic model was refreshed
+			column LatestRefreshDateTime
+				dataType: dateTime
+				isHidden
+				formatString: General Date
+				lineageTag: f9b5ac07-e8ac-4b00-8126-c32852c6dacb
+				summarizeBy: none
+				sourceColumn: LatestRefreshDateTime
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			/// The time of day before which this semantic model should have completed its daily refresh
+			column 'Refresh Deadline'
+				dataType: dateTime
+				isHidden
+				formatString: Long Time
+				lineageTag: 6a246cc5-a0b5-4298-a415-d1b4aed88da1
+				summarizeBy: none
+				sourceColumn: Refresh Deadline
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+				annotation UnderlyingDateTimeDataType = Time
+
+			partition _Info_SemanticModel = m
+				mode: import
+				queryGroup: Ultilities
+				source =
+						let
+						    // See the comments in fn_GetLocalTime to understand how to adjust the date and time to your locality
+						    Source = DateTimeZone.RemoveZone(fn_GetLocalDateTime(3, 2, 11, 1, -5, -6)),
+						    #"Converted to Table" = #table(1, {{Source}}),
+						    #"Changed Type" = Table.TransformColumnTypes(#"Converted to Table",{{"Column1", type datetime}}),
+						    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "LatestRefreshDateTime"}}),
+						    #"Added Refresh Deadline" = Table.AddColumn(#"Renamed Columns", "Refresh Deadline", each Refresh_Deadline, type time)
+						in
+						    #"Added Refresh Deadline"
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table _Measures
+			lineageTag: 360dd824-1ecd-4173-a25d-9c3c654c2eba
+
+			/// Conditional formatting to highlight rows where the SegmentKey column in the DimSegment table is either 0 or 2
+			measure 'Row Highlight Column' = ```
+					
+					
+					VAR Result =
+					    SWITCH (
+					        TRUE (),
+					        MAX ( DimSegment[SegmentKey] ) IN {1, 3},
+					        "#C4A8D1"
+					    )
+					RETURN
+					    Result 
+					
+					```
+				displayFolder: Formatting
+				lineageTag: 8d7888b9-a357-4d2b-a3f8-aa682b18e6c8
+
+				changedProperty = IsHidden
+
+			/// Conditional formatting to change the background color of the tooltip (table visual on the Horizontal Slicers page) to red if the Total Profit measure returns a negative value
+			measure 'Tooltip Background Color' =
+					
+					VAR Result =
+					    IF(
+					        [Total Profit] < 0,
+					        "#98012e"
+					    )
+					RETURN
+					    Result
+				displayFolder: Formatting
+				lineageTag: 9a3ecc75-6541-4e2e-ad20-5b1e14ca0fb5
+
+				changedProperty = IsHidden
+
+			/// Unicode character for the ⓘ hover target in the table visual on the Horizontal Slicers page
+			measure 'Symbol - Info' = UNICHAR(128712)
+				displayFolder: Formatting
+				lineageTag: 280b7ee0-7b31-4a6a-96f8-fbff1b85e232
+
+				changedProperty = IsHidden
+
+			/// Dynamic background color for the Country slicer
+			measure 'Slicer Background - Country' = ```
+					
+					VAR NonFilteredList =
+					    CALCULATE (
+					        DISTINCTCOUNT ( DimCountry[Country] ),
+					        ALLNOBLANKROW ( DimCountry[Country] )
+					    )
+					VAR FilteredList =
+					    DISTINCTCOUNT ( DimCountry[Country] )
+					VAR Result =
+					    IF (
+					        FilteredList < NonFilteredList,
+					        [Slicer Background Color - Filtered],
+					        [Slicer Background Color - Unfiltered]
+					    )
+					RETURN
+					    Result
+					
+					```
+				displayFolder: Formatting
+				lineageTag: 200cf50d-982d-446a-a322-45762e499788
+
+				changedProperty = IsHidden
+
+			/// Background color code for slicers that have no values selected
+			measure 'Slicer Background Color - Unfiltered' = "#9b77a9ff"
+				displayFolder: Formatting
+				lineageTag: 9c9634d3-1112-4ef9-81c3-683ad27f2abb
+
+				changedProperty = IsHidden
+
+			/// Background color code for slicers which have at least one value selected
+			measure 'Slicer Background Color - Filtered' = "#f08d8eff"
+				displayFolder: Formatting
+				lineageTag: 1b360a42-5dde-4a3a-aab4-0ddd02819b5b
+
+				changedProperty = IsHidden
+
+			/// Dynamic background color for the Year slicer
+			measure 'Slicer Background - Year' =
+					
+					VAR NonFilteredList =
+					    CALCULATE (
+					        DISTINCTCOUNT ( 'DimDate'[Year] ),
+					        ALLNOBLANKROW ( 'DimDate'[Year] )
+					    )
+					VAR FilteredList =
+					    DISTINCTCOUNT ( 'DimDate'[Year] )
+					VAR Result =
+					    IF (
+					        FilteredList < NonFilteredList,
+					        [Slicer Background Color - Filtered],
+					        [Slicer Background Color - Unfiltered]
+					    )
+					RETURN
+					    Result
+				displayFolder: Formatting
+				lineageTag: 9a5ec041-0ab6-43a8-8be2-80e6210d0d8c
+
+				changedProperty = IsHidden
+
+			/// Unicode character for the eraser symbol on the Clear Slicers buttons in the report
+			measure 'Symbol - Eraser' = UNICHAR(129529)
+				displayFolder: Formatting
+				lineageTag: e1d702f0-b93c-4b41-8a77-7740b1ab8904
+
+				changedProperty = IsHidden
+
+			/// Dynamic background color for the "Clear Slicers" buttons in the report
+			measure 'Clear Slicers Button Background Color' =
+					
+					IF (
+					    [Slicer Background Color - Filtered]
+					        IN { [Slicer Background - Year], [Slicer Background - Country] },
+					    [Slicer Background Color - Filtered],
+					    [Slicer Background Color - Unfiltered]
+					)
+				displayFolder: Formatting
+				lineageTag: 98ebfbf6-0862-43b4-aeae-c79f1bf33bdf
+
+				changedProperty = IsHidden
+
+			/// Average of the Sales column in the FactSales table
+			measure 'Average Sale Price' = AVERAGEX(FactSales, FactSales[Sales])
+				displayFolder: Calculation
+				lineageTag: 8050f1af-2468-40dd-9738-8e54020f7747
+
+				changedProperty = IsHidden
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// Sum of the COGS column in the FactSales table
+			measure 'Total COGS' = SUMX(FactSales, FactSales[COGS])
+				displayFolder: Calculation
+				lineageTag: fcbbc003-ea67-4f4f-a211-cea0961eb652
+
+				changedProperty = IsHidden
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// Sum of the Discounts column in the FactSales table
+			measure 'Total Discounts' = SUMX(FactSales, FactSales[Discounts])
+				displayFolder: Calculation
+				lineageTag: 890642d1-9588-4934-b998-fd96c30f5c83
+
+				changedProperty = IsHidden
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// Sum of the Gross Sales column in the FactSales  table
+			measure 'Total Gross Sales' = SUMX(FactSales, FactSales[Gross Sales])
+				displayFolder: Calculation
+				lineageTag: 78f1ca93-3bf1-4d33-a683-69abfb43ed68
+
+				changedProperty = IsHidden
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// Sum of the Manufacturing Price column in the FactSales table
+			measure 'Total Manufacturing Price' = SUMX(FactSales, FactSales[Manufacturing Price])
+				displayFolder: Calculation
+				lineageTag: 477aef62-d74d-4a1a-ae30-327aab77d668
+
+				changedProperty = IsHidden
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// Sum of the Profit column in the FactSales table
+			measure 'Total Profit' = SUMX(FactSales, FactSales[Profit])
+				formatString: #,0.00
+				displayFolder: Calculation
+				lineageTag: 495c8df4-5aee-4ed4-af21-ca47bee9e0e0
+
+				changedProperty = IsHidden
+
+			/// Sum of the Sale Price column in the FactSales table
+			measure 'Total Sale Price' = SUMX(FactSales, FactSales[Sale Price])
+				displayFolder: Calculation
+				lineageTag: b4ab0acc-d488-4f3a-b304-a3952345a7ff
+
+				changedProperty = IsHidden
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// Sum of the Sales column in the FactSales table
+			measure 'Total Sales' = SUMX(FactSales, FactSales[Sales])
+				displayFolder: Calculation
+				lineageTag: 2c6c60bd-e3fa-46b8-bfd2-f0f0b9b9e845
+
+				changedProperty = IsHidden
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// Sum of the Units Sold column in the FactSales table
+			measure 'Total Units Sold' = SUMX(FactSales, FactSales[Units Sold])
+				displayFolder: Calculation
+				lineageTag: 9ed80218-35c8-4e39-9047-9bc69e3f1fe7
+
+				changedProperty = IsHidden
+
+				annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+			/// HTML code for the frosted glass effect behind the slicer panel on the Slicer Panel page
+			measure Glassmorphism =
+					
+					"<!DOCTYPE html>
+					<html>
+					    <head>
+					        <style>
+					            body {
+					                background: rgba(50, 50, 50, 0.75);
+					                backdrop-filter: blur(10px);
+					            }
+					        </style>
+					    </head>
+					    <body></body>
+					</html>"
+				displayFolder: Formatting
+				lineageTag: 6954ca83-a438-4feb-9dbd-025da22b9838
+				dataCategory: Uncategorized
+
+				changedProperty = IsHidden
+
+			/// Title of the current page in the report
+			measure 'Page Title' = MAX(ReportPages[PageName])
+				displayFolder: Formatting
+				lineageTag: 06a8ac48-b36b-402c-b062-3ec487a355b3
+
+				changedProperty = IsHidden
+
+			partition _Measures = m
+				mode: import
+				queryGroup: Ultilities
+				source =
+						let
+						    Source = {},
+						    #"Converted to Table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+						    #"Added Custom" = Table.AddColumn(#"Converted to Table", "Dummy", each ""),
+						    #"Removed Columns" = Table.RemoveColumns(#"Added Custom",{"Dummy"})
+						in
+						    #"Removed Columns"
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table ReportPages
+			isHidden
+			lineageTag: bd0082f8-8e43-44fd-bdb3-f5d59dd24e42
+
+			column PageName
+				dataType: string
+				isHidden
+				lineageTag: 9c4d4d2c-8fc8-4057-8ec8-8e241e62a5d7
+				summarizeBy: none
+				sourceColumn: PageName
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column PageNumber
+				dataType: string
+				isHidden
+				lineageTag: 2e4a4994-716b-4460-9fc3-c2a1d4c48322
+				summarizeBy: none
+				sourceColumn: PageNumber
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			partition ReportPages = m
+				mode: import
+				source =
+						let
+						    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8swrLikqTS7JzM8rVtJRMlSK1YlW8sgvyqzKzytJzFEIzslMTi0CSRmBpcJSi0oyk1EkjMESEL5CQGJeag5Q0AQsGJKfn1OSWQDkm4L5nnlp+RC+GZjvklqWmpNfANTnl1+SCjLMXCk2FgA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [PageName = _t, PageNumber = _t])
+						in
+						    Source
+
+			changedProperty = IsHidden
+
+			annotation PBI_ResultType = Table
+
+			annotation PBI_NavigationStepName = Navigation
+
+		table LearningResources
+			isHidden
+			lineageTag: 5499e594-6603-49e5-a122-5b88ebd76647
+
+			measure Link = MIN(LearningResources[URL])
+				isHidden
+				lineageTag: 18a4ce3e-8621-46d7-bc38-bb9e5113cfee
+
+				changedProperty = IsHidden
+
+			column Name
+				dataType: string
+				isHidden
+				lineageTag: 3d4ba81a-7ed7-449e-a257-516c17f6cad9
+				summarizeBy: none
+				sourceColumn: Name
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column URL
+				dataType: string
+				isHidden
+				lineageTag: 71191217-ece7-4bc5-8c92-aad5be2442bc
+				summarizeBy: none
+				sourceColumn: URL
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Recommended Order'
+				dataType: int64
+				isHidden
+				formatString: 0
+				lineageTag: 8d888ca9-a327-4083-b85f-db208c9a804e
+				summarizeBy: none
+				sourceColumn: Recommended Order
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+			column Source
+				dataType: string
+				isHidden
+				lineageTag: 85561133-c0eb-4d5c-9aa0-ecd2d37c313f
+				summarizeBy: none
+				sourceColumn: Source
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Primary Content Type'
+				dataType: string
+				isHidden
+				lineageTag: 6ddf5c21-705d-445c-8740-ee66679d3771
+				summarizeBy: none
+				sourceColumn: Primary Content Type
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Secondary Content Type'
+				dataType: string
+				isHidden
+				lineageTag: ffc76b0d-6312-4541-a1b0-66d3c3b6849a
+				summarizeBy: none
+				sourceColumn: Secondary Content Type
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Learning Level'
+				dataType: string
+				isHidden
+				lineageTag: 08334f8d-e025-4077-ace2-0ed71a7ad96c
+				summarizeBy: none
+				sourceColumn: Learning Level
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Time Commitment (Hours)'
+				dataType: double
+				isHidden
+				formatString: 0.00
+				lineageTag: 0128bc10-c6e9-49b9-8273-dbadd0e9653a
+				summarizeBy: none
+				sourceColumn: Time Commitment (Hours)
+
+				changedProperty = IsHidden
+
+				annotation SummarizationSetBy = User
+
+			partition LearningResources = m
+				mode: import
+				source =
+						let
+						    // Connect to Power BI Learning Resources spreadsheet in GitHub
+						    Source = Excel.Workbook(Web.Contents(LearningResources_URL), null, true),
+						    // Select the "Power_BI_Learning_Resources_Table" table from the spreadsheet
+						    Power_BI_Learning_Resources_Table = Source{[Item="Power_BI_Learning_Resources",Kind="Table"]}[Data],
+						    // Set the correct data types for the columns in the table
+						    #"Changed Type" = Table.TransformColumnTypes(Power_BI_Learning_Resources_Table,{{"Name", type text}, {"URL", type text}, {"Recommended Order", Int64.Type}, {"Source", type text}, {"Primary Content Type", type text}, {"Secondary Content Type", type text}, {"Learning Level", type text}, {"Time Commitment (Hours)", type number}})
+						in
+						    #"Changed Type"
+
+			changedProperty = IsHidden
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		relationship a293d5c5-5093-4690-835f-a34664ab5ac8
+			fromColumn: FactSales.CountryKey
+			toColumn: DimCountry.CountryKey
+
+		relationship bdcf8149-9f82-41f0-8afa-635325957e1c
+			fromColumn: FactSales.DiscountBandKey
+			toColumn: DimDiscountBand.DiscountBandKey
+
+		relationship ab5cb3bf-d9de-4c46-860e-69a54ce3f2a4
+			fromColumn: FactSales.ProductKey
+			toColumn: DimProduct.ProductKey
+
+		relationship 7dec1cb7-dce7-4a01-8456-47510ee9f027
+			fromColumn: FactSales.SegmentKey
+			toColumn: DimSegment.SegmentKey
+
+		relationship 621f96d5-cce7-2155-bc1d-33863d14ab8d
+			fromColumn: FactSales.DateKey
+			toColumn: DimDate.DateKey
+
+		cultureInfo en-US
+
+			linguisticMetadata =
+					{
+					  "Version": "1.0.0",
+					  "Language": "en-US",
+					  "Entities": {
+					    "dimstudent.lastname": {
+					      "Binding": {
+					        "ConceptualEntity": "DimStudent",
+					        "ConceptualProperty": "LastName"
+					      },
+					      "State": "Generated"
+					    },
+					    "dimstudent.firstname": {
+					      "Binding": {
+					        "ConceptualEntity": "DimStudent",
+					        "ConceptualProperty": "FirstName"
+					      },
+					      "State": "Generated"
+					    }
+					  }
+					}
+				contentType: json
+
+		expression _Source = ```
+				let
+				    // Connect to the 'Financial Sample.xlsx' file in GitHub
+				    Source = Excel.Workbook(Web.Contents(FinancialSample_URL), null, true),
+				    // Navigate to the 'financials' table in the file
+				    financials_Table = Source{[Item="financials",Kind="Table"]}[Data],
+				    // Trim leading and trailing whitespace from column names
+				    #"Trim Column Names" = Table.TransformColumnNames(financials_Table, Text.Trim),
+				    // Set the data types for the columns in the file
+				    #"Set Column Data Types" = Table.TransformColumnTypes(#"Trim Column Names",{{"Segment", type text}, {"Country", type text}, {"Product", type text}, {"Discount Band", type text}, {"Units Sold", type number}, {"Manufacturing Price", type number}, {"Sale Price", type number}, {"Gross Sales", type number}, {"Discounts", type number}, {"Sales", type number}, {"COGS", type number}, {"Profit", type number}, {"Date", type date}, {"Month Number", Int16.Type}, {"Month Name", type text}, {"Year", Int16.Type}}),
+				    // Count the days between the latest date in the sample data and yesterday, then add that many days to each date, so the sample data will always appear fresh
+				    #"Sync Date To Current" = Table.TransformColumns(#"Set Column Data Types", {{"Date", 
+				      each Date.AddDays(_, Duration.Days(Date.From(DateTime.LocalNow()) - List.Max(#"Set Column Data Types"[Date])) - 1
+				    ), type date}})
+				in
+				    #"Sync Date To Current"
+				```
+			lineageTag: eb7f57f3-cb03-4c71-a40e-0996889b5ad9
+			queryGroup: 'Sample Tables'
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		expression fn_GetLocalDateTime = ```
+				let
+				    // Define metadata for the function, describing its purpose and usage.
+				    metaDocumentation = type function (
+				        Summer_Month_Number as (type number meta [
+				            Documentation.FieldCaption = "Summer Month Number",
+				            Documentation.SampleValues = {3, 4, 5}, // Examples: March, April, May
+				            Formatting.IsMultiLine = false,
+				            Formatting.IsCode = false
+				        ]),
+				        Summer_Sunday_Number as (type number meta [
+				            Documentation.FieldCaption = "Summer Sunday Number",
+				            Documentation.SampleValues = {1, 2, 3}, // Examples: 1st, 2nd, 3rd Sunday
+				            Formatting.IsMultiLine = false,
+				            Formatting.IsCode = false
+				        ]),
+				        Winter_Month_Number as (type number meta [
+				            Documentation.FieldCaption = "Winter Month Number",
+				            Documentation.SampleValues = {10, 11, 12}, // Examples: October, November, December
+				            Formatting.IsMultiLine = false,
+				            Formatting.IsCode = false
+				        ]),
+				        Winter_Sunday_Number as (type number meta [
+				            Documentation.FieldCaption = "Winter Sunday Number",
+				            Documentation.SampleValues = {1, 2, 3}, // Examples: 1st, 2nd, 3rd Sunday
+				            Formatting.IsMultiLine = false,
+				            Formatting.IsCode = false
+				        ]),
+				        Summer_GMT_Offset as (type number meta [
+				            Documentation.FieldCaption = "Summer GMT Offset",
+				            Documentation.SampleValues = {1, 2}, // Examples: +1, +2 hours
+				            Formatting.IsMultiLine = false,
+				            Formatting.IsCode = false
+				        ]),
+				        Winter_GMT_Offset as (type number meta [
+				            Documentation.FieldCaption = "Winter GMT Offset",
+				            Documentation.SampleValues = {0, -1}, // Examples: 0, -1 hour
+				            Formatting.IsMultiLine = false,
+				            Formatting.IsCode = false
+				        ])
+				    ) as any meta [
+				        Documentation.Name = "fn_GetLocalDateTime",
+				        Documentation.LongDescription =
+				            "
+				            <p><b>Get Local DateTime</b></p>
+				            <p>This function calculates the local date and time based on the current UTC time and daylight saving time (DST) rules. 
+				            It determines whether the current date is in the summer or winter time period and adjusts the time accordingly.</p>
+				            <p><b>Parameters:</b></p>
+				            <ul>
+				                <li><b>Summer_Month_Number:</b> The month number when DST (summer time) starts.</li>
+				                <li><b>Summer_Sunday_Number:</b> The nth Sunday of the Summer_Month_Number when DST starts.</li>
+				                <li><b>Winter_Month_Number:</b> The month number when non-DST (winter time) starts.</li>
+				                <li><b>Winter_Sunday_Number:</b> The nth Sunday of the Winter_Month_Number when DST starts.</li>
+				                <li><b>Summer_GMT_Offset:</b> The GMT offset during summer/DST.</li>
+				                <li><b>Winter_GMT_Offset:</b> The GMT offset during winter/non-DST.</li>
+				            </ul>
+				            <p><b>Example Usage:</b> Pass the appropriate month number, Sunday number, and GMT offset values for your location to use this function effectively.</p>
+				            "
+				    ],
+				    // Define the main function
+				    Source = (
+				        Summer_Month_Number as number,
+				        Summer_Sunday_Number as number,
+				        Winter_Month_Number as number,
+				        Winter_Sunday_Number as number,
+				        Summer_GMT_Offset as number,
+				        Winter_GMT_Offset as number
+				    ) as datetimezone =>
+				    let
+				        // Get the current UTC date and time
+				        UTC_DateTimeZone = DateTimeZone.UtcNow(),
+				
+				        // Extract the date portion from the current UTC DateTimeZone
+				        UTC_Date = Date.From(UTC_DateTimeZone),
+				
+				        // Calculate the start date of DST (summer time) by determining the Sunday of the nth week of the given summer month
+				        StartSummerTime = Date.StartOfWeek(
+				            #date(Date.Year(UTC_Date), Summer_Month_Number, Summer_Sunday_Number * 7),
+				            Day.Sunday
+				        ),
+				
+				        // Calculate the start date of standard time (winter time) using the same method
+				        StartWinterTime = Date.StartOfWeek(
+				            #date(Date.Year(UTC_Date), Winter_Month_Number, Winter_Sunday_Number * 7),
+				            Day.Sunday
+				        ),
+				
+				        // Determine the appropriate GMT offset based on whether the current date falls within the DST period
+				        UTC_Offset = if UTC_Date >= StartSummerTime and UTC_Date < StartWinterTime 
+				                     then Summer_GMT_Offset 
+				                     else Winter_GMT_Offset,
+				
+				        // Adjust the current UTC DateTimeZone to the local timezone using the determined offset
+				        Local_Timezone = DateTimeZone.SwitchZone(UTC_DateTimeZone, UTC_Offset)
+				    in
+				        Local_Timezone
+				in
+				    // Apply the function metadata to Source.
+				    Value.ReplaceType(Source, metaDocumentation)
+				```
+			lineageTag: 17dfb70c-e136-4d02-9cc3-9056c2ae7fc6
+			queryGroup: Functions
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Function
+
+		/// The time of day by which this dataset should have finished refreshing, and if it hasn't, the report will display a warning to the user.
+		expression Refresh_Deadline = #time(10, 30, 0) meta [IsParameterQuery=true, List={#time(8, 0, 0), #time(8, 30, 0), #time(9, 0, 0), #time(9, 30, 0), #time(10, 0, 0), #time(10, 30, 0), #time(11, 0, 0), #time(11, 30, 0), #time(12, 0, 0)}, DefaultValue=#time(10, 30, 0), Type="Time", IsParameterQueryRequired=true]
+			lineageTag: dead9c15-39e3-4e21-a073-a8881215455a
+			queryGroup: Parameters
+
+			annotation PBI_ResultType = Time
+
+			annotation PBI_NavigationStepName = Navigation
+
+		/// Limit the number of rows in the largest tables in this dataset during development. Set this value to -1 after publishing to remove the row limit, then refresh the dataset.
+		expression Row_Limit = 1000000 meta [IsParameterQuery=true, List={-1, 10000, 100000, 1000000, 10000000}, DefaultValue=1000000, Type="Number", IsParameterQueryRequired=true]
+			lineageTag: b7841bd3-c5e7-4ca6-bf0d-33888bb2fdfa
+			queryGroup: Parameters
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Number
+
+		expression fn_GetTableFromDataflow = ```
+				let
+				  // Define metadata for the function, describing its purpose and usage.
+				  metaDocumentation = type function (
+				    WorkspaceNameOrID as (type text meta [
+				      Documentation.FieldCaption = "Workspace Name or ID",
+				      Documentation.SampleValues = {"MyWorkspace", "128fd147-7051-4f3f-95b7-7970f6209d5f"},
+				      Formatting.IsMultiLine = false,
+				      Formatting.IsCode = false
+				    ]),
+				    DataflowNameOrID as (type text meta [
+				      Documentation.FieldCaption = "Dataflow Name or ID",
+				      Documentation.SampleValues = {"MyDataflow", "127fd147-7051-4f3f-95b7-7970f6209d5e"},
+				      Formatting.IsMultiLine = false,
+				      Formatting.IsCode = false
+				    ]),
+				    TableName as (type text meta [
+				      Documentation.FieldCaption = "Table Name",
+				      Documentation.SampleValues = {"MyTable"},
+				      Formatting.IsMultiLine = false,
+				      Formatting.IsCode = false
+				    ]),
+				    optional RowLimit as (type number meta [
+				      Documentation.FieldCaption = "Row Limit",
+				      Documentation.LongDescription = "Enter the number of rows to return. Leave blank or select -1 to return all rows.",
+				      Documentation.SampleValues = {null, -1, 0, 100, 1000, 10000, 1000000, 10000000, 1000000000},
+				      Formatting.IsMultiLine = false,
+				      Formatting.IsCode = false
+				    ])
+				  ) as any meta [
+				    Documentation.Name = "fn_GetTableFromDataflow",
+				    Documentation.LongDescription =
+				      //This is the description of the documentation, it only accepts a handful of HTML tags for formatting.
+				      "
+				        <p><b>Get Table from Dataflow</b></p>
+				        <p>This function will return a table from a dataflow in a Power BI workspace, limited to a specified number of rows. All connection string components have been parameterized to make switching between data sources as simple and easy as possible.</p>
+				        <p><b>Parameters:</b></p>
+				        <li><b>WorkspaceNameOrID:</b> The name or ID of the workspace containing the dataflow.</li>
+				        <li><b>DataflowNameOrID:</b> The name or ID of the dataflow containing the table.</li>
+				        <li><b>TableName:</b> The name of the table to return.</li>
+				        <li><b>RowLimit:</b> The number of rows to return. Leave blank or select -1 to return all rows.</li>
+				      "
+				  ],
+				  // Define the main function
+				  myFunction = (
+				    WorkspaceNameOrID as text,
+				    DataflowNameOrID as text,
+				    TableName as text,
+				    optional RowLimit as number
+				  ) as table =>
+				    let
+				      // Set RowLimit to -1 if null
+				      RowLimit = if RowLimit is null then -1 else RowLimit,
+				      // Set the Source to Power Platform Dataflows
+				      Source = PowerPlatform.Dataflows(null),
+				      // Get the list of workspaces containing dataflows
+				      WorkspaceList = Source{[Id = "Workspaces"]}[Data],
+				      // Use try...otherwise to select the workspace by it name or ID
+				      SelectedWorkspace =
+				        try WorkspaceList{[workspaceName = WorkspaceNameOrID]}[Data]
+				        otherwise WorkspaceList{[workspaceId = WorkspaceNameOrID]}[Data],
+				      // Use try...otherwise to select the dataflow by its name or ID
+				      SelectedDataflow =
+				        try SelectedWorkspace{[dataflowName = DataflowNameOrID]}[Data]
+				        otherwise SelectedWorkspace{[dataflowId = DataflowNameOrID]}[Data],
+				      // Select the table by its name from the selected dataflow
+				      SelectedTable = SelectedDataflow{[entity = TableName, version = ""]}[Data],
+				      // Limit the number of rows returned
+				      FilterLogic =
+				        if RowLimit < 0
+				        then SelectedTable
+				        else Table.FirstN(SelectedTable, RowLimit)
+				    in
+				      FilterLogic
+				in 
+				  // Apply the function metadata to myFunction.
+				  Value.ReplaceType(myFunction, metaDocumentation)
+				```
+			lineageTag: 195419dc-fe57-4eea-a031-717a881fcb44
+			queryGroup: Functions
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Function
+
+		expression fn_Coalesce =
+				let
+				    Source = each List.First(List.RemoveFirstN(_, each _ = null), null)
+				in
+				    Source
+			lineageTag: 3396901d-63a0-4f40-9c20-658a10fd1c47
+			queryGroup: Functions
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Function
+
+		/// Path to 'Learning_Resources.xlsx' on the web
+		expression LearningResources_URL = "https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.xlsx" meta [IsParameterQuery=true, List={"https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.xlsx"}, DefaultValue="https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/DMU_Data_Dojo_-_Power_BI_Learning_Resources.xlsx", Type="Text", IsParameterQueryRequired=true]
+			lineageTag: 99ae3065-18e8-4fcd-8caa-7ff21682b373
+			queryGroup: Parameters
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Text
+
+		/// Path to 'Financial Samlpe.xlsx' on the web
+		expression FinancialSample_URL = "https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/Financial%20Sample.xlsx" meta [IsParameterQuery=true, List={"https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/Financial%20Sample.xlsx"}, DefaultValue="https://raw.githubusercontent.com/DataVolumeXYZ/DataVolumeXYZ/refs/heads/main/assets/doc/Financial%20Sample.xlsx", Type="Text", IsParameterQueryRequired=true]
+			lineageTag: dedd21e2-8dfb-485f-b742-42f71ee0672b
+			queryGroup: Parameters
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Text
+
+		queryGroup 'Sample Tables'
+
+			annotation PBI_QueryGroupOrder = 0
+
+		queryGroup Ultilities
+
+			annotation PBI_QueryGroupOrder = 1
+
+		queryGroup Functions
+
+			annotation PBI_QueryGroupOrder = 2
+
+		queryGroup Parameters
+
+			annotation PBI_QueryGroupOrder = 3
+
+		annotation PBI_QueryOrder = ["_Source","DimCountry","DimDate","DimDiscountBand","DimProduct","DimSegment","FactSales","fn_GetLocalDateTime","_Info_SemanticModel","_Measures","_Utilities","LearningResources_URL","FinancialSample_URL","Refresh_Deadline","Row_Limit","fn_GetTableFromDataflow","fn_Coalesce","ReportPages","LearningResources"]
+
+		annotation __PBI_TimeIntelligenceEnabled = 0
+
+		annotation PBIDesktopVersion = 2.140.1476.0 (25.02)+e8c6a85d1d09735c5c055c3244a60ff4076cd2cf
+
+		annotation __TEdtr = 1
+
+		annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop","TMDLView_Desktop"]
+

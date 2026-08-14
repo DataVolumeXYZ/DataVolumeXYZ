@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.4.4
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=5">
+
+  <!-- Theme Mode-->
+  
+    <script>
+      const isAutoTheme = true;
+      document.documentElement.setAttribute('data-theme', sessionStorage.getItem('theme'))
+    </script>
+  
+
+  <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+  <script defer src="/assets/js/main.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!--Favicon-->
+  <link
+    rel="shortcut icon"
+    href="/assets/favicon.ico"
+    type="image/x-icon">
+
+  
+
+  <!-- KaTeX 0.15.2 -->
+  
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script
+      defer
+      src="/assets/js/vendor/auto-render.min.js"
+      onload="renderMathInElement(document.body);"></script>
+  
+
+  <!-- Mermaid 9.1.1 -->
+  
+    <script
+      defer
+      src="/assets/js/vendor/mermaid.min.js"
+      onload="mermaid.initialize({
+                              startOnLoad:true,
+                              theme: 'default',
+                            });"></script>
+  
+
+  <!-- Simple Jekyll Search 1.10.0 -->
+  <script src="/assets/js/vendor/simple-jekyll-search.min.js" type="text/javascript"></script>
+
+  <!-- Google Analytics / Cookie Consent -->
+  <script>
+    const cookieName = 'cookie-notice-dismissed-   https://DataVolume.xyz';
+    const isCookieConsent = 'false';
+    const analyticsName = '';
+    const analyticsNameGA4 = '';
+  </script>
+
+  
+  
+
+  <!-- seo tags -->
+  <meta property="og:image" content="https://datavolume.xyz/assets/img/data-dojo/ae896172-0bd7-4d20-ba30-e8a6d0574b04_cropped.jpg">
+  
+    <meta property="og:type" content="website" />
+  
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Data Dojo: A Power BI Community of Practice (Part 5) | DataVolume.xyz</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="The Data Dojo: A Power BI Community of Practice (Part 5)" />
+<meta name="author" content="James D. Bartlett III" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A series about founding and fostering a successful Power BI Community of Practice" />
+<meta property="og:description" content="A series about founding and fostering a successful Power BI Community of Practice" />
+<link rel="canonical" href="https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html" />
+<meta property="og:url" content="https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html" />
+<meta property="og:site_name" content="DataVolume.xyz" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Data Dojo: A Power BI Community of Practice (Part 5)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"James D. Bartlett III","url":"https://github.com/JamesDBartlett3"},"dateModified":"2025-03-16T00:00:00+00:00","datePublished":"2025-03-16T00:00:00+00:00","description":"A series about founding and fostering a successful Power BI Community of Practice","headline":"The Data Dojo: A Power BI Community of Practice (Part 5)","mainEntityOfPage":{"@type":"WebPage","@id":"https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html"},"url":"https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- RSS -->
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="DataVolume.xyz"
+    href="https://datavolume.xyz/feed.xml" />
+  <link type="application/atom+xml" rel="alternate" href="https://datavolume.xyz/feed.xml" title="DataVolume.xyz" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:title" content="The Data Dojo: A Power BI Community of Practice (Part&nbsp;5)">
+  <meta name="twitter:description" content="  This post is part of a series called The Data Dojo: A Power BI Community of Practice                          The Data Dojo: A Power BI Community of Practi...">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://datavolume.xyz/assets/img/data-dojo/ae896172-0bd7-4d20-ba30-e8a6d0574b04_cropped.jpg">
+  <meta name="twitter:image:alt" content="The Data Dojo: A Power BI Community of Practice (Part&nbsp;5)">
+</head>
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/cube.svg" />
+		</a>
+        
+        <a class="site-title" aria-label="DataVolume.xyz" href="/">
+        DataVolume.xyz
+		</a>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fas fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fas fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fas fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+        
+        
+        <li class="separator"> | </li>
+        <li><a id="theme-toggle" title="The Data Dojo: A Power BI Community of Practice (Part&nbsp;5) " aria-label="The Data Dojo: A Power BI Community of Practice (Part&nbsp;5)" onclick="themeToggle()"></a></li>
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image">
+  <header id="main" style="">
+    <div class="title-padder">
+      
+        <h1 id="The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B5%29" class="title">The Data Dojo: A Power BI Community of Practice (Part&nbsp;5)</h1>
+        
+
+
+<div class="post-info"><a href="https://github.com/JamesDBartlett3" target="_blank" rel="noopener">
+      <img alt="Author's avatar" src="https://avatars.githubusercontent.com/u/37491308?s=460&v=4">
+    
+    <p class="meta">
+      James D. Bartlett III - 
+      
+      March 16, 2025
+    </p></a></div>
+
+      
+    </div>
+  </header>
+  <div class="progress" style="top: 0px;">
+    <div class="progress__bar"></div>
+  </div>
+  <section class="post-content">
+    
+    <!-- intro -->
+<!--excerpt-->
+
+<!--more-->
+
+<aside class="series-overview">
+  <h4>This post is part of a series called <em>The Data Dojo: A Power BI Community of Practice</em></h4>
+  <ol>
+    
+    
+    <li>
+      
+      <a href="/2023/04/02/DataDojo-PowerBI-CommunityOfPractice-01.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;1)</a>
+      
+			<ul>
+				<li>
+					<i>The story of how I founded the Data Dojo at Des Moines University (DMU)</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/05/28/DataDojo-PowerBI-CommunityOfPractice-02.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;2)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our first two workshops, and a cautionary tale about our first major setback</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2023/10/13/DataDojo-PowerBI-CommunityOfPractice-03.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;3)</a>
+      
+			<ul>
+				<li>
+					<i>A summary of our 3rd workshop, our comeback story, and our plans to ensure that the Data Dojo will continue to grow and thrive for many years to come</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)</a>
+      
+			<ul>
+				<li>
+					<i>Summaries of our 4th and 5th workshops, and why I believe that every Power BI Community of Practice should host workshops like these as often as possible</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <strong>The Data Dojo: A Power BI Community of Practice (Part&nbsp;5) &nbsp;&nbsp;⟪<u>YOU ARE HERE</u>⟫</strong>
+      
+			<ul>
+				<li>
+					<i>A tour-de-force of the Data Dojo Report Template, which we provide to our members to give them a sturdy foundation upon which to develop reports of their own.</i>
+				</li>
+			</ul>
+    </li>
+    
+    <li>
+      
+      <a href="/2025/03/21/DataDojo-PowerBI-CommunityOfPractice-06.html">The Data Dojo: A Power BI Community of Practice (Part&nbsp;6)</a>
+      
+			<ul>
+				<li>
+					<i>A new workshop format for the Data Dojo called "Office Hours &amp; Coffee Lounge," why we decided to add it, and how it's been going so far.</i>
+				</li>
+			</ul>
+    </li>
+    
+  </ol>
+  
+</aside>
+
+<p>Thank you for joining us on this adventure!</p>
+
+<h1 id="the-data-dojo-power-bi-report-template">The Data Dojo Power BI Report Template</h1>
+
+<p>The Data Dojo Power BI Report Template is a starter file that we provide to the Data Dojo members to give them a sturdy foundation upon which to develop reports of their own. It’s designed to be simple, versatile, and user-friendly, with a focus on best practices in data visualization, data modeling, and report design. It is intended to be a starting point for report development, and users are encouraged to customize it to suit their specific needs and preferences. It is also constantly under development, with new features and improvements being added regularly based on feedback from the Data Dojo members and ideas from the Power BI community.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template-72060c18-e82b-447e-87d5-06721145b18c_cropped.jpg" alt="report-template-72060c18-e82b-447e-87d5-06721145b18c_cropped.jpg" />
+					<figcaption style="text-align: center;"><em></em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h2 id="overview">Overview</h2>
+
+<p>The Data Dojo Power BI Report Template includes a variety of helpful features, like an Instructions page, three example report pages, a Developer Notes page, sample data imported from a flat file and modeled in a proper Star Schema, a designated Date Dimension for Time Intelligence calculations, Explicit Measures, conditional formatting, slicers in various configurations, scrims, overlays, and more. It also incorporates several advanced features, such as a collection of custom Power Query functions for importing and transforming data, and an integrated VertiPaq Analyzer in DAX Query View for model performance tuning.</p>
+
+<h2 id="report-pages">Report Pages</h2>
+
+<p>The Data Dojo Power BI Report Template includes the following report pages, each of which demonstrates a different aspect of Power BI report design and functionality:</p>
+
+<h3 id="instructions">Instructions</h3>
+<p>This page displays a tabbed interface with six sections:</p>
+<ol>
+  <li><strong>Intro</strong>: Welcome message and overview of the report template.</li>
+  <li><strong>Demo Pages</strong>: Description of each of the example report pages.</li>
+  <li><strong>DAX</strong>: Brief introduction to the DAX language, the <code class="language-plaintext highlighter-rouge">_Measures</code> table, and the <code class="language-plaintext highlighter-rouge">DAX Query View</code> feature.</li>
+  <li><strong>Power Query / M</strong>: Brief introduction to the Power Query language and data transformation.</li>
+  <li><strong>Data Modeling</strong>: Overview of Model View, Star Schema, Relationships, Cardinality, and Cross-Filter Direction.</li>
+  <li><strong>Help &amp; Resources</strong>: Links to additional resources for learning Power BI, including LinkedIn Learning courses, Learning Paths on Microsoft Learn, free “Dashboard in a Day” webinars, etc.</li>
+</ol>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/instructions-intro.jpg" alt="instructions-intro.jpg" />
+					<figcaption style="text-align: center;"><em>The Instructions page, featuring a tabbed interface for easy navigation</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h3 id="horizontal-slicers">Horizontal Slicers</h3>
+<p>This page features slicers in the horizontal orientation with rounded rectangle (a.k.a. “chiclet”) buttons. It also features a table visual with conditional formatting on fill color, a tooltip with conditional formatting that appears when hovering over a row, and a special “Infotip” icon on the table visual that reveals helpful information about the conditional formatting when hovered over.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/horizontal-slicers.jpg" alt="horizontal-slicers.jpg" />
+					<figcaption style="text-align: center;"><em>The Horizontal Slicers page, featuring a table visual <br />with conditional formatting and an Infotip icon</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h3 id="vertical-slicers">Vertical Slicers</h3>
+<p>This page has slicers in the vertical orientation, with both multi-select (a.k.a. “checklist”) and single-select (a.k.a. “radio button”) styles. It also has a <a href="https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-combo-chart?tabs=powerbi-desktop">Line and Clustered Column Chart</a> visual with a date hierarchy on the X-axis to demonstrate the various <a href="https://learn.microsoft.com/en-us/power-bi/consumer/end-user-drill">Drill Modes</a>.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/vertical-slicers.jpg" alt="vertical-slicers.jpg" />
+					<figcaption style="text-align: center;"><em>The Vertical Slicers page, featuring slicers with multi-select and single-select styles, <br />and a Line and Clustered Column Chart visual with a date hierarchy on the X-axis</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h3 id="slicer-panel">Slicer Panel</h3>
+<p>This page showcases a slicer panel which can be expanded and collapsed to save space on the report canvas. This technique is achieved using a combination of bookmarks, buttons, and object visibility settings in the Selection Pane, and it can be a great way to give users a broad selection of slicers for filtering the data in the report without cluttering the report canvas. However, the slicer panel technique also requires a fair amount more work to create and maintain than standard slicers, so it should be used judiciously, and only when necessary to meet specific user requirements.</p>
+<table>
+	<tr>
+		<td>
+			
+
+
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/slicer-panel-hidden.jpg" alt="slicer-panel-hidden.jpg" />
+					<figcaption style="text-align: center;"><em>The Slicer Panel page with hidden slicer panel and 'Show Slicers' button</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			
+
+
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/slicer-panel-visible.jpg" alt="slicer-panel-visible.jpg" />
+					<figcaption style="text-align: center;"><em>The Slicer Panel page with visible slicer panel and 'Hide Slicers' button</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+
+
+		</td>
+	</tr>
+</table>
+
+<!-- ### Drillthrough (Hidden) -->
+
+<h3 id="tooltip-hidden">Tooltip (Hidden)</h3>
+<p>This is a special type of page that is hidden when the report is published, and is used to create a tooltip that displays when hovering over specific parts of visuals in other pages. It contains a <a href="https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card">(new) Card visual</a> with 8 different measures, and conditional formatting on both the background color behind the cards and the text color inside one of the cards. This tooltip displays when the user hovers over any row in the table visual on the “Horizontal Slicers” page, and the conditional formatting of the background and text colors is based on the positive or negative value of the “Total Profit” measure, which is displayed in the tooltip, but not in the table visual itself.</p>
+<table>
+	<tr>
+		<td style="width:28%; text-align:center;">
+			When <b>Total Profit</b> <br />value is <span style="color:green;"><b>positive</b></span>
+		</td>
+		<td>
+			
+
+
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/tooltip-positive-profit.jpg" alt="tooltip-positive-profit.jpg" />
+					<figcaption style="text-align: center;"><em>✅ No action required;<br />Do not activate conditional formatting</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+
+
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align:center;">
+			When <b>Total Profit</b> <br />value is <span style="color:red;"><b>negative</b></span>
+		</td>
+		<td>
+			
+
+
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/tooltip-negative-profit.jpg" alt="tooltip-negative-profit.jpg" />
+					<figcaption style="text-align: center;"><em>⚠️ Action required!<br />Activate conditional formatting to draw user's attention</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+
+
+		</td>
+	</tr>
+</table>
+
+<h3 id="infotip-hidden">Infotip (Hidden)</h3>
+<p>This is another special type of page that is hidden when the report is published, and is used to display an “Infotip” when hovering over a specific object in the report. In this case, it will appear when the user hovers over a special “Info” icon in the upper-right corner of the table visual on the “Horizontal Slicers” page, and it will display a message that explains the meaning of the conditional formatting in the visual to which it is attached.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/infotip.jpg" alt="infotip.jpg" />
+					<figcaption style="text-align: center;"><em>'Infotip' on a table visual with a message explaining <br />its conditional formatting and Tooltip features</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h3 id="developer-notes-hidden">Developer Notes (Hidden)</h3>
+<p>This page contains a text box for the report developer to write and keep their notes, including information on the data model, DAX measures, and other technical details about the report. When the report is published, this page is hidden from view, but it can be accessed by the report developer when they open the report in Power BI Desktop.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/developer-notes.jpg" alt="developer-notes.jpg" />
+					<figcaption style="text-align: center;"><em>Developer Notes page with a text box for writing and keeping notes</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h2 id="slicers--filters">Slicers &amp; Filters</h2>
+
+<p>Power BI has a feature called the Filter Pane which can be used to filter the data at the report, page, or individual visual level, which makes it an incredibly flexible and powerful tool in the right hands. However, that same flexibility and power can make the Filter Pane confusing and overwhelming for report users, and to make matters worse, the Filter Pane can also be difficult for the report developer to style and format to match the rest of the report’s design. Slicers, on the other hand, are much easier to style and format, and they are also more intuitive for users to interact with.</p>
+
+<p>Thus, the Filter Pane in the Data Dojo Report Template is hidden from report users by default, and only visible to the report developer when editing the report. This is a deliberate design choice, intended to simplify the report developer’s work and reduce the cognitive load on the report’s users, resulting in a better overall experience for everyone, and more active engagement with the report. That being said, there are other schools of thought on this subject, and the battle of Slicers vs. Filter Pane has been raging for almost as long as Power BI has been around, so you should consider the pros and cons of these different approaches, and choose whichever works best for your specific report and its intended audience.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/power_bi_slicer_filter_pane_sparring.png" alt="power_bi_slicer_filter_pane_sparring.png" />
+					<figcaption style="text-align: center;"><em></em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h2 id="star-schema">Star Schema</h2>
+
+<p>One of the core tenets of good data modeling in Power BI is the use of a Star Schema, which is a simple and intuitive way to organize the data tables in a hub-and-spoke configuration, with a central Fact table surrounded by Dimension tables. The Fact table contains the numerical data to be aggregated and analyzed, like sales amounts, quantities, and counts, while the Dimension tables contain the descriptive attributes that will be used to filter, group, or slice-and-dice through the data, like dates, products, customers, etc. This configuration is called a “Star Schema” because when drawn on paper, it looks like a star, with the Fact table in the center and the Dimension tables radiating out from it, like the points of a star.</p>
+
+<p>The Star Schema structure is easy to understand and work with, and it’s also the most efficient for querying and aggregating data in DAX, which makes it the ideal structure for Power BI semantic models. The Data Dojo report template includes a sample Star Schema with a Fact table called <code class="language-plaintext highlighter-rouge">FactSales</code> and several Dimension tables, including <code class="language-plaintext highlighter-rouge">DimProduct</code>, <code class="language-plaintext highlighter-rouge">DimDate</code>, <code class="language-plaintext highlighter-rouge">DimCountry</code>, etc., each of which is connected to the <code class="language-plaintext highlighter-rouge">FactSales</code> table by a “one-to-many” relationship. This Star Schema is designed to be a starting point that report developers can use as a guide when building their own semantic models.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/star-schema.jpg" alt="star-schema.jpg" />
+					<figcaption style="text-align: center;"><em>A basic Star Schema in the Model View, featuring a dedicated Measures table<br />and a central Fact table surrounded by its Dimension tables</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h2 id="date-dimension">Date Dimension</h2>
+
+<p>The Date Dimension in a Power BI semantic model is a special type of Dimension table that contains a continuous sequence of dates, usually one row per day, along with a variety of attributes that describe each date, like the day of the week, the month, the quarter, the year, etc. The Date Dimension is a critical component of any Power BI semantic model, because it enables Time Intelligence calculations, like year-over-year comparisons, month-to-date totals, rolling averages, etc., which are essential for many types of business analysis.</p>
+
+<p>The Data Dojo report template includes a sample Date Dimension table called <code class="language-plaintext highlighter-rouge">DimDate</code>, which contains a continuous sequence of 456 days, with the most recent date dynamically set to the day before the most recent refresh, along with a variety of attributes that describe each date, like the year, month number, month name, day of the week, etc. Thus, <code class="language-plaintext highlighter-rouge">DimDate</code> is designed to simulate a typical Date Dimension that report developers might find in a real-world Data Warehouse, which usually contain data up to the previous day, and are updated nightly with new data. <code class="language-plaintext highlighter-rouge">DimDate</code> is also tagged as a “Date Table” in Power BI, which tells Power BI to treat it as a special type of table that can be used for Time Intelligence calculations like those mentioned above.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/dimdate.jpg" alt="dimdate.jpg" />
+					<figcaption style="text-align: center;"><em>A sample Date Dimension table (DimDate) in the Power Query Editor, <br />showing a continuous sequence of dates and various attributes</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h2 id="explicit-measures">Explicit Measures</h2>
+
+<p>Explicit Measures are DAX formulas that are created by the report developer to perform specific calculations on the data in the semantic model, like sums, averages, counts, etc. These measures are called “explicit” because they are explicitly defined by the report developer, rather than being automatically generated by Power BI, which are called “implicit” measures. Explicit Measures are preferred over Implicit Measures because they are more flexible and powerful, and they can be customized to suit the specific needs of the report, whereas Implicit Measures are limited in their functionality and can be difficult to work with in certain scenarios.</p>
+
+<p>The Data Dojo report template includes a variety of Explicit Measures, and they are all stored in the <code class="language-plaintext highlighter-rouge">_Measures</code> table, which is organized into two folders, <code class="language-plaintext highlighter-rouge">Formatting</code> and <code class="language-plaintext highlighter-rouge">Calculation</code>. These folders are used to group the measures by their function or purpose – <code class="language-plaintext highlighter-rouge">Formatting</code> for measures that control the appearance of objects on the report canvas, like colors, fonts, etc., and <code class="language-plaintext highlighter-rouge">Calculation</code> for measures that perform calculations on the data, like sums, averages, etc. The Explicit Measures in the Data Dojo report template are intended to demonstrate best practices in DAX formula writing, like proper formatting, consistent naming conventions, etc., and to serve as a model for report developers to follow when creating their own measures.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/measures.jpg" alt="measures.jpg" />
+					<figcaption style="text-align: center;"><em>A dedicated Measures table (_Measures) with two folders (Calculation and Formatting) containing various Explicit Measures, alongside an example of a measure which changes a slicer's background color to visually indicate when it is active</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h2 id="conditional-formatting">Conditional Formatting</h2>
+
+<p>Several visuals in the Data Dojo Report Template have conditional formatting applied to them, which changes the appearance of the visual based on the data being displayed in it. For example, the table visual on the “Horizontal Slicers” page has conditional formatting on the fill color of the cells, which changes the color of the cells in the row based on the value in the “Segment” column and the “Total Sales” measure, both of which are displayed in the table. Conditional formatting like this can make it easier for the report user to notice patterns and trends in the data, and to quickly identify outliers or anomalies. That same table visual also features a tooltip with its own conditional formatting, which appears when the user hovers over a row, and displays additional information about the data in that row, like the “Total Profit” measure, which is not displayed in the table itself.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/conditional-formatting.jpg" alt="conditional-formatting.jpg" />
+					<figcaption style="text-align: center;"><em>A table visual with conditional formatting on the fill color of the cells,<br />based on the value of a DAX Measure</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<p>The slicers in the Data Dojo Report Template also have a special conditional formatting feature that’s worth mentioning: When the user selects one or more values in a slicer on a report page, that slicer’s background color will change, as will the color of the “Clear Slicers” button on that page. Report users often forget that they have applied a filter to the data in the report, and this can lead to confusion, frustration, and even a bad business decision based on faulty interpretation of the data. To help prevent situations like that from occurring, this feature gives report users a clear visual reminder that the data they are seeing is not the full dataset, but rather a subset of the data based on the slicer selections they have made. This can help reduce the likelihood of errors and misunderstandings, and improve the overall quality of the data analysis process.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/dynamic-slicer-color.jpg" alt="dynamic-slicer-color.jpg" />
+					<figcaption style="text-align: center;"><em>A screenshot of slicers with conditional formatting applied to their background color,<br />which changes when the user selects one or more values in the slicer</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h2 id="scrims--overlays">Scrims &amp; Overlays</h2>
+
+<p>Scrims and Overlays are design techniques that can be used to enhance the visual appearance and usability of a Power BI report, and to make it more engaging and informative for the user.</p>
+
+<p>A scrim is a semi-transparent layer that is placed over a visual or group of visuals to draw attention to a specific part of the report, like a title, a key metric, or a call-to-action. A scrim can be used to make the text on the report more readable, to create a visual hierarchy on the report canvas, or to add a layer of interactivity to the report. Alternatively, scrims can be used to mask or obscure parts of the report that are not relevant to the user at that moment, or to create a sense of depth or dimensionality in the report design.</p>
+
+<p>An overlay is a report design technique that is used to display additional information or controls on top of a visual or group of visuals, like a tooltip, a slicer panel, or a navigation menu. Overlays can be used to provide context or explanation for the data being displayed, to give the user more control over the data analysis process, or to add interactivity to the report.</p>
+
+<p>The Data Dojo Report Template features several examples of scrims and overlays, including two overlays on the “Horizontal Slicers” page in the form of a Tooltip and an Infotip, and a combination of scrims and overlays on the “Slicer Panel” page which are used to create an expandable and collapsible slicer panel with a “frosted glass” effect which partially obscures the report page when the panel is expanded (credit for this technique goes to Oscar Martínez Valero – <a href="https://www.bibb.pro/post/modern-design-business-intelligence-glassmorphism-power-bi">Blog</a>/<a href="https://www.linkedin.com/in/oscarmartinezv/">LinkedIn</a>/<a href="https://github.com/OscarValerock">GitHub</a>).</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/glassmorphism.jpg" alt="glassmorphism.jpg" />
+					<figcaption style="text-align: center;"><em>A combination of scrims and overlays on the Slicer Panel page, <br />showing an expandable and collapsible slicer panel with a 'frosted glass' effect</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h2 id="advanced-features">Advanced Features</h2>
+
+<p>The Data Dojo Report Template includes several advanced features that are designed to enhance the functionality and usability of the report, and to make it easier for report developers to create and maintain their reports. These features include:</p>
+
+<h3 id="dataflow-magic">Dataflow Magic</h3>
+
+<p>If you’ve been following this blog series, you’ll recall from the previous post that our latest official Data Dojo report template includes a custom Power Query function called <code class="language-plaintext highlighter-rouge">fn_GetTableFromDataflow</code>, which can be invoked to fetch any table from any Dataflow in Power BI. In case you missed it, or you need a refresher, click here for a recap:
+<a href="../../../2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html#The-Dao-of-the-Dataflow" target="_blank">The Dao of the Dataflow</a></p>
+
+<h3 id="report--model-settings">Report &amp; Model Settings</h3>
+
+<ul>
+  <li>Hide visual headers</li>
+  <li>Discourage implicit measures</li>
+  <li>Disable auto-date/time intelligence</li>
+</ul>
+
+<h3 id="integrated-vertipaq-analyzer-lite">Integrated “VertiPaq Analyzer Lite”</h3>
+
+<p>If you’re not already familiar with the <a href="https://www.sqlbi.com/tools/vertipaq-analyzer/">VertiPaq Analyzer</a>, it’s a fantastic tool for analyzing the performance of a Power BI semantic model, but until just a few months ago, it required the use of external tools like Microsoft Excel, <a href="https://www.sqlbi.com/tv/introducing-vertipaq-analyzer-in-dax-studio/">DAX Studio</a>, or <a href="https://data-goblins.com/power-bi/analyze-power-bi-dataset">Tabular Editor 3</a>, so it wasn’t very practical for business users and self-service data analysts.</p>
+
+<p>However, thanks to <a href="https://in.linkedin.com/in/imhariharanr">Hariharan Rajendran</a>’s <a href="https://haribiacademy.com/2024/03/vertipaq-analyzer-inside-powerbi-desktop-dax-query-view/">brilliant</a> <a href="https://github.com/rhariharaneee/Power-BI">work</a>, we now have a way to access the VertiPaq Analyzer data directly within Power BI Desktop via the DAX Query View, so now the Data Dojo report template has a “VertiPaq Analyzer Lite” built right in. This provides report developers with a great way to identify and address performance issues in their Power BI semantic models, and thereby improve the overall performance of their reports, all without ever having to install or learn to use any external tools.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/vertipaq-analyzer-lite.jpg" alt="vertipaq-analyzer-lite.jpg" />
+					<figcaption style="text-align: center;"><em>A screenshot of 'VertiPaq Analyzer Lite' in DAX Query View, <br />showing performance metrics for the Power BI semantic model</em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h1 id="balance-simplicity--versatility">Balance: Simplicity &amp; Versatility</h1>
+
+<p>It’s important to strike the right balance between simplicity and versatility while designing a Power BI report template, and here are several reasons why:</p>
+
+<ol>
+  <li><strong>User-Friendliness</strong>: A simple design makes it easier for users to understand, navigate, and use the report effectively without feeling overwhelmed by too many features or complex visuals. It helps in reducing cognitive load which encourages faster adoption and familiarity with the report by its stakeholders.</li>
+  <li><strong>Scalability &amp; Adaptability</strong>: While simplicity is key, versatility ensures that your report template can cater to a variety of data scenarios and business needs without requiring significant rework or customization each time it’s used. This flexibility will save a great deal of time and resources in the long run.</li>
+  <li><strong>Consistency</strong>: A well-designed Power BI report template, if adopted throughout the organization, will lead to consistency in visual representation of data across the organization’s Power BI reports. This uniformity helps users to interpret the data quickly as they become familiar with the layout and style of reporting.</li>
+  <li><strong>Customization &amp; Personalization</strong>: Versatility also enables customization according to individual user needs or departmental requirements, without compromising on the overall structure and integrity of the report template. This adds value by giving report authors and users a deeper sense of involvement in the data analysis process, which can lead to higher engagement levels.</li>
+  <li><strong>Speed &amp; Efficiency</strong>: A simple yet versatile Power BI template helps save time, as it reduces the need for extensive training or repeated queries. Users can quickly understand and apply the insights they gain from reading the report without spending excessive amounts of time on comprehension or seeking assistance, resulting in improved efficiency within their roles.</li>
+</ol>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+			<figure class="image">
+        <img class="single" src="/assets/img/data-dojo/report-template/data_ninjas_balance_1.png" alt="data_ninjas_balance_1.png" />
+					<figcaption style="text-align: center;"><em></em></figcaption>
+			</figure>
+    </div>
+    
+</div>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>In conclusion, the Data Dojo Power BI Report Template is a powerful and flexible tool that can help report developers create high-quality reports quickly and easily. It incorporates best practices in data modeling, DAX formula writing, and report design, while also providing a variety of advanced features that can enhance the functionality and usability of the report. By striking the right balance between simplicity and versatility, the Data Dojo Report Template is designed to be user-friendly for beginners while also being powerful enough for seasoned pros. We encourage all Data Dojo members to explore the features of the Data Dojo Report Template, and to use it as a starting point for their own reports. We also welcome feedback and suggestions for improvements, as we are constantly looking for ways to enhance the template and make it even more useful for our members.</p>
+
+<h1 id="resources">Resources</h1>
+<ul>
+  <li><a href="../../../assets/doc/Data_Dojo_Report_Template.pbit">Data Dojo Power BI Report Template</a></li>
+  <li><a href="../../../assets/doc/Data_Dojo_-_Power_BI_Learning_Resources.xlsx">Recommended Power BI Learning Resources (Excel)</a></li>
+  <li><a href="../../../assets/doc/Data_Dojo_-_Power_BI_Learning_Resources.pdf">Recommended Power BI Learning Resources (PDF)</a></li>
+</ul>
+
+<h1 id="next-time-the-data-dojo---office-hours--coffee-lounge">Next Time: The Data Dojo - Office Hours &amp; Coffee Lounge</h1>
+<p>In the next installment of this series, we’ll talk about a brand new format for the Data Dojo, which we call “Office Hours &amp; Coffee Lounge,” why we decided to add this new format to our repertoire, and how it’s been going so far. Stay tuned!</p>
+
+<aside class="series-pager" style="text-align: center">
+<h4><em>The Data Dojo: A Power BI Community of Practice</em> Series</h4>
+
+
+
+
+
+<p>
+</p>
+
+
+  
+	
+  
+
+  
+	
+  
+
+  
+	
+  
+
+  
+    <a class="btn" rel="prev" href="/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html">⪡ Previous</a>
+  
+	
+  
+
+  
+	
+		&nbsp;&nbsp;&nbsp;Post <strong>5</strong> of <strong>6</strong>
+		&nbsp;(more coming soon!)
+	
+  
+
+  
+	
+  
+		&nbsp;&nbsp;&nbsp;<a class="btn" rel="next" href="/2025/03/21/DataDojo-PowerBI-CommunityOfPractice-06.html">Next  ⪢</a>
+  
+
+</aside>
+
+<h2 id="bonus-data-dojo-featured-on-havens-consulting-youtube-channel">Bonus: Data Dojo featured on Havens Consulting YouTube Channel!</h2>
+<p><a href="https://www.youtube.com/watch?v=OlvXbg6VjFE&amp;list=PLzN99cpDw6oBsWZ-5CPVwGZqAQ1otRh1q&amp;t=326s" target="_blank"><img src="../../../assets/img/data-dojo/data-dojo-havens-consulting-youtube.png" alt="Data Dojo featured on Havens Consulting YouTube Channel!" /></a></p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <li class="meta">Share</li>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html" target="_blank"
+               title=" Facebook">
+                <i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on Facebook</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B5%29%20https%3A%2F%2Fdatavolume.xyz%2F2025%2F03%2F16%2FDataDojo-PowerBI-CommunityOfPractice-05.html"
+               target="_blank" title="">
+                <i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Tweet</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://www.tumblr.com/share?v=3&u=https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html&quote=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B5%29%20%7C%20DataVolume.xyz&s="
+               target="_blank" title=" Tumblr">
+                <i class="fab fa-tumblr-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on Tumblr</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://pinterest.com/pin/create/button/?url=https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html&media=https://datavolume.xyz/assets/img/data-dojo/matrix_aikido.png$description=%0A%0A%0AThis+is+the+fifth+installment+in+a+series+documenting+the+challenges%2C+progress%2C+setbacks%2C+and+victories+of+The+Data+Dojo%3A+A+Power+BI+Community+of+Practice.%0A%0AIn+this+post%2C+we%E2%80%99ll+take+a+closer+look+at+the+latest+Data+Dojo+template%2C+tinker+with+some+of+its+capabilities%2C+and+talk+about+how+to+strike+the+right+balance+when+designing+a+Power+BI+template+that%E2%80%99s+both+simple+enough+for+a+beginner+and+versatile+enough+for+a+seasoned+pro.%0A%0A"
+               target="_blank" title="">
+                <i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Pin it</span>
+            </a>
+        </li>
+          
+        <li>
+            <a href="https://www.reddit.com/submit?url=https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html&title=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B5%29%20%7C%20DataVolume.xyz"
+               target="_blank" title=" Reddit">
+                <i class="fab fa-reddit-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on Reddit</span>
+            </a>
+        </li>
+         
+        <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html&title=The+Data+Dojo%3A+A+Power+BI+Community+of+Practice+%28Part%26nbsp%3B5%29%20%7C%20DataVolume.xyz&summary=&source=https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html"
+               target="_blank" title=" LinkedIn">
+                <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Share on LinkedIn</span>
+            </a>
+        </li>
+          
+        <li>
+            <a href="mailto:?subject=The Data Dojo: A Power BI Community of Practice (Part&nbsp;5)%20%7C%20DataVolume.xyz&body=https://datavolume.xyz/2025/03/16/DataDojo-PowerBI-CommunityOfPractice-05.html"
+               target="_blank" title="">
+                <i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i>
+                <span class="sr-only">Email</span></a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+  <!-- Tag list -->
+  
+  
+
+
+  <div class="tag-list">
+    <ul>
+      
+        <li class="meta">Tags</li>
+      
+
+      
+        <li><a class="button" href="/tags#%0A++++Power+BI">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> 
+    Power BI</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Community+of+Practice">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Community of Practice</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Conditional+Formatting">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Conditional Formatting</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#DAX+Query+View">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> DAX Query View</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Data+Analytics">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Data Analytics</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Data+Dojo">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Data Dojo</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Data+Literacy">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Data Literacy</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Dataflow">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Dataflow</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Date+Dimension">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Date Dimension</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Knowledge+Sharing">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Knowledge Sharing</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Learning+Resources">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Learning Resources</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Power+Query+%28M%29">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Power Query (M)</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Slicer+Panel">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Slicer Panel</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Star+Schema">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Star Schema</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#Template">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> Template</p>
+        </a></li>
+      
+        <li><a class="button" href="/tags#VertiPaq+Analyzer">
+          <p><i class="fas fa-tag fa-fw fa-sm"></i> VertiPaq Analyzer</p>
+        </a></li>
+      
+    </ul>
+  </div>
+
+
+
+</article>
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+  
+    <div id="next-post">
+      <a alt="The Data Dojo: A Power BI Community of Practice (Part&nbsp;6)" href="/2025/03/21/DataDojo-PowerBI-CommunityOfPractice-06.html">
+        <p>Next Post ⪢</p>
+        The Data Dojo: A Power BI Community of Practice (Part&nbsp;6)
+      </a>
+    </div>
+  
+
+  
+    <div id="previous-post">
+      <a alt="The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)" href="/2024/01/15/DataDojo-PowerBI-CommunityOfPractice-04.html">
+        <p>⪡ Previous Post</p>
+        The Data Dojo: A Power BI Community of Practice (Part&nbsp;4)
+      </a>
+    </div>
+  
+</div>
+
+
+<!--Utterances-->
+
+
+<!-- Cusdis -->
+
+
+<!-- Disqus -->
+
+
+<!-- To change color of links in the page -->
+<style>
+  header#main {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+  }
+
+  
+
+  
+    header#main {
+      background-image: url('/assets/img/data-dojo/matrix_aikido.png');
+    }
+  
+</style>
+
+<!-- run code in post.js after page has loaded -->
+<script src="/assets/js/post.js"></script>
+    </div>
+    <footer class="site-footer">
+  <p class="text">
+    
+    Copyright © 2026 — DataVolume.xyz — All rights reserved.</p>
+  <div class="footer-icons">
+    <ul>
+      <!-- Social icons from Font Awesome, if enabled -->
+      
+  <li>
+    <a
+      feed.xml
+      href="/feed.xml"
+      title="Follow RSS feed"
+      target="_blank">
+      <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+    
+    <li>
+      <a href="https://github.com/JamesDBartlett3"title="Follow on Github"target="_blank"rel="me noopener">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+    
+    <li>
+      <a href="https://www.linkedin.com/in/jamesdbartlett3"title="Follow on Linkedin"target="_blank"rel="me noopener">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  
+
+  
+
+  
+
+  
+    
+    
+    
+    
+    <li>
+      <a href="https://techhub.social/@JamesDBartlett3"title="Follow on Mastodon"target="_blank"rel="me noopener">
+        <span class="fa-stack fa-lg">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+    </ul>
+  </div>
+  <div class="views" style="padding-top:15px">
+    <span class="views">
+			
+			
+			<img src='https://hits.sh/datavolume.xyz/2025/03/16/datadojo-powerbi-communityofpractice-05.html.svg?label=views&extraCount=1062&color=417eb3' alt="Views" />
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

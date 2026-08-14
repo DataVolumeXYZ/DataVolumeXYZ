@@ -1,0 +1,42 @@
+table DimProduct
+	lineageTag: c51ebd56-3e35-439f-a060-d7c79be336ac
+
+	column Product
+		dataType: string
+		lineageTag: 8b7f06de-9408-438f-b9a5-85a3be83e44e
+		summarizeBy: none
+		sourceColumn: Product
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: bb5a2070-77c7-413f-be2f-1c5b7c010d67
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProduct = m
+		mode: import
+		queryGroup: 'Sample Tables'
+		source =
+				let
+				    Source = _Source,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Product"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "ProductKey", 1, 1, Int64.Type)
+				in
+				    #"Added Index"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
