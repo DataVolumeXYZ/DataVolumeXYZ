@@ -1,0 +1,60 @@
+name: Maintain blog Branch
+
+# Recreate the blog branch from main if it is ever deleted,
+# and keep it in sync with main on every push to main.
+on:
+  push:
+    branches:
+      - main
+  delete:
+  workflow_dispatch:
+
+jobs:
+  sync_blog_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure blog branch exists and is in sync with main
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo  = context.repo.repo;
+
+            // Get the current SHA of main
+            const { data: mainRef } = await github.rest.git.getRef({
+              owner,
+              repo,
+              ref: 'heads/main',
+            });
+            const mainSha = mainRef.object.sha;
+            console.log(`main is at ${mainSha}`);
+
+            let blogExists = false;
+            try {
+              await github.rest.git.getRef({ owner, repo, ref: 'heads/blog' });
+              blogExists = true;
+            } catch (e) {
+              if (e.status !== 404) throw e;
+            }
+
+            if (!blogExists) {
+              console.log('blog branch not found – creating it from main');
+              await github.rest.git.createRef({
+                owner,
+                repo,
+                ref:  'refs/heads/blog',
+                sha:  mainSha,
+              });
+              console.log('blog branch created');
+            } else {
+              console.log('blog branch exists – fast-forwarding to main');
+              await github.rest.git.updateRef({
+                owner,
+                repo,
+                ref:   'heads/blog',
+                sha:   mainSha,
+                force: false,
+              });
+              console.log('blog branch updated');
+            }
