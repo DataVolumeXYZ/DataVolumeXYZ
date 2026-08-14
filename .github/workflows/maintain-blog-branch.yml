@@ -21,6 +21,17 @@ jobs:
             const owner = context.repo.owner;
             const repo  = context.repo.repo;
 
+            // When triggered by a delete event, only act if the deleted ref was 'blog'.
+            // For push/workflow_dispatch we always proceed.
+            if (context.eventName === 'delete') {
+              const deletedRef = context.payload.ref;
+              const refType    = context.payload.ref_type;
+              if (refType !== 'branch' || deletedRef !== 'blog') {
+                console.log(`Skipping: deleted ref is '${refType}/${deletedRef}', not branch/blog`);
+                return;
+              }
+            }
+
             // Get the current SHA of main
             const { data: mainRef } = await github.rest.git.getRef({
               owner,
@@ -43,18 +54,18 @@ jobs:
               await github.rest.git.createRef({
                 owner,
                 repo,
-                ref:  'refs/heads/blog',
-                sha:  mainSha,
+                ref: 'refs/heads/blog',
+                sha: mainSha,
               });
               console.log('blog branch created');
             } else {
-              console.log('blog branch exists – fast-forwarding to main');
+              console.log('blog branch exists – syncing to main');
               await github.rest.git.updateRef({
                 owner,
                 repo,
                 ref:   'heads/blog',
                 sha:   mainSha,
-                force: false,
+                force: true,  // force to handle any divergence
               });
               console.log('blog branch updated');
             }
